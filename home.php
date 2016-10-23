@@ -587,7 +587,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="white-text" href="#">
+									<a class="white-text" href="https://www.facebook.com/CodeStrikeHQ/?fref=ts">
 										<i class="small fa fa-facebook-square white-text"></i> Facebook
 									</a>
 								</li>
