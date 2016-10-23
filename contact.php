@@ -2,9 +2,9 @@
 
 if(isset($_POST['email'])) {
 
-    $email_to = "joash.pereira@gmail.com";
+    $email_to = "codestrikehq@gmail.com";
  
-    $email_subject = "Website Contact";
+    $email_subject = "Contact request from CodeStrike.in";
 
  
     function died($error) {
@@ -72,23 +72,14 @@ if(isset($_POST['email'])) {
 	 
 	'X-Mailer: PHP/' . phpversion();
 	 
-	@mail($email_to, $email_subject, $email_message, $headers);  
+	mail($email_to, $email_subject, $email_message, $headers);  
 
 
 ?>
  
- 
- 
 <!-- include your own success html here -->
- 
- 
- 
 Thank you for contacting me. Will be in touch with you very soon.
  
- 
- 
 <?php
- 
 }
- 
 ?>
