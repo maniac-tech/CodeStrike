@@ -28,7 +28,7 @@
 		<nav class="purple" role="navigation">
 			<div class="container">
 				<div class="nav-wrapper">
-					<a href="#" id="logo-container" class="brand-logo">CODESTRIKE</a>
+					<a href="index.php" id="logo-container" class="brand-logo">CODESTRIKE</a>
 					<ul class="right hide-on-med-and-down">
 						<li><a href="#intro">About us</a></li>
 						<li><a href="#team">Team</a></li>
