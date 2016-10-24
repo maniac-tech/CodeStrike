@@ -102,14 +102,14 @@
 				<h2 style="color:#A020F0">Team  </h2>
 				<div class="row">
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="width: 219.2">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/hod.jpg">
 							</div>
 							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">Prof. Mahendra Patil
 									<br/>
-									<small><em><a class="red-text text-darken-1" href="#">Faculty Advisor</a></em></small>
+						
 								</span>
 								<p>
 								<a class="blue-text text-lighten-2" href="">
@@ -134,7 +134,7 @@
 								<img class="activator" src="img/team/AbhishekJha.jpg">
 							</div>
 							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Abhishek Jha
+								<span class="card-title activator grey-text text-darken-4">Abhishek <br>Jha
 									<br/>
 									<small><em><a class="red-text text-darken-1" href="#"><!-- Insert the position here --></a></em></small>
 								</span>
@@ -220,7 +220,7 @@
 								<img class="activator" src="img/team/user.png">
 							</div>
 							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Ravi Chandak <br/>
+								<span class="card-title activator grey-text text-darken-4">Ravi <br>Chandak <br/>
 									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
 								</span>
 								<p>
@@ -272,7 +272,7 @@
 								<img class="activator" src="img/team/AbhishekJain.jpg">
 							</div>
 							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Abhishek Jain <br/>
+								<span class="card-title activator grey-text text-darken-4">Abhishek<br> Jain <br/>
 									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
 								</span>
 								<p>
@@ -295,7 +295,7 @@
 					<div class="col s12 m3">
 						<div class="card card-avatar">
 							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/KushagrGupta.JPG">
+								<img class="activator" src="img/team/KushagrGupta.jpg">
 							</div>
 							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">Kushagr Gupta<br/>
@@ -331,7 +331,7 @@
 							</div>
 							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">
-									Amrata Joshi<br/>
+									Amrata <br>Joshi<br/>
 									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
 								</span>
 								<p>
@@ -587,7 +587,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="white-text" href="https://www.facebook.com/CodeStrikeHQ/?fref=ts">
+									<a class="white-text" href="#">
 										<i class="small fa fa-facebook-square white-text"></i> Facebook
 									</a>
 								</li>
