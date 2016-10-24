@@ -78,7 +78,7 @@ if(isset($_POST['email'])) {
 ?>
  
 <!-- include your own success html here -->
-Thank you for contacting me. Will be in touch with you very soon.
+Sorry, but the E-mail was not sent due to some reason. Try contacing us on Facebook.
  
 <?php
 }
