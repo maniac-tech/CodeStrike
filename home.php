@@ -28,7 +28,7 @@
 		<nav class="purple" role="navigation">
 			<div class="container">
 				<div class="nav-wrapper">
-					<a href="index.php" id="logo-container" class="brand-logo">CODESTRIKE</a>
+					<a href="#" id="logo-container" class="brand-logo">CODESTRIKE</a>
 					<ul class="right hide-on-med-and-down">
 						<li><a href="#intro">About us</a></li>
 						<li><a href="#team">Team</a></li>
@@ -552,24 +552,9 @@
 							<form class="col s12" action="contact.php" method="post">
 								<div class="row">
 									<div class="input-field col s6">
-										<i class="mdi-action-account-circle prefix white-text"></i>
-										<input id="icon_prefix" name="name" type="text" class="validate white-text">
-										<label for="icon_prefix" class="white-text">First Name</label>
-									</div>
-									<div class="input-field col s6">
-										<i class="mdi-communication-email prefix white-text"></i>
-										<input id="icon_email" name="email" type="email" class="validate white-text">
-										<label for="icon_email" class="white-text">Email-id</label>
-									</div>
-									<div class="input-field col s12">
-										<i class="mdi-editor-mode-edit prefix white-text"></i>
-										<textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
-										<label for="icon_prefix2" class="white-text">Message</label>
-									</div>
-									<div class="col offset-s7 s5">
-										<button class="btn waves-effect waves-light red darken-1" type="submit">Submit
-											<i class="mdi-content-send right white-text"></i>
-										</button>
+										<label for="icon_prefix" class="white-text"><b>Contact Us:</b><br>
+											Email: codestrikehq@gmail.com <br><br> 
+											Call: +91 9833377596 </label>
 									</div>
 								</div>
 							</form>
