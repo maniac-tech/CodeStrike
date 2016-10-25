@@ -552,13 +552,20 @@
 							<form class="col s12" action="contact.php" method="post">
 								<div class="row">
 									<div class="input-field col s6">
-										<label for="icon_prefix" class="white-text"><b>Contact Us:</b><br>
-											Email: codestrikehq@gmail.com <br><br> 
-											Call: +91 9833377596 </label>
+										<label for="icon_prefix" class="white-text">Contact Us:</label>
+									</div>
+									<br>
+									<div class="input-field col s6">
+										<label for="icon_email" class="white-text">Email: codestrikehq@gmail.com</label>
+									</div>
+									<div class="input-field col s6">
+										<label for="icon_prefix2" class="white-text">Call: +91 9833377596</label>
+									</div>
 									</div>
 								</div>
 							</form>
 						</div>
+						<br>
 						<div class="col l3 s12">
 
 
