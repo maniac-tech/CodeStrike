@@ -32,7 +32,8 @@
 					<ul class="right hide-on-med-and-down">
 						<li><a href="#intro">About us</a></li>
 						<li><a href="#team">Team</a></li>
-						<li><a href="#work">Work</a></li>
+						<li><a href="#work">Events</a></li>
+						<li><a href="#projects">Projects</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<ul id="nav-mobile" class="side-nav">
@@ -96,13 +97,20 @@
 			</div>
 		</div>
 
+		<!--Parallax-->
+		<div class="parallax-container">
+			<div class="parallax"><img src="img/2.jpg"></div>
+		</div>
+
 		<!--team-->
 		<div class="section scrollspy" id="team">
 			<div class="container">
-				<h2 style="color:#A020F0">Team  </h2>
+				
 				<div class="row">
-					<div class="col s12 m3">
+					<div class="col s12 m6">
+						<center><h2 style="color:#A020F0">Recent Accomplishments </h2></center>
 						<div class="card card-avatar" style="width: 219.2">
+
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/hod.jpg">
 							</div>
@@ -128,18 +136,23 @@
 							</div>
 						</div>
 					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
+					
+					<!-- Three cards were deleted from here-->
+					<!-- New card added here -->
+					<div class="col s12 m6">
+						<center><h2 style="color:#A020F0">Our Blogs </h2></center>
+						<div class="card card-avatar" style="width: 219.2">
+
 							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/AbhishekJha.jpg">
+								<img class="activator" src="img/team/hod.jpg">
 							</div>
 							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Abhishek <br>Jha
+								<span class="card-title activator grey-text text-darken-4">Prof. Mahendra Patil
 									<br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Insert the position here --></a></em></small>
+						
 								</span>
 								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/abhishekshashinath.jha?fref=ts">
+								<a class="blue-text text-lighten-2" href="">
 										<i class="fa fa-facebook-square"></i>
 									</a>
 									<a class="blue-text text-lighten-2" href="">
@@ -155,390 +168,20 @@
 							</div>
 						</div>
 					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/PratikDeshpande.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">
-									Pratik Deshpande <br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/pratik.deshpande.169?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/AnkitChampaneria.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Ankit Champaneria<br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/ankitkamleshchampaneria?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="section scrollspy" id="team">
-			<div class="container">
-				<div class="row">
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/user.png">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Ravi <br>Chandak <br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/ravichandak1996?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/PrashantMahajan.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Prashant Mahajan<br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/Prashantmahajan70?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/AbhishekJain.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Abhishek<br> Jain <br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/Abhishek.Mac.Jain">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/KushagrGupta.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Kushagr Gupta<br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/l33tpl4y4?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="section scrollspy" id="team">
-			<div class="container">
-				<div class="row">
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/AmrataJoshi.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">
-									Amrata <br>Joshi<br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/amrata.joshi.92?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="col s12 m3">
-						<div class="card card-avatar">
-							<div class="waves-effect waves-block waves-light">
-								<img class="activator" src="img/team/RomilDodhiwala.jpg">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Romil Dodhiwala<br/>
-									<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-								</span>
-								<p>
-									<a class="blue-text text-lighten-2" href="https://www.facebook.com/romil15?fref=ts">
-										<i class="fa fa-facebook-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-twitter-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-google-plus-square"></i>
-									</a>
-									<a class="blue-text text-lighten-2" href="">
-										<i class="fa fa-linkedin-square"></i>
-									</a>
-								</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>								
-
-		<!--float-->
-
-		<form action="team.html" class="inline">
+		<!--Two scrollspy sections were deleted -->
+									
 
 
-			<div class="w3-container">
-
-
-				<button class="w3-btn-block w3-teal">Meet the Prime movers!</button>
-
-
-			</div>
-		</form>
 		<p></p>
 
-		<!--Parallax-->
-		<div class="parallax-container">
-			<div class="parallax"><img src="img/2.jpg"></div>
-		</div>
+		
 
-		<!--work-->
-		<div class="section scrollspy" id="work">
-			<div class="container">
-				<h2 style="color:#A020F0">Events and Project </h2>
-				<div class="row">
-					<div class="col s12 m4 l4">
-						<div class="card">
-							<div class="card-image waves-effect waves-block waves-light">
-								<img class="activator" src="img/codestrikeLogo.png">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Coding Workshop
+		<!--work removed from here-->
 
-									<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#portfolioModal1">More Details</a></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Coding workshop<i class="mdi-navigation-close right"></i></span>
-									<p>
-										conducted on On april 1, 2014
-
-									</p>
-
-									<p> students attended : 35</p>
-									<p> certificate issued : 35</p>                 
-								</div>
-							</div>
-						</div>
-
-						<div class="col s12 m4 l4">
-							<div class="card">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator" src="img/codestrikeLogo.png">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">C programming<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">C programming<i class="mdi-navigation-close right"></i></span>
-									<p>
-										conducted on On September 1, 2014
-
-									</p>
-
-									<p> students attended : 33</p>
-									<p> certificate issued : 33</p>
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m4 l4">
-							<div class="card">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator" src="img/codestrikeLogo.png">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">GIT Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">GIT WORKSHOP<i class="mdi-navigation-close right"></i></span>
-									<p>
-										conducted on On september 5, 2014
-
-									</p>
-
-									<p> students attended : 34</p>
-									<p> certificate issued : 34</p>
-								</div>
-							</div>
-						</div>
-						<div class="col s12 m4 l4">
-							<div class="card">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator" src="img/codestrikeLogo.png">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">Java Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Java Workshop1<i class="mdi-navigation-close right"></i></span>         
-									<p>
-										conducted on On september 6,2014
-
-									</p>
-
-									<p> students attended : 38</p>
-									<p> certificate issued : 38</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col s12 m4 l4">
-							<div class="card">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator" src="img/codestrikeLogo.png">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">Arduino workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Arduino workshop<i class="mdi-navigation-close right"></i></span>
-									<p>
-										conducted on On september 9, 2015
-
-									</p>
-
-									<p> students attended : 12</p>
-									<p> certificate issued : 12</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col s12 m4 l4">
-							<div class="card">
-								<div class="card-image waves-effect waves-block waves-light">
-									<img class="activator" src="img/codestrikeLogo.png">
-								</div>
-								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">Python Workshop<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
-								</div>
-								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Python workshop1<i class="mdi-navigation-close right"></i></span>                  <p>
-									conducted on On SEPTEMBER 28, 2015
-
-								</p>
-
-								<p> students attended : 30</p>
-								<p> certificate issued : 30</p>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div></div>
 			<!--Footer-->
 			<footer id="contact" class="page-footer default_color scrollspy">
 				<div class="footer-copyright default_color">
@@ -549,18 +192,27 @@
 				<div class="container">  
 					<div class="row">
 						<div class="col l6 s12">
-							<form class="col s12" action="contact.php" method="post">
+							<form class="col s12" action="contactV2.php" method="post">
 								<div class="row">
 									<div class="input-field col s6">
-										<label for="icon_prefix" class="white-text">Contact Us:</label>
-									</div>
-									<br>
-									<div class="input-field col s6">
-										<label for="icon_email" class="white-text">Email: codestrikehq@gmail.com</label>
+										<i class="mdi-action-account-circle prefix white-text"></i>
+										<input id="icon_prefix" name="name" type="text" class="validate white-text">
+										<label for="icon_prefix" class="white-text">First Name</label>
 									</div>
 									<div class="input-field col s6">
-										<label for="icon_prefix2" class="white-text">Call: +91 9833377596</label>
+										<i class="mdi-communication-email prefix white-text"></i>
+										<input id="icon_email" name="email" type="email" class="validate white-text">
+										<label for="icon_email" class="white-text">Email-id</label>
 									</div>
+									<div class="input-field col s12">
+										<i class="mdi-editor-mode-edit prefix white-text"></i>
+										<textarea id="icon_prefix2" name="message" class="materialize-textarea white-text"></textarea>
+										<label for="icon_prefix2" class="white-text">Message</label>
+									</div>
+									<div class="col offset-s7 s5">
+										<button class="btn waves-effect waves-light red darken-1" type="submit">Submit
+											<i class="mdi-content-send right white-text"></i>
+										</button>
 									</div>
 								</div>
 							</form>
