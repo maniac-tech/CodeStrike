@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 	<meta name="theme-color" content="#2196F3">
 	<title>codestrike</title>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" /> <!--Tab Icon-->
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
 
 	<!-- CSS  -->
 	<link href="min/plugin-min.css" type="text/css" rel="stylesheet">
