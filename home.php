@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 	<meta name="theme-color" content="#2196F3">
 	<title>CodeStrike - Atharva</title>
-
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab icon-->
 	<!-- CSS  -->
 	<link href="min/plugin-min.css" type="text/css" rel="stylesheet">
 	<link href="min/custom-min.css" type="text/css" rel="stylesheet" >
