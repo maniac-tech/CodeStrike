@@ -103,7 +103,7 @@
 				<h2 style="color:#A020F0">Team  </h2>
 				<div class="row">
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/hod.jpg">
 							</div>
@@ -129,7 +129,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/AbhishekJha.jpg">
 							</div>
@@ -156,7 +156,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/PratikDeshpande.jpg">
 							</div>
@@ -183,7 +183,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/AnkitChampaneria.jpg">
 							</div>
@@ -215,7 +215,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/user.png">
 							</div>
@@ -241,7 +241,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/PrashantMahajan.jpg">
 							</div>
@@ -267,7 +267,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/AbhishekJain.jpg">
 							</div>
@@ -293,7 +293,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/KushagrGupta.JPG">
 							</div>
@@ -325,7 +325,7 @@
 			<div class="container">
 				<div class="row">
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/AmrataJoshi.jpg">
 							</div>
@@ -352,7 +352,7 @@
 						</div>
 					</div>
 					<div class="col s12 m3">
-						<div class="card card-avatar">
+						<div class="card card-avatar" style="height:310px;">
 							<div class="waves-effect waves-block waves-light">
 								<img class="activator" src="img/team/RomilDodhiwala.jpg">
 							</div>
@@ -384,14 +384,8 @@
 		<!--float-->
 
 		<form action="team.html" class="inline">
-
-
 			<div class="w3-container">
-
-
 				<button class="w3-btn-block w3-teal">Meet the Prime movers!</button>
-
-
 			</div>
 		</form>
 		<p></p>
