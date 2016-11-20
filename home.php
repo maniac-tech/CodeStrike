@@ -112,7 +112,7 @@
 									<br/>
 								</span>
 								<p>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/mahendra.s.patil.5?fref=ts">
 										<i class="fa fa-facebook-square"></i>
 									</a>
 									<a class="blue-text text-lighten-2" href="">
@@ -279,7 +279,7 @@
 									<a class="blue-text text-lighten-2" href="https://www.facebook.com/Abhishek.Mac.Jain">
 										<i class="fa fa-facebook-square"></i>
 									</a>
-									<a class="blue-text text-lighten-2" href="">
+									<a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/abhishek-jain-086491b8?trk=hp-identity-name">
 										<i class="fa fa-twitter-square"></i>
 									</a>
 									<a class="blue-text text-lighten-2" href="">
@@ -592,7 +592,7 @@
 									</a>
 								</li>
 								<li>
-									<a class="white-text" href="#">
+									<a class="white-text" href="https://github.com/codestrike">
 										<i class="small fa fa-github-square white-text"></i> Github
 									</a>
 								</li>
