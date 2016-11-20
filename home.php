@@ -110,7 +110,6 @@
 							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">Prof. Mahendra Patil
 									<br/>
-									<small><em><a class="red-text text-darken-1" href="#">Faculty Advisor</a></em></small>
 								</span>
 								<p>
 								<a class="blue-text text-lighten-2" href="">
