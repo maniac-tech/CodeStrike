@@ -383,7 +383,7 @@
 
 		<!--float-->
 
-		<form action="team.html" class="inline">
+		<form action="team.php" class="inline">
 			<div class="w3-container">
 				<button class="w3-btn-block w3-teal">Meet the Prime movers!</button>
 			</div>
