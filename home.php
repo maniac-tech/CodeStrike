@@ -409,7 +409,7 @@
 								<span class="card-title activator grey-text text-darken-4">Coding Workshop
 
 									<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#portfolioModal1">More Details</a></p>
+									<p><a href="codingworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Coding workshop<i class="mdi-navigation-close right"></i></span>
@@ -431,7 +431,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">C programming<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
+									<p><a href="cprogramming.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">C programming<i class="mdi-navigation-close right"></i></span>
@@ -452,7 +452,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">GIT Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
+									<p><a href="gitworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">GIT WORKSHOP<i class="mdi-navigation-close right"></i></span>
@@ -495,7 +495,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Arduino workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
+									<p><a href="arduinoworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Arduino workshop<i class="mdi-navigation-close right"></i></span>
@@ -517,7 +517,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Python Workshop<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
+									<p><a href="pythonworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Python workshop1<i class="mdi-navigation-close right"></i></span>                  <p>
