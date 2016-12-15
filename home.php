@@ -112,7 +112,7 @@
 									<br/>
 								</span>
 								<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/mahendra.s.patil.5?fref=ts">
+									<a class="blue-text text-lighten-2" href="https://www.facebook.com/mahendra.s.patil.5?fref=ts">
 										<i class="fa fa-facebook-square"></i>
 									</a>
 									<a class="blue-text text-lighten-2" href="">
@@ -473,7 +473,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Java Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="#">More Details</a></p>
+									<p><a href="javaworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Java Workshop1<i class="mdi-navigation-close right"></i></span>         
@@ -536,8 +536,8 @@
 			
 			<!--Footer-->
 			<?php 
-				require 'footer.php';
-			 ?>
+			require 'footer.php';
+			?>
 
 
 			<!--  Scripts-->
@@ -554,4 +554,4 @@
 			ga('send', 'pageview');
 
 		</script>
-		</html>
+</html>
