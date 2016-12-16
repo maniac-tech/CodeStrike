@@ -409,17 +409,17 @@
 								<span class="card-title activator grey-text text-darken-4">Coding Workshop
 
 									<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="codingworkshop.php">More Details</a></p>
+									<p><a href="codingWorkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Coding workshop<i class="mdi-navigation-close right"></i></span>
+									<span class="card-title grey-text text-darken-4">Coding Workshop<i class="mdi-navigation-close right"></i></span>
 									<p>
-										conducted on On april 1, 2014
+										Conducted on april 1, 2014
 
 									</p>
 
-									<p> students attended : 35</p>
-									<p> certificate issued : 35</p>                 
+									<p> Students attended : 35</p>
+									<p> Certificates issued : 35</p>                 
 								</div>
 							</div>
 						</div>
@@ -430,18 +430,18 @@
 									<img class="activator" src="img/codestrikeLogo.png">
 								</div>
 								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">C programming<i class="mdi-navigation-more-vert right"></i></span>
+									<span class="card-title activator grey-text text-darken-4">C Programming<i class="mdi-navigation-more-vert right"></i></span>
 									<p><a href="cprogramming.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">C programming<i class="mdi-navigation-close right"></i></span>
+									<span class="card-title grey-text text-darken-4">C Programming<i class="mdi-navigation-close right"></i></span>
 									<p>
-										conducted on On September 1, 2014
+										Conducted on September 1, 2014
 
 									</p>
 
-									<p> students attended : 33</p>
-									<p> certificate issued : 33</p>
+									<p> Students attended : 33</p>
+									<p> Certificates issued : 33</p>
 								</div>
 							</div>
 						</div>
@@ -452,17 +452,17 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">GIT Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="gitworkshop.php">More Details</a></p>
+									<p><a href="gitWorkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">GIT WORKSHOP<i class="mdi-navigation-close right"></i></span>
+									<span class="card-title grey-text text-darken-4">GIT Workshop<i class="mdi-navigation-close right"></i></span>
 									<p>
-										conducted on On september 5, 2014
+										Conducted on September 5, 2014
 
 									</p>
 
-									<p> students attended : 34</p>
-									<p> certificate issued : 34</p>
+									<p> Students attended : 34</p>
+									<p> Certificates issued : 34</p>
 								</div>
 							</div>
 						</div>
@@ -473,17 +473,17 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Java Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="javaworkshop.php">More Details</a></p>
+									<p><a href="javaWorkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Java Workshop1<i class="mdi-navigation-close right"></i></span>         
+									<span class="card-title grey-text text-darken-4">Java Workshop<i class="mdi-navigation-close right"></i></span>         
 									<p>
-										conducted on On september 6,2014
+										Conducted on September 6,2014
 
 									</p>
 
-									<p> students attended : 38</p>
-									<p> certificate issued : 38</p>
+									<p> Students attended : 38</p>
+									<p> Certificates issued : 38</p>
 								</div>
 							</div>
 						</div>
@@ -494,18 +494,18 @@
 									<img class="activator" src="img/codestrikeLogo.png">
 								</div>
 								<div class="card-content">
-									<span class="card-title activator grey-text text-darken-4">Arduino workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="arduinoworkshop.php">More Details</a></p>
+									<span class="card-title activator grey-text text-darken-4">Arduino Workshop <i class="mdi-navigation-more-vert right"></i></span>
+									<p><a href="arduinoWorkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Arduino workshop<i class="mdi-navigation-close right"></i></span>
+									<span class="card-title grey-text text-darken-4">Arduino Workshop<i class="mdi-navigation-close right"></i></span>
 									<p>
-										conducted on On september 9, 2015
+										Conducted on September 9, 2015
 
 									</p>
 
-									<p> students attended : 12</p>
-									<p> certificate issued : 12</p>
+									<p> Students attended : 12</p>
+									<p> Certificates issued : 12</p>
 								</div>
 							</div>
 						</div>
@@ -517,16 +517,16 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Python Workshop<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="pythonworkshop.php">More Details</a></p>
+									<p><a href="pythonWorkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
-									<span class="card-title grey-text text-darken-4">Python workshop1<i class="mdi-navigation-close right"></i></span>                  <p>
-									conducted on On SEPTEMBER 28, 2015
+									<span class="card-title grey-text text-darken-4">Python Workshop<i class="mdi-navigation-close right"></i></span>                  <p>
+									Conducted on September 28, 2015
 
 								</p>
 
-								<p> students attended : 30</p>
-								<p> certificate issued : 30</p>
+								<p> Students attended : 30</p>
+								<p> Certificates issued : 30</p>
 							</div>
 						</div>
 					</div>
@@ -554,4 +554,4 @@
 			ga('send', 'pageview');
 
 		</script>
-</html>
+		</html>
