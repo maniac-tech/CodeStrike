@@ -414,7 +414,7 @@
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Coding Workshop<i class="mdi-navigation-close right"></i></span>
 									<p>
-										Conducted on april 1, 2014
+										Conducted on April 1, 2014
 
 									</p>
 
