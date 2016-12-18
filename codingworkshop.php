@@ -5,7 +5,8 @@
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
    <meta name="theme-color" content="#2196F3">
-   <title>Coding workshop by CodeStrike</title>
+   <title>Coding Workshop</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
 
    <!-- CSS  -->
    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
