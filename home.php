@@ -473,7 +473,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Java Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="javaWorkshop.php">More Details</a></p>
+									<p><a href="javaworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Java Workshop<i class="mdi-navigation-close right"></i></span>         
