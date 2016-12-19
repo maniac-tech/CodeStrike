@@ -33,13 +33,13 @@
 					<ul class="right hide-on-med-and-down">
 						<li><a href="#intro">About us</a></li>
 						<li><a href="#team">Team</a></li>
-						<li><a href="#work">Work</a></li>
+						<li><a href="#work">Events</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<ul id="nav-mobile" class="side-nav">
 						<li><a href="#intro">About us</a></li>
 						<li><a href="#work">Work</a></li>
-						<li><a href="#team">Team</a></li>
+						<li><a href="#team">Events</a></li>
 						<li><a href="#contact">Contact</a></li>
 					</ul>
 					<a href="#" data-activates="nav-mobile" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
@@ -100,7 +100,7 @@
 		<!--team-->
 		<div class="section scrollspy" id="team">
 			<div class="container">
-				<h2 style="color:#A020F0">Team  </h2>
+				<h2 style="color:#A020F0">Team</h2>
 				<div class="row">
 					<div class="col s12 m3">
 						<div class="card card-avatar" style="height:310px;">
@@ -382,7 +382,6 @@
 		</div>								
 
 		<!--float-->
-
 		<form action="team.php" class="inline">
 			<div class="w3-container">
 				<button class="w3-btn-block w3-teal">Meet the Prime movers!</button>
@@ -415,11 +414,9 @@
 									<span class="card-title grey-text text-darken-4">Coding Workshop<i class="mdi-navigation-close right"></i></span>
 									<p>
 										Conducted on April 1, 2014
-
 									</p>
-
 									<p> Students attended : 35</p>
-									<p> Certificates issued : 35</p>                 
+									<!-- <p> Certificates issued : 35</p> -->                 
 								</div>
 							</div>
 						</div>
@@ -441,7 +438,7 @@
 									</p>
 
 									<p> Students attended : 33</p>
-									<p> Certificates issued : 33</p>
+									<!-- <p> Certificates issued : 33</p> -->
 								</div>
 							</div>
 						</div>
@@ -462,7 +459,7 @@
 									</p>
 
 									<p> Students attended : 34</p>
-									<p> Certificates issued : 34</p>
+									<!-- <p> Certificates issued : 34</p> -->
 								</div>
 							</div>
 						</div>
@@ -530,15 +527,14 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
-			</div></div>
+			</div>
+		</div>
 			
-			<!--Footer-->
-			<?php 
+		<!--Footer-->
+		<?php 
 			require 'footer.php';
-			?>
-
+		?>
 
 			<!--  Scripts-->
 			<script src="min/plugin-min.js"></script>
