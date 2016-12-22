@@ -24,7 +24,7 @@
 					</div>
 				</form>
 			</div>
-			<div class="col l4 s12">
+			<div class="col l3 s12">
 				<h5 class="white-text">Social</h5>
 				<ul>
 					
@@ -45,10 +45,15 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col l4 s12">
+			<div class="col l3 s12">	
 				<a href="http://www.codechef.com" title="">
-					<img src="codechef logo.png" alt="CodeChef" style="width: 70%;vertical-align: top;">
+					<img src="codechef logo.png" alt="CodeChef" style="width:90%;vertical-align: top;">
 				</a>
+			</div>
+			<div class="col l2 s12">
+					<a href="http://www.atharvacoe.ac.in/" title="">
+						<img src="logo.png" alt="Atharva College of Engg" style="width: 90%;vertical-align: bottom;">
+					</a>
 			</div>
 		</div>
 	</div>
