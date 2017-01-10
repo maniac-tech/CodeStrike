@@ -10,6 +10,10 @@
    <!-- CSS  -->
    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+
+   <!-- NinjaScript Responsive Image Carousel -->
+   <link href="NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="NinjaScript/ninja-slider.js" type="text/javascript"></script>
 </head>
 <body id="top" class="scrollspy">
 
@@ -39,6 +43,32 @@
             <br><br>                    
             All in all it was a successful workshop and credit goes to all team members of organizing team, core team of CodeStrike and Prof. Mahendra Patil.
         </div>
+
+        <!-- Ninja Script JS Code: -->
+        <!--start-->
+        <div id="ninja-slider">
+        <div class="slider-inner">
+            <ul>
+                <li>
+                    <a class="ns-img" href="img/Events/Java/1.jpg"></a>
+                    <div class="caption">@colerise</div>
+                </li>
+                <li><a class="ns-img" href="img/Events/Java/2.jpg"></a>
+                    <div class="caption">@colerise</div>
+                </li>
+                <li>
+                    <a href="/"><img class="ns-img" src="img/Events/Java/3.jpg" style="cursor:pointer;" /></a>
+                    <div class="caption">@colerise</div>
+                </li>
+                <li>
+                    <a class="ns-img" href="img/Events/Java/4.jpg"></a>
+                    <div class="caption">@colerise</div>
+                </li>
+            </ul>
+            <div class="fs-icon" title="Expand/Close"></div>
+        </div>
+        </div>
+        <!--end-->
     </div>                         
 
     <!--Footer-->
