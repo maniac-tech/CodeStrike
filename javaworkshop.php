@@ -47,26 +47,28 @@
         <!-- Ninja Script JS Code: -->
         <!--start-->
         <div id="ninja-slider">
-        <div class="slider-inner">
-            <ul>
-                <li>
-                    <img class="ns-img" src="img/Events/Java/1.jpg"></a>
-                    <div class="caption">@colerise</div>
-                </li>
-                <li><a class="ns-img" href="img/Events/Java/2.jpg"></a>
-                    <div class="caption">@colerise</div>
-                </li>
-                <li>
-                    <a href="/"><img class="ns-img" src="img/Events/Java/3.jpg" style="cursor:pointer;" /></a>
-                    <div class="caption">@colerise</div>
-                </li>
-                <li>
-                    <a class="ns-img" href="img/Events/Java/4.jpg"></a>
-                    <div class="caption">@colerise</div>
-                </li>
-            </ul>
-            <div class="fs-icon" title="Expand/Close"></div>
-        </div>
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/Events/Java/1.jpg"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li><a class="ns-img" href="img/Events/Java/1.jpg"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a href="/"><img class="ns-img" src="img/Events/Java/1.jpg" style="cursor:pointer;" /></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/Events/Java/1.jpg"></a>
+                        <div class="caption cap1">RESPONSIVE</div>
+                        <div class="caption cap1 cap2">TOUCH·FRIENDLY</div>
+                        <div class="caption">@colerise</div>
+                    </li>
+                </ul>
+                <div class="fs-icon" title="Expand/Close"></div>
+            </div>
         </div>
         <!--end-->
     </div>                         
