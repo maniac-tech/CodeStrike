@@ -62,8 +62,6 @@
                     </li>
                     <li>
                         <a class="ns-img" href="img/Events/Java/1.jpg"></a>
-                        <div class="caption cap1">RESPONSIVE</div>
-                        <div class="caption cap1 cap2">TOUCH·FRIENDLY</div>
                         <div class="caption">@colerise</div>
                     </li>
                 </ul>
