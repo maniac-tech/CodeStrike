@@ -53,15 +53,15 @@
                         <a class="ns-img" href="img/Events/Java/1.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="img/Events/Java/2.jpg"></a>
+                    <li><a class="ns-img" href="img/Events/Java/2.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a href="/"><img class="ns-img" src="1.jpg" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="img/Events/Java/3.JPG" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a class="ns-img" href="1.jpg"></a>
+                        <a class="ns-img" href="img/Events/Java/4.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                 </ul>
