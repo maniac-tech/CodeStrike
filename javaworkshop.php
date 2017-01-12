@@ -50,7 +50,7 @@
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="img/Events/Java/1.jpg"></a>
+                        <a class="ns-img" href="img/Events/Java/1.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li><a class="ns-img" href="img/Events/Java/2.jpg"></a>
