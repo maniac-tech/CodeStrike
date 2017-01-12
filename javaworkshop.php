@@ -53,7 +53,7 @@
                         <a class="ns-img" href="img/Events/Java/1.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="1.jpg"></a>
+                    <li><a class="ns-img" href="img/Events/Java/2.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
