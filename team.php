@@ -49,23 +49,288 @@
     </div>
 
     <!--team-->
-    <div class="section scrollspy" id="team">
-        <div class="container">
-            <h2 style="color:#A020F0">Team  </h2>
-            <div class="row">
-                <div >
-                    <div class="card card-avatar">
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">This Page is still under development.
-                                <br/>
-
-                            </span>
+        <div class="section scrollspy" id="team">
+            <div class="container">
+                <h2 style="color:#A020F0">Team</h2>
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/hod.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Prof. Mahendra Patil
+                                    <br/>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/mahendra.s.patil.5?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/AbhishekJha.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Abhishek Jha
+                                    <br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Insert the position here --></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/abhishekshashinath.jha?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/PratikDeshpande.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">
+                                    Pratik Deshpande <br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/pratik.deshpande.169?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/AnkitChampaneria.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Ankit Champaneria<br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/ankitkamleshchampaneria?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>                          
+        <div class="section scrollspy" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/user.png">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Ravi Chandak <br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/ravichandak1996?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/PrashantMahajan.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Prashant Mahajan<br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/Prashantmahajan70?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/AbhishekJain.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Abhishek Jain <br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/Abhishek.Mac.Jain">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/abhishek-jain-086491b8?trk=hp-identity-name">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/KushagrGupta.JPG">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Kushagr Gupta<br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/l33tpl4y4?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section scrollspy" id="team">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/AmrataJoshi.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">
+                                    Amrata Joshi<br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/amrata.joshi.92?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col s12 m3">
+                        <div class="card card-avatar" style="height:310px;">
+                            <div class="waves-effect waves-block waves-light">
+                                <img class="activator" src="img/team/RomilDodhiwala.jpg">
+                            </div>
+                            <div class="card-content">
+                                <span class="card-title activator grey-text text-darken-4">Romil Dodhiwala<br/>
+                                    <small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+                                </span>
+                                <p>
+                                    <a class="blue-text text-lighten-2" href="https://www.facebook.com/romil15?fref=ts">
+                                        <i class="fa fa-facebook-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-google-plus-square"></i>
+                                    </a>
+                                    <a class="blue-text text-lighten-2" href="">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                           
 
     <!--Footer-->
     <?php 
