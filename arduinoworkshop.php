@@ -11,6 +11,10 @@
    <!-- CSS  -->
    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+
+   <!-- NinjaScript Responsive Image Carousel -->
+   <link href="NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="NinjaScript/ninja-slider.js" type="text/javascript"></script>
 </head>
 <body id="top" class="scrollspy">
 
@@ -40,6 +44,31 @@
             <br><br>                    
             All in all it was a successful workshop and credit goes to all team members of organizing team, core team of CodeStrike and Prof. Mahendra Patil. CodeStrike is thankful to Atharva College of Engineering for their full support. As we have received positive and motivational feedback from participants, we are planning to do more such events in future.
         </div>
+        <!-- Ninja Script JS Code: -->
+        <!--start-->
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/Events/Arduino/1.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li><a class="ns-img" href="img/Events/Arduino/2.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a href="/"><img class="ns-img" src="img/Events/Arduino/3.JPG" style="cursor:pointer;" /></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/Events/Arduino/4.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                </ul>
+                <div class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+        <!--end-->
     </div>
     <!--Footer-->
     <?php 
