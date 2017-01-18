@@ -11,6 +11,10 @@
    <!-- CSS  -->
    <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
    <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+
+   <!-- NinjaScript Responsive Image Carousel -->
+   <link href="NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="NinjaScript/ninja-slider.js" type="text/javascript"></script>
 </head>
 <body id="top" class="scrollspy">
 
@@ -45,6 +49,32 @@
                 </div>
             </div>
         </div>
+
+        <!-- Ninja Script JS Code: -->
+        <!--start-->
+        <div id="ninja-slider">
+            <div class="slider-inner">
+                <ul>
+                    <li>
+                        <a class="ns-img" href="img/Events/C Programming/1.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li><a class="ns-img" href="img/Events/C Programming/2.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a href="/"><img class="ns-img" src="img/Events/C Programming/3.JPG" style="cursor:pointer;" /></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="img/Events/C Programming/4.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                </ul>
+                <div class="fs-icon" title="Expand/Close"></div>
+            </div>
+        </div>
+        <!--end-->
     </div>                          
 
     <!--Footer-->
