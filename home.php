@@ -28,8 +28,6 @@
     <?php 
         require 'navigationBar.php'; 
     ?>
-	<iframe src="http://free.timeanddate.com/countdown/i5ke38yq/n44/cf111/cm0/cu4/ct0/cs0/ca0/cr0/ss0/cac000/cpc000/pc000/tc30f/fs100/szw320/szh135/tatTime%20left%20for%20CodeStrike%20interview/tac000/tptTime%20since%20CodeStrike%20interview/tpc000/matAtharva%20College%20Of%20Engineering/mac000/mptAtharva%20College%20Of%20Engineering/mpc000/iso2017-02-16T09:00:00" allowTransparency="true" frameborder="0" width="320" height="135"></iframe>
-
 
 	<!--Hero-->
 	<div class="section no-pad-bot" id="index-banner">
