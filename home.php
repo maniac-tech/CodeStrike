@@ -386,6 +386,29 @@
 								<img class="activator" src="img/codestrikeLogo.png">
 							</div>
 							<div class="card-content">
+								<span class="card-title activator grey-text text-darken-4">Interview 2017
+
+									<i class="mdi-navigation-more-vert right"></i></span>
+									<p><a href="interview2017.php">More Details</a></p>
+								</div>
+								<div class="card-reveal">
+									<span class="card-title grey-text text-darken-4">Interview 2017<i class="mdi-navigation-close right"></i></span>
+									<p>
+										Will be Conducted on 16th February 2017
+									</p>
+									<p> Interested students of ACE register at the below link.
+									Registration link: [Link will be soon available]</p>
+									<!-- <p> Certificates issued : 35</p> -->                 
+								</div>
+							</div>
+						</div>
+					
+						<div class="col s12 m4 l4">
+							<div class="card">
+							<div class="card-image waves-effect waves-block waves-light">
+								<img class="activator" src="img/codestrikeLogo.png">
+							</div>
+							<div class="card-content">
 								<span class="card-title activator grey-text text-darken-4">Coding Workshop
 
 									<i class="mdi-navigation-more-vert right"></i></span>
@@ -401,6 +424,7 @@
 								</div>
 							</div>
 						</div>
+						
 
 						<div class="col s12 m4 l4">
 							<div class="card">
