@@ -1,0 +1,41 @@
+#regTimer{
+	text-align: center;
+	
+  font-family: sans-serif;
+  font-weight: 100;
+}
+
+h1{
+  color: #A020F0;
+  font-weight: 100;
+  font-size: 40px;
+  margin: 40px 0px 20px;
+}
+
+#clockdiv{
+	font-family: sans-serif;
+	color: #fff;
+	display: inline-block;
+	font-weight: 100;
+	text-align: center;
+	font-size: 30px;
+}
+
+#clockdiv > div{
+	padding: 10px;9c27b0 
+	border-radius: 3px;
+	background: #9C27B0;
+	display: inline-block;
+}
+
+#clockdiv div > span{
+	padding: 15px;
+	border-radius: 3px;
+	background: #7B1FA2;
+	display: inline-block;
+}
+
+.smalltext{
+	padding-top: 5px;
+	font-size: 16px;
+}
