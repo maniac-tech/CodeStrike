@@ -368,8 +368,7 @@
 				<button class="w3-btn-block w3-teal">Meet the Prime movers!</button>
 			</div>
 		</form>
-		<p></p>
-
+		
 		<!--Parallax-->
 		<div class="parallax-container">
 			<div class="parallax"><img src="img/2.jpg"></div>
@@ -380,16 +379,17 @@
 			<div class="container">
 				<h2 style="color:#A020F0">Events and Project </h2>
 				<div class="row">
-					<div class="col s12 m4 l4">
-						<div class="card">
-							<div class="card-image waves-effect waves-block waves-light">
-								<img class="activator" src="img/codestrikeLogo.png">
-							</div>
-							<div class="card-content">
-								<span class="card-title activator grey-text text-darken-4">Interview 2017
 
-									<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="interview2017.php">More Details</a></p>
+						<div class="col s12 m4 l4">
+							<div class="card">
+								<div class="card-image waves-effect waves-block waves-light">
+									<img class="activator" src="img/codestrikeLogo.png">
+								</div>
+								<div class="card-content">
+									<span class="card-title activator grey-text text-darken-4">Interview 2017
+
+										<i class="mdi-navigation-more-vert right"></i></span>
+										<p><a href="interview2017.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Interview 2017<i class="mdi-navigation-close right"></i></span>
@@ -397,7 +397,7 @@
 										Will be Conducted on 16th February 2017
 									</p>
 									<p> Interested students of ACE register at the below link.
-									Registration link: [Link will be soon available]</p>
+										Registration link: [Link will be soon available]</p>
 									<!-- <p> Certificates issued : 35</p> -->                 
 								</div>
 							</div>
@@ -425,7 +425,6 @@
 							</div>
 						</div>
 						
-
 						<div class="col s12 m4 l4">
 							<div class="card">
 								<div class="card-image waves-effect waves-block waves-light">
@@ -447,6 +446,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col s12 m4 l4">
 							<div class="card">
 								<div class="card-image waves-effect waves-block waves-light">
@@ -468,6 +468,7 @@
 								</div>
 							</div>
 						</div>
+
 						<div class="col s12 m4 l4">
 							<div class="card">
 								<div class="card-image waves-effect waves-block waves-light">
@@ -503,9 +504,7 @@
 									<span class="card-title grey-text text-darken-4">Arduino Workshop<i class="mdi-navigation-close right"></i></span>
 									<p>
 										Conducted on September 9, 2015
-
 									</p>
-
 									<p> Students attended : 12</p>
 									<p> Certificates issued : 12</p>
 								</div>
@@ -524,15 +523,13 @@
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Python Workshop<i class="mdi-navigation-close right"></i></span>                  <p>
 									Conducted on September 28, 2015
-
 								</p>
-
 								<p> Students attended : 30</p>
 								<p> Certificates issued : 30</p>
 							</div>
 						</div>
-					</div>
 				</div>
+			</div>
 			</div>
 		</div>
 			
@@ -541,18 +538,17 @@
 			require 'footer.php';
 		?>
 
-			<!--  Scripts-->
-			<script src="min/plugin-min.js"></script>
-			<script src="min/custom-min.js"></script>
-		</body>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+		<!--  Scripts-->
+		<script src="min/plugin-min.js"></script>
+		<script src="min/custom-min.js"></script>
+</body>
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-47253454-2', 'auto');
-			ga('send', 'pageview');
-
-		</script>
-		</html>
+		ga('create', 'UA-47253454-2', 'auto');
+		ga('send', 'pageview');
+</script>
+</html>
