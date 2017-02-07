@@ -5,10 +5,10 @@
                     <a href="index.php" id="logo-container" class="brand-logo">CODESTRIKE</a>
 
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="index.php #intro">About us</a></li>
-                        <li><a href="index.php #work">Events</a></li>
-                        <li><a href="index.php #team">Team</a></li>
-                        <li><a href="index.php #contact">Contact</a></li>
+                        <li><a href="index.php">About us</a></li>
+                        <li><a href="index.php">Events</a></li>
+                        <li><a href="index.php">Team</a></li>
+                        <li><a href="index.php">Contact</a></li>
 
                     </ul>
 

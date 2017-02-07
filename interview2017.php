@@ -23,12 +23,11 @@
 
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-
     </div>
 
     <!--Navigation-->
     <?php 
-    require 'navigationBar.php'; 
+      require 'navigationBar.php'; 
     ?>
 
 
