@@ -16,24 +16,23 @@
 		echo "Password:".$password."<br>";
 		//create query
 		$query="SELECT * FROM login WHERE id='$id' AND password='$password'";
-		$result=$conn->query($query);
+		$result=mysqli_query($conn,$query);
 
 		//check the query in the database
-		if ($result){
-			if ($result->num_rows > 0){	
-				//Create session id and store them 
-				session_regenerate_id();
-				$user=$result->fetch_assoc();
+		if (mysqli_num_rows($result) > 0){	
+			//Create session id and store them 
+			session_regenerate_id();
+			$user=$result->fetch_assoc();
 
-				$_SESSION['SESS_MEMBER_ID']=$user['id'];
+			$_SESSION['SESS_MEMBER_ID']=$user['id'];
 				
-				$session_id=$_SESSION['SESS_MEMBER_ID'];
-			}
-			else
-				$console="Failed";
-
-			echo $console;
+			$session_id=$_SESSION['SESS_MEMBER_ID'];
 		}
+		else
+			$console="Failed";
+
+		echo $console;
+		
 	}
  ?>
  <!DOCTYPE html>
