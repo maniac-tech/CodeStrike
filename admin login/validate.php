@@ -7,7 +7,7 @@
 	$session_id='';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		echo "POST METHOD - PASSED";
+		echo "<br> POST METHOD - PASSED <br>";
 		$id=$_POST["loginID"];
 		$password=$_POST["loginPassword"];
 
