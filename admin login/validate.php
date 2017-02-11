@@ -7,32 +7,30 @@
 	$session_id='';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		echo "<br> POST METHOD - PASSED <br>";
-		echo $_POST['emailID']."<br>";
-		$id=$_POST["loginID"];
-		$password=$_POST["loginPassword"];
+		$id=$_POST["emailID"];
+		$password=$_POST["password"];
 
-		echo "ID:".$id."<br>";
-		echo "Password:".$password."<br>";
+		echo $_POST['emailID']."<br>";
 		//create query
 		$query="SELECT * FROM login WHERE id='$id' AND password='$password'";
-		$result=mysqli_query($conn,$query);
+		$result=$conn->query($query);
 
 		//check the query in the database
-		if (mysqli_num_rows($result) > 0){	
-			//Create session id and store them 
-			session_regenerate_id();
-			$user=$result->fetch_assoc();
+		if ($result){
+			if ($result->num_rows > 0){	
+				//Create session id and store them 
+				session_regenerate_id();
+				$user=$result->fetch_assoc();
 
-			$_SESSION['SESS_MEMBER_ID']=$user['id'];
+				$_SESSION['SESS_MEMBER_ID']=$user['id'];
 				
-			$session_id=$_SESSION['SESS_MEMBER_ID'];
-		}
-		else
-			$console="Failed";
+				$session_id=$_SESSION['SESS_MEMBER_ID'];
+			}
+			else
+				$console="Failed";
 
-		echo $console;
-		
+			echo $console;
+		}
 	}
  ?>
  <!DOCTYPE html>
