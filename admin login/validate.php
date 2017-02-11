@@ -8,7 +8,7 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$id=$_POST["loginID"];
-		$password=$_POST["password"];
+		$password=$_POST["loginPassword"];
 
 		echo $id."<br>";
 		echo $password."<br>";
