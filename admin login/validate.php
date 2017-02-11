@@ -10,8 +10,8 @@
 		$id=$_POST["loginID"];
 		$password=$_POST["password"];
 
-		echo $id;
-		echo $password;
+		echo $id."<br>";
+		echo $password."<br>";
 		//create query
 		$query="SELECT * FROM login WHERE id='$id' AND password='$password'";
 		$result=$conn->query($query);
