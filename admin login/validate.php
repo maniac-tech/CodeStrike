@@ -10,7 +10,7 @@
 		echo "<br> POST METHOD - PASSED <br>";
 		$id=$_POST["loginID"];
 		$password=$_POST["loginPassword"];
-
+		$id="garbage value";
 		echo "ID:".$id."<br>";
 		echo "Password:".$password."<br>";
 		//create query
