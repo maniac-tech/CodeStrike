@@ -8,7 +8,7 @@
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		echo "<br> POST METHOD - PASSED <br>";
-		echo $_POST['loginID'];
+		echo $_POST['emailID']."<br>";
 		$id=$_POST["loginID"];
 		$password=$_POST["loginPassword"];
 
