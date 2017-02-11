@@ -7,7 +7,7 @@
 	$session_id='';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		$id=$_POST["emailID"];
+		$id=$_POST["loginID"];
 		$password=$_POST["password"];
 
 		//create query
