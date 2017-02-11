@@ -7,10 +7,13 @@
 	$session_id='';
 
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
-		$id=$_POST["emailID"];
-		$password=$_POST["password"];
+		$id=$_POST["loginID"];
+		$password=$_POST["loginPassword"];
 
 		echo $_POST['emailID']."<br>";
+		echo "ID:".$id."<br>";
+		echo "Password:".$password."<br>";
+
 		//create query
 		$query="SELECT * FROM login WHERE id='$id' AND password='$password'";
 		$result=$conn->query($query);
