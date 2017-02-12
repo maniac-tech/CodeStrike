@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$_SESSION['SESS_MEMBER_ID']=$user['id'];
 			
 			$session_id=$_SESSION['SESS_MEMBER_ID'];
-			$console="DB query: Successful"
+			$console="DB query: Successful";
 		}
 		else
 			$console="Failed";
