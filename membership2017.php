@@ -41,7 +41,7 @@
 			<div class="login-page form">
 				<p><h4 style="color:#A020F0">Sign Up</h2></p>
 				<hr>
-				<form class="login-form" action="commiteeDB.php" method="POST">
+				<form class="login-form" action="membership2017Validate.php" method="POST">
 
 					<p>Full Name:<input type="Text" name="fullName" placeholder="First Name + Last Name" autofocus="true" required></p>
 
