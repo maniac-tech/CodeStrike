@@ -11,11 +11,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$id=$_POST["loginID"];
 	$password=$_POST["loginPassword"];
 
-	echo $_POST['emailID']."<br>";
-	echo "ID:".$id."<br>";
-	echo "Password:".$password."<br>";
-
-			//create query
+	//create query
 	$query="SELECT * FROM login WHERE id='$id' AND password='$password'";
 	$result=$conn->query($query);
 
@@ -29,12 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$_SESSION['SESS_MEMBER_ID']=$user['id'];
 			
 			$session_id=$_SESSION['SESS_MEMBER_ID'];
-			$console="DB query: Successful";
 		}
-		else
-			$console="Failed";
-
-		echo $console;
 	}
 }
 ?>
