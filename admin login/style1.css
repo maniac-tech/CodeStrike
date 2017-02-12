@@ -28,6 +28,9 @@
   padding-left:10;
   box-sizing: border-box;
 }
+.inputDepartment{
+  width:auto;
+}
 .form button {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
