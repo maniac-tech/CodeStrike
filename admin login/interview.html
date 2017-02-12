@@ -1,81 +1,79 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Code Strike Interview</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" type="text/css" href="style_interview.css" media="all" />
-    <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
-</head>
-<body>
-<div class="container">
-			<!-- freshdesignweb top bar -->
-      <div class="freshdesignweb-top">
-                
-               <span class="right">
-                    <a href="http://codestrike.in">
-                        <strong>Code Strike Website</strong>
-                    </a>
-                </span>
-                <div class="clr"></div>
-      </div><!--/ freshdesignweb top bar -->
-			
-      <header>
-				<h1> Code Strike Interview</h1>
-            </header>       
-      
-      <div  class="form">
-    		<form id="contactform" action="http://localhost/interview/registration.php" method="post"> 
-    			<p class="contact"><label for="name">Name</label></p> 
-    			<input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text"> 
-    			 
-    			<p class="contact"><label for="email">Email</label></p> 
-    			<input id="email" name="email" placeholder="example@domain.com" required="" type="email"> 
-                
-                <p class="contact"><label for="branch">Branch</label></p> 
-    			<input id="branch" name="branch" placeholder="example-CMPN" required="" tabindex="2" type="text"> 
-    			 
-                <p class="contact"><label for="year">Year</label></p> 
-    			<input type="year" id="year" placeholder="example-FE" name="year" required="" type="text"> 
-                
-        
-               <fieldset>
-                 <label>Birthday</label>
-                  <label class="month"> 
-                  <select class="select-style" name="BirthMonth">
-                  <option value="">Month</option>
-                  <option  value="01">January</option>
-                  <option value="02">February</option>
-                  <option value="03" >March</option>
-                  <option value="04">April</option>
-                  <option value="05">May</option>
-                  <option value="06">June</option>
-                  <option value="07">July</option>
-                  <option value="08">August</option>
-                  <option value="09">September</option>
-                  <option value="10">October</option>
-                  <option value="11">November</option>
-                  <option value="12" >December</option>
-                  </label>
-                 </select>    
-                <label>Day<input class="birthday" maxlength="2" name="BirthDay"  placeholder="Day" required=""></label>
-                <label>Year <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label>
-              </fieldset>
-  
-            <select class="select-style gender" name="gender">
-	            <option value="select">i am..</option>
-	            <option value="m">Male</option>
-	            <option value="f">Female</option>
-	            <option value="others">Other</option>
-            </select><br><br>
-            
-            <p class="contact"><label for="phone">Mobile phone</label></p> 
-            <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
-            <input class="buttom" name="submit" id="submit" tabindex="12" value="Begin Test" type="submit" style="margin-left: 33%">   
-        </form> 
-      </div>      
-</div>
+  <script src="js/jquery.min.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="theme-color" content="#2196F3">
+  <title>Commitee Registration</title>
 
+  <!-- CSS  -->
+  <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
+  <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<body id="top" class="scrollspy">
+  <!-- Pre Loader -->
+  <div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+
+  <!--Navigation-->
+  <?php 
+  require 'navigationBar.php'; 
+  ?>
+  
+
+  <!-- Registration Form -->
+  <div class="section scrollspy" id="team">
+    <center>
+      <h2 style="color:#A020F0">Interview 2017</h2>
+      <div class="login-page">
+        <div class="form">
+          <p>Sign Up</p>
+          <hr>
+          <form class="login-form" action="commiteeDB.php" method="POST">
+
+            <p>Full Name:<input type="Text" name="fullName" placeholder="First Name + Last Name" autofocus="true" required></p>
+
+            <p>Email ID:<input type="email" name="emailID" placeholder="abc@xyz.com" required></p>
+
+            <p>Mobile No:<input type="tel" name="mobileNo" placeholder="98xxxxxxxx" required></p>
+
+            <p>
+              Department:<input type="radio" name="department" value="CMPN">Computer
+              <input type="radio" name="department" value="IT">IT
+              <input type="radio" name="department" value="EXTC">EXTC
+              <input type="radio" name="department" value="Electronics">Electronics
+              <input type="radio" name="department" value="Electrical">Electrical
+            </select></p>
+
+            <p>
+              Year:<input type="radio" name="yar" value="FE">FE
+              <input type="radio" name="yar" value="SE">SE
+              <input type="radio" name="yar" value="TE">TE
+              <input type="radio" name="yar" value="BE">BE
+            </p>
+            
+            <P> 
+              Year of Joining:<select name="yearOfJoining" >
+              <option value="2014">2014</option>
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+            </select></p>
+
+            <button type="submit">Register</button> 
+          </form>
+        </div>
+      </div>
+    </center>
+  </div>
+  <!--Footer-->
+  <?php 
+  require 'footer.php';
+  ?>
 </body>
 </html>
