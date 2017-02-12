@@ -92,7 +92,7 @@
 
           <p class="contact"><label for="phone">Mobile phone</label></p> 
           <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
-          <input class="buttom" name="submit" id="submit" tabindex="12" value="Begin Test" type="submit" style="margin-left: 33%">   
+          <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
         </form> 
       </div>
 
