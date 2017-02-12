@@ -74,7 +74,7 @@ var deadline = 'December 31 2017';
 
 */
 //set the dead line time here
-var deadline = 'February 16 2017 09:00:00 GMT+0530';
+var deadline = 'February 13 2017 18:00:00 GMT+0530';
 
 //initialize function
 initializeClock('clockdiv', deadline);
