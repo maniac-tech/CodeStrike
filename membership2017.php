@@ -10,7 +10,7 @@
 	<!-- CSS  -->
 	<link href="min/plugin-min.css" type="text/css" rel="stylesheet">
 	<link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="stylesheet" type="text/css" href="style_membership2017.css">
 </head>
 <body id="top" class="scrollspy">
 	<!-- Pre Loader -->
