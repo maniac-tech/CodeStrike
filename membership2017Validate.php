@@ -13,10 +13,10 @@
  		$result=$conn->query($query);
 
  		if($result){
- 			echo"Reg done";
+ 			header("location:RegComplete.html");
  		}
  		else{
- 			echo "Reg failed";
+ 			header("location:RegFailed.html");
  		}
  	}
  ?>
