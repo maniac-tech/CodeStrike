@@ -13,5 +13,5 @@
 		die('Connection failed:'.mysqli_connect_error());
 	}
 	else
-		echo "Connection established <br>";
+		echo "Database Connection has been established <br>";
  ?>
