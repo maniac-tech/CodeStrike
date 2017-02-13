@@ -7,7 +7,7 @@
  		$name=$_POST["name"];
  		$emailID=$_POST["email"];
  		$mobileNo=$_POST["phone"];
- 		$branch=$_POST["branch"];
+ 		$branch=$_POST["stream"];
  		$year=$_POST["year"];
 
 

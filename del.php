@@ -50,7 +50,7 @@
           <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
 
           <p class="contact"><label for="branch">Branch</label></p> 
-          <input type="text" name="branch" required="TRUE">
+          <input type="text" name="stream" required="TRUE">
           
           <p class="contact"><label for="year">Year</label></p> 
           <input type="year" id="year" placeholder="example-FE" name="year" required="" type="text"> 
