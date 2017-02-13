@@ -11,7 +11,7 @@
  		$year=$_POST["year"];
 
 
- 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo) VALUES ('$name','$emailID','$mobileNo')";
+ 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo,Branch,Year) VALUES ('$name','$emailID','$mobileNo','$branch','$year')";
 
  		$result=$conn->query($query);
 
