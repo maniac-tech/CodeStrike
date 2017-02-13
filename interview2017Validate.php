@@ -12,7 +12,7 @@
  		$uid=uniqid('',true);
  		echo $uid;
 
- 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo,Branch,Year,UniqueID) VALUES ('$name','$emailID','$mobileNo','$branch','$year','$uid')";
+ 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo,Branch,Year,UniqueID,Status) VALUES ('$name','$emailID','$mobileNo','$branch','$year','$uid','1')";
 
  		$result=$conn->query($query);
 
