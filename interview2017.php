@@ -37,7 +37,7 @@
             <div id="regTimer">
                 
             
-            <h1>Time left for Registrations</h1>
+            <h1>Time left to Register</h1>
             <div id="clockdiv">
               <div>
                 <span class="days"></span>
