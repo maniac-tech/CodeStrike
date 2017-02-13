@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	<p><h1><u>Registration 2017 Database</u></h1></p>
 	
 	<p>
-		Below is the table of registered students, apart from the starting few entries all the data has been injected.
+		Below is the table of registered students, apart from the starting few entries all the data has been <u>injected</u>.
 		<p>
 		<table>
 			<?php 
