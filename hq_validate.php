@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$password=$_POST["loginPassword"];
 
 	//create query
-	$query="SELECT * FROM login WHERE id='$id' AND password='$password'";
+	$query="SELECT * FROM Members2017 WHERE EmailID='$id' AND MobileNo='$password'";
 	$result=$conn->query($query);
 
 			//check the query in the database
