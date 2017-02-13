@@ -4,9 +4,9 @@
  	$regStatus="";
 
  	if ($_SERVER["REQUEST_METHOD"]=="POST"){
- 		$name=$_POST["fullName"];
- 		$emailID=$_POST["emailID"];
- 		$mobileNo=$_POST["mobileNo"];
+ 		$name=$_POST["name"];
+ 		$emailID=$_POST["email"];
+ 		$mobileNo=$_POST["phone"];
 
  		$query="INSERT INTO Members2017 (Name,EmailID,MobileNo) VALUES ('$name','$emailID','$mobileNo')";
 
