@@ -35,14 +35,15 @@
   <div class="section scrollspy" id="team">
     <div class="container">
       <h2 style="color:#A020F0">Interview 2017</h2>
-      <p>"HELLO WORLD!" Codestrike is looking for enthusiastic students who wish to fluorish in the tech field and meet like minded people along the way! 
+      <p>
+        "HELLO WORLD!" Codestrike is looking for enthusiastic students who wish to fluorish in the tech field and meet like minded people along the way!
+        <br> 
         Have a chance to come across endless opportunities to learn/teach the most amazing tech stuff and brag about it in front of your friends! With the help of rock solid support of the best atharva seniors explore the tech world, you can learn things which are not in the curriculum but useful. The community conducts several meet ups in a month where members hangout and share about the stuff they learned. The recruitment process is fairly simple and there are no pre requisites to join codestrike. Register now and have a shot to be one of the skilled engineers you dreamed of.
       </p>
-      <a href="del.php" title="">
-        Register Here</a>
-      </div>
+      <center><a href="del.php" title="">Register Here</a></center>
     </div>
   </div>
+</div>
 </div>
 </div>
 </div>                          
