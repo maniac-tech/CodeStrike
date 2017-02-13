@@ -8,7 +8,7 @@
  		$emailID=$_POST["email"];
  		$mobileNo=$_POST["phone"];
 
- 		$query="INSERT INTO Members2017 (Name,EmailID,MobileNo) VALUES ('$name','$emailID','$mobileNo')";
+ 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo) VALUES ('$name','$emailID','$mobileNo')";
 
  		$result=$conn->query($query);
 
