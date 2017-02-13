@@ -4,12 +4,12 @@ namespace SendGrid;
 require __DIR__ . '<PATH_TO>/vendor/autoload.php';
 function helloEmail()
 {
-    $from = new Email(null, "test@example.com");
+    $from = new Email(null, "codestrikehq@gmail.com");
     $subject = "Hello World from the SendGrid PHP Library";
-    $to = new Email(null, "test@example.com");
+    $to = new Email(null, "maniac.develops@gmail.com");
     $content = new Content("text/plain", "some text here");
     $mail = new Mail($from, $subject, $to, $content);
-    $to = new Email(null, "test2@example.com");
+    $to = new Email(null, "maniac.develops@gmail.com");
     $mail->personalization[0]->addTo($to);
     //echo json_encode($mail, JSON_PRETTY_PRINT), "\n";
     return $mail;
