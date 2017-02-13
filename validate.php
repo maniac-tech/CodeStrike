@@ -1,6 +1,8 @@
 <?php
 	//include database config file 
 include('connect.php');
+require_once('interview2017Connect.php');
+
 session_start();
 
 $id="0";
@@ -36,19 +38,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	<title>Test</title>
 </head>
 <body>
-	<p><h1>After-Login Page</h1></p>
-	<p>Below is a detailed suammary of the connection.</p>
+	<p><h1>CodeStrike-HQ</h1></p>
+	<p><h1><u>Registration 2017 Database</u></h1></p>
 	
 	<p>
-		Your Credentials:<br>
-		Your username is <?php echo $session_id;?>	
+		Below is the table of registered students, apart from the starting few entries all the data has been injected.
+		<p>
+			<?php 
+			$query="SELECT Name FROM Interview2017";
+			$result=$conn->query($query);
 
-		<hr>
-		The interview page will be shown here after successful implementation.
-		<br>
-		<a href="adminValid.php">Move to another page</a>	
-		<br>
-		Click here to <a href="logout.php">logout</a>	
+			if ($result->num_rows > 0){
+				while ($row=$result->fetch_assoc()){
+					echo "<tr><td>".$row["Name"]."</td></tr>";
+				}
+			}
+			else
+				echo "No Results";
+			?>
+			
+		</p>
 	</p>
 </body>
 </html>
