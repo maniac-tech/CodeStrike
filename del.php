@@ -42,7 +42,7 @@
       <div  class="form">
       <center><p>Sign Up</p></center>
       <hr>
-        <form id="contactform" action="http://localhost/interview/registration.php" method="post"> 
+        <form id="contactform" action="interview2017Validate.php" method="post"> 
           <p class="contact"><label for="name">Name</label></p> 
           <input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text"> 
 
