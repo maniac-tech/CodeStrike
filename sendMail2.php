@@ -1,7 +1,7 @@
 <?php
 namespace SendGrid;
 // If you are using Composer
-require __DIR__ . '<PATH_TO>/vendor/autoload.php';
+require 'vendor/autoload.php';
 function helloEmail()
 {
     $from = new Email(null, "codestrikehq@gmail.com");
