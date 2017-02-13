@@ -1,6 +1,6 @@
 <?php
 	//include database config file 
-include('connect.php');
+include('hq_connect.php');
 require_once('interview2017Connect.php');
 
 session_start();
