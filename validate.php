@@ -39,6 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 <body>
 	<p><h1>CodeStrike-HQ</h1></p>
+	<a href="logout.php" title="">Logout</a>
 	<p><h1><u>Registration 2017 Database</u></h1></p>
 	
 	<p>
