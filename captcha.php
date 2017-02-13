@@ -32,5 +32,5 @@
   // display image and clean up
   header('Content-type: image/png');
   imagepng($image);
-  imagedestroy($image);
+  //imagedestroy($image);
 ?>
