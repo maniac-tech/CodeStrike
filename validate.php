@@ -44,6 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	<p>
 		Below is the table of registered students, apart from the starting few entries all the data has been injected.
 		<p>
+		<table>
 			<?php 
 			$query="SELECT Name FROM Interview2017";
 			$result=$conn->query($query);
@@ -56,8 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			else
 				echo "No Results";
 			?>
-			
-		</p>
+		</table>
+		</p>	
 	</p>
 </body>
 </html>
