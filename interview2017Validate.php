@@ -7,6 +7,9 @@
  		$name=$_POST["name"];
  		$emailID=$_POST["email"];
  		$mobileNo=$_POST["phone"];
+ 		$branch=$_POST["branch"];
+ 		$year=$_POST["year"];
+
 
  		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo) VALUES ('$name','$emailID','$mobileNo')";
 
