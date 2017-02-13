@@ -44,17 +44,13 @@
       <hr>
         <form id="contactform" action="interview2017Validate.php" method="post"> 
           <p class="contact"><label for="name">Name</label></p> 
-          <input id="name" name="name" placeholder="First and last name" required="" tabindex="1" type="text"> 
+          <input id="name" name="name" placeholder="First and last name" required="True" tabindex="1" type="text"> 
 
           <p class="contact"><label for="email">Email</label></p> 
-          <input id="email" name="email" placeholder="example@domain.com" required="" type="email"> 
+          <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
 
           <p class="contact"><label for="branch">Branch</label></p> 
-          <input id="branch" name="branch" required="" tabindex="2" type="radio" group="branch">CMPN 
-          <input id="branch" name="branch" required="" tabindex="2" type="radio" group="branch">IT
-          <input id="branch" name="branch" required="" tabindex="2" type="radio" group="branch">ELEX 
-          <input id="branch" name="branch" required="" tabindex="2" type="radio" group="branch">ELEC
-          <input id="branch" name="branch" required="" tabindex="2" type="radio" group="branch">EXTC 
+          <input type="text" name="branch" required="TRUE">
           
           <p class="contact"><label for="year">Year</label></p> 
           <input type="year" id="year" placeholder="example-FE" name="year" required="" type="text"> 
