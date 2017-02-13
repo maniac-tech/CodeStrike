@@ -55,30 +55,6 @@
           <p class="contact"><label for="year">Year</label></p> 
           <input type="year" id="year" placeholder="example-FE" name="year" required="" type="text"> 
 
-
-          <fieldset>
-            <label>Birthday</label>
-            <label class="month"> 
-              <select class="select-style" name="BirthMonth">
-                <option value="">Month</option>
-                <option  value="01">January</option>
-                <option value="02">February</option>
-                <option value="03" >March</option>
-                <option value="04">April</option>
-                <option value="05">May</option>
-                <option value="06">June</option>
-                <option value="07">July</option>
-                <option value="08">August</option>
-                <option value="09">September</option>
-                <option value="10">October</option>
-                <option value="11">November</option>
-                <option value="12" >December</option>
-              </select>    
-            </label>
-            <label>Day<input class="birthday" maxlength="2" name="BirthDay"  placeholder="Day" required=""></label>
-            <label>Year <input class="birthyear" maxlength="4" name="BirthYear" placeholder="Year" required=""></label>
-          </fieldset>
-
           <select class="select-style gender" name="gender">
             <option value="select">i am..</option>
             <option value="m">Male</option>

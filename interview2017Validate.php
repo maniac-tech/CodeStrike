@@ -9,9 +9,10 @@
  		$mobileNo=$_POST["phone"];
  		$branch=$_POST["stream"];
  		$year=$_POST["year"];
+ 		$uid=uniqid('',true);
+ 		echo $uid;
 
-
- 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo,Branch,Year) VALUES ('$name','$emailID','$mobileNo','$branch','$year')";
+ 		$query="INSERT INTO  Interview2017(Name,EmailID,MobileNo,Branch,Year,UniqueID) VALUES ('$name','$emailID','$mobileNo','$branch','$year',$uid)";
 
  		$result=$conn->query($query);
 
