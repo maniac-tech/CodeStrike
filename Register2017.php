@@ -17,6 +17,9 @@
   <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
  <!-- Timer -->
  <link rel="stylesheet" href="styleTimer.css"> 
+
+ <script src='https://www.google.com/recaptcha/api.js'></script>
+
 </head>
 <body id="top" class="scrollspy">
 
@@ -64,9 +67,7 @@
 
           <p class="contact"><label for="phone">Mobile phone</label></p> 
           <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
-          <p><img src="captcha.php" width="120" height="30" border="1" alt="CAPTCHA"></p>
-          <p><input type="text" size="6" maxlength="5" name="captcha" value=""><br>
-          	<small>copy the digits from the image into this box</small></p>
+          <span><div class="g-recaptcha" name="g-recaptcha-response" data-sitekey="6LeshBUUAAAAAOkHIrxVe2QetErIbIq2Bc5RQPxl"></div></span>
 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
         </form> 
@@ -84,8 +85,6 @@
   <!--  Scripts-->
   <script src="min/plugin-min.js"></script>
   <script src="min/custom-min.js"></script>
-
-
 
 </body>
 </html>
