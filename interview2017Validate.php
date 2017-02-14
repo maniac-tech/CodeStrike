@@ -1,4 +1,3 @@
-
 <?php 
 
 require_once('interview2017Connect.php');
@@ -14,12 +13,7 @@ $request = file_get_contents("https://www.google.com/recaptcha/api/siteverify?se
 
 echo "Before captcha if loop";
 
-if(!strstr($request, "true")){
-	session_destroy();
-}
 
-else{
-	echo "Entered echo session in captcha else";
     //if($_POST['captcha'] != $_SESSION['digit']) die("Sorry, the CAPTCHA code entered was incorrect!");
 
     //session_destroy();
@@ -42,7 +36,6 @@ else{
 		else{
 			header("location:RegFailed.html");
 		}
-	}
 }
 
 ?>
