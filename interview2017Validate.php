@@ -3,8 +3,23 @@
  	
  	$regStatus="";
  	session_start();
-    if($_POST['captcha'] != $_SESSION['digit']) die("Sorry, the CAPTCHA code entered was incorrect!");
-    session_destroy();
+
+
+
+ 	$captcha=$_POST['g-recaptcha-response'];
+ 	$secretKey = "6LeshBUUAAAAAC7SiwFP0M1cW-OfVqxXHza0rXmc";
+    $request = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}&remoteip={$userIP}");
+
+    if(!strstr($request, "true")){
+       
+        session_destroy();
+    }
+    else{
+        
+    
+
+    //if($_POST['captcha'] != $_SESSION['digit']) die("Sorry, the CAPTCHA code entered was incorrect!");
+    //session_destroy();
 
  	if ($_SERVER["REQUEST_METHOD"]=="POST"){
  		$name=$_POST["name"];
@@ -26,4 +41,5 @@
  			header("location:RegFailed.html");
  		}
  	}
+    }
  ?>
