@@ -208,27 +208,28 @@
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[2]; ?>
+      <?php echo $question[2]; $_SESSION["q2"]=$question[2];?>
 
       <p>
+      <input class="with-gap" type="radio" name="option2" id="test5" value="<?php echo $answer[5]; ?>"/>
         <label for="test5"><?php echo $answer[5]; ?></label>
       </p>
       <p>
-        <input class="with-gap" name="option2" type="radio" id="test6">
+        <input class="with-gap" name="option2" type="radio" id="test6" value="<?php echo $answer[6]; ?>"/>
         <label for="test6"><?php echo $answer[6]; ?></label>
       </p>
       <p>
-        <input class="with-gap" name="option2" type="radio" id="test7"  />
+        <input class="with-gap" name="option2" type="radio" id="test7" value="<?php echo $answer[7]; ?>"  />
         <label for="test7"><?php echo $answer[7]; ?></label>
       </p>
       <p>
-        <input class="with-gap" name="option2" type="radio" id="test8"  />
+        <input class="with-gap" name="option2" type="radio" id="test8" value="<?php echo $answer[8]; ?>"  />
         <label for="test8"><?php echo $answer[8]; ?></label>
       </p>
     </div>
     <?php $_SESSION["answer1"]="ANSWER"; ?>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[3]; ?>
+      <?php echo $question[3];$_SESSION["q3"]=$question[3]; ?>
 
       <p>
         <input class="with-gap" name="group1" type="radio" id="test9"  />
@@ -248,7 +249,7 @@
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[4]; ?>
+      <?php echo $question[4];$_SESSION["q4"]=$question[4]; ?>
       <div class="col s12">
         <div class="row">
           <div class="input-field col s12">
@@ -259,7 +260,7 @@
       </div>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-     <?php echo $question[5]; ?>
+     <?php echo $question[5]; $_SESSION["q5"]=$question[5];?>
       <div class="col s12">
         <div class="row">
           <div class="input-field col s12">
