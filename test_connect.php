@@ -15,4 +15,5 @@
 	else{
 		echo "test_connect: Connection Successful <br>";
 	}
+	echo "tes_connect ended";
  ?>

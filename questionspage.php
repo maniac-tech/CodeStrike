@@ -5,8 +5,6 @@
  </head>
   <body>
     <script type="text/javascript">
-
-
       var s=59
       var m=14
       var q
@@ -16,7 +14,7 @@
         s=s-1
         q=setTimeout("quizCount()", 1000)
         if (s<0)
-          { m=m-1; s=59;}
+          m=m-1; s=59;
 
         if (m<0)
         {
@@ -24,25 +22,24 @@
         }
       }
       window.onload = quizCount;
+      
       function quizStop()
       {
         clearTimeout(q)
         document.getElementById('timer').value="Time Over!"
         box();
       }
+
       function box()
       {
         alert('Your Response has been recorded. Thank You!');
         document.getElementById("myForm").submit();
       }
 
-
-
-
       function textAreaAdjust(o) {
        o.style.height = "1px";
        o.style.height = (25+o.scrollHeight)+"px";
-     }
+      }
     </script>
   <dl>
     <?php
@@ -61,7 +58,8 @@
          $uid[] = $row["uid"];
        }
       }
-     for ($i=1; $i <=3; $i++) { 
+      
+      for ($i=1; $i <=3; $i++) { 
         $num = rand( 1, 14 );
         if ($uid[$num-1] == 0) {
          if (check($array, $num)) {
@@ -73,9 +71,9 @@
         $row = mysqli_fetch_assoc($query);
         $question[$i] = $row["question"];
         $array[$i] = $num;
+        }
       }
-
-      }
+      
       for ($i=4; $i <=5; $i++) { 
           $num = rand( 16, 24 );
           if ($uid[$num-1] == 1) {
@@ -89,8 +87,8 @@
           $question[$i] = $row["question"];
           $array[$i] = $num;
         }
+      }
 
-        }
       $k = 1;
       for ($j=1; $j <4 ; $j++) { 
         $num = $array[$j]*4;
@@ -112,10 +110,10 @@
          if($array[$i] == $num)
          {
           return true;
-        } 
+          } 
+        }
       }
-
-      }
+      
     ?>
   </dl>
 <style>
