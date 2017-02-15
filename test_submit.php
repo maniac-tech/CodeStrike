@@ -4,7 +4,7 @@
 	
 	// Question1
 	echo "Question is : <br>".$_SESSION["q1"]."<br>";
-	echo "Answer is ".$_POST["option1"]." ".$_SESSION["answer1"]."<br>";
+	echo "Answer is ".$_POST["option1"]."<br>";
 
 	//Question2
 	echo "Question is : <br>".$_SESSION["q2"]."<br>";
