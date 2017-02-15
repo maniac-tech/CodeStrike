@@ -186,9 +186,9 @@
 
 
 
-  <form action="test_connect.php" method="post" id = "myForm">
+  <form action="test_submit.php" method="post" id = "myForm">
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[1]; ?>
+      <input type="text" name="q1"><?php echo $question[1]; ?></input>
 
       <p>
         <input class="with-gap" name="option1" type="radio" id="test1" />
@@ -208,7 +208,7 @@
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[2]; ?>
+      <input type="text" name="q2"><?php echo $question[2]; ?>
 
       <p>
         <input class="with-gap" name="option2" type="radio" id="test5">
