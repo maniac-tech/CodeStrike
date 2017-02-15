@@ -226,6 +226,7 @@
         <label for="test8"><?php echo $answer[8]; ?></label>
       </p>
     </div>
+    <?php $_SESSION["answer1"]; ?>
     <div class="content row cover z-depth-5 blue lighten-5">
       <?php echo $question[3]; ?>
 
