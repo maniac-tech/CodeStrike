@@ -421,7 +421,7 @@
 										Will be Conducted on 16th February 2017
 									</p>
 									<p> Interested students of ACE register at the below link.
-										Registration link: [Link will be soon available]</p>
+										Registration link: <a href="Register2017.php" title="">Register Here</a></p>
 									<!-- <p> Certificates issued : 35</p> -->                 
 								</div>
 							</div>
