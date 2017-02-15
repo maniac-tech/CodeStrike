@@ -192,19 +192,19 @@
 
       <p>
         <input class="with-gap" name="option1" type="radio" id="test1" value="<?php echo $answer[1]; ?>" />
-        <!-- <label for="test1"></label> -->
+        <label for="test1"><?php echo $answer[1] ?></label>
       </p>
       <p>
         <input class="with-gap" name="option1" type="radio" id="test2" value="<?php echo $answer[2]; ?>" />
-        <!-- <label for="test2"></label> -->
+        <label for="test2"><?php echo $answer[2] ?></label>
       </p>
       <p>
         <input class="with-gap" name="option1" type="radio" id="test3" value="<?php echo $answer[3]; ?>" />
-        <!-- <label for="test3"></label> -->
+        <label for="test3"><?php echo $answer[3] ?></label>
       </p>
       <p>
         <input class="with-gap" name="option1" type="radio" id="test4" value="<?php echo $answer[4]; ?>" />
-        <!-- <label for="test4"></label> -->
+        <label for="test4"><?php echo $answer[4] ?></label>
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
