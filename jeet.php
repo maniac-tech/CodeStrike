@@ -11,39 +11,39 @@
 
 <body>
   <style>
-    .cover{
-      background: rgba(255, 255, 255, 0.8);
-      padding: 20px;
+      .cover{
+        background: rgba(255, 255, 255, 0.8);
+        padding: 20px;
 
-    }
-
-
-    .content {
-      width: 900px;
-    }
-
-    body {
-      background: url("http://www.ridgeviewacademy.com/content/uploads/2016/10/minutes.jpg") no-repeat center center fixed;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-    }
+      }
 
 
-    input[type=button] {
-     padding:23px 30px; 
-     background-color: red;
-     color: white; 
-     border:0 none;
-     cursor:pointer;
-     border-radius: 0px;
-     float: right;
-     width: 170px;
-     opacity:1; 
+      .content {
+        width: 900px;
+      }
 
-   }
- </style>
+      body {
+        background: url("http://www.ridgeviewacademy.com/content/uploads/2016/10/minutes.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+
+
+      input[type=button] {
+       padding:23px 30px; 
+       background-color: red;
+       color: white; 
+       border:0 none;
+       cursor:pointer;
+       border-radius: 0px;
+       float: right;
+       width: 170px;
+       opacity:1; 
+
+     }
+  </style>
 
   <div class="navbar-fixed ">
     <nav>
@@ -54,159 +54,155 @@
       </div>
     </nav>
   </div>
-<dl>
-  <?php
-  session_start();
-  $question = $_SESSION['question'];
-  $answer = $_SESSION['answer'];
-  ?>
-</dl>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'></script>
 
-<script type="text/javascript">
+  <dl>
+    <?php
+    session_start();
+    $question = $_SESSION['question'];
+    $answer = $_SESSION['answer'];
+    ?>
+  </dl>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'></script>
+
+  <script type="text/javascript">
 
 
-  var s=59
-  var m=14
-  var q
-  function quizCount()
-  {
-    document.getElementById('timer').value=m+":"+s+" remaining"
-    s=s-1
-    q=setTimeout("quizCount()", 1000)
-    if (s<0)
-      { m=m-1; s=59;}
-
-    if (m<0)
+    var s=59
+    var m=14
+    var q
+    function quizCount()
     {
-      quizStop();
+      document.getElementById('timer').value=m+":"+s+" remaining"
+      s=s-1
+      q=setTimeout("quizCount()", 1000)
+      if (s<0)
+        { m=m-1; s=59;}
+
+      if (m<0)
+      {
+        quizStop();
+      }
     }
-  }
-  window.onload = quizCount;
-  function quizStop()
-  {
-    clearTimeout(q)
-    document.getElementById('timer').value="Time Over!"
-    box();
-  }
-  function box()
-  {
-    alert('Your Response has been recorded. Thank You!');
-    document.getElementById("myForm").submit();
-  }
-  
-  
-  
-  
-  function textAreaAdjust(o) {
-   o.style.height = "1px";
-   o.style.height = (25+o.scrollHeight)+"px";
- }
-</script>
-<!--div class="content row cover z-depth-5 center">
-<h1>CODESTRIKE</h1> <h3>INTERVIEW Q&A</h3>
-</div-->
+    window.onload = quizCount;
+    function quizStop()
+    {
+      clearTimeout(q)
+      document.getElementById('timer').value="Time Over!"
+      box();
+    }
+    function box()
+    {
+      alert('Your Response has been recorded. Thank You!');
+      document.getElementById("myForm").submit();
+    }
+    
+    
+    
+    
+    function textAreaAdjust(o) {
+     o.style.height = "1px";
+     o.style.height = (25+o.scrollHeight)+"px";
+   }
+  </script>
+  <!--div class="content row cover z-depth-5 center">
+  <h1>CODESTRIKE</h1> <h3>INTERVIEW Q&A</h3>
+  </div-->
 
 
 
-<form action="test_connect.php" method="post" id = "myForm">
-  <div class="content row cover z-depth-5 blue lighten-5">
-    <?php echo $question[1]; ?>
+  <form action="test_connect.php" method="post" id = "myForm">
+    <div class="content row cover z-depth-5 blue lighten-5">
+      <?php echo $question[1]; ?>
 
-    <p>
-      <input class="with-gap" name="option1" type="radio" id="test1" />
-      <label for="test1"><?php echo $answer[1]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="option1" type="radio" id="test2"  />
-      <label for="test2"><?php echo $answer[2]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="option1" type="radio" id="test3"  />
-      <label for="test3"><?php echo $answer[3]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="option1" type="radio" id="test4"  />
-      <label for="test4"><?php echo $answer[4]; ?></label>
-    </p>
+      <p>
+        <input class="with-gap" name="option1" type="radio" id="test1" />
+        <label for="test1"><?php echo $answer[1]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="option1" type="radio" id="test2"  />
+        <label for="test2"><?php echo $answer[2]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="option1" type="radio" id="test3"  />
+        <label for="test3"><?php echo $answer[3]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="option1" type="radio" id="test4"  />
+        <label for="test4"><?php echo $answer[4]; ?></label>
+      </p>
+    </div>
+    <div class="content row cover z-depth-5 blue lighten-5">
+      <?php echo $question[2]; ?>
 
+      <p>
+        <input class="with-gap" name="option2" type="radio" id="test5">
+        <label for="test5"><?php echo $answer[5]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="option2" type="radio" id="test6">
+        <label for="test6"><?php echo $answer[6]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="option2" type="radio" id="test7"  />
+        <label for="test7"><?php echo $answer[7]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="option2" type="radio" id="test8"  />
+        <label for="test8"><?php echo $answer[8]; ?></label>
+      </p>
+    </div>
+    <div class="content row cover z-depth-5 blue lighten-5">
+      <?php echo $question[3]; ?>
 
-
-  </div>
-  <div class="content row cover z-depth-5 blue lighten-5">
-    <?php echo $question[2]; ?>
-
-    <p>
-      <input class="with-gap" name="option2" type="radio" id="test5">
-      <label for="test5"><?php echo $answer[5]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="option2" type="radio" id="test6">
-      <label for="test6"><?php echo $answer[6]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="option2" type="radio" id="test7"  />
-      <label for="test7"><?php echo $answer[7]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="option2" type="radio" id="test8"  />
-      <label for="test8"><?php echo $answer[8]; ?></label>
-    </p>
-
-  </div>
-  <div class="content row cover z-depth-5 blue lighten-5">
-    <?php echo $question[3]; ?>
-
-    <p>
-      <input class="with-gap" name="group1" type="radio" id="test9"  />
-      <label for="test9"><?php echo $answer[9]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="group1" type="radio" id="test10"  />
-      <label for="test10"><?php echo $answer[10]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="group1" type="radio" id="test11"  />
-      <label for="test11"><?php echo $answer[11]; ?></label>
-    </p>
-    <p>
-      <input class="with-gap" name="group1" type="radio" id="test12"  />
-      <label for="test12"><?php echo $answer[12]; ?></label>
-    </p>
-
-  </div>
-  <div class="content row cover z-depth-5 blue lighten-5">
-    <?php echo $question[4]; ?>
-    <div class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea name="answer1" id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1"></label>
+      <p>
+        <input class="with-gap" name="group1" type="radio" id="test9"  />
+        <label for="test9"><?php echo $answer[9]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="group1" type="radio" id="test10"  />
+        <label for="test10"><?php echo $answer[10]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="group1" type="radio" id="test11"  />
+        <label for="test11"><?php echo $answer[11]; ?></label>
+      </p>
+      <p>
+        <input class="with-gap" name="group1" type="radio" id="test12"  />
+        <label for="test12"><?php echo $answer[12]; ?></label>
+      </p>
+    </div>
+    <div class="content row cover z-depth-5 blue lighten-5">
+      <?php echo $question[4]; ?>
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea name="answer1" id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1"></label>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="content row cover z-depth-5 blue lighten-5">
-   <?php echo $question[5]; ?>
-   <div class="col s12">
-    <div class="row">
-      <div class="input-field col s12">
-        <textarea name="answer2" id="textarea1" class="materialize-textarea"></textarea>
-        <label for="textarea1"></label>
+    <div class="content row cover z-depth-5 blue lighten-5">
+     <?php echo $question[5]; ?>
+      <div class="col s12">
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea name="answer2" id="textarea1" class="materialize-textarea"></textarea>
+            <label for="textarea1"></label>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-<div class="content row center">
-  <button class="btn waves-effect waves-light" type="submit" name="action" onclick="box()">Submit
-    <i class="material-icons right">send</i>
-  </button>
-</div>
-</form>
+    <div class="content row center">
+      <button class="btn waves-effect waves-light" type="submit" name="action" onclick="box()">Submit
+        <i class="material-icons right">send</i>
+      </button>
+    </div>
+  </form>
 
-
-<footer class="page-footer blue lighten-1">
+  <footer class="page-footer blue lighten-1">
   <div class="container">
     <div class="row">
       <div class="col l6 s12">
@@ -227,11 +223,7 @@
       <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
     </div>
   </div>
-</footer>
-
-
-
-
+  </footer>
 
 </body>
 </html>
