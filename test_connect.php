@@ -12,8 +12,8 @@
 	if (!$conn){
 		die('test_connect Connection failed:'.mysqli_connect_error());
 	}
-	else{
-		echo "test_connect: Connection Successful <br>";
-	}
-	echo "tes_connect ended";
+	// else{
+	// 	echo "test_connect: Connection Successful <br>";
+	// }
+	// echo "tes_connect ended";
  ?>
