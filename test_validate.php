@@ -1,5 +1,6 @@
 <?php
 	//include database config file 
+	echo "test_validate: begun <br>";
 include('test_connect.php');
 require_once('interview2017Connect.php');
 
@@ -9,6 +10,7 @@ $id="0";
 $console='';
 $session_id='';
 
+echo "test_validate before if loop <br>";
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$id=$_POST["loginID"];
 	$password=$_POST["loginPassword"];

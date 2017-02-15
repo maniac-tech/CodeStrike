@@ -13,6 +13,6 @@
 		die('interview2017 Connection failed:'.mysqli_connect_error());
 	}
 	else{
-		echo "interview2017: Connection Successful";
+		echo "interview2017: Connection Successful <br>";
 	}
  ?>

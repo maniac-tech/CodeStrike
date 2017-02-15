@@ -13,6 +13,6 @@
 		die('test_connect Connection failed:'.mysqli_connect_error());
 	}
 	else{
-		echo "test_connect: Connection Successful";
+		echo "test_connect: Connection Successful <br>";
 	}
  ?>
