@@ -232,19 +232,19 @@
       <?php echo $question[3];$_SESSION["q3"]="Question3 session set"; ?>
 
       <p>
-        <input class="with-gap" name="group1" type="radio" id="test9"  />
+        <input class="with-gap" name="group1" type="radio" id="test9"  value="<?php echo $answer[9];?>"/>
         <label for="test9"><?php echo $answer[9]; ?></label>
       </p>
       <p>
-        <input class="with-gap" name="group1" type="radio" id="test10"  />
+        <input class="with-gap" name="group1" type="radio" id="test10"  value="<?php echo $answer[10];?>"/>
         <label for="test10"><?php echo $answer[10]; ?></label>
       </p>
       <p>
-        <input class="with-gap" name="group1" type="radio" id="test11"  />
+        <input class="with-gap" name="group1" type="radio" id="test11"  value="<?php echo $answer[11];?>"/>
         <label for="test11"><?php echo $answer[11]; ?></label>
       </p>
       <p>
-        <input class="with-gap" name="group1" type="radio" id="test12"  />
+        <input class="with-gap" name="group1" type="radio" id="test12"  value="<?php echo $answer[12];?>"/>
         <label for="test12"><?php echo $answer[12]; ?></label>
       </p>
     </div>
