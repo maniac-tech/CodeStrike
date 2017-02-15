@@ -4,31 +4,31 @@
    <title>CodeStrike Interview Test</title>
  </head>
   <body>
-    <!-- <script type="text/javascript">
-      var s=59
-      var m=14
-      var q
-      function quizCount()
-      {
-        document.getElementById("timer").value=m+":"+s+" remaining"
-        s=s-1
-        q=setTimeout("quizCount()", 1000)
-        if (s<0)
-          m=m-1; s=59;
+    <script type="text/javascript">
+      // var s=59
+      // var m=14
+      // var q
+      // function quizCount()
+      // {
+      //   document.getElementById("timer").value=m+":"+s+" remaining"
+      //   s=s-1
+      //   q=setTimeout("quizCount()", 1000)
+      //   if (s<0)
+      //     m=m-1; s=59;
 
-        if (m<0)
-        {
-          quizStop();
-        }
-      }
-      window.onload = quizCount;
+      //   if (m<0)
+      //   {
+      //     quizStop();
+      //   }
+      // }
+      // window.onload = quizCount;
       
-      function quizStop()
-      {
-        clearTimeout(q)
-        document.getElementById('timer').value="Time Over!"
-        box();
-      }
+      // function quizStop()
+      // {
+      //   clearTimeout(q)
+      //   document.getElementById('timer').value="Time Over!"
+      //   box();
+      // }
 
       function box()
       {
@@ -40,7 +40,7 @@
        o.style.height = "1px";
        o.style.height = (25+o.scrollHeight)+"px";
       }
-    </script> -->
+    </script>
   <dl>
     <?php
       require_once 'test_connect.php';
