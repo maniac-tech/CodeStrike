@@ -188,7 +188,7 @@
 
   <form action="test_submit.php" method="post" id = "myForm">
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[1]; $_SESSION["q1"]=$question1;?>
+      <?php echo $question[1]; $_SESSION["q1"]=$question[1];?>
 
       <p>
         <input class="with-gap" name="option1" type="radio" id="test1" />
