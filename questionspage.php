@@ -4,7 +4,7 @@
    <title>CodeStrike Interview Test</title>
  </head>
   <body>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       var s=59
       var m=14
       var q
@@ -40,7 +40,7 @@
        o.style.height = "1px";
        o.style.height = (25+o.scrollHeight)+"px";
       }
-    </script>
+    </script> -->
   <dl>
     <?php
       require_once 'test_connect.php';
@@ -191,7 +191,7 @@
 </style>
 
 <div class="header">CodeStrike Interview Test</div>
-<input class="sticky" type="button" value="15:00 remaining" id="timer">
+<!-- <input class="sticky" type="button" value="15:00 remaining" id="timer"> -->
 
 <div class="questions" id ='divs'>
   <form action="http://localhost/interview/send.php" method="post" id = "myForm">
