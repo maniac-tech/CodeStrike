@@ -188,7 +188,7 @@
 
   <form action="test_submit.php" method="post" id = "myForm">
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[1]; $_SESSION["q1"]=$question[1];?>
+      <?php echo $question[1]; $_SESSION["q1"]="Question 1 session set";?>
 
       <p>
         <input class="with-gap" name="option1" type="radio" id="test1" value="<?php echo $answer[1]; ?>" />
@@ -208,7 +208,7 @@
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[2]; $_SESSION["q2"]=$question[2];?>
+      <?php echo $question[2]; $_SESSION["q2"]="Question 2 session set";?>
 
       <p>
       <input class="with-gap" type="radio" name="option2" id="test5" value="<?php echo $answer[5]; ?>"/>
@@ -229,7 +229,7 @@
     </div>
     <?php $_SESSION["answer1"]="ANSWER"; ?>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[3];$_SESSION["q3"]=$question[3]; ?>
+      <?php echo $question[3];$_SESSION["q3"]="Question3 session set"; ?>
 
       <p>
         <input class="with-gap" name="group1" type="radio" id="test9"  />
@@ -249,7 +249,7 @@
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <?php echo $question[4];$_SESSION["q4"]=$question[4]; ?>
+      <?php echo $question[4];$_SESSION["q4"]="Question 4 Session Set"; ?>
       <div class="col s12">
         <div class="row">
           <div class="input-field col s12">
@@ -260,7 +260,7 @@
       </div>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-     <?php echo $question[5]; $_SESSION["q5"]=$question[5];?>
+     <?php echo $question[5]; $_SESSION["q5"]="Question 5 session set";?>
       <div class="col s12">
         <div class="row">
           <div class="input-field col s12">
