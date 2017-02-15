@@ -21,5 +21,13 @@
 	echo "Question is : ".$_SESSION["q5"]."<br>";
 	echo "Answer is ".$_POST["answer2"]."<br>";
 
-	// $query = "INSERT INTO Results2017 (Name, Year, Stream, Q1, A1, Q3, A3, Q4, A4, Q5, A5) VALUES ()";
+	$query = "INSERT INTO Results2017 (Name, Year, Stream, Q1, A1, Q3, A3, Q4, A4, Q5, A5) VALUES ('$_SESSION["q1"]','$_POST["option1"]','$_SESSION["q2"]','$_POST["option2"]','$_SESSION["q3"]','$_POST["group1"]','$_SESSION["q4"]','$_POST["answer1"]','$_SESSION["q5"]','$_POST["answer2"]')";
+
+	$result=$conn->query($query);
+	if ($result){
+		echo "Hello";
+	}
+	else{
+		echo "Bye";
+	}
  ?>
