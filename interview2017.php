@@ -42,6 +42,7 @@
       </p>
       <center>
             <a href="Register2017.php" title="">Register Here</a>
+            <br>
             <a href="test2017.php" title="">Login here</a>
             </center>
     </div>
