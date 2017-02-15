@@ -39,6 +39,6 @@
 		echo "Hello";
 	}
 	else{
-		echo mysqli_error();
+		echo $conn->error;
 	}
  ?>
