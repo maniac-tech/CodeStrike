@@ -63,7 +63,7 @@
     // $answer = $_SESSION['answer'];
 
     //Below code has been copied from Burhan's snippet: 
-    require_once 'connect.php';
+    require_once 'test_connect.php';
     $db = new connect();
     $conn = $db->connection();
     session_start();
