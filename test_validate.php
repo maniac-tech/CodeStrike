@@ -16,7 +16,7 @@
 		$password=$_POST["loginPassword"];
 
 		//create query
-		$query="SELECT * FROM Members2017 WHERE EmailID='$id' AND MobileNo='$password'";
+		$query="SELECT * FROM Interview2017 WHERE EmailID='$id' AND MobileNo='$password'";
 		$result=$conn->query($query);
 
 				//check the query in the database
