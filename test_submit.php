@@ -39,6 +39,6 @@
 		echo "Hello";
 	}
 	else{
-		echo "Bye";
+		echo mysqli_error();
 	}
  ?>
