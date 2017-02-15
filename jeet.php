@@ -188,7 +188,7 @@
 
   <form action="test_submit.php" method="post" id = "myForm">
     <div class="content row cover z-depth-5 blue lighten-5">
-      <input type="text" name="q1"><?php echo $question[1]; ?></input>
+      <?php echo $question[1]; $_SESSION["q1"]=$question1;?>
 
       <p>
         <input class="with-gap" name="option1" type="radio" id="test1" />
@@ -208,10 +208,9 @@
       </p>
     </div>
     <div class="content row cover z-depth-5 blue lighten-5">
-      <input type="text" name="q2"><?php echo $question[2]; ?>
+      <?php echo $question[2]; ?>
 
       <p>
-        <input class="with-gap" name="option2" type="radio" id="test5">
         <label for="test5"><?php echo $answer[5]; ?></label>
       </p>
       <p>
