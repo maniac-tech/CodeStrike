@@ -10,7 +10,7 @@
       var q
       function quizCount()
       {
-        document.getElementById('timer').value=m+":"+s+" remaining"
+        document.getElementById("timer").value=m+":"+s+" remaining"
         s=s-1
         q=setTimeout("quizCount()", 1000)
         if (s<0)
