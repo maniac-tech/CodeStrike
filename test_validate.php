@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$_SESSION['SESS_MEMBER_ID']=$user['id'];
 			
 			$session_id=$_SESSION['SESS_MEMBER_ID'];
-			header('location:questionspage.php')
+			header('location:questionspage.php');
 		}
 	}
 }
