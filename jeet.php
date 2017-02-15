@@ -4,96 +4,91 @@
   <meta charset="UTF-8">
   <title>CodeStrike Interview 2017</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css'>
-
-      
-
 </head>
 
 <body>
-<style>
-.cover{
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
-  
-}
+  <style>
+    .cover{
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+
+    }
 
 
-.content {
-  width: 900px;
-}
+    .content {
+      width: 900px;
+    }
 
-body {
-  background: url("http://www.ridgeviewacademy.com/content/uploads/2016/10/minutes.jpg") no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
-
-input[type=button] {
-   padding:23px 30px; 
-   background-color: red;
-   color: white; 
-   border:0 none;
-   cursor:pointer;
-   border-radius: 0px;
-  float: right;
-  width: 170px;
-  opacity:1; 
-  
-  }
-  </style>
+    body {
+      background: url("http://www.ridgeviewacademy.com/content/uploads/2016/10/minutes.jpg") no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+    }
 
 
+    input[type=button] {
+     padding:23px 30px; 
+     background-color: red;
+     color: white; 
+     border:0 none;
+     cursor:pointer;
+     border-radius: 0px;
+     float: right;
+     width: 170px;
+     opacity:1; 
+
+   }
+ </style>
 
   <div class="navbar-fixed ">
     <nav>
       <div class="nav-wrapper blue lighten-1">
         <a href="#!" class="brand-logo center">CodeStrike Interview Q&A</a>
         <input class="sticky" type="button" value="15:00 remaining" id="timer">
-        
+
       </div>
     </nav>
   </div>
-  <dl>
+<dl>
   <?php
   session_start();
-   $question = $_SESSION['question'];
-   $answer = $_SESSION['answer'];
-   ?>
-  </dl>
-   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+  $question = $_SESSION['question'];
+  $answer = $_SESSION['answer'];
+  ?>
+</dl>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js'></script>
 
-    <script type="text/javascript">
-  
-  
+<script type="text/javascript">
+
+
   var s=59
   var m=14
   var q
   function quizCount()
   {
-  document.getElementById('timer').value=m+":"+s+" remaining"
-  s=s-1
-  q=setTimeout("quizCount()", 1000)
-  if (s<0)
-  { m=m-1; s=59;}
-  
-  if (m<0)
-  {
-  quizStop();
-  }
+    document.getElementById('timer').value=m+":"+s+" remaining"
+    s=s-1
+    q=setTimeout("quizCount()", 1000)
+    if (s<0)
+      { m=m-1; s=59;}
+
+    if (m<0)
+    {
+      quizStop();
+    }
   }
   window.onload = quizCount;
   function quizStop()
   {
-  clearTimeout(q)
-  document.getElementById('timer').value="Time Over!"
-  box();
+    clearTimeout(q)
+    document.getElementById('timer').value="Time Over!"
+    box();
   }
   function box()
   {
@@ -107,18 +102,18 @@ input[type=button] {
   function textAreaAdjust(o) {
    o.style.height = "1px";
    o.style.height = (25+o.scrollHeight)+"px";
-  }
-  </script>
+ }
+</script>
 <!--div class="content row cover z-depth-5 center">
 <h1>CODESTRIKE</h1> <h3>INTERVIEW Q&A</h3>
 </div-->
 
 
 
-  <form action="http://localhost/interview/send.php" method="post" id = "myForm">
-<div class="content row cover z-depth-5 blue lighten-5">
-  <?php echo $question[1]; ?>
-  
+<form action="test_connect.php" method="post" id = "myForm">
+  <div class="content row cover z-depth-5 blue lighten-5">
+    <?php echo $question[1]; ?>
+
     <p>
       <input class="with-gap" name="option1" type="radio" id="test1" />
       <label for="test1"><?php echo $answer[1]; ?></label>
@@ -137,11 +132,11 @@ input[type=button] {
     </p>
 
 
-  
-</div>
-<div class="content row cover z-depth-5 blue lighten-5">
-  <?php echo $question[2]; ?>
-  
+
+  </div>
+  <div class="content row cover z-depth-5 blue lighten-5">
+    <?php echo $question[2]; ?>
+
     <p>
       <input class="with-gap" name="option2" type="radio" id="test5">
       <label for="test5"><?php echo $answer[5]; ?></label>
@@ -158,11 +153,11 @@ input[type=button] {
       <input class="with-gap" name="option2" type="radio" id="test8"  />
       <label for="test8"><?php echo $answer[8]; ?></label>
     </p>
-  
-</div>
-<div class="content row cover z-depth-5 blue lighten-5">
-  <?php echo $question[3]; ?>
-  
+
+  </div>
+  <div class="content row cover z-depth-5 blue lighten-5">
+    <?php echo $question[3]; ?>
+
     <p>
       <input class="with-gap" name="group1" type="radio" id="test9"  />
       <label for="test9"><?php echo $answer[9]; ?></label>
@@ -179,11 +174,11 @@ input[type=button] {
       <input class="with-gap" name="group1" type="radio" id="test12"  />
       <label for="test12"><?php echo $answer[12]; ?></label>
     </p>
-  
-</div>
-<div class="content row cover z-depth-5 blue lighten-5">
-  <?php echo $question[4]; ?>
-  <div class="col s12">
+
+  </div>
+  <div class="content row cover z-depth-5 blue lighten-5">
+    <?php echo $question[4]; ?>
+    <div class="col s12">
       <div class="row">
         <div class="input-field col s12">
           <textarea name="answer1" id="textarea1" class="materialize-textarea"></textarea>
@@ -191,17 +186,17 @@ input[type=button] {
         </div>
       </div>
     </div>
-</div>
-<div class="content row cover z-depth-5 blue lighten-5">
+  </div>
+  <div class="content row cover z-depth-5 blue lighten-5">
    <?php echo $question[5]; ?>
-  <div class="col s12">
-      <div class="row">
-        <div class="input-field col s12">
-          <textarea name="answer2" id="textarea1" class="materialize-textarea"></textarea>
-          <label for="textarea1"></label>
-        </div>
+   <div class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <textarea name="answer2" id="textarea1" class="materialize-textarea"></textarea>
+        <label for="textarea1"></label>
       </div>
     </div>
+  </div>
 </div>
 <div class="content row center">
   <button class="btn waves-effect waves-light" type="submit" name="action" onclick="box()">Submit
@@ -212,31 +207,31 @@ input[type=button] {
 
 
 <footer class="page-footer blue lighten-1">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">CodeStrike</h5>
-                <p class="grey-text text-lighten-4">Atharva College Malad (W)</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <!--h5 class="white-text">Links</h5-->
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">CodeStrike Home</a></li>                
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2014 Copyright Text
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+  <div class="container">
+    <div class="row">
+      <div class="col l6 s12">
+        <h5 class="white-text">CodeStrike</h5>
+        <p class="grey-text text-lighten-4">Atharva College Malad (W)</p>
+      </div>
+      <div class="col l4 offset-l2 s12">
+        <!--h5 class="white-text">Links</h5-->
+        <ul>
+          <li><a class="grey-text text-lighten-3" href="#!">CodeStrike Home</a></li>                
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <div class="container">
+      © 2014 Copyright Text
+      <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+    </div>
+  </div>
+</footer>
 
 
-  
- 
+
+
 
 </body>
 </html>
