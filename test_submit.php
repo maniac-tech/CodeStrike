@@ -1,4 +1,5 @@
-<?php 
+<?php
+	session_start(); 
 	require('test_connect.php');
-	echo "YOLO";
+	echo $_SESSION["q1"];
  ?>
