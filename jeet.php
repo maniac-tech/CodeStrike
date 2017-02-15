@@ -64,8 +64,8 @@
 
     //Below code has been copied from Burhan's snippet: 
     require_once 'test_connect.php';
-    $db = new connect();
-    $conn = $db->connection();
+    // $db = new connect();
+    // $conn = $db->connection();
     session_start();
     $array =  array('0' => 0);
     $question = array();
