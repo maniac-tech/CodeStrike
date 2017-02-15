@@ -20,7 +20,7 @@
 	echo "Answer is ".$ra2."<br>";
 	
 	//Question3
-	echo "Question is : ".$rq3."<br>";
+	echo "Question is : ".$_SESSION["q3"]."<br>";
 	echo "Answer is ".$ra3."<br>";
 
 	//Question4
