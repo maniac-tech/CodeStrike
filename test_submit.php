@@ -1,5 +1,5 @@
 <?php
 	session_start(); 
 	require('test_connect.php');
-	echo $_SESSION["q1"];
+	echo "Question is : <br>".$_SESSION["q1"]."<br>";
  ?>
