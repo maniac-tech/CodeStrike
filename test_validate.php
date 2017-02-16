@@ -14,7 +14,8 @@
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$id=$_POST["loginID"];
 		$password=$_POST["loginPassword"];
-
+	
+		echo "Test after if loop";
 		//create query
 		$query="SELECT * FROM Interview2017 WHERE EmailID='$id' AND MobileNo='$password'";
 		$result=$conn->query($query);
