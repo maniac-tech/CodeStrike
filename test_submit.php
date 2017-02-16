@@ -38,6 +38,11 @@
 	$result=$conn->query($query);
 	if ($result){
 		
+	
+	}
+	else{
+		echo $conn->error;
+	}
 	ob_start(); // ensures anything dumped out will be caught
 	            // do stuff here
 	             $url = 'http://www.codestrike.in/interview2017.php'; // this can be set based on whatever
@@ -50,8 +55,4 @@
 
 	            // no redirect
 	            header( "Location: $url" );
-	}
-	else{
-		echo $conn->error;
-	}
  ?>
