@@ -6,10 +6,6 @@
 	require_once('interview2017Connect.php');
 	echo "test_validate: begun <br>";
 
-	$id="0";
-	$console='';
-	$session_id='';
-
 	echo "test_validate before if loop <br>";
 	if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$id=$_POST["loginID"];
@@ -27,10 +23,8 @@
 						//Create session id and store them 
 				session_regenerate_id();
 				$user=$result->fetch_assoc();
-
-				$_SESSION['SESS_MEMBER_ID']=$user['id'];
-				
-				$session_id=$_SESSION['SESS_MEMBER_ID'];
+				$_SESSION['user']=$id;
+				$_SESSION['user']=$password;
 				header('location:jeet.php');
 			}
 			else
