@@ -1,4 +1,5 @@
 <?php
+	include ('test_validate.php');
 	session_start(); 
 	require('test_connect.php');
 	
@@ -20,7 +21,7 @@
 	// //Question5
 	// echo "Question is : ".$_SESSION["q5"]."<br>";
 	// echo "Answer is ".$_POST["answer2"]."<br>";
-
+	
 	$rq1=$_SESSION["q1"];
 	$rq2=$_SESSION["q2"];
 	$rq3=$_SESSION["q3"];
@@ -32,7 +33,7 @@
 	$ra4=$_POST["answer1"];
 	$ra5=$_POST["answer2"];
 
-	$query = "INSERT INTO Results2017 (Q1, A1, Q2, A2, Q3, A3, Q4, A4, Q5, A5) VALUES (\"'$rq1'\",\"'$ra1'\",\"'$rq2'\",\"'$ra2'\",\"'$rq3'\",\"'$ra3'\",\"'$rq4',\"'$ra4'\",\"'$rq5'\",\"'$ra5'\")";
+	$query = "INSERT INTO Results2017 (Name, EmailID, MobileNo) VALUES ('Abhishek', 'Jain', '9876543211')";
 	echo $query;
 
 	$result=$conn->query($query);
