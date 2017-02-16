@@ -33,6 +33,8 @@
 				$session_id=$_SESSION['SESS_MEMBER_ID'];
 				header('location:jeet.php');
 			}
+			else
+				echo "Result IN failed";
 		}
 		else
 			echo "Result failed";
