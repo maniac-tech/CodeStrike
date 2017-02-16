@@ -24,7 +24,7 @@
 				session_regenerate_id();
 				$user=$result->fetch_assoc();
 				$_SESSION['user']=$id;
-				$_SESSION['user']=$password;
+				$_SESSION['pass']=$password;
 				header('location:jeet.php');
 			}
 			else
