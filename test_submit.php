@@ -53,16 +53,16 @@
 	else{
 		echo $conn->error;
 	}
-// 	ob_start(); // ensures anything dumped out will be caught
-// 	            // do stuff here
-// 	             $url = 'http://www.codestrike.in/interview2017.php'; // this can be set based on whatever
+	ob_start(); // ensures anything dumped out will be caught
+	            // do stuff here
+	             $url = 'http://www.codestrike.in/interview2017.php'; // this can be set based on whatever
 
-// 	            // clear out the output buffer
-// 	            while (ob_get_status()) 
-// 	            {
-// 	                ob_end_clean();
-// 	            }
+	            // clear out the output buffer
+	            while (ob_get_status()) 
+	            {
+	                ob_end_clean();
+	            }
 
-// 	            // no redirect
-// 	            header( "Location: $url" );
+	            // no redirect
+	            header( "Location: $url" );
  ?>
