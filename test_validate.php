@@ -19,7 +19,7 @@
 		//create query
 		$query="SELECT * FROM Interview2017 WHERE EmailID='$id' AND MobileNo='$password'";
 		$result=$conn->query($query);
-
+		echo "<br>".$id."     ".$password."<br>";
 				//check the query in the database
 		if ($result){
 			echo "Result IN";
