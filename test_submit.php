@@ -38,8 +38,7 @@
 
 	$result=$conn->query($query);
 	if ($result){
-		
-	
+		echo "Query Fired!!";
 	}
 	else{
 		echo $conn->error;
