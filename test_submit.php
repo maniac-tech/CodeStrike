@@ -33,7 +33,7 @@
 	$ra4=$_POST["answer1"];
 	$ra5=$_POST["answer2"];
 
-	$query = "INSERT INTO Results2017 (Name, EmailID, MobileNo) VALUES ('Abhishek', 'Jain', '9876543211')";
+	$query = "INSERT INTO Results2017 (Name, Year, Stream) VALUES ('Abhishek', 'Jain', '9876543211')";
 	echo $query;
 
 	$result=$conn->query($query);
