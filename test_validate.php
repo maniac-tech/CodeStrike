@@ -22,6 +22,7 @@
 
 				//check the query in the database
 		if ($result){
+			echo "Result IN";
 			if ($result->num_rows > 0){	
 						//Create session id and store them 
 				session_regenerate_id();
@@ -33,5 +34,7 @@
 				header('location:jeet.php');
 			}
 		}
+		else
+			echo "Result failed";
 	}
 ?>
