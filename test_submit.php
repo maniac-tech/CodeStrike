@@ -32,11 +32,23 @@
 	$ra4=$_POST["answer1"];
 	$ra5=$_POST["answer2"];
 
-	$query = "INSERT INTO Results2017 (Q1, A1, Q2, A2,Q3, A3, Q4, A4, Q5, A5) VALUES ('$rq1','$rq2','$rq3','$rq4','$rq5','$ra1','$ra2','$ra3','$ra4','$ra5')";
+	$query = "INSERT INTO Results2017 (Q1, A1, Q2, A2,Q3, A3, Q4, A4, Q5, A5) VALUES (\"'$rq1'\",\"'$rq2'\",\"'$rq3'\",\"'$rq4'\",\"'$rq5'\",\"'$ra1',\"'$ra2',\"'$ra3'\",\"'$ra4'\",\"'$ra5'\")";
 
 	$result=$conn->query($query);
 	if ($result){
-		echo "Hello";
+		
+	ob_start(); // ensures anything dumped out will be caught
+	            // do stuff here
+	             $url = 'http://www.codestrike.in/interview2017.php'; // this can be set based on whatever
+
+	            // clear out the output buffer
+	            while (ob_get_status()) 
+	            {
+	                ob_end_clean();
+	            }
+
+	            // no redirect
+	            header( "Location: $url" );
 	}
 	else{
 		echo $conn->error;
