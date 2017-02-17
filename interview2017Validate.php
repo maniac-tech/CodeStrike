@@ -8,7 +8,6 @@ $regStatus="";
 
 session_start();
 $captcha=$_POST['g-recaptcha-response'];
-$secretKey = "6LeshBUUAAAAAC7SiwFP0M1cW-OfVqxXHza0rXmc";
 $request = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$secretKey}&response={$recaptchaResponse}&remoteip={$userIP}");
 
 echo "Before captcha if loop";
