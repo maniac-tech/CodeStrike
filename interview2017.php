@@ -100,7 +100,7 @@
 							<td>CMPN</td>
 						</tr>
 						<tr>
-							<td>Rushikesh</td>
+							<td>Rushikesh Nanaware</td>
 							<td>FE</td>
 							<td>INFT</td>
 						</tr>
