@@ -144,6 +144,21 @@
 							<td>FE</td>
 							<td>ELEX</td>
 						</tr>
+						<tr>
+							<td>Shubham Vengulekar</td>
+							<td>SE</td>
+							<td>CMPN</td>
+						</tr>
+						<tr>
+							<td>Nishant Ghanate</td>
+							<td>SE</td>
+							<td>CMPN</td>
+						</tr>
+						<tr>
+							<td>Utsav</td>
+							<td>SE</td>
+							<td>CMPN</td>
+						</tr>
 					</tbody>
 					</table>
 				</center>
