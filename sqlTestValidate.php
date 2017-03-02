@@ -5,25 +5,30 @@ $servername=getenv('DATABASE_SERVER_NAME');
 	$tableName=getenv('DATABASE_TABLE_MEMBERS');
 	$username=getenv('DATABASE_USERNAME');
 	$password=getenv('DATABASE_PASSWORD'
-$mysqli = new mysqli($servername, $username, $password, 'sqlTest');
+
+$link = mysqli_connect($servername, $username, $password, $databaseName);
 
 /* check connection */
-if (mysqli_connect_errno()) {
+if (!$link) {
     printf("Connect failed: %s\n", mysqli_connect_error());
     exit();
 }
 
-$stmt = $mysqli->prepare("INSERT INTO sqlTest VALUES (?, ?)");
-$stmt->bind_param('ss', $code, $language);
+$stmt = mysqli_prepare($link, "INSERT INTO sqlTest VALUES (?, ?)");
+mysqli_stmt_bind_param($stmt, 'ss', $code, $language);
 
 $code = 'DEU';
 $language = 'Bavarian';
 
 
 /* execute prepared statement */
-$stmt->execute();
+mysqli_stmt_execute($stmt);
 
-printf("%d Row inserted.\n", $stmt->affected_rows);
+printf("%d Row inserted.\n", mysqli_stmt_affected_rows($stmt));
 
 /* close statement and connection */
-$stmt->close();
+mysqli_stmt_close($stmt);
+
+/* close connection */
+mysqli_close($link);
+?>
