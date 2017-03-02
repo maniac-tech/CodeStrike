@@ -43,7 +43,7 @@
 				<hr>
 				<form class="login-form" action="sqlTestValidate.php" method="POST">
 
-					<p>Full Name:<input type="Text" pattern='[a-zA-Z\\s ]*' name="fullName"  placeholder="First Name + Last Name" autofocus="true" required></p>
+					<p>Full Name:<input type="Text" pattern="[a-zA-Z]+[ ][a-zA-Z]+" name="fullName"  placeholder="First Name + Last Name" autofocus="true" required></p>
 
 					<p>Email ID:<input type="email" name="emailID" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="abc@xyz.com" required></p>
 
