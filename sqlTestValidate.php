@@ -6,7 +6,7 @@
 	if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
 		echo "<br>If loop entered";
-		$stmt = $mysqli->prepare("INSERT INTO sqlTest VALUES (?, ?)");
+		$stmt = $mysqli->prepare("INSERT INTO sqlTest (test1,test2) VALUES (?, ?)");
 		$stmt->bind_param('ss', $name, $emailID);
 
 		echo "<br>Echo done";
@@ -23,6 +23,6 @@
 		$stmt->close();
 
 		/* close connection */
-		$mysqli->close();
+		$conn->close();
 	}
 ?>
