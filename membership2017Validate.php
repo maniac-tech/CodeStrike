@@ -19,4 +19,7 @@
  			header("location:RegFailed.html");
  		}
  	}
+ 	else{
+ 		echo " <br>Error in validate!!";
+ 	}
  ?>
