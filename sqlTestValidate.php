@@ -3,7 +3,8 @@ $servername=getenv('DATABASE_SERVER_NAME');
 	$databaseName=getenv('DATABASE_NAME');
 	$tableName=getenv('DATABASE_TABLE_MEMBERS');
 	$username=getenv('DATABASE_USERNAME');
-	$password=getenv('DATABASE_PASSWORD'
+	$password=getenv('DATABASE_PASSWORD');
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $databaseName);
