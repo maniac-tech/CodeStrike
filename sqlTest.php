@@ -47,7 +47,7 @@
 
 					<p>Email ID:<input type="email" name="emailID" placeholder="abc@xyz.com" required></p>
 
-					<p>Mobile No:<input type="tel" name="mobileNo" placeholder="98xxxxxxxx" required></p>
+					
 
 					<button type="submit">Register</button>	
 				</form>
