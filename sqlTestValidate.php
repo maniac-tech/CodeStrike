@@ -25,12 +25,6 @@
 
  	$stmt->execute();
 
- 	$firstname = $_POST["fullName"];
- 	$lastname = $_POST["emailID"];
-
- 	$stmt->execute();
-
-
  	echo "New records created successfully";
 
  	$stmt->close();
