@@ -1,34 +1,40 @@
-<?php
-
+ <?php
 $servername=getenv('DATABASE_SERVER_NAME');
 	$databaseName=getenv('DATABASE_NAME');
 	$tableName=getenv('DATABASE_TABLE_MEMBERS');
 	$username=getenv('DATABASE_USERNAME');
 	$password=getenv('DATABASE_PASSWORD'
 
-$link = mysqli_connect($servername, $username, $password, $databaseName);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $databaseName);
 
-/* check connection */
-if (!$link) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-$stmt = mysqli_prepare($link, "INSERT INTO sqlTest VALUES (?, ?)");
-mysqli_stmt_bind_param($stmt, 'ss', $code, $language);
+// prepare and bind
+$stmt = $conn->prepare("INSERT INTO sqlTest (test1,test2) VALUES (?, ?)");
+$stmt->bind_param("ss", $firstname, $lastname);
 
-$code = 'DEU';
-$language = 'Bavarian';
+// set parameters and execute
+$firstname = "John";
+$lastname = "Doe";
 
+$stmt->execute();
 
-/* execute prepared statement */
-mysqli_stmt_execute($stmt);
+$firstname = "Mary";
+$lastname = "Moe";
 
-printf("%d Row inserted.\n", mysqli_stmt_affected_rows($stmt));
+$stmt->execute();
 
-/* close statement and connection */
-mysqli_stmt_close($stmt);
+$firstname = "Julie";
+$lastname = "Dooley";
 
-/* close connection */
-mysqli_close($link);
-?>
+$stmt->execute();
+
+echo "New records created successfully";
+
+$stmt->close();
+$conn->close();
+?> 
