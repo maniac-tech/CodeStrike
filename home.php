@@ -413,7 +413,7 @@
 									<span class="card-title activator grey-text text-darken-4">Interview 2017
 
 										<i class="mdi-navigation-more-vert right"></i></span>
-										<p><a href="interview2017.php">More Details</a></p>
+										<p><a href="Events/interview2017.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Interview 2017<i class="mdi-navigation-close right"></i></span>
@@ -436,7 +436,7 @@
 								<span class="card-title activator grey-text text-darken-4">Coding Workshop
 
 									<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="codingworkshop.php">More Details</a></p>
+									<p><a href="Events/codingworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Coding Workshop<i class="mdi-navigation-close right"></i></span>
@@ -456,7 +456,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">C Programming<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="cprogramming.php">More Details</a></p>
+									<p><a href="Events/cprogramming.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">C Programming<i class="mdi-navigation-close right"></i></span>
@@ -478,7 +478,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">GIT Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="gitworkshop.php">More Details</a></p>
+									<p><a href="Events/gitworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">GIT Workshop<i class="mdi-navigation-close right"></i></span>
@@ -500,7 +500,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Java Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="javaworkshop.php">More Details</a></p>
+									<p><a href="Events/javaworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Java Workshop<i class="mdi-navigation-close right"></i></span>         
@@ -522,7 +522,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Arduino Workshop <i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="arduinoworkshop.php">More Details</a></p>
+									<p><a href="Events/arduinoworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Arduino Workshop<i class="mdi-navigation-close right"></i></span>
@@ -542,7 +542,7 @@
 								</div>
 								<div class="card-content">
 									<span class="card-title activator grey-text text-darken-4">Python Workshop<i class="mdi-navigation-more-vert right"></i></span>
-									<p><a href="pythonworkshop.php">More Details</a></p>
+									<p><a href="Events/pythonworkshop.php">More Details</a></p>
 								</div>
 								<div class="card-reveal">
 									<span class="card-title grey-text text-darken-4">Python Workshop<i class="mdi-navigation-close right"></i></span>                  <p>
