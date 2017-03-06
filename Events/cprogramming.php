@@ -1,20 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <script src="js/jquery.min.js"></script>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-   <meta name="theme-color" content="#2196F3">
-   <title>C Programming</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
-
-   <!-- CSS  -->
-   <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-   <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-
-   <!-- NinjaScript Responsive Image Carousel -->
-   <link href="NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
-    <script src="NinjaScript/ninja-slider.js" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>C Programming</title>
+    <!--Tab Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />  
 </head>
 <body id="top" class="scrollspy">
 
@@ -29,7 +21,7 @@
 
     <!--Navigation-->
     <?php 
-        require 'navigationBar.php'; 
+        require '../navigationBar.php'; 
     ?>
 
     <!--team-->
@@ -79,15 +71,22 @@
 
     <!--Footer-->
     <?php 
-        require 'footer.php';
+        require '../footer.php';
      ?>
 
+</body>
 
 <!--  Scripts-->
-<script src="min/plugin-min.js"></script>
-<script src="min/custom-min.js"></script>
+<script src="../min/plugin-min.js"></script>
+<script src="../min/custom-min.js"></script>
+<script src="../js/jquery.min.js"></script>
 
+<!-- CSS  -->
+    <link href="../min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
 
+<!-- NinjaScript Responsive Image Carousel -->
+    <link href="../NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css"/>
+    <script src="../NinjaScript/ninja-slider.js" type="text/javascript"></script>
 
-</body>
 </html>

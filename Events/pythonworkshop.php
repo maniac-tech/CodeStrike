@@ -1,16 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <script src="js/jquery.min.js"></script>
    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
    <meta name="theme-color" content="#2196F3">
-   <title>Coding Workshop</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
+   <title>Python Workshop</title>
+    <!--Tab Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> 
 
-   <!-- CSS  -->
-   <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-   <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
 </head>
 <body id="top" class="scrollspy">
 
@@ -25,13 +22,13 @@
 
     <!--Navigation-->
     <?php 
-        require 'navigationBar.php'; 
+        require '../navigationBar.php'; 
     ?>
 
     <!--team-->
     <div class="section scrollspy" id="team">
         <div class="container">
-            <h2 style="color:#A020F0">Coding Workshop  </h2>
+            <h2 style="color:#A020F0">Python Workshop  </h2>
             <div class="row">
                 <div >
                     <div class="card card-avatar">
@@ -49,15 +46,19 @@
 
     <!--Footer-->
     <?php 
-        require 'footer.php';
+        require '../footer.php';
      ?>
-
-
-<!--  Scripts-->
-<script src="min/plugin-min.js"></script>
-<script src="min/custom-min.js"></script>
-
-
-
 </body>
+<!--  Scripts-->
+<script src="../js/jquery.min.js"></script>
+<script src="../min/plugin-min.js"></script>
+<script src="../min/custom-min.js"></script>
+
+<!-- CSS  -->
+    <link href="../min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
+
+<!-- NinjaScript Responsive Image Carousel -->
+    <link href="../NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../NinjaScript/ninja-slider.js" type="text/javascript"></script>
 </html>

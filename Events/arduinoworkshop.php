@@ -1,20 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <script src="js/jquery.min.js"></script>
-   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-   <meta name="theme-color" content="#2196F3">
-   <title>Arduino Workshop</title>
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="theme-color" content="#2196F3">
+    <title>Arduino Workshop</title>
 
-   <!-- CSS  -->
-   <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-   <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
-
-   <!-- NinjaScript Responsive Image Carousel -->
-   <link href="NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
-    <script src="NinjaScript/ninja-slider.js" type="text/javascript"></script>
+    <!--Tab Icon-->
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />     
 </head>
 <body id="top" class="scrollspy">
 
@@ -24,12 +17,11 @@
 
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-
     </div>
 
     <!--Navigation-->
     <?php 
-        require 'navigationBar.php'; 
+        require ('../navigationBar.php'); 
     ?>
 
     <!--Event Details-->
@@ -44,24 +36,25 @@
             <br><br>                    
             All in all it was a successful workshop and credit goes to all team members of organizing team, core team of CodeStrike and Prof. Mahendra Patil. CodeStrike is thankful to Atharva College of Engineering for their full support. As we have received positive and motivational feedback from participants, we are planning to do more such events in future.
         </div>
+
         <!-- Ninja Script JS Code: -->
         <!--start-->
         <div id="ninja-slider">
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="img/Events/Arduino/1.JPG"></a>
+                        <a class="ns-img" href="../img/Events/Arduino/1.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="img/Events/Arduino/2.JPG"></a>
-                        <div class="caption">@colerise</div>
-                    </li>
-                    <li>
-                        <a href="/"><img class="ns-img" src="img/Events/Arduino/3.JPG" style="cursor:pointer;" /></a>
+                    <li><a class="ns-img" href="../img/Events/Arduino/2.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a class="ns-img" href="img/Events/Arduino/4.JPG"></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/Arduino/3.JPG" style="cursor:pointer;" /></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="../img/Events/Arduino/4.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                 </ul>
@@ -72,15 +65,21 @@
     </div>
     <!--Footer-->
     <?php 
-        require 'footer.php';
+        require '../footer.php';
      ?>
-
+</body>
 
 <!--  Scripts-->
+<script src="../js/jquery.min.js"></script>
 <script src="min/plugin-min.js"></script>
 <script src="min/custom-min.js"></script>
 
+<!-- CSS  -->
+    <link href="../min/plugin-min.css" type="text/css" rel="stylesheet">
+    <link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
 
+<!-- NinjaScript Responsive Image Carousel -->
+    <link href="../NinjaScript/ninja-slider.css" rel="stylesheet" type="text/css" />
+    <script src="../NinjaScript/ninja-slider.js" type="text/javascript"></script>
 
-</body>
 </html>
