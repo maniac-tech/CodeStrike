@@ -174,17 +174,17 @@ require '../footer.php';
 </body>
 
 <!-- Scripts -->
-	<script src="js/jquery.min.js"></script>
+	<script src="../js/jquery.min.js"></script>
 
 	<!-- CSS  -->
-	<link href="min/plugin-min.css" type="text/css" rel="stylesheet">
-	<link href="min/custom-min.css" type="text/css" rel="stylesheet" >
+	<link href="../min/plugin-min.css" type="text/css" rel="stylesheet">
+	<link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
 
 	<!-- Timer -->
 	<link rel="stylesheet" href="styleTimer.css"> 
 
-	<script src="min/plugin-min.js"></script>
-	<script src="min/custom-min.js"></script>
+	<script src="../min/plugin-min.js"></script>
+	<script src="../min/custom-min.js"></script>
 	
 <style type="text/css" media="screen">
 	.results_table{
