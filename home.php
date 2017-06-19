@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script src="js/jquery.min.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 	<meta name="theme-color" content="#2196F3">
@@ -557,6 +556,8 @@
 require 'footer.php';
 ?>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="js/jquery.min.js"></script>
 <!--  Scripts-->
 <script async src="min/plugin-min.js"></script>
 <script async src="min/custom-min.js"></script>
