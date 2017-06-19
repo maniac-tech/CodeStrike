@@ -562,8 +562,8 @@ require 'footer.php';
 <script async src="min/custom-min.js"></script>
 </body>
 <!-- CSS  -->
-<link async href="min/plugin-min.css" type="text/css" rel="stylesheet">
-<link async href="min/custom-min.css" type="text/css" rel="stylesheet" >
+<link  href="min/plugin-min.css" type="text/css" rel="stylesheet">
+<link  href="min/custom-min.css" type="text/css" rel="stylesheet" >
 
 <!-- float -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
