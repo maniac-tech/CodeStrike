@@ -46,8 +46,11 @@
       <center><p>Sign Up</p></center>
       <hr>
         <form id="contactform" action="imacValidate.php" method="post"> 
-          <p class="contact"><label for="name">Name</label></p> 
-          <input id="name" name="name" placeholder="First and last name" required="True" tabindex="1" type="text"> 
+          <p class="contact"><label for="name">First Name</label></p> 
+          <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
+
+          <p class="contact"><label for="name">Last Name</label></p> 
+          <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
 
           <p class="contact"><label for="email">Email</label></p> 
           <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 

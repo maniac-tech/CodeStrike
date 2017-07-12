@@ -5,6 +5,7 @@
 	$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
 	$username=getenv('DATABASE_USERNAME_IMAC');
 	$password=getenv('DATABASE_PASSWORD_IMAC');
+	
 
 	// $servername="localhost";
 	// $databaseName="imac";
