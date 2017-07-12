@@ -27,11 +27,15 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  		// Regex Expressions:
  		// NAME CHECKING:
  		if (!preg_match("/^[a-zA-Z]*$/", $fname)){ 
- 			echo "NO MATCH<br>";
+ 			echo "FIRST NAME NO MATCH<br>";
  		}
  		else{
- 			if (!preg_match("/^[a-zA-Z]*$/", $fname)){
+ 			if (!preg_match("/^[a-zA-Z]*$/", $lname)){
+ 				echo "LAST NAME NO MATCH";
+ 			}
+ 			else{
  				echo "NAME HAS BEEN MATCHED.<BR>";
+ 				echo "doubt";
  				$name = $fname." ".$lname;
  				// IF THE NAME IS ACCEPTABLE, CHECK FOR EMAIL ID:
  				// EMAIL CHECKING:
