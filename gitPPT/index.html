@@ -1,0 +1,547 @@
+<!doctype html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CLEAN MARKUP = GOOD KARMA.
+      Hi source code lover,
+
+      you're a curious person and a fast learner ;)
+      Let's make something beautiful together. Contribute on Github:
+      https://github.com/jlantunez/webslides
+
+      Thanks,
+      @jlantunez.
+    -->
+
+    <!-- SEO -->
+    <title>CodeStrike Intro to GitHub</title>
+    <meta name="description" content="CodeStrike Intro to GitHub">
+
+    <!-- URL CANONICAL -->
+    <!-- <link rel="canonical" href="http://your-url.com/"> -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,700,700i%7CMaitree:200,300,400,600,700&amp;subset=latin-ext" rel="stylesheet">
+
+    <!-- CSS Base -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/base.css">
+
+    <!-- CSS Colors -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/colors.css">
+
+    <!-- Optional - CSS SVG Icons (Font Awesome) -->
+    <link rel="stylesheet" type='text/css' media='all' href="static/css/svg-icons.css">
+
+    <!-- SOCIAL CARDS (ADD YOUR INFO) -->
+
+    <!-- FACEBOOK -->
+    <meta property="og:url" content="http://your-url.com/"> <!-- YOUR URL -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta property="og:description" content="WebSlides is about telling stories beautifully. Just the essential features. Good karma."> <!-- EDIT -->
+    <meta property="og:updated_time" content="2017-01-04T17:20:50"> <!-- EDIT -->
+    <meta property="og:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- TWITTER -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@webslides"> <!-- EDIT -->
+    <meta name="twitter:creator" content="@jlantunez"> <!-- EDIT -->
+    <meta name="twitter:title" content="WebSlides — Making HTML Presentations Easy"> <!-- EDIT -->
+    <meta name="twitter:description" content="WebSlides is about good karma. Just essential features. 120+ free slides ready to use."> <!-- EDIT -->
+    <meta name="twitter:image" content="static/images/share-webslides.jpg"> <!-- EDIT -->
+
+    <!-- FAVICONS -->
+    <link rel="shortcut icon" sizes="16x16" href="static/images/favicons/favicon.png">
+    <link rel="shortcut icon" sizes="32x32" href="static/images/favicons/favicon-32.png">
+    <link rel="apple-touch-icon icon" sizes="76x76" href="static/images/favicons/favicon-76.png">
+    <link rel="apple-touch-icon icon" sizes="120x120" href="static/images/favicons/favicon-120.png">
+    <link rel="apple-touch-icon icon" sizes="152x152" href="static/images/favicons/favicon-152.png">
+    <link rel="apple-touch-icon icon" sizes="180x180" href="static/images/favicons/favicon-180.png">
+    <link rel="apple-touch-icon icon" sizes="192x192" href="static/images/favicons/favicon-192.png">
+
+    <!-- Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="theme-color" content="#333333">
+
+  </head>
+  <body>
+    <header role="banner">
+      <nav role="navigation">
+        <p class="logo"><a href="index.html" title="WebSlides">CodeStrike</a></p>
+        <ul>
+          <li class="github">
+            <a rel="external" href="https://github.com/jlantunez/webslides" title="Github">
+              <svg class="fa-github">
+                <use xlink:href="#fa-github"></use>
+              </svg>
+              <em>WebSlides</em>
+            </a>
+          </li>
+                    <!--  <li class="dribbble"><a rel="external" href="http://dribbble.com/jlantunez" title="Dribbble"><svg class="fa-dribbble"><use xlink:href="#fa-dribbble"></use></svg> <em>jlantunez</em></a></li> -->
+        </ul>
+      </nav>
+    </header>
+
+    <main role="main">
+      <article id="webslides" class="vertical">
+        <!-- Quick Guide
+          - Each parent <section> in the <article id="webslides"> element is an individual slide.
+          - Vertical sliding = <article id="webslides" class="vertical">
+          - <div class="wrap"> = container 1200px / <div class="wrap size-50"> = 600px;
+        -->
+
+        <section>
+         <span class="background" style="background-image:url('https://webslides.tv/static/images/nature.jpg')"></span>
+          <!--.wrap = container 1200px -->
+          <div class="wrap aligncenter">
+            <h1><strong>Introduction to GitHub</strong></h1>
+            <p class="text-intro">git pull a day keeps the conflict's away
+            </p>
+            <p>
+              <!-- <a href="https://webslides.tv/webslides-latest.zip" class="button zoomIn" title="Download WebSlides for free">
+                <svg class="fa-cloud-download">
+                  <use xlink:href="#fa-cloud-download"></use>
+                </svg>
+                WebSlides
+              </a> -->
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section class="bg-apple aligncenter">
+          <h1>All characters appearing in this work are fictitious. Any resemblence to real people, living or dead, is purely coincidental.</h1>
+          <!-- <p>&lt;section class="bg-apple"&gt;</p> -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git Init</strong></h3>
+                <p class="text-intro">It is used to create a new repository. </p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column text-data"><strong>
+                <pre>Syntax:
+                <br>
+  <span class="code-comment big">git init</span>
+  <br></strong>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git status</strong></h3>
+                <p class="text-intro">List the files you've changed and
+those you still need to add or commit</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                <br>
+  <span class="code-comment">git status</span>
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git add</strong></h3>
+                <p class="text-intro">Add one or more files to staging (index)</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git add &lt;file name&gt;</span>
+  <br>
+  For adding all the files
+  <span class="code-comment">git add * </span>
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git remote add</strong></h3>
+                <p class="text-intro">It is used to connevct the local git to the remote git.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git remote add &lt;name&gt; &lt;url&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git push</strong></h3>
+                <p class="text-intro">It's used to push the local repository into remote repository.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git push -u &lt;remote-branch-name&gt;&lt;local-branch-name&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git pull</strong></h3>
+                <p class="text-intro">It fetches the remote repository and merges it with the local repository.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git pull &lt;remote-branch-name&gt; &lt;local-branch-name&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git branch</strong></h3>
+                <p class="text-intro">We can create a copy (aka. branch) of their code they can make separate commits to. Branches are used to test features or remove bugs.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git branch &lt;branch name&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git checkout</strong></h3>
+                <p class="text-intro">We can switch between our branches using checkout.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git checkout &lt;branch name&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git merge</strong></h3>
+                <p class="text-intro">Merging takes the changes from one branch (in the same repository), and applies them into another.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git merge &lt;branch name&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git Clone</strong></h3>
+                <p class="text-intro">Creates copy of remote repository on users computer.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">$git clone &lt;URL&gt;</span>
+  Eg: <span class="code-comment">$git clone &lt;https://github.com/USERNAME/REPO&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git Diff</strong></h3>
+                <p class="text-intro">Shows changes between commits, commit and working tree, etc.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git diff [options] [&lt;commit&gt;] [-- ] [&lt;path&gt;…​]  
+git diff [options] -- cached [&lt;commit&gt;] [-- ] [&lt;path&gt;…​]
+git diff [options] &lt;commit&gt; &lt;commit&gt; [-- ] [&lt;path&gt;…​]
+git diff [options] &lt;blob&gt; &lt;blob&gt;
+git diff [options] [-- no-index] [-- ] &lt;path&gt; &lt;path&gt;</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git log</strong></h3>
+                <p class="text-intro">Show commit logs.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git log</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git remote</strong></h3>
+                <p class="text-intro">Manages set of tracked repositories.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git remote rename &lt;old&gt; &lt;new&gt;
+git remote remove &lt;name&gt;
+git remote set-head &lt;name&gt; (-a | -- auto | -d | -- delete | &lt;branch&gt;)
+git remote set-branches [-- add] &lt;name&gt; &lt;branch&gt;​</span>
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+        <section>
+          <!--.wrap = container 1200px -->
+          <div class="wrap">
+            <div class="grid vertical-align">
+              <div class="column">
+                <h3><strong>Git stash</strong></h3>
+                <p class="text-intro">It is used when you want to record the current state of the working directory and the index, but want to go back to a clean working directory.</p>
+                
+              </div>
+              <!-- .end .column -->
+              <div class="column">
+                <pre>Syntax:
+                
+  <span class="code-comment">git stash pop
+git stash clear
+  <br>
+  
+
+  <br>
+
+</pre>
+              </div>
+              <!-- .end .column -->
+            </div>
+            <!-- .end .grid -->
+          </div>
+          <!-- .end .wrap -->
+        </section>
+        
+        <section>
+         <span class="background" style="background-image:url('https://webslides.tv/static/images/nature.jpg')"></span>
+          <!--.wrap = container 1200px. -->
+          <div class="wrap aligncen,brter">
+            <h1><strong>Thanks for your time.</strong></h1>
+            <p class="text-intro">Who are we?<br>Computers Engineers.<br>
+            Are we good at making powerpoint presenatations? <br>No.<br>
+            How do we make it? <br>HTML CSS. 
+            </p>
+            <p>
+              <!-- <a href="https://webslides.tv/webslides-latest.zip" class="button zoomIn" title="Download WebSlides for free">
+                <svg class="fa-cloud-download">
+                  <use xlink:href="#fa-cloud-download"></use>
+                </svg>
+                WebSlides
+              </a> -->
+            </p>
+          </div>
+          <!-- .end .wrap -->
+        </section>
+
+      </article>
+      <!-- end article -->
+    </main>
+    <!-- end main -->
+
+   <!-- Remove #webslides element :)
+
+     <footer role="contentinfo">
+      <div class="wrap">
+        <p>An <a href="https://github.com/jlantunez/webslides">open source solution</a>, by <a href="https://twitter.com/jlantunez">@jlantunez</a>.</p>
+      </div>
+    </footer>  -->
+
+    <!-- Required -->
+    <script src="static/js/webslides.js"></script>
+    <script>
+      window.ws = new WebSlides();
+    </script>
+
+    <!-- OPTIONAL - svg-icons.js (fontastic.me - Font Awesome as svg icons) -->
+    <script defer src="static/js/svg-icons.js"></script>
+
+  </body>
+</html>
