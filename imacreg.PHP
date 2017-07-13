@@ -72,6 +72,9 @@
           <!-- <span><div class="g-recaptcha" name="g-recaptcha-response" data-sitekey="6LeshBUUAAAAAOkHIrxVe2QetErIbIq2Bc5RQPxl"></div></span> -->
 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
+          
+          <!-- Google reCaptcha Code -->
+          <button class="g-recaptcha" data-sitekey="6LfQASkUAAAAAE0yRhBqmVxHyGWWymQUXVAlPwoM" data-callback="YourOnSubmitFn"> Submit </button>
         </form> 
       </div>
 
