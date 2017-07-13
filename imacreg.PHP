@@ -12,13 +12,12 @@
  <link href="min/plugin-min.css" type="text/css" rel="stylesheet">
  <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
 
-  <!-- Reg form CSS -->
-  <link rel="stylesheet" type="text/css" href="style_burhan.css" media="all" />
-  <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
- <!-- Timer -->
- <link rel="stylesheet" href="styleTimer.css"> 
+ <!-- Reg form CSS -->
+ <link rel="stylesheet" type="text/css" href="style_burhan.css" media="all" />
+ <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
 
- <script src='https://www.google.com/recaptcha/api.js'></script>
+ <!-- Google reCaptcha  -->
+ <script src='https://www.google.com/recaptcha/api.js'></script>  
 
 </head>
 <body id="top" class="scrollspy">
@@ -43,8 +42,8 @@
     <br>
     <div class="container">
       <div  class="form">
-      <center><p>Sign Up</p></center>
-      <hr>
+        <center><p>Sign Up</p></center>
+        <hr>
         <form id="contactform" action="imacValidate.php" method="post"> 
           <p class="contact"><label for="name">First Name</label></p> 
           <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
