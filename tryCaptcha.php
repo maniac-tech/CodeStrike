@@ -9,7 +9,8 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 	$clientIp = $_SERVER['REMOTE_ADDR'];
 	$captchResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$captchaSecretKey."&response=".$captcha);
 	$captchaResponseKeys = json_decode($response,true);
-	echo $captchaResponseKeys;
+	// echo $captchaResponseKeys;
+	echo "$responseKeys["success"]";
 	if(intval($responseKeys["success"]) !== 1) {
 		echo '<h2>SPAM</h2>';
 	} else {
