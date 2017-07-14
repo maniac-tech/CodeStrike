@@ -74,8 +74,7 @@
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
           
           <!-- Google reCaptcha Code -->
-          <!-- Callback function has to be written  -->
-          <button class="g-recaptcha" data-sitekey="6LfQASkUAAAAAE0yRhBqmVxHyGWWymQUXVAlPwoM" data-callback="YourOnSubmitFn"> Submit </button>
+          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
         </form> 
       </div>
 
