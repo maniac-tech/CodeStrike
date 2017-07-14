@@ -74,7 +74,9 @@
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
           
           <!-- Google reCaptcha Code -->
-          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+          <?php 
+            echo "<div class=\"g-recaptcha\" data-sitekey=\".getenv('GOOGLE_RECAPTCHA_SECRET');.\"></div>"
+           ?>
         </form> 
       </div>
 
