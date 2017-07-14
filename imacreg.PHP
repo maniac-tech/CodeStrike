@@ -44,7 +44,7 @@
       <div  class="form">
         <center><p>Sign Up</p></center>
         <hr>
-        <form id="contactform" action="imacValidate.php" method="post"> 
+        <form id="contactform" action="tryCaptcha.php" method="post"> 
           <p class="contact"><label for="name">First Name</label></p> 
           <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
 
