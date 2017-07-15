@@ -72,7 +72,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  									$result=$conn->query($query);
 
  									if ($result) {
- 										echo "Your Registration has been completed.<br>";
+ 										header('Location:imac.php');
  									}
  									else{
  										echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
