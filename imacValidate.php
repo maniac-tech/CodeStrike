@@ -76,6 +76,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  									}
  									else{
  										echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
+ 										echo "<script>console.log('Database error:'".$conn->error.");</script>";
  									}
  								}
  								else{
