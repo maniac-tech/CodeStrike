@@ -37,7 +37,10 @@ require 'navigationBar.php';
 
 <!--Form Details-->
 <div class="section scrollspy" id="team">
-    <center><h1 style="color:#A020F0">iMac Training Sessions 2017</h1></center>
+    <br>
+    <center>
+      <h2 style="color:#A020F0; font-size: 35px">iMac Training Sessions 2017</h2>
+    </center>
     <br>
     <div class="container">
       <div  class="form">
@@ -70,10 +73,10 @@ require 'navigationBar.php';
         <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
         <!-- <span><div class="g-recaptcha" name="g-recaptcha-response" data-sitekey="6LeshBUUAAAAAOkHIrxVe2QetErIbIq2Bc5RQPxl"></div></span> -->
 
-        <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
-
         <!-- Google reCaptcha Code -->
         <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+        <br> 
+        <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
     </form> 
 </div>
 
