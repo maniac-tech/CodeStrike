@@ -13,7 +13,7 @@
     <link href="min/custom-min.css" type="text/css" rel="stylesheet" >
 
     <!-- Reg form CSS -->
-    <link rel="stylesheet" type="text/css" href="style_burhan.css" media="all" />
+    <link rel="stylesheet" type="text/css" href="css/imacreg.css" media="all" />
     <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
 
     <!-- Google reCaptcha  -->
