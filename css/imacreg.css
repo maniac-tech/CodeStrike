@@ -8,6 +8,9 @@ body{
   vertical-align: center;
   background: #9c27b0;
 }
+.video{
+  margin-bottom: 15px;
+}
 .form{
 	background:#FFFFFF; width:470px; 
   margin:0 auto; 
