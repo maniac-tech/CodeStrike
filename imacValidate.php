@@ -26,8 +26,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		header('Location:imac.php');
 	}
 	else{
-		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
-		echo $conn->error;
+		error($func_var_mobileNo);
 	}
 }
 
@@ -126,8 +125,19 @@ function regularExpression(){
  		}
  	}
 
-function error(){
+function error($func_var_mobileNo){
+	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
+	global $tableName, $conn;
+	$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
+	$result = mysqli_query($conn, $sql);
 
+	if (mysqli_num_rows ($result) > 0){
+		echo "You have been Registered already.";
+	}
+	else{
+		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
+		echo $conn->error;
+	}
 }
 
 function main(){
