@@ -85,6 +85,7 @@
           <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
+          <a class="buttom" href="http://www.phpmyadmin.co/index.php">Admin Login</a>
         </form> 
       </div>
 
