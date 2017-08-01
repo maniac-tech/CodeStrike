@@ -54,7 +54,7 @@
       <div  class="form">
       <center><p>Register Here</p></center>
         <hr>
-        <form id="contactform" action="imacValidate2.php" method="post"> 
+        <form id="contactform" action="imacValidate.php" method="post"> 
           <p class="contact"><label for="name">First Name</label></p> 
           <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
 

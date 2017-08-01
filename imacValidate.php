@@ -1,11 +1,25 @@
 <?php 
+// Importing all the required files:
 require_once('imacConnect.php');
 
-$regStatus="";
+// Declaring Global variables: is for False nd 1 is for True
+$status_captcha;
 
-// Function to add Data in the DB:
-function insertData($fun_var_name,$fun_var_year,$fun_var_branch,$fun_var_emailID,$fun_var_mobileNo){
-	$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$fun_var_name','$fun_var_year','$fun_var_branch','$fun_var_emailID','$fun_var_mobileNo')";
+// Form Variables:
+$form_fname;
+$form_lname;
+$form_name;
+$form_emailId;
+$form_mobileNo;
+$form_year;
+$form_branch;
+
+// Declating all the required functions:
+function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_emailID,$func_var_mobileNo){
+	global $tableName;
+	global $conn;
+
+	$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 	$result=$conn->query($query);
 
 	if ($result) {
@@ -13,47 +27,61 @@ function insertData($fun_var_name,$fun_var_year,$fun_var_branch,$fun_var_emailID
 	}
 	else{
 		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
-		echo "<script>console.log('Database error:'".$conn->error.");</script>";
+		echo $conn->error;
 	}
 }
 
-if ($_SERVER["REQUEST_METHOD"]=="POST"){
-	// Captcha Validation
+function captchaValidation(){
+	//Captcha Validation as instructed by Google:
 	$captcha = $_POST['g-recaptcha-response'];
 	$captchaSecretKey=	getenv('GOOGLE_RECAPTCHA_SECRET');
 	$clientIp = $_SERVER['REMOTE_ADDR'];
 	$captchResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$captchaSecretKey."&response=".$captcha);
-
+	// The success status of captcha is being returned:
 	if ($captchResponse.success==false){
-		echo "FAILED";
+		echo "Captcha Failed.";
+		return 0; //Captcha Failed
 	}
 	else{
-		// ON SUCCESSFUL CAPTCHA VALIDATION, ALLOW DATABASE ENTRY:
-		$fname=$_POST["fname"]; 
-		$lname=$_POST["lname"];
-		$name;
-		$emailID=$_POST["email"];
-		$mobileNo=$_POST["phone"];
-		$year=$_POST["year"];
-		$branch=$_POST["stream"];
+		//On Captcha Successful
+		// Fetch form data:
+		fetchFormData();
 
- 		// REGEX EXPRESSIONS TO AVOID SQL INJECTIONS:
+		// Regular expression check:
+		regularExpression();
+		return 1; 
+	}
+}
 
- 		// NAME VALIDATION:
-		if (!preg_match("/^[a-zA-Z]*$/", $fname)){ 
+function fetchFormData(){
+	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
+
+	$form_fname=$_POST["fname"]; 
+	$form_lname=$_POST["lname"];
+	$form_emailId=$_POST["email"];
+	$form_mobileNo=$_POST["phone"];
+	$form_year=$_POST["year"];
+	$form_branch=$_POST["stream"];
+}
+
+function regularExpression(){
+	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
+	// REGEX EXPRESSIONS TO AVOID SQL INJECTIONS
+	// NAME VALIDATION:
+	if (!preg_match("/^[a-zA-Z]*$/", $form_fname)){ 
+		echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
+	}
+	else{
+		if (!preg_match("/^[a-zA-Z]*$/", $form_lname)){
 			echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
 		}
 		else{
-			if (!preg_match("/^[a-zA-Z]*$/", $lname)){
-				echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
-			}
-			else{
  				//echo "NAME HAS BEEN MATCHED.<BR>";
- 				$name = $fname." ".$lname; //COMBINED FIRST NAME AND LAST NAME INTO ONE VARIABLE
+ 				$name = $form_fname." ".$form_name; //COMBINED FIRST NAME AND LAST NAME INTO ONE VARIABLE
 
  				// IF THE NAME IS ACCEPTABLE, PROCEED TO CHECK FOR EMAIL ID:
  				// EMAIL CHECKING:
- 				if (!filter_var($emailID,FILTER_VALIDATE_EMAIL)){
+ 				if (!filter_var($form_emailId,FILTER_VALIDATE_EMAIL)){
  					echo "ENTER A VALID EMAIL ADDRESS.<br>";
  				}
  				else{
@@ -61,7 +89,7 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 
  					// IF THE EMAIL IS ACCEPTABLE, PROCEED TO CHECK FOR NUMBER:
  					//NUMBER CHECKING :
- 					if (!preg_match("/[0-9]{10,10}/", $mobileNo)){
+ 					if (!preg_match("/[0-9]{10,10}/", $form_mobileNo)){
  						echo "PLEASE ENTER ONLY 10-DIGIT CONTACT NUMBER.<br>";
  					}
  					else{
@@ -69,20 +97,20 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  						
  						// IF THE NUMBER IS ACCEPTABLE, PROCEED TO CHECK FOR YEAR:
  						//YEAR CHECKING :
- 						if (!preg_match("/^.{2}$/", $year)){
+ 						if (!preg_match("/^.{2}$/", $form_year)){
  							echo "ENTER A VALID YEAR. i.e FE,SE,TE or BE.<br>";
  						}
  						else{
- 							if (preg_match("/^[a-zA-Z]*$/", $year)){
+ 							if (preg_match("/^[a-zA-Z]*$/", $form_year)){
  								// echo "YEAR HAS BEEN MATCHED.<BR>";
 
 			 					// IF THE YEAR IS ACCEPTABLE, PROCEED TO CHECK FOR BRANCH:
 			 					//BRANCH CHECKING :
- 								if (preg_match("/^[a-zA-Z]*$/", $branch)){
+ 								if (preg_match("/^[a-zA-Z]*$/", $form_branch)){
  									// echo "BRANCH HAS BEEN MATCHED.<BR>";
  									
  									// IF THE BRANCH IS ACCEPTABLE, WRITE THE DATA TO DB:
- 									insertData($name,$year,$branch,$emailID,$mobileNo);
+ 									insertData($name,$form_year,$form_branch,$form_emailId,$form_mobileNo);
  								}
  								else{
  									echo "ENTER A VALID BRANCH. i.e IT,CMPN,ELEX,ELEC or EXTC. <br>";
@@ -97,6 +125,17 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  			}
  		}
  	}
- }
 
- ?>
+function error(){
+
+}
+
+function main(){
+	if($_SERVER["REQUEST_METHOD"]=="POST"){
+		$status_captcha = captchaValidation();
+	}
+}
+
+main();
+
+?>
