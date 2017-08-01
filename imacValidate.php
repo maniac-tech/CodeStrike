@@ -3,6 +3,20 @@ require_once('imacConnect.php');
 
 $regStatus="";
 
+// Function to add Data in the DB:
+function insertData($fun_var_name,$fun_var_year,$fun_var_branch,$fun_var_emailID,$fun_var_mobileNo){
+	$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$fun_var_name','$fun_var_year','$fun_var_branch','$fun_var_emailID','$fun_var_mobileNo')";
+	$result=$conn->query($query);
+
+	if ($result) {
+		header('Location:imac.php');
+	}
+	else{
+		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
+		echo "<script>console.log('Database error:'".$conn->error.");</script>";
+	}
+}
+
 if ($_SERVER["REQUEST_METHOD"]=="POST"){
 	// Captcha Validation
 	$captcha = $_POST['g-recaptcha-response'];
@@ -24,16 +38,16 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
 		$branch=$_POST["stream"];
 
  		// REGEX EXPRESSIONS TO AVOID SQL INJECTIONS:
- 		
+
  		// NAME VALIDATION:
- 		if (!preg_match("/^[a-zA-Z]*$/", $fname)){ 
- 			echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
- 		}
- 		else{
- 			if (!preg_match("/^[a-zA-Z]*$/", $lname)){
- 				echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
- 			}
- 			else{
+		if (!preg_match("/^[a-zA-Z]*$/", $fname)){ 
+			echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
+		}
+		else{
+			if (!preg_match("/^[a-zA-Z]*$/", $lname)){
+				echo "PLEASE ENTER ONLY ALPHABETS IN THE NAME FIELD, NO SYMBOLS, NUMBERS OR ANY SPECIAL CHARACTERS.<br>";
+			}
+			else{
  				//echo "NAME HAS BEEN MATCHED.<BR>";
  				$name = $fname." ".$lname; //COMBINED FIRST NAME AND LAST NAME INTO ONE VARIABLE
 
@@ -61,23 +75,14 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  						else{
  							if (preg_match("/^[a-zA-Z]*$/", $year)){
  								// echo "YEAR HAS BEEN MATCHED.<BR>";
-			 					
+
 			 					// IF THE YEAR IS ACCEPTABLE, PROCEED TO CHECK FOR BRANCH:
 			 					//BRANCH CHECKING :
  								if (preg_match("/^[a-zA-Z]*$/", $branch)){
  									// echo "BRANCH HAS BEEN MATCHED.<BR>";
  									
  									// IF THE BRANCH IS ACCEPTABLE, WRITE THE DATA TO DB:
- 									$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$name','$year','$branch','$emailID','$mobileNo')";
- 									$result=$conn->query($query);
-
- 									if ($result) {
- 										header('Location:imac.php');
- 									}
- 									else{
- 										echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
- 										echo "<script>console.log('Database error:'".$conn->error.");</script>";
- 									}
+ 									insertData($name,$year,$branch,$emailID,$mobileNo);
  								}
  								else{
  									echo "ENTER A VALID BRANCH. i.e IT,CMPN,ELEX,ELEC or EXTC. <br>";
@@ -93,3 +98,5 @@ if ($_SERVER["REQUEST_METHOD"]=="POST"){
  		}
  	}
  }
+
+ ?>
