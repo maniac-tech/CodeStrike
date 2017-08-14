@@ -20,7 +20,7 @@
             <h1>Page is under Development.</h1>
             <!-- <p>Scheduled maintenance is currently in progress. Please check back soon.</p> -->
             <!-- <p>We apologize for any inconvenience.</p> -->
-            <p id="signature">&mdash; <a href="mailto:[Email]">CodeStrike</a></p>
+            <p id="signature">&mdash; <a href="mailto:[codestrikehq@gmail.com]">CodeStrike</a></p>
         </article>
     </body>
 </html>
