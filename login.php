@@ -7,7 +7,7 @@
 <body>
 <div class="login-page">
   <div class="form">
-    <form class="login-form" method="post" action="hq_validate.php">
+    <form class="login-form" method="post" action="login_validate.php">
       <input type="text" placeholder="username" name="loginID"/>
       <input type="password" placeholder="password" name="loginPassword"/>
       <input type="Submit" value="Login">
