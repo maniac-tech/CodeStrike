@@ -1,5 +1,5 @@
 <?php 
-	$servername=getenv('DATABASE_SERVER_NAME');
+	$servername=getenv('DATABASE_SERVER_NAME_IMAC');
 	$databaseName=getenv('DATABASE_NAME_IMAC');
 	$tableName=getenv('DATABASE_TABLE_3');
 	$username=getenv('DATABASE_USERNAME');
