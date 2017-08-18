@@ -1,0 +1,12 @@
+#interface{
+ 	width: 100%;
+}
+#interface button{
+	height: 7%;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-bottom: 1%;
+}
+#content{
+	margin-left: 1%;
+}
