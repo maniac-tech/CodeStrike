@@ -1,5 +1,5 @@
 #interface{
- 	width: 100%;
+	width: 100%;
 }
 #interface button{
 	height: 7%;
@@ -9,4 +9,43 @@
 }
 #content{
 	margin-left: 1%;
+	display: inline;
+}
+#content_table{
+	background: white;
+	margin-left: 1%;
+	margin-right: 0.5%;
+	border-radius: 4px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 1%;
+	padding-right: 2%;
+	display: table;
+	float: left;
+}
+#studentsList{
+	margin-bottom: 1%;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	font-family: sans-serif;
+}
+#content_table table {
+	border-style: none;
+}
+#content_table table tr:first-child{
+	background: grey;
+	text-align: left;
+}
+#operations{
+	width: 50%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	background: white;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 1%;
+	padding-right: 2%;	
+	border-radius: 4px;
+	float: left;
 }

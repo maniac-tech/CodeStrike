@@ -1,5 +1,7 @@
 body{
 	margin: 0 0 0 0;
+	height: 100%;
+	width: 100%;
 }
 #navbar{
 	background: white;
@@ -23,7 +25,7 @@ body{
 #sidebar{
 	background: #9c27b0;
 	width: 20%;
-	height: 100%;
+	min-height: 100%;
 	float: left;
 	margin: 0 0 0 0 ;
 }
@@ -56,4 +58,5 @@ body{
 	height: 90%;
 	float: right;
 	margin: 0 0 0 0;
+	overflow-y: scroll;
 }
