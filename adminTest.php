@@ -1,69 +1,48 @@
 <?php 
 	require 'imacConnect.php';
+	session_start();
+	if(!isset($_SESSION['userId'])){
+		header('Location:login.php');
+	}
  ?>
 <html>
 	<head>
 		<title></title>
+		<link rel="stylesheet" href="css/adminTest.css">
+		<link rel="stylesheet" href="css/data.css">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	</head>
 	<body>
 		<div id="navbar">
-			<p>CodeStrike</p>
+			<p>Welcome, maniac-tech</p>
+			<form action="logout.php" method="POST">
+				<input type="submit" name="Logout" value="Logout">
+			</form>
 		</div>
 		<div id="sidebar">
+			<img src="img/logo.png" alt="">
 			<ul>
 				<li title="overview" onclick="loadPage(this.title)">
-				<p>Overview</p>
+					<p>Overview</p>
 				</li>
 				<li title="data" onclick="loadPage(this.title)">
 					<p>iMac</p>
 				</li>
-				<li>
-					<a href="">Git</a>
-				</li>
-				<li>
-					<a href="">Java</a>
-				</li>
-				<li>
-					<a href="">C</a>
-				</li>
 			</ul>
 		</div>
-		<div id="content_body">
-			<p>Display relevant data here</p>
+		<div id="body">
 			<?php 
-				require 'data.php';
+				require 'overview.php';
 			 ?>
 		</div>
 	</body>
 	<script>
 		function loadPage(loadFile){
-			$('#content_body').load(loadFile+".php");
+			$('#body').load(loadFile+".php");
+		}
+		function loadContent(loadData){
+			$('#content').load(loadData+".php");
 		}
 	</script>
-	<style>
-		body{
-			margin: 0 0 0 0;
-		}
-		#navbar{
-			background: blue;
-			margin:0 0 0 0;
-			width: 100%;
-			height: 10%;
-		}
-		#sidebar{
-			background: green;
-			width: 20%;
-			height: 90%;
-			float: left;
-			margin: 0 0 0 0 ;
-		}
-		#content_body{
-			background: red;
-			width: 80%;
-			height: 90%;
-			float: right;
-			margin: 0 0 0 0;
-		}
-	</style>
+
 </html>

@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$row=mysqli_fetch_assoc($result);
 			if ($row['password']==$password){
 				// echo "LOGIN GRANTED";
+				$_SESSION['userId']=$row['UserID'];
 				header('Location:adminTest.php');
 			}else{
 				echo "LOGIN DENIED";
