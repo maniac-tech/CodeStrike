@@ -1,6 +1,6 @@
 <?php 
 	$servername=getenv('DATABASE_SERVER_NAME');
-	$databaseName=getenv('DATABASE_NAME');
+	$databaseName=getenv('DATABASE_NAME_IMAC');
 	$tableName=getenv('DATABASE_TABLE_3');
 	$username=getenv('DATABASE_USERNAME');
 	$password=getenv('DATABASE_PASSWORD');
