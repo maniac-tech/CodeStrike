@@ -14,22 +14,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$password=$_POST["loginPassword"];
 
 	//create query
-	$query="SELECT * FROM users WHERE username='$id'";
-	$result=$conn->query($query);
+	$query="SELECT * FROM $tableName WHERE username='$id'";
+	$result=mysqli_query($conn,$query);
 
 			//check the query in the database
 	if ($result){
-		if ($result->num_rows > 0){	
+		if (mysqli_num_rows($result) > 0){	
 			$row=mysqli_fetch_assoc($result);
 			if ($row['password']==$password){
 				// echo "LOGIN GRANTED";
 				$_SESSION['userId']=$row['username'];
 				header('Location:admin.php');
 			}else{
-				echo "<script>console.log('Login Denied')</script>";
+				echo "<script>console.log('Login Denied');</script>";
 				header('Location:login.php');
 			}
 		}
 	}
+}else{
+	echo "POST method failed";
 }
 ?>
