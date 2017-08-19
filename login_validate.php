@@ -14,7 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$password=$_POST["loginPassword"];
 
 	//create query
-	$query="SELECT * FROM users WHERE username='$id'";
+	$query="SELECT * FROM $tableName WHERE username='$id'";
 	$result=$conn->query($query);
 
 			//check the query in the database
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				$_SESSION['userId']=$row['username'];
 				header('Location:admin.php');
 			}else{
-				echo "<script>console.log('Login Denied')</script>";
+				echo "<script>console.log('Login Denied');</script>";
 				header('Location:login.php');
 			}
 		}
