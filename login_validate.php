@@ -15,11 +15,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	//create query
 	$query="SELECT * FROM $tableName WHERE username='$id'";
-	$result=$conn->query($query);
+	$result=mysqli_query($conn,$query);
 
 			//check the query in the database
 	if ($result){
-		if ($result->num_rows > 0){	
+		if (mysqli_num_rows($result) > 0){	
 			$row=mysqli_fetch_assoc($result);
 			if ($row['password']==$password){
 				// echo "LOGIN GRANTED";
