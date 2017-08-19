@@ -3,7 +3,7 @@
 include('login_connect.php');
 //require_once('interview2017Connect.php');
 
-// session_start();
+session_start();
 
 $id="0";
 $console='';
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$row=mysqli_fetch_assoc($result);
 			if ($row['password']==$password){
 				// echo "LOGIN GRANTED";
-				// $_SESSION['userId']=$row['username'];
+				$_SESSION['userId']=$row['username'];
 				header('Location:admin.php');
 			}else{
 				echo "<script>console.log('Login Denied');</script>";
