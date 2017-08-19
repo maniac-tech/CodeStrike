@@ -15,4 +15,7 @@
     <body>
         <p>Successful in your attempt.</p>
     </body>
+    <form action="logout.php" method="post">
+        <input type="submit" value="Logout">
+    </form>
 </html>
