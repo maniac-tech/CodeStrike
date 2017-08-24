@@ -11,7 +11,7 @@ require ('iMacConnect.php');
 			<td>Batch</td>
 		</tr>
 		<?php
-		$sql = "SELECT * FROM $tableName WHERE Batch=0";
+		$sql = "SELECT * FROM $tableName WHERE Batch!=0";
 		$result = mysqli_query($conn,$sql);
 		if(mysqli_num_rows($result)>0){
 			while ($row=mysqli_fetch_assoc($result)){
