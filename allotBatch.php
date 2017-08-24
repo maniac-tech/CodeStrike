@@ -1,12 +1,33 @@
 <?php
 require ('iMacConnect.php'); 
 ?>
+
+<script>
+	function loadAjax(){
+var checkboxArray = new Array();
+		var xhttp = new XMLHttpRequest();
+		
+		$("input:checked").each(function(){
+			checkboxArray.push($(this).val());
+		});
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				alert(xhttp.responseText);
+			}
+		};
+		xhttp.open("POST","master.php",true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
+		xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray);
+	}
+
+</script>
 <div id="content_table">
 	<p id="studentsList"><b>List of Students Pending:</b></p>
-	<form action="allotTaskScript.php" method="POST" id="willAllotTaskForm">
+
 	<table >
 		<tr>
-		<td></td>
+			<td></td>
 			<td>Name</td>
 			<td>Year</td>
 			<td>Branch</td>
@@ -17,7 +38,7 @@ require ('iMacConnect.php');
 		if(mysqli_num_rows($result)>0){
 			while ($row=mysqli_fetch_assoc($result)){
 				echo "<tr>";
-				echo "<td><input type='checkbox' name='checkbox[]' value='".$row['Mobile']."'></td>";
+				echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
 				echo "<td>".$row["Name"]."</td>";
 				echo "<td>".$row["Year"]."</td>";
 				echo "<td>".$row["Branch"]."</td>";
@@ -28,13 +49,13 @@ require ('iMacConnect.php');
 		}
 		?>
 	</table>
-	</form>
+
 </div>
 <div id="operations">
 	<p id="studentsList">Instructions:</p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus a corrupti libero ipsam unde. Impedit iure, deserunt odio! Eligendi beatae voluptatibus vel quo nostrum mollitia tenetur iusto, molestias quis! Non.</p>
 	<p>
-			<input type="text" form="willAllotTaskForm" name="batchAllotedInput">
-			<button type="submit" value="submit" form="willAllotTaskForm">Submit</button>
+		<input type="text" form="willAllotTaskForm" id="batchAllotedInput">
+		<button onclick="loadAjax()">Submit</button>
 	</p>
 </div>
