@@ -11,6 +11,7 @@ require ('iMacConnect.php');
 			<td>Email</td>
 			<td>Mobile</td>
 			<td>Status</td>
+			<td>Batch</td>
 		</tr>
 		<?php
 		$sql = "SELECT * FROM $tableName WHERE Status='Pending'";
@@ -24,6 +25,7 @@ require ('iMacConnect.php');
 				echo "<td>".$row["Email"]."</td>";
 				echo "<td>".$row["Mobile"]."</td>";
 				echo "<td>".$row["Status"]."</td>";
+				echo "<td>".$row["Batch"]."</td>";
 				echo "</tr>";
 			}
 		}else{
