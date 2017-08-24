@@ -20,7 +20,9 @@
 			</form>
 		</div>
 		<div id="sidebar">
-			<img src="img/logo.png" alt="">
+			<a href="http://www.codestrike.in">
+				<img src="img/logo.png" alt="">
+			</a>
 			<ul>
 				<li title="overview" onclick="loadPage(this.title)">
 					<p>Overview</p>
