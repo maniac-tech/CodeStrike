@@ -1,7 +1,21 @@
+@font-face {
+	font-family:'Helvetica Neue Light';
+	src: url('../font/helveticaneue/HelveticaNeue-Light.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Medium';
+	src: url('../font/helveticaneue/HelveticaNeue-Medium.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Thin';
+	src: url('../font/helveticaneue/HelveticaNeue-Thin.ttf');
+}
+
 body{
 	margin: 0 0 0 0;
 	height: 100%;
 	width: 100%;
+	font-family: 'Helvetica Neue Medium';
 }
 #navbar{
 	background: white;
@@ -15,12 +29,15 @@ body{
 	margin-top: 1%;
 	margin-left: 1%;
 	margin-right: 0%;
+	margin-bottom: 1%;
+	font-size: 1em;
 }
 #navbar button{
 	float: right;
 	margin-top: 1%;
 	margin-left: 0%;
 	margin-right: 1%;
+	margin-bottom: 1%;
 }
 #sidebar{
 	background: #9c27b0;
