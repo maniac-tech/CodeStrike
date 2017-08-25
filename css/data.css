@@ -2,10 +2,16 @@
 	width: 100%;
 }
 #interface button{
+	width: 12%;
 	height: 7%;
 	margin-top: 1%;
 	margin-left: 1%;
 	margin-bottom: 1%;
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+	background: transparent;
+	cursor: pointer;
 }
 #content{
 	margin-left: 1%;
