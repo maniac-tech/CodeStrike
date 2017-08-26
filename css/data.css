@@ -1,3 +1,20 @@
+@font-face {
+	font-family:'Helvetica Neue Light';
+	src: url('../font/helveticaneue/HelveticaNeue-Light.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Medium';
+	src: url('../font/helveticaneue/HelveticaNeue-Medium.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Thin';
+	src: url('../font/helveticaneue/HelveticaNeue-Thin.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Bold';
+	src: url('../font/helveticaneue/HelveticaNeue-Bold.ttf');
+}
+
 #interface{
 	width: 100%;
 }
@@ -30,6 +47,11 @@
 	padding-right: 2%;
 	display: table;
 	float: left;
+	font-family: 'Helvetica Neue Thin';
+}
+#content_table p{
+	font-family: 'Helvetica Neue Bold';
+	font-size: 1.5em;
 }
 #studentsList{
 	margin-bottom: 1%;
@@ -42,8 +64,12 @@
 	border-style: none;
 }
 #content_table table tr:first-child{
-	background: grey;
+	background: #64b5f6;
 	text-align: left;
+}
+#intro{
+	font-size: 1em !important;
+	font-family: 'Helvetica Neue Thin'!important;
 }
 #operations{
 	width: 50%;
@@ -56,4 +82,11 @@
 	padding-right: 2%;	
 	border-radius: 4px;
 	float: left;
+}
+#operations p button{
+	background: #42a5f5;
+	width: 25%;
+	height: 5%;
+	border-style: none;
+	box-shadow: 1px 1px 1px #888888;
 }
