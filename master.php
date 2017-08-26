@@ -73,7 +73,7 @@ Button Roles:
 		}else{
 			foreach($checkboxArray as $array) {
 				// echo "$array";
-				$sql = "UPDATE $tableName SET Batch='$toInsert' WHERE Mobile in ($array)";
+				$sql = "UPDATE $tableName SET Batch='$toInsert' WHERE Mobile IN ($array)";
 				$result=mysqli_query($conn,$sql);
 				if ($result) {
 					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
@@ -91,9 +91,44 @@ Button Roles:
 		}
 	}
 
+	function otherOptions($status){
+		$checkboxArray = array();
+		$checkboxArray=$_POST['checkbox'];
+		$servername="localhost";
+		$databaseName="imac";
+		$tableName="registrations2017";
+		$username="root";
+		$password="";
+		//create connection
+		$conn=mysqli_connect($servername,$username,$password,$databaseName);
+		if (!$conn){
+			die('Connection failed:'.mysqli_connect_error());
+		}else{
+			foreach($_POST['checkbox'] as $check) {
+				if ($status=="statusComplete"){
+				$sql = "UPDATE $tableName SET Status='COMPLETED' WHERE Mobile IN ($check)";
+				$result=mysqli_query($conn,$sql);
+			}else{
+				$sql = "UPDATE $tableName SET Status='PENDING' WHERE Mobile IN ($check)";
+				$result=mysqli_query($conn,$sql);
+			}
+				if ($result) {
+					echo "QUERY COMPLETE";
+				}else{
+					echo "<p>QUERY FAILED</p>";
+					echo mysqli_error($conn);
+				}
+			}
+		}
+	}
+
 	if($urlVariable=="allotTask"){
 		$batch = $_POST['Batch'];
 		// echo "$batch";
 		alloTaskScript($batch);
+	}elseif ($urlVariable=="statusComplete") {
+		otherOptions("statusComplete");
+	}elseif($urlVariable=="statusPending"){
+		otherOptions("statusPending");
 	}
 	?>
