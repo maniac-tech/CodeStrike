@@ -1,9 +1,47 @@
 <?php
 require ('iMacConnect.php'); 
 ?>
+<script>
+	function loadAjax(){
+		var checkboxArray = new Array();
+		var xhttp = new XMLHttpRequest();
+		
+		$("input:checked").each(function(){
+			checkboxArray.push($(this).val());
+		});
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				alert(xhttp.responseText);
+			}
+		};
+		xhttp.open("POST","master.php",true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
+		xhttp.send("query=statusComplete&checkbox[]="+checkboxArray);
+	}
+	function loadAjax2(){
+		/*
+		var checkboxArray = new Array();
+		var xhttp = new XMLHttpRequest();
+		
+		$("input:checked").each(function(){
+			checkboxArray.push($(this).val());
+		});
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				alert(xhttp.responseText);
+			}
+		};
+		xhttp.open("POST","master.php",true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
+		xhttp.send("query=statusPending&checkbox[]="+checkboxArray);
+		*/
+		alert ("Functionality Under development");
+	}
+</script>
 <div id="content_table">
 	<p id="studentsList"><b>List of Students Pending:</b></p>
-	<form action="allotStatusScript.php" method="POST" id="willAllotStatusForm">
 		<table >
 			<tr>
 				<td></td>
@@ -30,12 +68,20 @@ require ('iMacConnect.php');
 			}
 			?>
 		</table>
-	</form>
 </div>
 <div id="operations">
-	<p id="studentsList">Instructions:</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus a corrupti libero ipsam unde. Impedit iure, deserunt odio! Eligendi beatae voluptatibus vel quo nostrum mollitia tenetur iusto, molestias quis! Non.</p>
+	<p id="studentsList">About:</p>
 	<p>
-		<button type="submit" name="CompleteStatusButton" value="Completed" form="willAllotStatusForm">Completed</button>
+		This section is used to change the status of the Students, after they have completed their training.
+		
+		Instructions:
+		<ol>
+			<li>Select Students to change Status.</li>
+			<li>Click on <b>Complete Button</b> below, to change the status.</li>
+		</ol>
+	</p>
+	<p>
+		<button onclick="loadAjax()">Completed</button>
+		<button onclick="loadAjax2()">Pending</button>
 	</p>
 </div>
