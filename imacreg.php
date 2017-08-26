@@ -86,6 +86,7 @@
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
           <a class="buttom" href="http://www.phpmyadmin.co/index.php">Admin Login</a>
+          <a class="buttom" href="http://admin.codestrike.in">Dashboard</a>          
         </form> 
       </div>
 
