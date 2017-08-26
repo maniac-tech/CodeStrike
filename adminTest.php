@@ -16,12 +16,12 @@ if(!isset($_SESSION['userId'])){
 	<div id="navbar">
 		<p>Welcome, maniac-tech</p>
 		<form action="logout.php" method="POST">
-			<input type="submit" name="Logout" value="Logout">
+			<Button type="submit" name="Logout" value="Logout">Logout</Button>
 		</form>
 	</div>
 	<div id="sidebar">
 		<a href="http://www.codestrike.in">
-			<img src="img/logo.png" alt="">
+			<img src="img/dashboard_logo.png" alt="">
 		</a>
 		<ul>
 			<li title="overview" onclick="loadPage(this.title)">
