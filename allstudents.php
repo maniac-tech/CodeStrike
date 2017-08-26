@@ -2,7 +2,7 @@
 require ('iMacConnect.php'); 
 ?>
 <div id="content_table">
-<p id="studentsList"><b>List of Students Registered:</b></p>
+<p id="studentsList">List of Students Registered:</p>
 	<table >
 		<tr>
 			<th>Name</th>
