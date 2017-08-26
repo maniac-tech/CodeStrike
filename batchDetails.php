@@ -2,7 +2,7 @@
 require ('iMacConnect.php'); 
 ?>
 <div id="content_table">
-	<p id="studentsList"><b>List of Students Pending:</b></p>
+	<p id="studentsList"><b>Student Batch Details:</b></p>
 	<table >
 		<tr>
 			<td>Name</td>
@@ -30,5 +30,5 @@ require ('iMacConnect.php');
 </div>
 <div id="operations">
 	<p id="studentsList">Instructions:</p>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus a corrupti libero ipsam unde. Impedit iure, deserunt odio! Eligendi beatae voluptatibus vel quo nostrum mollitia tenetur iusto, molestias quis! Non.</p>
+	<p>All Batch related information is available on the following tab.</p>
 </div>
