@@ -2,21 +2,16 @@
 	//include database config file 
 include('login_connect.php');
 //require_once('interview2017Connect.php');
-
 session_start();
-
 $id="0";
 $console='';
 $session_id='';
-
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$id=$_POST["loginID"];
 	$password=$_POST["loginPassword"];
-
 	//create query
 	$query="SELECT * FROM $tableName WHERE username='$id'";
 	$result=mysqli_query($conn,$query);
-
 			//check the query in the database
 	if ($result){
 		if (mysqli_num_rows($result) > 0){	
@@ -29,9 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				echo "<script>console.log('Login Denied');</script>";
 				header('Location:login.php');
 			}
+		}else{
+			header('Location:login.php');	
 		}
+	}else{
+		header('Location:login.php');	
 	}
 }else{
-	echo "POST method failed";
+	header('Location:login.php');
 }
 ?>
