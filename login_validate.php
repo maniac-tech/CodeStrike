@@ -24,6 +24,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				echo "<script>console.log('Login Denied');</script>";
 				header('Location:login.php');
 			}
+		}else{
+			header('Location:login.php');	
 		}
 	}else{
 		header('Location:login.php');	
