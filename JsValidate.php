@@ -23,7 +23,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$result=$conn->query($query);
 
 	if ($result) {
-		header('Location:imac.php');
+		header('Location:js.php');
 	}
 	else{
 		error($func_var_mobileNo);
