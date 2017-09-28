@@ -20,19 +20,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	//create query
 		$query="SELECT * FROM users WHERE username='$id'";
-		$result=$conn->query($query);
+		$result = mysqli_query($conn,$query);
 
 			//check the query in the database
 		if ($result){
-			if ($result->num_rows > 0){	
-				$row=mysqli_fetch_assoc($result);
-				if ($row['password']==$password){
-				// echo "LOGIN GRANTED";
-					$_SESSION['userId']=$row['UserID'];
-					header('Location:adminTest.php');
-				}else{
-					echo "LOGIN DENIED";
-				}
+			$row=mysqli_fetch_assoc($result);
+			$hash=$row["password_hash"];
+			if (password_verify($password,$hash)){
+				$_SESSION['userId']=$row['UserID'];
+				header('Location:adminTest.php');
+			}else{
+				header('Location:login.php');
 			}
 		}
 	}
