@@ -1,7 +1,7 @@
 <?php 
 	$servername=getenv('DATABASE_SERVER_NAME_IMAC');
 	$databaseName=getenv('DATABASE_NAME_IMAC');
-	$tableName=getenv('DATABASE_TABLE_3');
+	$tableName=getenv('DATABASE_TABLE_NAME_DASHBOARDUSERS');
 	$username=getenv('DATABASE_USERNAME_IMAC');
 	$password=getenv('DATABASE_PASSWORD_IMAC');
 

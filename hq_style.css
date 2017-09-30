@@ -1,32 +1,69 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@font-face {
+  font-family:'Helvetica Neue Light';
+  src: url('../font/helveticaneue/HelveticaNeue-Light.ttf');
+}
+@font-face {
+  font-family:'Helvetica Neue Medium';
+  src: url('font/helveticaneue/HelveticaNeue-Medium.ttf');
+}
+@font-face {
+  font-family:'Helvetica Neue Thin';
+  src: url('font/helveticaneue/HelveticaNeue-Thin.ttf');
+}
 
 .login-page {
   width: 500px;
+  /*height: 500px;*/
   padding: 8% 0 0;
   margin: auto;
 }
 .form {
-  position: relative;
-  z-index: 1;
+  /*position: relative;*/
+  /*z-index: 1;*/
   background: #FFFFFF;
   max-width: 500px;
-  margin: 0 auto 100px;
-  padding: 45px;
+  height: 250px;
+  /*margin: 0 0 0 100px;*/
+  margin: auto;
+  padding-top: 5px;
+  padding-bottom: 25px;
   text-align: center;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
 }
 .form p{
-  font-size: 14px;
+  font-size: 24px;
+  font-family: 'Helvetica Neue Thin';
+}
+.formgroup{
+  display: inline-block;
+  border-style: solid;
+  border-color: grey;
+  border-width: 1px;
+  width: 60%;
+  text-align: left;
+  margin-bottom: 15px;
+  margin-left: 15px;
+}
+.form img{
+  width: 15%;
+  margin-top: auto;
 }
 .form input {
   font-family: "Roboto", sans-serif;
   outline: 0;
-  background: #f2f2f2;
-  width: 60%;
-  border: 0;
-  margin-left:15px;
-  padding-left:10;
+  background: white;
+  width: 85%;
+  height: 50px; 
+  /*margin-top: auto;*/
+  /*margin-bottom: 15px;*/
+  border-style: none;
+  /*border-width: 1px;*/
+  /*border-radius: 5px;*/
+  /*border-color: grey;*/
+  /*margin-left:15px;*/
   box-sizing: border-box;
+  float: right;
 }
 .inputDepartment{
   width:auto;
@@ -36,9 +73,10 @@
   text-transform: uppercase;
   outline: 0;
   background: #9c27b0;
-  width: 100%;
+  width: 60%;
   border: 0;
   padding: 15px;
+  margin-left: 15px;
   color: #FFFFFF;
   font-size: 14px;
   -webkit-transition: all 0.3 ease;

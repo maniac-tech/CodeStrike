@@ -2,35 +2,37 @@
 	//include database config file 
 include('login_connect.php');
 //require_once('interview2017Connect.php');
+
 session_start();
+
 $id="0";
 $console='';
 $session_id='';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$id=$_POST["loginID"];
 	$password=$_POST["loginPassword"];
+
+	// Checking the received data for correct expressions:
+	if (!preg_match("/^[a-zA-Z]*$/",$id)){
+		echo "Enter only characters";
+	}else{
+
 	//create query
-	$query="SELECT * FROM $tableName WHERE username='$id'";
-	$result=mysqli_query($conn,$query);
+		$query="SELECT * FROM users WHERE username='$id'";
+		$result = mysqli_query($conn,$query);
+
 			//check the query in the database
-	if ($result){
-		if (mysqli_num_rows($result) > 0){	
+		if ($result){
 			$row=mysqli_fetch_assoc($result);
-			if ($row['password']==$password){
-				// echo "LOGIN GRANTED";
-				$_SESSION['userId']=$row['username'];
-				header('Location:admin.php');
+			$hash=$row["password_hash"];
+			if (password_verify($password,$hash)){
+				$_SESSION['userId']=$row['UserID'];
+				header('Location:adminTest.php');
 			}else{
-				echo "<script>console.log('Login Denied');</script>";
 				header('Location:login.php');
 			}
-		}else{
-			header('Location:login.php');	
 		}
-	}else{
-		header('Location:login.php');	
 	}
-}else{
-	header('Location:login.php');
 }
 ?>
