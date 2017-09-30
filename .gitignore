@@ -1,0 +1,2 @@
+#Ignoring the vendor folder created by composer
+/vendor/*

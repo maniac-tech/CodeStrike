@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="#2196F3">
-  <title>iMac Training Sessions 2017</title>
+  <title>JavaScript Workshop</title>
   <link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
 
   <!-- CSS  -->
@@ -34,27 +34,18 @@
   require 'navigationBar.php'; 
   ?>
 
-
   <!--Form Details-->
   <div class="section scrollspy" id="team">
     <br>
     <center>
-      <h2 style="color:#A020F0; font-size: 35px">iMac Training Sessions 2017</h2>
+      <h2 style="color:#A020F0; font-size: 35px">JavaScript Workshop</h2>
     </center>
     <br>
     <div class="container">
-      <center>
-      <div class="video">
-      <video width="50%" controls="auto">
-        <source src="imacLab.mp4">
-        Your browser doesn't support the Video.
-      </video>
-      </div>
-      </center>
       <div  class="form">
-      <center><p>Register Here</p></center>
+        <center><p>Register Here</p></center>
         <hr>
-        <form id="contactform" action="imacValidate.php" method="post"> 
+        <form id="contactform" action="JsValidate.php" method="post"> 
           <p class="contact"><label for="name">First Name</label></p> 
           <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
 
@@ -74,7 +65,7 @@
             <option value="select">i am..</option>
             <option value="m">Male</option>
             <option value="f">Female</option>
-            <option value="others">Other</option>
+            <!-- <option value="others">Other</option> -->
           </select><br><br>
 
           <p class="contact"><label for="phone">Mobile phone</label></p> 
@@ -85,8 +76,8 @@
           <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
-          <a class="buttom" href="http://www.phpmyadmin.co/index.php">Admin Login</a>
-          <a class="buttom" href="http://admin.codestrike.in">Dashboard</a>          
+<!--           <a class="buttom" href="http://www.phpmyadmin.co/index.php">Admin Login</a>
+          <a class="buttom" href="http://admin.codestrike.in">Dashboard</a>           -->
         </form> 
       </div>
 
@@ -97,7 +88,6 @@
   <?php 
   require 'footer.php';
   ?>
-
 
   <!--  Scripts-->
   <script src="min/plugin-min.js"></script>
