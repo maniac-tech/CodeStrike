@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$row=mysqli_fetch_assoc($result);
 			$passwordDb=$row["password"];
 			if (password_verify($password,$passwordDb)){
-				$_SESSION['userId']=$row['UserID'];
+				$_SESSION['userId']=$row['username'];
 				header('Location:admin.php');
 			}else{
 				header('Location:admin.php');
