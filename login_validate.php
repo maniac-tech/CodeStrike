@@ -12,7 +12,7 @@ $session_id='';
 if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	$id=$_POST["loginID"];
 	$password=$_POST["loginPassword"];
-	
+
 	// Checking the received data for correct expressions:
 	if (!preg_match("/^[a-zA-Z]*$/",$id)){
 		echo "Enter only characters";
