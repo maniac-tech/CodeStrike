@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				$_SESSION['userId']=$row['UserID'];
 				header('Location:admin.php');
 			}else{
-				header('Location:login.php');
+				header('Location:admin.php');
 				echo "<script>console.log('Login Failed');</script>";
 			}
 		}
