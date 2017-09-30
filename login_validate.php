@@ -19,18 +19,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	}else{
 
 	//create query
-		$query="SELECT * FROM users WHERE username='$id'";
+		$query="SELECT * FROM $tableName WHERE username='$id'";
 		$result = mysqli_query($conn,$query);
 
 			//check the query in the database
 		if ($result){
 			$row=mysqli_fetch_assoc($result);
-			$hash=$row["password_hash"];
-			if (password_verify($password,$hash)){
+			$passwordDb=$row["password"];
+			if (password_verify($password,$passwordDb)){
 				$_SESSION['userId']=$row['UserID'];
 				header('Location:admin.php');
 			}else{
 				header('Location:login.php');
+				echo "<script>console.log('Login Failed');</script>";
 			}
 		}
 	}
