@@ -1,5 +1,5 @@
 <?php
-require ('iMacConnect.php'); 
+require ('imacConnect.php'); 
 ?>
 <div id="content_table">
 	<p id="studentsList"><b>List of Students Completed:</b></p>
