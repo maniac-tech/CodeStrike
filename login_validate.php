@@ -28,7 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			$hash=$row["password_hash"];
 			if (password_verify($password,$hash)){
 				$_SESSION['userId']=$row['UserID'];
-				header('Location:adminTest.php');
+				header('Location:admin.php');
 			}else{
 				header('Location:login.php');
 			}
