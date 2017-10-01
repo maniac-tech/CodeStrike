@@ -20,7 +20,7 @@ if(!isset($_SESSION['userId'])){
         </form>
     </div>
     <div id="sidebar">
-        <a href="http://www.codestrike.in">
+        <a href="http://www.codestrike.in" target="_blank">
             <img src="img/dashboard_logo.png" alt="">
         </a>
         <ul>
