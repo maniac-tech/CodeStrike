@@ -14,7 +14,7 @@ if(!isset($_SESSION['userId'])){
 </head>
 <body>
     <div id="navbar">
-        <p>Welcome, maniac-tech</p>
+        <p>Welcome, <?php echo $_SESSION['username']; ?></p>
         <form action="logout.php" method="POST">
             <Button type="submit" name="Logout" value="Logout">Logout</Button>
         </form>
