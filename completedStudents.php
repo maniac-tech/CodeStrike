@@ -1,5 +1,5 @@
 <?php
-require ('iMacConnect.php'); 
+require ('imacConnect.php'); 
 ?>
 <div id="content_table">
 	<p id="studentsList"><b>List of Students Completed:</b></p>
@@ -13,7 +13,7 @@ require ('iMacConnect.php');
 				<td>Status</td>
 			</tr>
 			<?php
-			$sql = "SELECT * FROM $tableName WHERE Status='Completed'";
+			$sql = "SELECT * FROM $tableName WHERE Status='COMPLETED'";
 			$result = mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result)>0){
 				while ($row=mysqli_fetch_assoc($result)){
