@@ -61,6 +61,6 @@ require ('imacConnect.php');
 	</ol></p>
 	<p>
 		<input type="text" form="willAllotTaskForm" id="batchAllotedInput" required>
-		<button onclick="loadAjax()" form="willAllotTaskForm">Submit</button>
+		<button onclick="loadAjax()" >Submit</button>
 	</p>
 </div>
