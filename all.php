@@ -2,7 +2,7 @@
 require ('imacConnect.php'); 
 ?>
 <div id="content_table">
-<p id="studentsList">List of Students Registered:</p>
+	<p id="studentsList">List of Students Registered:</p>
 	<table >
 		<tr>
 			<th>Name</th>
