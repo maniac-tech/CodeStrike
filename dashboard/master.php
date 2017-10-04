@@ -1,5 +1,5 @@
 <?php 
-require 'imacConnect.php';
+require '../imacConnect.php';
 // Master PHP File
 // This file should conatin all the Functional working code for all the buttons. All at one Place
 
