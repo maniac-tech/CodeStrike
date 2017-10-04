@@ -1,0 +1,92 @@
+@font-face {
+	font-family:'Helvetica Neue Light';
+	src: url('../../font/helveticaneue/HelveticaNeue-Light.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Medium';
+	src: url('../../font/helveticaneue/HelveticaNeue-Medium.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Thin';
+	src: url('../../font/helveticaneue/HelveticaNeue-Thin.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Bold';
+	src: url('../../font/helveticaneue/HelveticaNeue-Bold.ttf');
+}
+
+#interface{
+	width: 100%;
+}
+#interface button{
+	width: 12%;
+	height: 7%;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-bottom: 1%;
+	border-style: solid;
+	border-color: #2196F3;
+	border-width: 1px;
+	background: #2196F3;
+	cursor: pointer;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px #888888;
+}
+#content{
+	margin-left: 1%;
+	display: inline;
+}
+#content_table{
+	background: white;
+	margin-left: 1%;
+	margin-right: 0.5%;
+	border-radius: 4px;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 1%;
+	padding-right: 2%;
+	display: table;
+	float: left;
+	font-family: 'Helvetica Neue Thin';
+}
+#content_table p{
+	font-family: 'Helvetica Neue Bold';
+	font-size: 1.5em;
+}
+#studentsList{
+	margin-bottom: 1%;
+	margin-top: 0;
+	margin-right: 0;
+	margin-left: 0;
+	font-family: sans-serif;
+}
+#content_table table {
+	border-style: none;
+}
+#content_table table tr:first-child{
+	background: #64b5f6;
+	text-align: left;
+}
+#intro{
+	font-size: 1em !important;
+	font-family: 'Helvetica Neue Thin'!important;
+}
+#operations{
+	width: 50%;
+	margin-left: 0.5%;
+	margin-right: 0.5%;
+	background: white;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	padding-left: 1%;
+	padding-right: 2%;	
+	border-radius: 4px;
+	float: left;
+}
+#operations p button{
+	background: #42a5f5;
+	width: 25%;
+	height: 5%;
+	border-style: none;
+	box-shadow: 1px 1px 1px #888888;
+}
