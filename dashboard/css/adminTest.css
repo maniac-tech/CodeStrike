@@ -46,6 +46,9 @@ body{
 	/*border-width: 1px;*/
 	box-shadow: 1px 1px 1px #888888;
 }
+#userProfile{
+	cursor: pointer;
+}
 #sidebar{
 	background: #9c27b0;
 	width: 20%;
