@@ -1,0 +1,27 @@
+#userProfile{
+	width: 40%;
+	margin-left: 3%;
+	margin-right: 3%;
+	margin-top: 3%;
+	padding-top: 1%;
+	padding-right: 1%;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 1%;
+	background-color: white; 
+	align-content: center;
+}
+#userHeader{
+	display: inline-block;
+	width: 100%;
+}
+#name{
+	/*font-style: italic;*/
+	float: left;
+	margin: 0 0 0 0;
+}
+#edit{
+	float: right;
+}
