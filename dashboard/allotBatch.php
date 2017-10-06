@@ -1,5 +1,5 @@
 <?php
-require ('imacConnect.php'); 
+require ('../imacConnect.php'); 
 ?>
 
 <script>
@@ -19,16 +19,16 @@ require ('imacConnect.php');
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
 		xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray);
+		// xhttp.send("Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray);
 	}
-
 </script>
 <div id="content_table">
 	<p id="studentsList"><b>List of Students Pending:</b></p>
-	<form action="" name="willAllotTaskForm" id="willAllotTaskForm">
+	<form name="willAllotTaskForm" id="willAllotTaskForm">
 		<table >
 
 			<?php
-			$sql = "SELECT * FROM $tableName WHERE Status='Pending' AND Batch=0";
+			$sql = "SELECT * FROM $tableName WHERE Status='PENDING' AND Batch=0";
 			$result = mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result)>0){
 				echo "<tr>

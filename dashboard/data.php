@@ -1,5 +1,5 @@
 <?php
-require 'imacConnect.php';
+require '../imacConnect.php';
 ?>
 <div id="interface">
 	<button title="allStudents" onclick="loadContent(this.title)">Student Detail</button>

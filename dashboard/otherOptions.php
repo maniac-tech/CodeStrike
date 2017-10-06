@@ -1,5 +1,5 @@
 <?php
-require ('iMacConnect.php'); 
+require ('../imacConnect.php'); 
 ?>
 <script>
 	function loadAjax(){

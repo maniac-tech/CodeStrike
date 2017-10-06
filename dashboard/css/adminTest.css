@@ -1,0 +1,86 @@
+@font-face {
+	font-family:'Helvetica Neue Light';
+	src: url('../font/helveticaneue/HelveticaNeue-Light.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Medium';
+	src: url('../font/helveticaneue/HelveticaNeue-Medium.ttf');
+}
+@font-face {
+	font-family:'Helvetica Neue Thin';
+	src: url('../font/helveticaneue/HelveticaNeue-Thin.ttf');
+}
+
+body{
+	margin: 0 0 0 0;
+	height: 100%;
+	width: 100%;
+	font-family: 'Helvetica Neue Medium';
+}
+#navbar{
+	background: white;
+	margin:0 0 0 0;
+	width: 80%;
+	height: 10%;
+	float: right;
+}
+#navbar p{
+	float: left;
+	margin-top: 1%;
+	margin-left: 1%;
+	margin-right: 0%;
+	margin-bottom: 1%;
+	font-size: 1em;
+}
+#navbar button{
+	float: right;
+	height: 50%;
+	width: 10%;
+	margin-top: 1%;
+	margin-left: 0%;
+	margin-right: 1%;
+	margin-bottom: 1%;
+	background: #d05ce3;
+	color: white;
+	border-style: none;
+	/*border-width: 1px;*/
+	box-shadow: 1px 1px 1px #888888;
+}
+#sidebar{
+	background: #9c27b0;
+	width: 20%;
+	min-height: 100%;
+	float: left;
+	margin: 0 0 0 0 ;
+}
+#sidebar img{
+	width: 100%;
+}
+#sidebar ul{
+	padding-left: 0;
+}
+#sidebar ul li{
+	width: 100%;
+	cursor: pointer;
+}
+#sidebar ul li:hover{
+	background: #2196F3;
+}
+#sidebar ul li p{
+	width: 100%;
+	color: white;
+	font-size: 1.3em;
+	text-align: left;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	padding-left: 5%;
+	margin:0 0 0 0;
+}
+#body{
+	background: #eae6e6;
+	width: 80%;
+	height: 90%;
+	float: right;
+	margin: 0 0 0 0;
+	overflow-y: scroll;
+}

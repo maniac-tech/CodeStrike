@@ -25,14 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			//check the query in the database
 		if ($result){
 			$row=mysqli_fetch_assoc($result);
-			$passwordDb=$row["password"];
-			if (password_verify($password,$passwordDb)){
+			$hash=$row["password"];
+			if (password_verify($password,$hash)){
 				$_SESSION['userId']=$row['Unique ID'];
 				$_SESSION['username']=$row['username'];
-				header('Location:admin.php');
+				header('Location:index.php');
 			}else{
 				header('Location:login.php');
-				echo "<script>console.log('Login Failed');</script>";
 			}
 		}
 	}

@@ -1,20 +1,20 @@
 <?php
-require ('imacConnect.php'); 
+require ('../imacConnect.php'); 
 ?>
 <div id="content_table">
-<p id="studentsList">List of Students Registered:</p>
+	<p id="studentsList"><b>List of Students Pending:</b></p>
 	<table >
 		<tr>
-			<th>Name</th>
-			<th>Year</th>
-			<th>Branch</th>
-			<th>Email</th>
-			<th>Mobile</th>
-			<th>Status</th>
-			<th>Batch</th>
+			<td>Name</td>
+			<td>Year</td>
+			<td>Branch</td>
+			<td>Email</td>
+			<td>Mobile</td>
+			<td>Status</td>
+			<td>Batch</td>
 		</tr>
 		<?php
-		$sql = "SELECT * FROM $tableName ";
+		$sql = "SELECT * FROM $tableName WHERE Status='Pending'";
 		$result = mysqli_query($conn,$sql);
 		if(mysqli_num_rows($result)>0){
 			while ($row=mysqli_fetch_assoc($result)){
