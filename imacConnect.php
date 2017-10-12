@@ -5,6 +5,7 @@
 	$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
 	$tableName2=getenv('DATABASE_TABLE_NAME_GIT');
 	$tableNameJs = getenv('DATABASE_TABLE_NAME_JS');
+	$tableNameCo = getenv('DB_IMAC_Co');
 	$username=getenv('DATABASE_USERNAME_IMAC');
 	$password=getenv('DATABASE_PASSWORD_IMAC');
 	
