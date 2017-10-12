@@ -1,5 +1,6 @@
 <?php
-require ('../imacConnect.php'); 
+require ('../iMacConnect.php'); 
+session_start();
 ?>
 <link rel="stylesheet" href="css/userProfile.css">
 <div id="userProfile">
@@ -11,7 +12,7 @@ require ('../imacConnect.php');
     <table>
       <tbody>
         <?php 
-        $sql = "SELECT * FROM $tableNameDUD WHERE `Unique ID`='CSCMPN00' ";
+        $sql = "SELECT * FROM $tableUsers WHERE `Unique ID`='".$_SESSION['userId']."' ";
         $result = mysqli_query($conn,$sql);
         if (mysqli_num_rows($result)>0){
           $row=mysqli_fetch_assoc($result);
