@@ -1,6 +1,6 @@
 <?php
 require ('../imacConnect.php'); 
-session_start();
+// session_start();
 ?>
 <link rel="stylesheet" href="css/userProfile.css">
 <div id="userProfile">
