@@ -11,7 +11,7 @@ require ('../iMacConnect.php');
     <table>
       <tbody>
         <?php 
-        $sql = "SELECT * FROM $tableUsers WHERE `Unique ID`='CSCMPN00' ";
+        $sql = "SELECT * FROM $tableNameDUD WHERE `Unique ID`='CSCMPN00' ";
         $result = mysqli_query($conn,$sql);
         if (mysqli_num_rows($result)>0){
           $row=mysqli_fetch_assoc($result);
