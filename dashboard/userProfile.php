@@ -24,7 +24,7 @@ session_start();
           echo "<tr><td>Mobile:</td><td>".$row['Mobile']."</td></tr>";
         }else{
           echo "<tr><td>NO DATA AVAILABLE.</td></tr>";
-          echo "$_SESSION['userId']";
+          // echo "$_SESSION['userId']";
         }
         ?>
     </tbody>
