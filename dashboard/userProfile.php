@@ -1,3 +1,6 @@
+<?php
+require ('../iMacConnect.php'); 
+?>
 <link rel="stylesheet" href="css/userProfile.css">
 <div id="userProfile">
   <div id="userHeader">
@@ -7,36 +10,21 @@
   <div> 
     <table>
       <tbody>
-        <tr>
-          <td>Name:</td>
-          <td>Sheena Shrestha</td>
-        </tr>
-        <tr>
-          <td>Unique ID</td>
-          <td>XXXXXXXX</td>
-        </tr>
-        <tr>
-          <td>Department:</td>
-          <td>Programming</td>
-        </tr>
-
-        <tr>
-          <td>Date of Birth:</td>
-          <td>01/24/1988</td>
-        </tr>
-
-        <tr>
-         <tr>
-          <td>Gender:</td>
-          <td>Female</td>
-        </tr>
-        <tr>
-          <td>Email:</td>
-          <td><a href="mailto:info@support.com">info@support.com</a></td>
-        </tr>
-        <td>Phone Number:</td>
-        <td>555-4567-890(Mobile)</td>
-      </tr>
+        <?php 
+        $sql = "SELECT * FROM $tableUsers WHERE `Unique ID`='CSCMPN00' ";
+        $result = mysqli_query($conn,$sql);
+        if (mysqli_num_rows($result)>0){
+          $row=mysqli_fetch_assoc($result);
+          echo "<tr><td>Name:</td><td>".$row['First Name']." ".$row['Last Name']."</td></tr>";
+          echo "<tr><td>Unique ID:</td><td>".$row['Unique ID']."</td></tr>";
+          echo "<tr><td>Department:</td><td>".$row['Department']."</td></tr>";
+          echo "<tr><td>Role:</td><td>".$row['Role']."</td></tr>";
+          echo "<tr><td>E-Mail ID:</td><td>".$row['Email ID']."</td></tr>";
+          echo "<tr><td>Mobile:</td><td>".$row['Mobile']."</td></tr>";
+        }else{
+          echo "<tr><td>NO DATA AVAILABLE.</td></tr>";
+        }
+        ?>
     </tbody>
   </table>
 </div>
