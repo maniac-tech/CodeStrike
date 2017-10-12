@@ -1,5 +1,5 @@
 <?php
-require ('../iMacConnect.php'); 
+require ('../imacConnect.php'); 
 ?>
 <link rel="stylesheet" href="css/userProfile.css">
 <div id="userProfile">
