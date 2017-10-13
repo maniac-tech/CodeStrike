@@ -39,10 +39,7 @@ require ('../imacConnect.php');
 			<th>Name</th>
 			<th>Year</th>
 			<th>Branch</th>
-			<th>Email</th>
 			<th>Mobile</th>
-			<th>Unique ID</th>
-			<th>RFID No</th>
 		</tr>
 		<?php
 		$sql = "SELECT * FROM $tableNameCoT";
