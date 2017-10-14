@@ -3,11 +3,11 @@
 <?php 
 	$sql="";
 	$result="";
-	$sql = "SELECT * FROM $tableName WHERE Branch='Cmpn' ";
+	$sql = "SELECT * FROM $tableName WHERE Branch='CMPN' ";
 	$result = mysqli_query($conn,$sql);
 	$countCMPN = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='IT' ";
+	$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
 	$result = mysqli_query($conn,$sql);
 	$countIT = mysqli_num_rows($result);
 
@@ -15,11 +15,11 @@
 	$result = mysqli_query($conn,$sql);
 	$countEXTC = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='Electronics' ";
+	$sql = "SELECT * FROM $tableName WHERE Branch='ELEX' ";
 	$result = mysqli_query($conn,$sql);
 	$countELEC = mysqli_num_rows($result);	
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='Electrical' ";
+	$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
 	$result = mysqli_query($conn,$sql);
 	$countELEX = mysqli_num_rows($result);	
 
