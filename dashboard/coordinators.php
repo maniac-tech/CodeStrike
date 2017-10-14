@@ -1,5 +1,9 @@
 <?php
 require ('../imacConnect.php'); 
+session_start();
+if(!isset($_SESSION['userId'])){
+	header('Location:login.php');
+}
 ?>
 <div id="content_table">
 	<p id="studentsList">Student Co-Ordinator List:</p>
