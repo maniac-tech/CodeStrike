@@ -9,6 +9,7 @@
 	$countCMPN = mysqli_num_rows($result);
 
 	$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
+
 	$result = mysqli_query($conn,$sql);
 	$countIT = mysqli_num_rows($result);
 
@@ -40,7 +41,7 @@
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 	google.charts.setOnLoadCallback(drawBasic);
-	
+
 	function drawChart() {
 
 		var data = google.visualization.arrayToDataTable([
@@ -61,6 +62,7 @@
 
 		chart.draw(data, options);
 	}
+  
 	function drawBasic() {
 
 		var data = google.visualization.arrayToDataTable([
