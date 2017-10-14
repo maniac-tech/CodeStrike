@@ -40,7 +40,8 @@
 			]);
 
 		var options = {
-			title: 'Department wise Registrations'
+			title: 'Department wise Registrations',
+			is3D: true,
 		};
 
 		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
