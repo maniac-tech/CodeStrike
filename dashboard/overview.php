@@ -21,12 +21,25 @@
 
 	$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
 	$result = mysqli_query($conn,$sql);
-	$countELEX = mysqli_num_rows($result);	
+	$countELEX = mysqli_num_rows($result);
+
+	$sql = "SELECT * FROM $tableName WHERE Year='BE' ";
+	$result = mysqli_query($conn,$sql);
+	$countBE = mysqli_num_rows($result);
+
+	$sql = "SELECT * FROM $tableName WHERE Year='TE' ";
+	$result = mysqli_query($conn,$sql);
+	$countTE = mysqli_num_rows($result);
+
+	$sql = "SELECT * FROM $tableName WHERE Year='SE' ";
+	$result = mysqli_query($conn,$sql);
+	$countSE = mysqli_num_rows($result);	
 
  ?>
 <script>
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
+	google.charts.setOnLoadCallback(drawBasic);
 
 	function drawChart() {
 
@@ -45,6 +58,32 @@
 		};
 
 		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+		chart.draw(data, options);
+	}
+
+	function drawBasic() {
+
+		var data = google.visualization.arrayToDataTable([
+			['Year', 'Registrations',],
+			['SE', <?php echo $countSE; ?>],
+			['TE', <?php echo $countTE; ?>],
+			['BE', <?php echo $countBE; ?>],
+			]);
+
+		var options = {
+			title: 'Year wise Registrations',
+			chartArea: {width: '50%'},
+			hAxis: {
+				title: 'Total Registrations',
+				minValue: 0
+			},
+			vAxis: {
+				title: 'Year'
+			}
+		};
+
+		var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
 
 		chart.draw(data, options);
 	}
