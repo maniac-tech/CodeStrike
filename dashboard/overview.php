@@ -1,5 +1,6 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <div id="piechart" style="width: 900px; height: 500px;"></div>
+<div id="chart_div" style="width: 50%; height: 50%;"></div>
 <?php 
 	$sql="";
 	$result="";
