@@ -1,6 +1,6 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div id="piechart" style="width: 50%; height: 50%;"></div>
-<div id="chart_div" style="width: 50%; height: 50%;"></div>
+<div id="piechart" ></div>
+<div id="chart_div"></div>
 <?php 
 	$sql="";
 	$result="";
@@ -22,7 +22,7 @@
 
 	$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
 	$result = mysqli_query($conn,$sql);
-	$countELEX = mysqli_num_rows($result);
+	$countELEX = mysqli_num_rows($result);	
 
 	$sql = "SELECT * FROM $tableName WHERE Year='BE' ";
 	$result = mysqli_query($conn,$sql);
@@ -34,14 +34,13 @@
 
 	$sql = "SELECT * FROM $tableName WHERE Year='SE' ";
 	$result = mysqli_query($conn,$sql);
-	$countSE = mysqli_num_rows($result);	
-
- ?>
+	$countSE = mysqli_num_rows($result);
+?>
 <script>
 	google.charts.load('current', {'packages':['corechart']});
 	google.charts.setOnLoadCallback(drawChart);
 	google.charts.setOnLoadCallback(drawBasic);
-
+	
 	function drawChart() {
 
 		var data = google.visualization.arrayToDataTable([
@@ -62,7 +61,6 @@
 
 		chart.draw(data, options);
 	}
-
 	function drawBasic() {
 
 		var data = google.visualization.arrayToDataTable([
