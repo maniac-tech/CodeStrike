@@ -13,6 +13,8 @@ if(!isset($_SESSION['userId'])){
 	<link rel="stylesheet" href="css/overview.css">
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	<script>google.charts.load('current', {'packages':['corechart']});</script>
 </head>
 <body>
 	<div id="navbar">
