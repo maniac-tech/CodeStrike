@@ -42,8 +42,8 @@
 	
 	google.charts.setOnLoadCallback(drawChart);
 	google.charts.setOnLoadCallback(drawBasic);
-	
-	function drawChart() {
+
+function drawChart() {
 
 		var data = google.visualization.arrayToDataTable([
 			['Registrations', 'Per week'],
@@ -63,8 +63,8 @@
 
 		chart.draw(data, options);
 	}
-	function drawBasic() {
 
+function drawBasic() {
 		var data = google.visualization.arrayToDataTable([
 			['Year', 'Registrations',],
 			['SE', <?php echo $countSE; ?>],
