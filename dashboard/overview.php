@@ -1,4 +1,6 @@
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<div id="overview_chart">
+	Main chart goes here
+</div>
 <div id="piechart" ></div>
 <div id="chart_div"></div>
 <?php 
@@ -9,7 +11,6 @@
 	$countCMPN = mysqli_num_rows($result);
 
 	$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
-
 	$result = mysqli_query($conn,$sql);
 	$countIT = mysqli_num_rows($result);
 
@@ -38,11 +39,11 @@
 	$countSE = mysqli_num_rows($result);
 ?>
 <script>
-	google.charts.load('current', {'packages':['corechart']});
+	
 	google.charts.setOnLoadCallback(drawChart);
 	google.charts.setOnLoadCallback(drawBasic);
 
-	function drawChart() {
+function drawChart() {
 
 		var data = google.visualization.arrayToDataTable([
 			['Registrations', 'Per week'],
@@ -62,9 +63,8 @@
 
 		chart.draw(data, options);
 	}
-  
-	function drawBasic() {
 
+function drawBasic() {
 		var data = google.visualization.arrayToDataTable([
 			['Year', 'Registrations',],
 			['SE', <?php echo $countSE; ?>],
