@@ -6,11 +6,8 @@ if(!isset($_SESSION['userId'])){
 }
 ?>
 <div id="content_table">
-	<form action="" method="post">
-<input type="text" name="search">
-<input type="submit" name="submit" value="Search">
-</form>
-<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+	
+<input type="text" id="myInput" onkeyup="myFunction()" style="background-image: url('/css/searchicon.png'); background-position: 10px 12px; background-repeat: no-repeat; width: 100%; font-size: 16px; padding: 12px 20px 12px 40px; border: 1px solid #ddd; margin-bottom: 12px;" placeholder="Search for names..">
 <p id="studentsList">List of Students Registered:</p>
 	<table id="myTable">
 		<tr>
@@ -22,44 +19,6 @@ if(!isset($_SESSION['userId'])){
 			<th>Status</th>
 			<th>Batch</th>
 		</tr>
-		<tr>
-			<td>Harshit</td>
-			<td>Year</td>
-			<td>Branch</td>
-			<td>Email</td>
-			<td>Mobile</td>
-			<td>Status</td>
-			<td>Batch</td>
-		</tr>
-		<tr>
-			<td>Name</td>
-			<td>Year</td>
-			<td>Branch</td>
-			<td>Email</td>
-			<td>Mobile</td>
-			<td>Status</td>
-			<td>Batch</td>
-		</tr>
-		<?php
-		$search_value=$_POST["search"];
-		$sql="SELECT * FROM $tableName where Name like '%$search_value%'";
-		$result = mysqli_query($conn,$sql);
-		if(mysqli_num_rows($result)>0){
-			while ($row=mysqli_fetch_assoc($result)){
-				echo "<tr>";
-				echo "<td>".$row["Name"]."</td>";
-				echo "<td>".$row["Year"]."</td>";
-				echo "<td>".$row["Branch"]."</td>";
-				echo "<td>".$row["Email"]."</td>";
-				echo "<td>".$row["Mobile"]."</td>";
-				echo "<td>".$row["Status"]."</td>";
-				echo "<td>".$row["Batch"]."</td>";
-				echo "</tr>";
-			}
-		}else{
-			echo "NO DATA";
-		}
-		?>
 		<?php
 		$sql = "SELECT * FROM $tableName ";
 		$result = mysqli_query($conn,$sql);
