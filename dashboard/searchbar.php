@@ -1,1 +1,0 @@
-<input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
