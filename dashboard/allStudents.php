@@ -7,7 +7,7 @@ if(!isset($_SESSION['userId'])){
 ?>
 <div id="content_table">
 	
-<input type="text" id="myInput" onkeyup="myFunction()" style="background-image: url('http://www.phoebehealth.com/health-matters/inside-phoebe/_img/search-icon.png'); background-position: 10px 12px; background-repeat: no-repeat; width: 100%; font-size: 16px; padding: 12px 20px 12px 40px; border: 1px solid #ddd; margin-bottom: 12px;" placeholder="Search for names..">
+require('searchbar.php');
 <p id="studentsList">List of Students Registered:</p>
 	<table id="myTable">
 		<tr>
