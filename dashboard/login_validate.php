@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		}
 		*/
 
-		echo "<br> Result: pg_result_status($result) <br>";
+		echo "<br> Result:". pg_result_status($result) ." <br>";
 	}
 }
 ?>
