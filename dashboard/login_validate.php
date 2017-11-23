@@ -19,10 +19,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	}else{
 
 	//create query
-		$query="SELECT * FROM $tableName WHERE username='$id'";
-		$result = mysqli_query($conn,$query);
+		// $query="SELECT * FROM $tableName WHERE username='$id'";
+		// $result = mysqli_query($conn,$query);
 
-			//check the query in the database
+		$result = pg_query_params($dbconn, "SELECT * FROM $tableName WHERE username='$1'", array($id));
+		
+		//check the query in the database
+		/*
 		if ($result){
 			$row=mysqli_fetch_assoc($result);
 			$hash=$row["password"];
@@ -34,6 +37,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				header('Location:login.php');
 			}
 		}
+		*/
+
+		echo "$result";
 	}
 }
 ?>
