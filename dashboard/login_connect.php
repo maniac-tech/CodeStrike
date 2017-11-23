@@ -8,5 +8,8 @@ $password=getenv('PostGRE_DB_Password');
 // $tableName=getenv('DATABASE_TABLE_NAME_DASHBOARDUSERS');
 
 $dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password")
-or die('Could not connect: ' . pg_last_error());
+if (!$dbconn){
+	echo ('Could not connect: ' . pg_last_error().'<br>');
+	pg_result_error($dbconn);
+}
 ?>
