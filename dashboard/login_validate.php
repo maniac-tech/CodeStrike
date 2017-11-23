@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		}
 		*/
 
-		echo "$result";
+		echo "<br> Result: $result <br>";
 	}
 }
 ?>
