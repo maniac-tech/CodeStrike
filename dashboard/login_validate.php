@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		// $query="SELECT * FROM $tableName WHERE username='$id'";
 		// $result = mysqli_query($conn,$query);
 
-		$result = pg_query_params($dbconn, "SELECT * FROM $tableName WHERE username='$1'", array($id));
+		$result = pg_query_params($dbconn, "SELECT * FROM $tableName WHERE userID='$1'", array($id));
 		echo "result done";
 		//check the query in the database
 		/*
