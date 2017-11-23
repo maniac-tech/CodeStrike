@@ -1,7 +1,7 @@
 <?php
 // Connecting, selecting database
 
-$servername=getenv('DATABASE_URL');
+$servername=getenv('PostGRE_DB_Host');
 $databaseName=getenv('PostGRE_DB');
 $username=getenv('PostGRE_DB_User');
 $password=getenv('PostGRE_DB_Password');
