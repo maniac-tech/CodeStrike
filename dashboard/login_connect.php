@@ -10,6 +10,6 @@ $password=getenv('PostGRE_DB_Password');
 $dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password")
 if (!$dbconn){
 	echo ('Could not connect: ' . pg_last_error().'<br>');
-	pg_result_error($dbconn);
+	echo pg_result_error($dbconn);
 }
 ?>
