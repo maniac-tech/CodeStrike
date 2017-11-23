@@ -4,7 +4,7 @@ $servername=getenv('PostGRE_DB_Host');
 $databaseName=getenv('PostGRE_DB');
 $username=getenv('PostGRE_DB_User');
 $password=getenv('PostGRE_DB_Password');
-// $tableName=getenv('DATABASE_TABLE_NAME_DASHBOARDUSERS');
+$tableName=getenv('PostGRE_DB_Users');
 
 $dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 if (!$dbconn){
