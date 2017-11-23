@@ -12,4 +12,7 @@ if (!$dbconn){
 	echo ('Could not connect: ' . pg_last_error().'<br>');
 	echo pg_result_error($dbconn);
 }
+else{
+	header("Location:codestrike.in");
+}
 ?>
