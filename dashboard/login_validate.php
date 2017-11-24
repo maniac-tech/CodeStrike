@@ -53,8 +53,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		
 
 		// PostGRE SQL Commands:
-		if (pg_result_status($result)==2) {
-			echo "No of rows:".pg_num_rows($result);
+		if ((pg_result_status($result)==2) && (pg_num_rows($result)==1) ) {
+			$row = pg_fetch_row($result);
+			$psd = $row['password'];
+			echo "Password is :".$password;
+			if ($psd == $password ){
+				echo "Congratulations, You have been granted access.";
+			}
+			else{
+				echo "Sorry. Access Denied.";
+			}
 		}
 
 		// SQL Commands:
