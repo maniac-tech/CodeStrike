@@ -30,16 +30,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 			//Verifying the password:
 			if (password_verify($password,$hash)){ // <--Replace here
-				echo "Congratulations, You have been granted access.";
 				// Seting Session variables:
 				$_SESSION['userId']=$row['uniqueID'];
 				$_SESSION['username']=$row['username'];
+
 				// Redirecting after successfull login:
 				header("Location:index.php");
 			}
 			else{
-				echo "Sorry. Access Denied.";
-				// Redirect: login.php
+				// Redirecting after unsuccessful login:
+				header("Location:login.php");
 			}
 		}
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
