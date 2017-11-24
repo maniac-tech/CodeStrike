@@ -37,7 +37,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 				// Set follwoing Session Variables:
 				//		* userID
 				//		* username
-
+				$_SESSION['userId']=$row['uniqueID'];
+				$_SESSION['username']=$row['username'];
 				// Redirect: index.php 
 			}
 			else{
