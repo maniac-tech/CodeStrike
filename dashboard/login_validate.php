@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 		// PostGRE SQL Commands:
 		if (pg_result_status($result)==2) {
-			echo "No of rows:".pg_num_fields($result);
+			echo "No of rows:".pg_num_rows($result);
 		}
 
 		// SQL Commands:
