@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 			echo "<tr><td>".pg_field_name($result, $count)."</td></tr>";
 			$count = $count+1;
 		}
-		</table>
+		echo "</table>";
 		echo "result done";
 		//check the query in the database
 		/*
