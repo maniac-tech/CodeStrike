@@ -29,10 +29,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		echo "<table><tr>";
 		while ($count < pg_num_fields($result)){
 			echo "<td>".pg_field_name($result, $count)."</td>";
-			echo "pg_field_";
 			$count = $count+1;
 		}
-		echo "</tr></table>";
+		echo "</tr>";
+
+		$count = 0;
+		while ($count < pg_fetch_row($result)){
+			echo "<tr>";
+			$count = count($row);
+			$y = 0;
+			while ($y < $count)
+			{
+				$c_row = current($row);
+				echo '<td>' . $c_row . '</td>';
+				next($row);
+				$y = $y + 1;
+			}
+			echo '</tr>';
+			$i = $i + 1;
+		}
+		echo "</table>";
 		echo "result done";
 		//check the query in the database
 		/*
