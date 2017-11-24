@@ -17,29 +17,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 	if (!preg_match("/^[a-zA-Z]*$/",$id)){
 		echo "Enter only characters";
 	}else{
-
-	//create query
-		// $query="SELECT * FROM $tableName WHERE username='$id'";
-		// $result = mysqli_query($conn,$query);
-
+		//----- PostGRE SQL Commands -----
+	
+		//creating Query:
 		$result = pg_query_params($dbconn, "SELECT * FROM $tableName WHERE username=$1", array($id));
 		// $result = pg_query($dbconn, "SELECT * FROM $tableName WHERE username='$id'");
 
-		//----- PostGRE SQL Commands -----
+		//Checking for Success Result and only ONE Row entry:
 		if ((pg_result_status($result)==2) && (pg_num_rows($result)==1) ) {
 			$row = pg_fetch_assoc($result);
 			$hash = $row['password'];
 
-			// To-DO:
-			// 		* Replace the simple password matching code with the previous one, used in SQL.
+			//Verifying the password:
 			if (password_verify($password,$hash)){ // <--Replace here
 				echo "Congratulations, You have been granted access.";
-				// Set follwoing Session Variables:
-				//		* userID
-				//		* username
+				// Seting Session variables:
 				$_SESSION['userId']=$row['uniqueID'];
 				$_SESSION['username']=$row['username'];
-				// Redirect: index.php 
+				// Redirecting after successfull login:
+				header("Location:index.php");
 			}
 			else{
 				echo "Sorry. Access Denied.";
@@ -50,6 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 
 		//----- SQL Commands -----
+		//create query
+		// $query="SELECT * FROM $tableName WHERE username='$id'";
+		// $result = mysqli_query($conn,$query);
+
 		//check the query in the database
 		/*
 		if ($result){
