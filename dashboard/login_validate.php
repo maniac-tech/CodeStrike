@@ -26,12 +26,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		$result = pg_query($dbconn, "SELECT * FROM $tableName ");
 		$count = 0;
 
-		echo "<table>";
+		echo "<table><tr>";
 		while ($count < pg_num_fields($result)){
-			echo "<tr><td>".pg_field_name($result, $count)."</td></tr>";
+			echo "<td>".pg_field_name($result, $count)."</td>";
+			echo "pg_field_";
 			$count = $count+1;
 		}
-		echo "</table>";
+		echo "</tr></table>";
 		echo "result done";
 		//check the query in the database
 		/*
