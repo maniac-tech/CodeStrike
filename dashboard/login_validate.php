@@ -24,48 +24,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 		$result = pg_query_params($dbconn, "SELECT * FROM $tableName WHERE username=$1", array($id));
 		// $result = pg_query($dbconn, "SELECT * FROM $tableName WHERE username='$id'");
-		$count = 0;
 
-		// echo "<table><tr>";
-		// while ($count < pg_num_fields($result)){
-		// 	echo "<td>".pg_field_name($result, $count)."</td>";
-		// 	$count = $count+1;
-		// }
-		// echo "</tr>";
-
-		// $count = 0;
-		// while ($row = pg_fetch_row($result)){
-		// 	echo "<tr>";
-		// 	$count = count($row);
-		// 	$y = 0;
-		// 	while ($y < $count)
-		// 	{
-		// 		$c_row = current($row);
-		// 		echo '<td>' . $c_row . '</td>';
-		// 		next($row);
-		// 		$y = $y + 1;
-		// 	}
-		// 	echo '</tr>';
-		// 	$i = $i + 1;
-		// }
-		// echo "</table>";
-		// echo "result done";
-		
-
-		// PostGRE SQL Commands:
+		//----- PostGRE SQL Commands -----
 		if ((pg_result_status($result)==2) && (pg_num_rows($result)==1) ) {
 			$row = pg_fetch_assoc($result);
-			$psd = $row['password'];
-			echo "Password is :".$psd;
-			if ($psd == $password ){
+			$hash = $row['password'];
+
+			// To-DO:
+			// 		* Replace the simple password matching code with the previous one, used in SQL.
+			if ($hash == $password ){ // <--Replace here
 				echo "Congratulations, You have been granted access.";
+				// Set follwoing Session Variables:
+				//		* userID
+				//		* username
+
+				// Redirect: index.php 
 			}
 			else{
 				echo "Sorry. Access Denied.";
+				// Redirect: login.php
 			}
 		}
+		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
-		// SQL Commands:
+
+		//----- SQL Commands -----
 		//check the query in the database
 		/*
 		if ($result){
@@ -81,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		}
 		*/
 
-		echo "<br> Result:". pg_result_status($result) ." <br>";
+		// -X-X-X- End of SQL Commands -X-X-X-
 	}
 }
 ?>
