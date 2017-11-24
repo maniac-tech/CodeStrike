@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 			// To-DO:
 			// 		* Replace the simple password matching code with the previous one, used in SQL.
-			if ($hash == $password ){ // <--Replace here
+			if (password_verify($password,$hash)){ // <--Replace here
 				echo "Congratulations, You have been granted access.";
 				// Set follwoing Session Variables:
 				//		* userID
