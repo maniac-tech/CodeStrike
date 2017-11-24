@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		if ((pg_result_status($result)==2) && (pg_num_rows($result)==1) ) {
 			$row = pg_fetch_row($result);
 			$psd = $row['password'];
-			echo "Password is :".$password;
+			echo "Password is :".$psd;
 			if ($psd == $password ){
 				echo "Congratulations, You have been granted access.";
 			}
