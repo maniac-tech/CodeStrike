@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 
 		// PostGRE SQL Commands:
 		if ((pg_result_status($result)==2) && (pg_num_rows($result)==1) ) {
-			$row = pg_fetch_row($result);
+			$row = pg_fetch_assoc($result);
 			$psd = $row['password'];
 			echo "Password is :".$psd;
 			if ($psd == $password ){
