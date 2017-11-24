@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
 		echo "</tr>";
 
 		$count = 0;
-		while ($count < pg_fetch_row($result)){
+		while ($row = pg_fetch_row($result)){
 			echo "<tr>";
 			$count = count($row);
 			$y = 0;
