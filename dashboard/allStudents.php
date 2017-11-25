@@ -31,7 +31,7 @@ if(!isset($_SESSION['userId'])){
 				echo "<td>".$row["Branch"]."</td>";
 				echo "<td>".$row["Email"]."</td>";
 				echo "<td>".$row["Mobile"]."</td>";
-				// echo "<td>".$row["Status"]."</td>";
+				echo "<td>".$row["Status"]."</td>";
 				// echo "<td>".$row["Batch"]."</td>";
 				echo "</tr>";
 			}
