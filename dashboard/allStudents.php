@@ -14,7 +14,8 @@ if(!isset($_SESSION['userId'])){
 			<th>Branch</th>
 			<th>Email</th>
 			<th>Mobile</th>
-			<!-- <th>Status</th> -->
+			<th>Status</th>
+			<!-- TO-DO: Print the Batch no alloted from the respective table -->
 			<!-- <th>Batch</th> -->
 		</tr>
 		<?php
