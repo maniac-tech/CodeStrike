@@ -14,12 +14,12 @@ if(!isset($_SESSION['userId'])){
 			<th>Branch</th>
 			<th>Email</th>
 			<th>Mobile</th>
-			<th>Status</th>
-			<th>Batch</th>
+			<!-- <th>Status</th> -->
+			<!-- <th>Batch</th> -->
 		</tr>
 		<?php
 		//----- PostGRE SQL Commands -----
-		$query = "SELECT * FROM $tableName ";
+		$query = "SELECT * FROM $tablename_IMac";
 		$result = pg_query($dbconn, $query);
 
 		if (pg_result_status($result)==2) {
@@ -30,8 +30,8 @@ if(!isset($_SESSION['userId'])){
 				echo "<td>".$row["Branch"]."</td>";
 				echo "<td>".$row["Email"]."</td>";
 				echo "<td>".$row["Mobile"]."</td>";
-				echo "<td>".$row["Status"]."</td>";
-				echo "<td>".$row["Batch"]."</td>";
+				// echo "<td>".$row["Status"]."</td>";
+				// echo "<td>".$row["Batch"]."</td>";
 				echo "</tr>";
 			}
 		}
