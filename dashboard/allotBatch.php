@@ -44,6 +44,7 @@ if(!isset($_SESSION['userId'])){
 					</tr>";
 				while($row = pg_fetch_assoc($result)){
 					echo "<tr>";
+					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
 					echo "<td>".$row["Name"]."</td>";
 					echo "<td>".$row["Year"]."</td>";
 					echo "<td>".$row["Branch"]."</td>";
