@@ -34,7 +34,7 @@ if(!isset($_SESSION['userId'])){
 			<?php
 			//----- PostGRE SQL Commands -----
 			// $query = "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND Batch=$2";
-			$result = pg_query_params($connect,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND Batch=$2",array('PENDING','0'));
+			$result = pg_query_params($connect,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2",array('PENDING','0'));
 			if (pg_result_status($result)==2) {
 				echo "<tr>
 						<td></td>
