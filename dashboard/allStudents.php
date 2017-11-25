@@ -20,7 +20,7 @@ if(!isset($_SESSION['userId'])){
 		<?php
 		//----- PostGRE SQL Commands -----
 		$query = "SELECT * FROM $tableName ";
-		$result = pg_query_params($dbconn, $query, array());
+		$result = pg_query($dbconn, $query);
 
 		if (pg_result_status($result)==2) {
 			while($row = pg_fetch_assoc($result)){
