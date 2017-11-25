@@ -19,7 +19,7 @@ if(!isset($_SESSION['userId'])){
 		</tr>
 		<?php
 		//----- PostGRE SQL Commands -----
-		$query = "SELECT * FROM $tablename_IMac WHERE Status='$1'";
+		$query = "SELECT * FROM $tablename_IMac WHERE \"Status\"='$1'";
 		$result = pg_query_params($dbconn, $query,array('PENDING'));
 		if (pg_result_status($result)==2) {
 			while($row = pg_fetch_assoc($result)){
