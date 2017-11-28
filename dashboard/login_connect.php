@@ -6,6 +6,7 @@ $username=getenv('PostGRE_DB_User');
 $password=getenv('PostGRE_DB_Password');
 $tableName=getenv('PostGRE_DB_Users');
 $tablename_IMac=getenv('PostGRE_DB_IMac');
+$tablename_IMac_Coord=getenv('PostGRE_DB_IMac_Co');
 
 $dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 if (!$dbconn){
