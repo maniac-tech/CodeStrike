@@ -1,5 +1,9 @@
 <?php 
-require 'imacConnect.php';
+require 'login_connect.php';
+session_start();
+if(!isset($_SESSION['userId'])){
+	header('Location:login.php');
+}
 // Master PHP File
 // This file should conatin all the Functional working code for all the buttons. All at one Place
 
@@ -62,10 +66,10 @@ Button Roles:
 		$checkboxArray = array();
 		$checkboxArray=$_POST['checkbox'];
 		$servername=getenv('DATABASE_SERVER_NAME_IMAC');
-	$databaseName=getenv('DATABASE_NAME_IMAC');
+		$databaseName=getenv('DATABASE_NAME_IMAC');
 		$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
-	$username=getenv('DATABASE_USERNAME_IMAC');
-	$password=getenv('DATABASE_PASSWORD_IMAC');
+		$username=getenv('DATABASE_USERNAME_IMAC');
+		$password=getenv('DATABASE_PASSWORD_IMAC');
 		//create connection
 		$conn=mysqli_connect($servername,$username,$password,$databaseName);
 		if (!$conn){
@@ -94,11 +98,11 @@ Button Roles:
 	function otherOptions($status){
 		$checkboxArray = array();
 		$checkboxArray=$_POST['checkbox'];
-		$servername="localhost";
-		$databaseName="imac";
-		$tableName="registrations2017";
-		$username="root";
-		$password="";
+		$servername=getenv('DATABASE_SERVER_NAME_IMAC');
+		$databaseName=getenv('DATABASE_NAME_IMAC');
+		$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
+		$username=getenv('DATABASE_USERNAME_IMAC');
+		$password=getenv('DATABASE_PASSWORD_IMAC');
 		//create connection
 		$conn=mysqli_connect($servername,$username,$password,$databaseName);
 		if (!$conn){
@@ -106,12 +110,12 @@ Button Roles:
 		}else{
 			foreach($_POST['checkbox'] as $check) {
 				if ($status=="statusComplete"){
-				$sql = "UPDATE $tableName SET Status='COMPLETED' WHERE Mobile IN ($check)";
-				$result=mysqli_query($conn,$sql);
-			}else{
-				$sql = "UPDATE $tableName SET Status='PENDING' WHERE Mobile IN ($check)";
-				$result=mysqli_query($conn,$sql);
-			}
+					$sql = "UPDATE $tableName SET Status='COMPLETED' WHERE Mobile IN ($check)";
+					$result=mysqli_query($conn,$sql);
+				}else{
+					$sql = "UPDATE $tableName SET Status='PENDING' WHERE Mobile IN ($check)";
+					$result=mysqli_query($conn,$sql);
+				}
 				if ($result) {
 					echo "QUERY COMPLETE";
 				}else{

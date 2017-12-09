@@ -1,5 +1,9 @@
 <?php
-require ('iMacConnect.php'); 
+require ('login_connect.php'); 
+session_start();
+if(!isset($_SESSION['userId'])){
+	header('Location:login.php');
+}
 ?>
 <script>
 	function loadAjax(){

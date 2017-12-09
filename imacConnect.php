@@ -1,13 +1,9 @@
 <?php 
 
-	$servername=getenv('DATABASE_SERVER_NAME_IMAC');
-	$databaseName=getenv('DATABASE_NAME_IMAC');
-	$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
-	$tableName2=getenv('DATABASE_TABLE_NAME_GIT');
-	$tableNameJs = getenv('DATABASE_TABLE_NAME_JS');
-	$username=getenv('DATABASE_USERNAME_IMAC');
-	$password=getenv('DATABASE_PASSWORD_IMAC');
-	
+	$servername=getenv('DATABASE_URL');
+	$databaseName=getenv('PostGRE_DB');
+	$username=getenv('PostGRE_DB_User');
+	$password=getenv('PostGRE_DB_Password');
 
 	// $servername="localhost";
 	// $databaseName="imac";
@@ -16,13 +12,7 @@
 	// $password="";
 
 	//create connection
-	$conn=mysqli_connect($servername,$username,$password,$databaseName);
-
-	//check connection
-	if (!$conn){
-		die('Connection failed:'.mysqli_connect_error());
-	}
-	// else
-		// echo "Connection Successful";
+	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password")
+or die('Could not connect: ' . pg_last_error());
 	
 	?>

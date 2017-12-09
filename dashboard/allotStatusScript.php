@@ -1,5 +1,5 @@
 <?php 
-require('imacConnect.php');
+require('login_connect.php');
 if (!empty($_POST['checkbox'])){
 	foreach($_POST['checkbox'] as $check) {
 		$sql = "UPDATE $tableName SET Status='Completed' WHERE Mobile=$check";
