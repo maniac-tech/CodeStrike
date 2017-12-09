@@ -1,24 +1,17 @@
-<?php 
-	$servername=getenv('DATABASE_SERVER_NAME_IMAC');
-	$databaseName=getenv('DATABASE_NAME_IMAC');
-	$tableName=getenv('DATABASE_TABLE_NAME_DASHBOARDUSERS');
-	$username=getenv('DATABASE_USERNAME_IMAC');
-	$password=getenv('DATABASE_PASSWORD_IMAC');
+<?php
+// Connecting, selecting database
+$servername=getenv('PostGRE_DB_Host');
+$databaseName=getenv('PostGRE_DB');
+$username=getenv('PostGRE_DB_User');
+$password=getenv('PostGRE_DB_Password');
+$tableName=getenv('PostGRE_DB_Users');
+$tablename_IMac=getenv('PostGRE_DB_IMac');
+$tablename_IMac_Coord=getenv('PostGRE_DB_IMac_Co');
 
-	// $servername='localhost';
-	// $username='root';
-	// $password='';
-	// $databaseName='dashboard';
-	// $tableName='users';
+$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+if (!$dbconn){
+	echo ('Could not connect: ' . pg_last_error().'<br>');
+	echo pg_result_error($dbconn);
+}
 
-	//create connection
-	$conn=mysqli_connect($servername,$username,$password,$databaseName);
-
-	//check connection
-	if (!$conn){
-		die('Connection failed:'.mysqli_connect_error());
-	}else{
-		echo "<script>console.log('Connection to DB set.');</script>";
-	}
-	
- ?>
+?>
