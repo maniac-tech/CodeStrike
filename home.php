@@ -6,8 +6,23 @@
 	<meta name="theme-color" content="#2196F3">
 	<title>CodeStrike</title>
 	<link rel="shortcut icon" type="image/x-icon" href="favicon.png" /> <!--Tab Icon-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="js/jquery-2.1.1.min.js"></script>
+
+	<script type="text/javascript">
+		//splash script
+		$(window).load(function(){
+			// PAGE IS FULLY LOADED  
+			// FADE OUT YOUR OVERLAYING DIV
+			$('#overlay').fadeOut();
+		});
+	</script>
 </head>
 <body>
+	<!-- splash overlay -->
+	<div id="overlay">
+     <img src="img/loading.gif" alt="Loading" width="100%" height="100%" />
+	</div>
 	<!-- Pre Loader -->
 	<div id="loader-wrapper">
 		<div id="loader"></div>
@@ -45,7 +60,7 @@
 
 
 	<!--Hero-->
-	<div class="section no-pad-bot" id="index-banner">
+	<!-- <div class="section no-pad-bot" id="index-banner">
 		<div class="container">
 			<h1 class="text_h center header cd-headline letters type">
 				<span></span> 
@@ -56,10 +71,11 @@
 				</span>
 			</h1>
 		</div>
-	</div>
+	</div> -->
 
 	<!--Intro and service-->
-	<div id="intro" class="section scrollspy">
+	<!-- added class main from home.css for background -->
+	<div id="intro" class="section scrollspy main" >
 		<div class="container">
 			<div class="row">
 				<div  class="col s12">
@@ -97,7 +113,7 @@
 	<!--team-->
 	<div class="section scrollspy" id="team">
 		<div class="container">
-			<h2 style="color:#A020F0">Team</h2>
+			<h2 class = "topic"	>TEAM</h2>
 			<div class="row">
 				<div class="col s12 m3">
 					<div class="card card-avatar" style="height:310px;">
@@ -128,19 +144,18 @@
 				<div class="col s12 m3">
 					<div class="card card-avatar" style="height:310px;">
 						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/AbhishekJha.jpg">
+							<img class="activator" src="img/team/tejas.jpg">
 						</div>
 						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Abhishek Jha
+							<span class="card-title activator grey-text text-darken-4">Tejas Nanaware
 								<br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Insert the position here --></a></em></small>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/abhishekshashinath.jha?fref=ts">
+								<a class="blue-text text-lighten-2" href="">
 									<i class="fa fa-facebook-square"></i>
 								</a>
 								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
+									<i class="fa fa-github-square"></i>
 								</a>
 								<a class="blue-text text-lighten-2" href="">
 									<i class="fa fa-google-plus-square"></i>
@@ -155,21 +170,20 @@
 				<div class="col s12 m3">
 					<div class="card card-avatar" style="height:310px;">
 						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/PratikDeshpande.jpg">
+							<img class="activator" src="img/team/ravi.jpg">
 						</div>
 						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">
-								Pratik Deshpande <br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+							<span class="card-title activator grey-text text-darken-4">Ravi Chandak
+								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/pratik.deshpande.169?fref=ts">
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/ravichandak1996">
 									<i class="fa fa-facebook-square"></i>
 								</a>
 								<a class="blue-text text-lighten-2" href="">
 									<i class="fa fa-twitter-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/+ravichandak627">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
 								<a class="blue-text text-lighten-2" href="">
@@ -182,20 +196,72 @@
 				<div class="col s12 m3">
 					<div class="card card-avatar" style="height:310px;">
 						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/AnkitChampaneria.jpg">
+							<img class="activator" src="img/team/pavan.jpg">
 						</div>
 						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Ankit Champaneria<br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
+							<span class="card-title activator grey-text text-darken-4">Pavankumar Kamath
+								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/ankitkamleshchampaneria?fref=ts">
+								<a class="blue-text text-lighten-2" href="https://m.facebook.com/pavankumar.kamath?ref=bookmarks">
+									<i class="fa fa-facebook-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://github.com/pavankamath1406">
+									<i class="fa fa-github-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/117059402327542528472">
+									<i class="fa fa-google-plus-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/mwlite/me/edit">
+									<i class="fa fa-linkedin-square"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3">
+					<div class="card card-avatar" style="height:310px;">
+						<div class="waves-effect waves-block waves-light">
+							<img class="activator" src="img/team/burhanuddin.jpg">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Burhanuddin Rampurawala
+								<br/>
+							</span>
+							<p>
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/burhanuddinzrampurawala">
+									<i class="fa fa-facebook-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://www.github.com/burhanuddinrampurawala">
+									<i class="fa fa-github-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/u/1/109763198179383755792">
+									<i class="fa fa-google-plus-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/burhanuddin-rampurawala-885882148/">
+									<i class="fa fa-linkedin-square"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3">
+					<div class="card card-avatar" style="height:310px;">
+						<div class="waves-effect waves-block waves-light">
+							<img class="activator" src="img/team/ishani.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Ishani Parkar
+								<br/>
+							</span>
+							<p>
+								<a class="blue-text text-lighten-2" href="https://m.facebook.com/ishani.parkar?ref=bookmarks">
 									<i class="fa fa-facebook-square"></i>
 								</a>
 								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
+									<i class="fa fa-github-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="plus.google.com/+IshaniParkar">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
 								<a class="blue-text text-lighten-2" href="">
@@ -205,196 +271,72 @@
 						</div>
 					</div>
 				</div>
+				
 			</div>
 		</div>
 	</div>
-	<div class="section scrollspy" id="team">
-		<div class="container">
-			<div class="row">
-				<div class="col s12 m3">
-					<div class="card card-avatar" style="height:310px;">
-						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/user.png">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Ravi Chandak <br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-							</span>
-							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/ravichandak1996?fref=ts">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-google-plus-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-linkedin-square"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m3">
-					<div class="card card-avatar" style="height:310px;">
-						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/PrashantMahajan.jpg">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Prashant Mahajan<br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-							</span>
-							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/Prashantmahajan70?fref=ts">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-google-plus-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-linkedin-square"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m3">
-					<div class="card card-avatar" style="height:310px;">
-						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/AbhishekJain.jpg">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Abhishek Jain <br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-							</span>
-							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/Abhishek.Mac.Jain">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/abhishek-jain-086491b8?trk=hp-identity-name">
-									<i class="fa fa-twitter-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-google-plus-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-linkedin-square"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m3">
-					<div class="card card-avatar" style="height:310px;">
-						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/KushagrGupta.JPG">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Kushagr Gupta<br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-							</span>
-							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/l33tpl4y4?fref=ts">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-google-plus-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-linkedin-square"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="section scrollspy" id="team">
-		<div class="container">
-			<div class="row">
-				<div class="col s12 m3">
-					<div class="card card-avatar" style="height:310px;">
-						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/AmrataJoshi.jpg">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">
-								Amrata Joshi<br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-							</span>
-							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/amrata.joshi.92?fref=ts">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-google-plus-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-linkedin-square"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div class="col s12 m3">
-					<div class="card card-avatar" style="height:310px;">
-						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/RomilDodhiwala.jpg">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">Romil Dodhiwala<br/>
-								<small><em><a class="red-text text-darken-1" href="#"><!-- Position here--></a></em></small>
-							</span>
-							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/romil15?fref=ts">
-									<i class="fa fa-facebook-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-google-plus-square"></i>
-								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-linkedin-square"></i>
-								</a>
-							</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>								
-
 	<!--float-->
-	<form action="team.php" class="inline">
+<!-- 	<form action="team.php" class="inline">
 		<div class="w3-container">
 			<button class="w3-btn-block w3-teal">Meet the Prime movers!</button>
 		</div>
 	</form>
-
+ -->
 	<!--Parallax-->
-	<div class="parallax-container">
+	<!-- <div class="parallax-container">
 		<div class="parallax"><img src="img/2.jpg"></div>
-	</div>
+	</div> -->
 
 	<!--work-->
 	<div class="section scrollspy" id="work">
 		<div class="container">
-			<h2 style="color:#A020F0">Events and Project </h2>
+			<h2 class = "topic">Events and Project </h2>
 			<div class="row">
+				<div class="col s12 m4 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="img/codestrikeLogo.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">
+								Induction 2017
+								<i class="mdi-navigation-more-vert right"></i>
+							</span>
+							<p><a href="Events/induction_2017.php">More Details</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Induction 2017<i class="mdi-navigation-close right"></i></span>
+							<p>
+								CodeStrike organised an induction for the first year students on 7th September 2017.
+							</p>
+							<p> 
+								Students attended : 240	
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="img/codestrikeLogo.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">GIT Workshop <i class="mdi-navigation-more-vert right"></i></span>
+							<p><a href="Events/gitworkshop.php">More Details</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">GIT Workshop<i class="mdi-navigation-close right"></i></span>
+							<p>
+								Conducted on July 17, 2017
+
+							</p>
+
+							<p> Students attended : 34</p>
+							<!-- <p> Certificates issued : 34</p> -->
+						</div>
+					</div>
+				</div>
+
 
 				<div class="col s12 m4 l4">
 					<div class="card">
@@ -420,6 +362,7 @@
 					</div>
 				</div>
 
+			
 				<div class="col s12 m4 l4">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
@@ -465,28 +408,7 @@
 					</div>
 				</div>
 
-				<div class="col s12 m4 l4">
-					<div class="card">
-						<div class="card-image waves-effect waves-block waves-light">
-							<img class="activator" src="img/codestrikeLogo.png">
-						</div>
-						<div class="card-content">
-							<span class="card-title activator grey-text text-darken-4">GIT Workshop <i class="mdi-navigation-more-vert right"></i></span>
-							<p><a href="Events/gitworkshop.php">More Details</a></p>
-						</div>
-						<div class="card-reveal">
-							<span class="card-title grey-text text-darken-4">GIT Workshop<i class="mdi-navigation-close right"></i></span>
-							<p>
-								Conducted on September 5, 2014
-
-							</p>
-
-							<p> Students attended : 34</p>
-							<!-- <p> Certificates issued : 34</p> -->
-						</div>
-					</div>
-				</div>
-
+				
 				<div class="col s12 m4 l4">
 					<div class="card">
 						<div class="card-image waves-effect waves-block waves-light">
@@ -549,15 +471,12 @@
 			</div>
 		</div>
 	</div>
-</div>
 
 <!--Footer-->
 <?php 
 require 'footer.php';
 ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/jquery-2.1.1.min.js"></script>
 <!--  Scripts-->
 <script async src="min/plugin-min.js"></script>
 <script async src="min/custom-min.js"></script>
@@ -565,6 +484,7 @@ require 'footer.php';
 <!-- CSS  -->
 <link  href="min/plugin-min.css" type="text/css" rel="stylesheet">
 <link  href="min/custom-min.css" type="text/css" rel="stylesheet" >
+<link  href="home.css" type="text/css" rel="stylesheet" >
 
 <!-- float -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
