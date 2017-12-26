@@ -44,10 +44,10 @@
                 </ol>
             </div>
             <br><br>                   
-                conscious efforts were made by the organisers to keep the session two sided. Informal interaction helped the students overcome their hesitation and cast a doubt on domains being covered . Active participation from students was evident during the enitre induction. In this manner the productivity of the induction attained a different milestone.
+                Conscious efforts were made by the organisers to keep the session two sided. Informal interaction helped the students overcome their hesitation and cast a doubt on domains being covered . Active participation from students was evident during the enitre induction. In this manner the productivity of the induction attained a different milestone.
          </div>
 
-        <!-- Ninja Script JS Code: -->
+        <!-- Ninja Script JS Code:-->
         <!--start-->
         <div id="ninja-slider">
             <div class="slider-inner">

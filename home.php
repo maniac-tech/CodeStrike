@@ -248,7 +248,7 @@
 				<div class="col s12 m3">
 					<div class="card card-avatar" style="height:310px;">
 						<div class="waves-effect waves-block waves-light">
-							<img class="activator" src="img/team/ishani.png">
+							<img class="activator" src="img/team/ishani.jpg">
 						</div>
 						<div class="card-content">
 							<span class="card-title activator grey-text text-darken-4">Ishani Parkar
@@ -290,7 +290,7 @@
 	<!--work-->
 	<div class="section scrollspy" id="work">
 		<div class="container">
-			<h2 class = "topic">Events and Project </h2>
+			<h2 class = "topic">Events and Projects </h2>
 			<div class="row">
 				<div class="col s12 m4 l4">
 					<div class="card">
