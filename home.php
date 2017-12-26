@@ -9,20 +9,20 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/jquery-2.1.1.min.js"></script>
 
-	<script type="text/javascript">
+	<!-- <script type="text/javascript">
 		//splash script
 		$(window).load(function(){
 			// PAGE IS FULLY LOADED  
 			// FADE OUT YOUR OVERLAYING DIV
 			$('#overlay').fadeOut();
 		});
-	</script>
+	</script> -->
 </head>
 <body>
 	<!-- splash overlay -->
-	<div id="overlay">
+	<!-- <div id="overlay">
      <img src="img/loading.gif" alt="Loading" width="100%" height="100%" />
-	</div>
+	</div> -->
 	<!-- Pre Loader -->
 	<div id="loader-wrapper">
 		<div id="loader"></div>
