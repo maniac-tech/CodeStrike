@@ -49,21 +49,21 @@
 
         <!-- Ninja Script JS Code:-->
         <!--start-->
-        <div id="ninja-slider">
+         <div id="ninja-slider">
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="img/Events/Induction_2017/1.JPG"></a>
+                        <a class="ns-img" href="../img/Events/induction_2017/1.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="img/Events/Induction_2017/2.JPG"></a>
+                    <li><a class="ns-img" href="../img/Events/induction_2017/2.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a href="/"><img class="ns-img" src="img/Events/Induction_2017/3.JPG" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/induction_2017/3.JPG" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    
+                   
                 </ul>
                 <div class="fs-icon" title="Expand/Close"></div>
             </div>

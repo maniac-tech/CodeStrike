@@ -336,7 +336,52 @@
 						</div>
 					</div>
 				</div>
-
+						
+				<div class="col s12 m4 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="img/codestrikeLogo.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">
+								Chatbot
+								<i class="mdi-navigation-more-vert right"></i>
+							</span>
+							<p><a href="Events/chatbot.php">More Details</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Chatbot<i class="mdi-navigation-close right"></i></span>
+							<p>
+								CodeStrike organized a workshop in ChatBots and its Integrations on 31st March , 2017.
+							</p>
+							<p> 
+								Students attended : 35	
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m4 l4">
+					<div class="card">
+						<div class="card-image waves-effect waves-block waves-light">
+							<img class="activator" src="img/codestrikeLogo.png">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">
+								Inception
+								<i class="mdi-navigation-more-vert right"></i>
+							</span>
+							<p><a href="Events/inception.php">More Details</a></p>
+						</div>
+						<div class="card-reveal">
+							<span class="card-title grey-text text-darken-4">Inception<i class="mdi-navigation-close right"></i></span>
+							<p>
+								
+							</p>
+							<p> 
+							</p>
+						</div>
+					</div>
+				</div>
 
 				<div class="col s12 m4 l4">
 					<div class="card">

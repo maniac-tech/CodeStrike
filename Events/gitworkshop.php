@@ -52,29 +52,29 @@
          </div>  
          <!-- Ninja Script JS Code: -->
         <!--start-->
-        <div id="ninja-slider">
+         <div id="ninja-slider">
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="img/Events/Github/1.jpg"></a>
+                        <a class="ns-img" href="../img/Events/Github/1.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="img/Events/Github/2.jpg"></a>
-                        <div class="caption">@colerise</div>
-                    </li>
-                    <li>
-                        <a href="/"><img class="ns-img" src="img/Events/Github/3.jpg" style="cursor:pointer;" /></a>
+                    <li><a class="ns-img" href="../img/Events/Github/2.JPG"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a href="/"><img class="ns-img" src="img/Events/Github/4.jpg" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/Github/3.JPG" /></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    
+                    <li>
+                        <a class="ns-img" href="../img/Events/Github/4.JPG"></a>
+                        <div class="caption">@colerise</div>
+                    </li>
                 </ul>
                 <div class="fs-icon" title="Expand/Close"></div>
             </div>
         </div>
+        
         <!--end-->
     </div>                       
 

@@ -53,10 +53,7 @@
                         <a href="/"><img class="ns-img" src="../img/Events/Arduino/3.JPG" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li>
-                        <a class="ns-img" href="../img/Events/Arduino/4.JPG"></a>
-                        <div class="caption">@colerise</div>
-                    </li>
+
                 </ul>
                 <div class="fs-icon" title="Expand/Close"></div>
             </div>
