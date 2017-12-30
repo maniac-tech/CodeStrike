@@ -74,7 +74,7 @@
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a href="/"><img class="ns-img" src="../img/Events/chatbot/5.jpg" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/chatbot/6.jpg" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
                    
