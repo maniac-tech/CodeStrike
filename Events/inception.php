@@ -76,19 +76,19 @@
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="../img/Events/inception/1.JPG"></a>
+                        <a class="ns-img" href="../img/Events/inception/1.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="../img/Events/inception/2.JPG"></a>
+                    <li><a class="ns-img" href="../img/Events/inception/2.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     
                     <li>
-                        <a href="/"><img class="ns-img" src="../img/Events/inception/4.JPG" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/inception/4.jpg" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a href="/"><img class="ns-img" src="../img/Events/inception/5.JPG" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/inception/5.jpg" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
                    

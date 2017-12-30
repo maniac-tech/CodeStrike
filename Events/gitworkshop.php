@@ -56,18 +56,18 @@
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="../img/Events/Github/1.JPG"></a>
+                        <a class="ns-img" href="../img/Events/Github/1.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="../img/Events/Github/2.JPG"></a>
-                        <div class="caption">@colerise</div>
-                    </li>
-                    <li>
-                        <a href="/"><img class="ns-img" src="../img/Events/Github/3.JPG" /></a>
+                    <li><a class="ns-img" href="../img/Events/Github/2.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a class="ns-img" href="../img/Events/Github/4.JPG"></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/Github/3.jpg" /></a>
+                        <div class="caption">@colerise</div>
+                    </li>
+                    <li>
+                        <a class="ns-img" href="../img/Events/Github/4.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
                 </ul>

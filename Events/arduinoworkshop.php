@@ -43,14 +43,14 @@
             <div class="slider-inner">
                 <ul>
                     <li>
-                        <a class="ns-img" href="../img/Events/Arduino/1.JPG"></a>
+                        <a class="ns-img" href="../img/Events/Arduino/1.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
-                    <li><a class="ns-img" href="../img/Events/Arduino/2.JPG"></a>
+                    <li><a class="ns-img" href="../img/Events/Arduino/2.jpg"></a>
                         <div class="caption">@colerise</div>
                     </li>
                     <li>
-                        <a href="/"><img class="ns-img" src="../img/Events/Arduino/3.JPG" style="cursor:pointer;" /></a>
+                        <a href="/"><img class="ns-img" src="../img/Events/Arduino/3.jpg" style="cursor:pointer;" /></a>
                         <div class="caption">@colerise</div>
                     </li>
 

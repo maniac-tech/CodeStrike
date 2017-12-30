@@ -47,12 +47,12 @@
 			</div>
 			<div class="col l3 s12">	
 				<a href="http://www.codechef.com" title="">
-					<img src="codechef logo.png" alt="CodeChef" style="width:90%;vertical-align: top;">
+					<img src="http://codestrike.in/codechef logo.png" alt="CodeChef" style="width:90%;vertical-align: top;">
 				</a>
 			</div>
 			<div class="col l2 s12">
 					<a href="http://www.atharvacoe.ac.in/" title="">
-						<img src="logo.png" alt="Atharva College of Engg" style="width: 90%;vertical-align: bottom;">
+						<img src="http://codestrike.in/logo.png" alt="Atharva College of Engg" style="width: 90%;vertical-align: bottom;">
 					</a>
 			</div>
 		</div>
