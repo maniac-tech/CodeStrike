@@ -31,15 +31,15 @@
 	$countELEX = pg_num_rows($result);
 
 	$sql = "SELECT  * FROM $tablename_IMac WHERE Year='BE' ";
-	$result = mysqli_query($conn,$sql);
+	$result = pg_query($dbconn,$sql);
 	$countBE = pg_num_rows($result);
 
 	$sql = "SELECT  * FROM $tablename_IMac WHERE Year='TE' ";
-	$result = mysqli_query($conn,$sql);
+	$result = pg_query($dbconn,$sql);
 	$countTE = pg_num_rows($result);
 
 	$sql = "SELECT  * FROM $tablename_IMac WHERE Year='SE' ";
-	$result = mysqli_query($conn,$sql);
+	$result = pg_query($dbconn,$sql);
 	$countSE = pg_num_rows($result);	
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
