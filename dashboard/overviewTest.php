@@ -7,6 +7,7 @@
 	$result="";
 	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='CMPN' ";
 	$resultCMPN = pg_query($dbconn, $sql);
+	echo "$resultCMPN";
 	$countCMPN = pg_num_rows($resultCMPN);
 	// echo "$countCMPN";
 
