@@ -6,7 +6,7 @@
 	$result="";
 	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='CMPN' ";
 	$result = pg_query($dbconn, $sql);
-	$countCMPN = $result;
+	$countCMPN = 5;
 	// echo "$countCMPN";
 
 	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='IT' ";
