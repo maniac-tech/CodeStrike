@@ -80,11 +80,11 @@
 </div>
 <div id="piechart" >
 	<p>
-		CMPN:<?php echo $countCMPN ?>
-		IT:<?php $countIT ?>
-		EXTC:<?php echo $countEXTC ?>
-		ELEC:<?php echo $countELEC; ?>
-		ELEX:<?php echo $countELEX; ?>
+		<?php echo "CMPN:".$countCMPN ?>
+		<?php echo "IT:".$countIT ?>
+		<?php echo "EXTC:".$countEXTC ?>
+		<?php echo "ELEC:".$countELEC; ?>
+		<?php echo "ELEX:".$countELEX; ?>
 		<br>
 		SE:<?php echo $countSE; ?>
 		TE:<?php echo $countTE; ?>
