@@ -5,9 +5,9 @@
 	//----- PostGRE SQL Commands -----	
 	$sql="";
 	$result="";
-	$sql = "SELECT Count(*) FROM $tablename_IMac WHERE Branch='CMPN' ";
+	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='CMPN' ";
 	$resultCMPN = pg_query($dbconn, $sql);
-	$countCMPN = $resultCMPN;
+	$countCMPN = pg_num_rows($resultCMPN);
 	// echo "$countCMPN";
 
 	/*
