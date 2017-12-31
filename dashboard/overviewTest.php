@@ -4,9 +4,9 @@
 	//----- PostGRE SQL Commands -----	
 	$sql="";
 	$result="";
-	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='CMPN' ";
-	$result = pg_query($dbconn, $sql);
-	$countCMPN = 5;
+	$sql = "SELECT Count(\"Branch\"") FROM $tablename_IMac WHERE Branch='CMPN' ";
+	$resultCMPN = pg_query($dbconn, $sql);
+	$countCMPN = $resultCMPN;
 	// echo "$countCMPN";
 
 	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='IT' ";
@@ -80,7 +80,7 @@
 </div>
 <div id="piechart" >
 	<p>
-		<?php echo "CMPN:".$countCMPN ?>
+		<?php echo "CMPN:".$countCMPN."&&".$resultCMPN ?>
 		<?php echo "IT:".$countIT ?>
 		<?php echo "EXTC:".$countEXTC ?>
 		<?php echo "ELEC:".$countELEC; ?>
