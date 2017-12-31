@@ -80,9 +80,9 @@
 </div>
 <div id="piechart" >
 	<p>
-		<?php echo "CMPN:".$countCMPN."&&".$resultCMPN ?>
-		<?php echo "IT:".$countIT ?>
-		<?php echo "EXTC:".$countEXTC ?>
+		<?php echo "CMPN:".$countCMPN."&&".$resultCMPN; ?>
+		<?php echo "IT:".$countIT; ?>
+		<?php echo "EXTC:".$countEXTC; ?>
 		<?php echo "ELEC:".$countELEC; ?>
 		<?php echo "ELEX:".$countELEX; ?>
 		<br>
