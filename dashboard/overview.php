@@ -88,11 +88,11 @@
 	function drawChart() {
 		var data = google.visualization.arrayToDataTable([
 			['Registrations', 'Per week'],
-			['CMPN',     <?php echo $countCMPN; ?>],
-			['INFT',      <?php echo $countIT; ?>],
-			['ELEX',  <?php echo $countEXTC; ?>],
-			['ELEC', <?php echo $countELEX; ?>],
-			['EXTC',    <?php echo $countEXTC; ?>]
+			['CMPN',     <?php echo "50"; ?>],
+			['INFT',      <?php echo "50"; ?>],
+			['ELEX',  <?php echo "50"; ?>],
+			['ELEC', <?php echo "50"; ?>],
+			['EXTC',    <?php echo "50"; ?>]
 			]);
 
 		var options = {
@@ -108,9 +108,9 @@
 	function drawBasic() {
 		var data = google.visualization.arrayToDataTable([
 			['Year', 'Registrations',],
-			['SE', <?php echo $countSE; ?>],
-			['TE', <?php echo $countTE; ?>],
-			['BE', <?php echo $countBE; ?>],
+			['SE', <?php echo "10"; ?>],
+			['TE', <?php echo "10"; ?>],
+			['BE', <?php echo "10"; ?>],
 			]);
 
 		var options = {
