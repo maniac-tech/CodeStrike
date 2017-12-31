@@ -30,6 +30,17 @@
 	$result = pg_query($dbconn, $sql);
 	$countELEX = $result;
 
+	$sql = "SELECT  Count(Year) FROM $tablename_IMac WHERE Year='BE' ";
+	$result = mysqli_query($conn,$sql);
+	$countBE = $result;
+
+	$sql = "SELECT  Count(Year) FROM $tablename_IMac WHERE Year='TE' ";
+	$result = mysqli_query($conn,$sql);
+	$countTE = $result;
+
+	$sql = "SELECT  Count(Year) FROM $tablename_IMac WHERE Year='SE' ";
+	$result = mysqli_query($conn,$sql);
+	$countSE = $result;	
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 	//----- SQL Commands -----
@@ -75,6 +86,7 @@
 	google.charts.setOnLoadCallback(drawBasic);
 
 	function drawChart() {
+		console.log (<?php echo $countCMPN; ?>);
 		var data = google.visualization.arrayToDataTable([
 			['Registrations', 'Per week'],
 			['CMPN',     <?php echo $countCMPN; ?>],
