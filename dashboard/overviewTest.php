@@ -4,7 +4,7 @@
 	//----- PostGRE SQL Commands -----	
 	$sql="";
 	$result="";
-	$sql = "SELECT Count(\"Branch\"") FROM $tablename_IMac WHERE Branch='CMPN' ";
+	$sql = "SELECT Count(\"Branch\") FROM $tablename_IMac WHERE Branch='CMPN' ";
 	$resultCMPN = pg_query($dbconn, $sql);
 	$countCMPN = $resultCMPN;
 	// echo "$countCMPN";
@@ -40,39 +40,39 @@
 
 	//----- SQL Commands -----
 	/*
-	$sql="";
-	$result="";
-	$sql = "SELECT * FROM $tableName WHERE Branch='CMPN' ";
-	$result = mysqli_query($conn,$sql);
-	$countCMPN = mysqli_num_rows($result);
+		$sql="";
+		$result="";
+		$sql = "SELECT * FROM $tableName WHERE Branch='CMPN' ";
+		$result = mysqli_query($conn,$sql);
+		$countCMPN = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
-	$result = mysqli_query($conn,$sql);
-	$countIT = mysqli_num_rows($result);
+		$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
+		$result = mysqli_query($conn,$sql);
+		$countIT = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='EXTC' ";
-	$result = mysqli_query($conn,$sql);
-	$countEXTC = mysqli_num_rows($result);
+		$sql = "SELECT * FROM $tableName WHERE Branch='EXTC' ";
+		$result = mysqli_query($conn,$sql);
+		$countEXTC = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='ELEX' ";
-	$result = mysqli_query($conn,$sql);
-	$countELEC = mysqli_num_rows($result);	
+		$sql = "SELECT * FROM $tableName WHERE Branch='ELEX' ";
+		$result = mysqli_query($conn,$sql);
+		$countELEC = mysqli_num_rows($result);	
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
-	$result = mysqli_query($conn,$sql);
-	$countELEX = mysqli_num_rows($result);	
+		$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
+		$result = mysqli_query($conn,$sql);
+		$countELEX = mysqli_num_rows($result);	
 
-	$sql = "SELECT * FROM $tableName WHERE Year='BE' ";
-	$result = mysqli_query($conn,$sql);
-	$countBE = mysqli_num_rows($result);
+		$sql = "SELECT * FROM $tableName WHERE Year='BE' ";
+		$result = mysqli_query($conn,$sql);
+		$countBE = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Year='TE' ";
-	$result = mysqli_query($conn,$sql);
-	$countTE = mysqli_num_rows($result);
+		$sql = "SELECT * FROM $tableName WHERE Year='TE' ";
+		$result = mysqli_query($conn,$sql);
+		$countTE = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Year='SE' ";
-	$result = mysqli_query($conn,$sql);
-	$countSE = mysqli_num_rows($result);
+		$sql = "SELECT * FROM $tableName WHERE Year='SE' ";
+		$result = mysqli_query($conn,$sql);
+		$countSE = mysqli_num_rows($result);
 	*/ 	
 ?>
 <div id="overview_chart">
@@ -80,7 +80,7 @@
 </div>
 <div id="piechart" >
 	<p>
-		<?php echo "CMPN:".$countCMPN."&&".$resultCMPN; ?>
+		<?php echo "CMPN:".$countCMPN; ?>
 		<?php echo "IT:".$countIT; ?>
 		<?php echo "EXTC:".$countEXTC; ?>
 		<?php echo "ELEC:".$countELEC; ?>
