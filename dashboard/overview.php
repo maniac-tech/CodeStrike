@@ -86,7 +86,6 @@
 	google.charts.setOnLoadCallback(drawBasic);
 
 	function drawChart() {
-		console.log (<?php echo $countCMPN; ?>);
 		var data = google.visualization.arrayToDataTable([
 			['Registrations', 'Per week'],
 			['CMPN',     <?php echo $countCMPN; ?>],
