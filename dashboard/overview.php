@@ -12,7 +12,24 @@
 	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='CMPN' ";
 	$result = pg_query($dbconn, $sql);
 	$countCMPN = $result;
-	echo "$countCMPN";
+	// echo "$countCMPN";
+
+	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='IT' ";
+	$result = pg_query($dbconn, $sql);
+	$countIT = $result;
+
+	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='EXTC' ";
+	$result = pg_query($dbconn, $sql);
+	$countEXTC = $result;
+
+	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='ELEC' ";
+	$result = pg_query($dbconn, $sql);
+	$countELEC = $result;
+
+	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='ELEX' ";
+	$result = pg_query($dbconn, $sql);
+	$countELEX = $result;
+
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 	//----- SQL Commands -----
