@@ -1,14 +1,16 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <?php
+	require 'login_connect.php';
 
 	//----- PostGRE SQL Commands -----	
 	$sql="";
 	$result="";
-	$sql = "SELECT Count(\"Branch\") FROM $tablename_IMac WHERE Branch='CMPN' ";
+	$sql = "SELECT Count(*) FROM $tablename_IMac WHERE Branch='CMPN' ";
 	$resultCMPN = pg_query($dbconn, $sql);
 	$countCMPN = $resultCMPN;
 	// echo "$countCMPN";
 
+	/*
 	$sql = "SELECT Count(Branch) FROM $tablename_IMac WHERE Branch='IT' ";
 	$result = pg_query($dbconn, $sql);
 	$countIT = $result;
@@ -36,6 +38,7 @@
 	$sql = "SELECT  Count(Year) FROM $tablename_IMac WHERE Year='SE' ";
 	$result = mysqli_query($conn,$sql);
 	$countSE = $result;	
+	*/
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 	//----- SQL Commands -----
@@ -81,14 +84,6 @@
 <div id="piechart" >
 	<p>
 		<?php echo "CMPN:".$countCMPN; ?>
-		<?php echo "IT:".$countIT; ?>
-		<?php echo "EXTC:".$countEXTC; ?>
-		<?php echo "ELEC:".$countELEC; ?>
-		<?php echo "ELEX:".$countELEX; ?>
-		<br>
-		SE:<?php echo $countSE; ?>
-		TE:<?php echo $countTE; ?>
-		BE:<?php echo $countBE; ?>
 	</p>
 </div>
 <div id="chart_div"></div>
