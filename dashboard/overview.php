@@ -1,49 +1,50 @@
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 <div id="overview_chart">
 	Main chart goes here
 </div>
 <div id="piechart" ></div>
 <div id="chart_div"></div>
 <?php 
-	$sql="";
-	$result="";
-	$sql = "SELECT * FROM $tableName WHERE Branch='CMPN' ";
-	$result = mysqli_query($conn,$sql);
-	$countCMPN = mysqli_num_rows($result);
+$sql="";
+$result="";
+$sql = "SELECT * FROM $tableName WHERE Branch='CMPN' ";
+$result = mysqli_query($conn,$sql);
+$countCMPN = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
-	$result = mysqli_query($conn,$sql);
-	$countIT = mysqli_num_rows($result);
+$sql = "SELECT * FROM $tableName WHERE Branch='INFT' ";
+$result = mysqli_query($conn,$sql);
+$countIT = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='EXTC' ";
-	$result = mysqli_query($conn,$sql);
-	$countEXTC = mysqli_num_rows($result);
+$sql = "SELECT * FROM $tableName WHERE Branch='EXTC' ";
+$result = mysqli_query($conn,$sql);
+$countEXTC = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='ELEX' ";
-	$result = mysqli_query($conn,$sql);
-	$countELEC = mysqli_num_rows($result);	
+$sql = "SELECT * FROM $tableName WHERE Branch='ELEX' ";
+$result = mysqli_query($conn,$sql);
+$countELEC = mysqli_num_rows($result);	
 
-	$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
-	$result = mysqli_query($conn,$sql);
-	$countELEX = mysqli_num_rows($result);	
+$sql = "SELECT * FROM $tableName WHERE Branch='ELEC' ";
+$result = mysqli_query($conn,$sql);
+$countELEX = mysqli_num_rows($result);	
 
-	$sql = "SELECT * FROM $tableName WHERE Year='BE' ";
-	$result = mysqli_query($conn,$sql);
-	$countBE = mysqli_num_rows($result);
+$sql = "SELECT * FROM $tableName WHERE Year='BE' ";
+$result = mysqli_query($conn,$sql);
+$countBE = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Year='TE' ";
-	$result = mysqli_query($conn,$sql);
-	$countTE = mysqli_num_rows($result);
+$sql = "SELECT * FROM $tableName WHERE Year='TE' ";
+$result = mysqli_query($conn,$sql);
+$countTE = mysqli_num_rows($result);
 
-	$sql = "SELECT * FROM $tableName WHERE Year='SE' ";
-	$result = mysqli_query($conn,$sql);
-	$countSE = mysqli_num_rows($result);
+$sql = "SELECT * FROM $tableName WHERE Year='SE' ";
+$result = mysqli_query($conn,$sql);
+$countSE = mysqli_num_rows($result);
 ?>
 <script>
 	
 	google.charts.setOnLoadCallback(drawChart);
 	google.charts.setOnLoadCallback(drawBasic);
 
-function drawChart() {
+	function drawChart() {
 
 		var data = google.visualization.arrayToDataTable([
 			['Registrations', 'Per week'],
@@ -64,7 +65,7 @@ function drawChart() {
 		chart.draw(data, options);
 	}
 
-function drawBasic() {
+	function drawBasic() {
 		var data = google.visualization.arrayToDataTable([
 			['Year', 'Registrations',],
 			['SE', <?php echo $countSE; ?>],
