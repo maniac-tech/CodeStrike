@@ -1,5 +1,9 @@
 <?php
-require ('../imacConnect.php'); 
+require ('login_connect.php'); 
+session_start();
+if(!isset($_SESSION['userId'])){
+	header('Location:login.php');
+}
 ?>
 <div id="content_table">
 	<p id="studentsList"><b>Student Batch Details:</b></p>
