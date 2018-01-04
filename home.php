@@ -126,16 +126,16 @@
 								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/mahendra.s.patil.5?fref=ts">
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/mahendra.s.patil.5?fref=ts" target="_blank">
 									<i class="fa fa-facebook-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="" target="_blank">
 									<i class="fa fa-twitter-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="" target="_blank">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="" target="_blank">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
 							</p>
@@ -152,16 +152,16 @@
 								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/TejasNanaware" target="_blank">
 									<i class="fa fa-facebook-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="https://github.com/Tejas-Nanaware" target="_blank">
 									<i class="fa fa-github-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/+TejasNanaware" target="_blank">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="https://in.linkedin.com/in/tejasnanaware" target="_blank">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
 							</p>
@@ -178,16 +178,16 @@
 								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/ravichandak1996">
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/ravichandak1996" target="_blank">
 									<i class="fa fa-facebook-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
-									<i class="fa fa-twitter-square"></i>
+								<a class="blue-text text-lighten-2" href="https://github.com/Ravi627" target="_blank">
+									<i class="fa fa-github-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://plus.google.com/+ravichandak627">
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/+ravichandak627" target="_blank">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="" target="_blank">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
 							</p>
@@ -204,16 +204,16 @@
 								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://m.facebook.com/pavankumar.kamath?ref=bookmarks">
+								<a class="blue-text text-lighten-2" href="https://m.facebook.com/pavankumar.kamath?ref=bookmarks" target="_blank">
 									<i class="fa fa-facebook-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://github.com/pavankamath1406">
+								<a class="blue-text text-lighten-2" href="https://github.com/pavankamath1406" target="_blank">
 									<i class="fa fa-github-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://plus.google.com/117059402327542528472">
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/117059402327542528472" target="_blank">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/mwlite/me/edit">
+								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/mwlite/me/edit" target="_blank">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
 							</p>
@@ -230,16 +230,16 @@
 								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://www.facebook.com/burhanuddinzrampurawala">
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/burhanuddinzrampurawala" target="_blank">
 									<i class="fa fa-facebook-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://www.github.com/burhanuddinrampurawala">
+								<a class="blue-text text-lighten-2" href="https://www.github.com/burhanuddinrampurawala" target="_blank">
 									<i class="fa fa-github-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://plus.google.com/u/1/109763198179383755792">
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/u/1/109763198179383755792" target="_blank">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/burhanuddin-rampurawala-885882148/">
+								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/burhanuddin-rampurawala-885882148/" target="_blank">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
 							</p>
@@ -256,16 +256,16 @@
 								<br/>
 							</span>
 							<p>
-								<a class="blue-text text-lighten-2" href="https://m.facebook.com/ishani.parkar?ref=bookmarks">
+								<a class="blue-text text-lighten-2" href="https://m.facebook.com/ishani.parkar?ref=bookmarks" target="_blank">
 									<i class="fa fa-facebook-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="" target="_blank">
 									<i class="fa fa-github-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="plus.google.com/+IshaniParkar">
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/+IshaniParkar" target="_blank">
 									<i class="fa fa-google-plus-square"></i>
 								</a>
-								<a class="blue-text text-lighten-2" href="">
+								<a class="blue-text text-lighten-2" href="" target="_blank">
 									<i class="fa fa-linkedin-square"></i>
 								</a>
 							</p>
