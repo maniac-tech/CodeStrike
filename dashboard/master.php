@@ -71,23 +71,23 @@ Button Roles:
 		$databaseName=getenv('PostGRE_DB');
 		$username=getenv('PostGRE_DB_User');
 		$password=getenv('PostGRE_DB_Password');
-		$tableName=getenv('PostGRE_DB_Users');
+		$tableNameImac=getenv('PostGRE_DB_Users');
 
 		//create connection
-		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+		$dbconn = pg_connect("host=$servername dbname=$databaseNameImac user=$username password=$password");
 		if (!$dbconn){
 			echo ('Could not connect: ' . pg_last_error().'<br>');
 			echo pg_result_error($dbconn);
 		}else{
 			foreach($checkboxArray as $array) {
 				// echo "$array";
-				$sql = "UPDATE $tableName SET Batch='$toInsert' WHERE Mobile IN ($array)";
-				$result=mysqli_query($conn,$sql);
+				$psql = "UPDATE $tableNameImac SET Batch='$toInsert' WHERE Mobile IN ($array)";
+				$result=pg_query($dbconn,$psql);
 				if ($result) {
 					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
 				}else{
 					echo "QUERY FAILED for $array";
-					echo mysqli_error($conn);
+					echo pg_result_error($dbconn);
 				}
 			}		
 		}
