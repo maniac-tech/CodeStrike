@@ -71,7 +71,7 @@ Button Roles:
 		$databaseName=getenv('PostGRE_DB');
 		$username=getenv('PostGRE_DB_User');
 		$password=getenv('PostGRE_DB_Password');
-		$tableNameImac=getenv('PostGRE_DB_Users');
+		$tableNameImac=getenv('PostGRE_DB_IMac');
 
 		//create connection
 		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
