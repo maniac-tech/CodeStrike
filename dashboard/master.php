@@ -65,11 +65,43 @@ Button Roles:
 	function alloTaskScript($toInsert){
 		$checkboxArray = array();
 		$checkboxArray=$_POST['checkbox'];
+
+		//----- PostGRE SQL Server Commands -----
+		$servername=getenv('PostGRE_DB_Host');
+		$databaseName=getenv('PostGRE_DB');
+		$username=getenv('PostGRE_DB_User');
+		$password=getenv('PostGRE_DB_Password');
+		$tableName=getenv('PostGRE_DB_Users');
+
+		//create connection
+		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+		if (!$dbconn){
+			echo ('Could not connect: ' . pg_last_error().'<br>');
+			echo pg_result_error($dbconn);
+		}else{
+			foreach($checkboxArray as $array) {
+				// echo "$array";
+				$sql = "UPDATE $tableName SET Batch='$toInsert' WHERE Mobile IN ($array)";
+				$result=mysqli_query($conn,$sql);
+				if ($result) {
+					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
+				}else{
+					echo "QUERY FAILED for $array";
+					echo mysqli_error($conn);
+				}
+			}		
+		}
+
+		// -X-X-X- End of PostGRE SQL Server Commands -X-X-X-
+
+		//----- SQL Server Commands -----
+		/*
 		$servername=getenv('DATABASE_SERVER_NAME_IMAC');
 		$databaseName=getenv('DATABASE_NAME_IMAC');
 		$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
 		$username=getenv('DATABASE_USERNAME_IMAC');
 		$password=getenv('DATABASE_PASSWORD_IMAC');
+		
 		//create connection
 		$conn=mysqli_connect($servername,$username,$password,$databaseName);
 		if (!$conn){
@@ -85,7 +117,6 @@ Button Roles:
 					echo "QUERY FAILED for $array";
 					echo mysqli_error($conn);
 				}
-
 			}		
 
 			// foreach ($checkboxArray as $key) {
@@ -93,6 +124,8 @@ Button Roles:
 			// }
 
 		}
+		*/
+		// -X-X-X- End of SQL Server Commands -X-X-X-
 	}
 
 	function otherOptions($status){
