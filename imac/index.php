@@ -31,7 +31,7 @@
 
   <!--Navigation-->
   <?php 
-  require 'navigationBar.php'; 
+  require '../navigationBar.php'; 
   ?>
 
   <!-- Introsuction Paragraph -->
@@ -108,7 +108,7 @@
 
   <!--Footer-->
   <?php 
-  require 'footer.php';
+  require '../footer.php';
   ?>
 
 
