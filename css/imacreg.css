@@ -8,6 +8,11 @@ body{
   vertical-align: center;
   background: #9c27b0;
 }
+.message{
+  width: 70%;
+  margin-left:15%;
+  margin-right: :15%;
+}
 .video{
   margin-bottom: 15px;
 }
