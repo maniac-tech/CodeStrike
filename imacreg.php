@@ -41,7 +41,7 @@
             <h2 style="color:#A020F0; font-size: 35px">iMac Registrations 2018</h2>
           </center>
           <div class="message">
-            <b>Update</b>: The registartions for iOS application development for academic semester 2018 is currently closed, and will reopen in the <b>THIRD WEEK</b> of <b>January</b>.
+            <b>Update</b>: The registartions for iOS application development for academic semester 2018 are currently closed, and will reopen in the <b>THIRD WEEK</b> of <b>January</b>.
 
           </div>
         </div>
