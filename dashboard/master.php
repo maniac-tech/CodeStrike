@@ -86,7 +86,7 @@ Button Roles:
 				if ($result) {
 					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
 				}else{
-					echo "QUERY FAILED for $array ".pg_result_error($dbconn)"...";
+					echo "QUERY FAILED for $array ".pg_result_error($dbconn)."...";
 					echo pg_result_error($dbconn);
 				}
 			}		
