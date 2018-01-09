@@ -74,7 +74,7 @@ Button Roles:
 		$tableNameImac=getenv('PostGRE_DB_Users');
 
 		//create connection
-		$dbconn = pg_connect("host=$servername dbname=$databaseNameImac user=$username password=$password");
+		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 		if (!$dbconn){
 			echo ('Could not connect: ' . pg_last_error().'<br>');
 			echo pg_result_error($dbconn);
