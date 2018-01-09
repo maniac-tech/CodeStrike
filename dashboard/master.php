@@ -81,7 +81,7 @@ Button Roles:
 		}else{
 			foreach($checkboxArray as $array) {
 				// echo "$array";
-				$psql = "UPDATE $tableNameImac SET Batch='$toInsert' WHERE Mobile IN ($array)";
+				$psql = "UPDATE $tableNameImac SET \"Batch\"='$toInsert' WHERE \"Mobile\" IN ($array)";
 				$result=pg_query($dbconn,$psql);
 				if ($result) {
 					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
