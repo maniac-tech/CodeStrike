@@ -56,7 +56,7 @@ if(!isset($_SESSION['userId'])){
 			</tr>
 			<?php
 			//----- PostGRE SQL Commands -----
-			$psql = "SELECT * FROM $tablename_IMac WHERE \"Batch\"!=0 AND \"Status\"='Pending'";
+			$psql = "SELECT * FROM $tablename_IMac WHERE \"Batch\"!=0 AND \"Status\"='PENDING'";
 			$result = pg_query($dbconn,$psql);
 			if(pg_num_rows($result)>0){
 				while ($row=pg_fetch_assoc($result)){
