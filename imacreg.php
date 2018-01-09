@@ -34,8 +34,20 @@
   require 'navigationBar.php'; 
   ?>
 
+  <!-- Introsuction Paragraph -->
+  <div class="section scrollspy" id="team">
+        <div class="container">
+          <center>
+            <h2 style="color:#A020F0; font-size: 35px">iMac Registrations 2018</h2>
+          </center>
+          <div class="message">
+            <b>Update</b>: The registartions for iOS application development for academic semester 2018 are currently closed, and will reopen in the <b>THIRD WEEK</b> of <b>January</b>.
 
+          </div>
+        </div>
+    </div>
   <!--Form Details-->
+  <!--
   <div class="section scrollspy" id="team">
     <br>
     <center>
@@ -79,9 +91,9 @@
 
           <p class="contact"><label for="phone">Mobile phone</label></p> 
           <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
-          <!-- <span><div class="g-recaptcha" name="g-recaptcha-response" data-sitekey="6LeshBUUAAAAAOkHIrxVe2QetErIbIq2Bc5RQPxl"></div></span> -->
-
+          -->
           <!-- Google reCaptcha Code -->
+          <!-- 
           <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
@@ -92,6 +104,7 @@
 
     </div>
   </div>                         
+  -->
 
   <!--Footer-->
   <?php 
