@@ -34,7 +34,8 @@
   require '../navigationBar.php'; 
   ?>
 
-  <!-- Introsuction Paragraph -->
+  <!-- Introduction Paragraph -->
+  <!-- 
   <div class="section scrollspy" id="team">
         <div class="container">
           <center>
@@ -46,75 +47,65 @@
           </div>
         </div>
     </div>
+  -->
   <!--Form Details-->
-  <!--
   <div class="section scrollspy" id="team">
     <br>
     <center>
-      <h2 style="color:#A020F0; font-size: 35px">iMac Training Sessions 2017</h2>
+      <h2 style="color:#A020F0; font-size: 35px">iMac Interview 2018</h2>
     </center>
     <br>
     <div class="container">
       <center>
-      <div class="video">
-      <video width="50%" controls="auto">
-        <source src="imacLab.mp4">
-        Your browser doesn't support the Video.
-      </video>
+        <!-- 
+        <div class="video">
+          <video width="50%" controls="auto">
+            <source src="imacLab.mp4">
+              Your browser doesn't support the Video.
+            </video>
+          </div>
+           -->
+        </center>
+        <div  class="form">
+          <center><p>Register here for iMac interviews 2018 </p></center>
+          <hr>
+          <form id="contactform" action="imacValidate.php" method="post"> 
+            <p class="contact"><label for="name">First Name</label></p> 
+            <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
+
+            <p class="contact"><label for="name">Last Name</label></p> 
+            <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
+
+            <p class="contact"><label for="email">E-Mail ID</label></p> 
+            <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
+
+            <p class="contact"><label for="branch">Branch</label></p> 
+            <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
+
+            <p class="contact"><label for="year">Year</label></p> 
+            <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
+
+            <p class="contact"><label for="phone">Mobile phone</label></p> 
+            <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
+
+            <!-- Google reCaptcha Code -->
+            <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+            <br> 
+            <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
+            
+          </form> 
+        </div>
       </div>
-      </center>
-      <div  class="form">
-      <center><p>Register Here</p></center>
-        <hr>
-        <form id="contactform" action="imacValidate.php" method="post"> 
-          <p class="contact"><label for="name">First Name</label></p> 
-          <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
+    </div>                         
 
-          <p class="contact"><label for="name">Last Name</label></p> 
-          <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
+    <!--Footer-->
+    <?php 
+    require '../footer.php';
+    ?>
 
-          <p class="contact"><label for="email">Email</label></p> 
-          <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
+    <!--  Scripts-->
+    <script src="../min/plugin-min.js"></script>
+    <script src="../min/custom-min.js"></script>
 
-          <p class="contact"><label for="branch">Branch</label></p> 
-          <input type="text" name="stream" required="TRUE">
-          
-          <p class="contact"><label for="year">Year</label></p> 
-          <input type="year" id="year" placeholder="example-FE" name="year" required="" type="text"> 
-
-          <select class="select-style gender" name="gender">
-            <option value="select">i am..</option>
-            <option value="m">Male</option>
-            <option value="f">Female</option>
-            <option value="others">Other</option>
-          </select><br><br>
-
-          <p class="contact"><label for="phone">Mobile phone</label></p> 
-          <input id="phone" name="phone" placeholder="phone number" required="" type="text"> <br>
-          -->
-          <!-- Google reCaptcha Code -->
-          <!-- 
-          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
-          <br> 
-          <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
-          <a class="buttom" href="http://www.phpmyadmin.co/index.php">Admin Login</a>
-          <a class="buttom" href="http://admin.codestrike.in">Dashboard</a>          
-        </form> 
-      </div>
-
-    </div>
-  </div>                         
-  -->
-
-  <!--Footer-->
-  <?php 
-  require '../footer.php';
-  ?>
-
-
-  <!--  Scripts-->
-  <script src="../min/plugin-min.js"></script>
-  <script src="../min/custom-min.js"></script>
-
-</body>
-</html>
+  </body>
+  </html>
