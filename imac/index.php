@@ -67,9 +67,18 @@
            -->
         </center>
         <div  class="form">
-          <center><p>Register here for iMac interviews 2018 </p></center>
+          <div id="aboutInterview">
+          <p>About the Interview</p>
           <hr>
-          <form id="contactform" action="imacValidate.php" method="post"> 
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, facilis facere dolore aliquid. Ipsum, quae. Sed magni repellendus repudiandae vitae repellat nesciunt. Beatae, deleniti ipsam enim, quae fugiat perferendis repellat!
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis perferendis, repellat dolore, doloremque fugit sed dolores aliquid ipsa sit nisi hic nihil accusantium, quisquam fugiat ipsum. Aliquam id et adipisci.
+          </p>
+          </div>
+          <form id="contactform" action="imacValidate.php" method="post">
+            <center><p>Register here</p></center>
+            <hr> 
             <p class="contact"><label for="name">First Name</label></p> 
             <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
 
@@ -91,8 +100,7 @@
             <!-- Google reCaptcha Code -->
             <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
             <br> 
-            <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">   
-            
+            <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">     
           </form> 
         </div>
       </div>

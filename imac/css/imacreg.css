@@ -17,13 +17,27 @@ body{
   margin-bottom: 15px;
 }
 .form{
-	background:#FFFFFF; width:470px; 
+	/*background:#FFFFFF;*/
   margin:0 auto; 
-  width: 500px;
-  height: auto;
+  width: 80%;
+  height: 22cm;
   padding-left: 50px;
   padding-top: 50px;
   padding-right: 50px;
+}
+#aboutInterview{
+  width: 46%;
+  float: left;
+  margin-right: 0.5%;
+  background:#FFFFFF;
+  padding : 2% 2% 2% 2%;
+}
+#contactform{
+  width: 50%;
+  float: right;
+  margin-left: 0.5%;
+  background:#FFFFFF;
+  padding : 3% 3% 3% 3%;
 }
 .form fieldset{border:0px; padding:0px; margin:0px;}
 .form p.contact { font-size: 12px; margin:0px 0px 10px 0;line-height: 14px; font-family:Arial, Helvetica;}
