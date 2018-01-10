@@ -55,6 +55,26 @@ if(!isset($_SESSION['userId'])){
 				<td>Batch</td>
 			</tr>
 			<?php
+			//----- PostGRE SQL Commands -----
+			$psql = "SELECT * FROM $tablename_IMac WHERE \"Batch\"!=0 AND \"Status\"='PENDING'";
+			$result = pg_query($dbconn,$psql);
+			if(pg_num_rows($result)>0){
+				while ($row=pg_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td><input type='checkbox' name='checkbox[]' value='".$row['Mobile']."'></td>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					echo "<td>".$row["Batch"]."</td>";
+					echo "</tr>";
+				}
+			}else{
+				echo "NO DATA";
+			}
+			// -X-X-X- End of PostGRE SQL Commands -X-X-X-
+
+			//----- SQL Commands -----
+			/*
 			$sql = "SELECT * FROM $tableName WHERE Batch!=0 AND Status='Pending'";
 			$result = mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result)>0){
@@ -70,6 +90,8 @@ if(!isset($_SESSION['userId'])){
 			}else{
 				echo "NO DATA";
 			}
+			*/
+			// -X-X-X- End of SQL Commands -X-X-X-
 			?>
 		</table>
 </div>
