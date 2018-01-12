@@ -4,6 +4,7 @@
 	$databaseName=getenv('PostGRE_DB');
 	$username=getenv('PostGRE_DB_User');
 	$password=getenv('PostGRE_DB_Password');
+	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
 
 	// $servername="localhost";
 	// $databaseName="imac";
