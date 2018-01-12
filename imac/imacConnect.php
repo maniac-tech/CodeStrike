@@ -14,6 +14,6 @@
 
 	//create connection
 	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password")
-or die('Could not connect: ' . pg_last_error());
+or die('Could not connect: ' . pg_last_error($dbconn));
 	
 	?>
