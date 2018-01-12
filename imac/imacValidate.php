@@ -19,14 +19,23 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	global $tableName;
 	global $conn;
 
+	//----- PostGRE SQL Commands -----
+	$query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+	$result=$pg_query($query);
+	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
+
+	//----- SQL Commands -----
+	/*
 	$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 	$result=$conn->query($query);
+	*/
+	// -X-X-X- End of SQL Commands -X-X-X-
 
 	if ($result) {
 		header('Location:imac.php');
 	}
 	else{
-		error($func_var_mobileNo);
+		echo error($func_var_mobileNo);
 	}
 }
 
