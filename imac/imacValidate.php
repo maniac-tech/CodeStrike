@@ -32,8 +32,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	// -X-X-X- End of SQL Commands -X-X-X-
 
 	if ($result) {
-		// header('Location:imac.php');
-		echo "Success.";
+		header('Location:imac.php');
 	}
 	else{
 		echo pg_result_error($result);
