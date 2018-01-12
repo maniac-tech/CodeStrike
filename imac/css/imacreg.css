@@ -32,6 +32,9 @@ body{
   background:#FFFFFF;
   padding : 2% 2% 2% 2%;
 }
+#aboutInterview_bullets{
+  margin-left: 8%;
+}
 #contactform{
   width: 50%;
   float: right;
