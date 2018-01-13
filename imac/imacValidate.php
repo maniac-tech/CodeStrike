@@ -37,6 +37,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		echo "Successful submission of form";
 	}
 	else{
+		echo "dbocnn is :".$dbconn."..<br>";
 		echo "Failure";
 	}
 }
