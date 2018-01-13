@@ -27,10 +27,9 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$username=getenv('PostGRE_DB_User');
 	$password=getenv('PostGRE_DB_Password');
 	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
-	echo $tableName_interviews
 
 	echo "<br>Dumping the URL part 2:<br>";
- 	echo $form_name." ".$form_year." ".$form_branch." ".$form_mobileNo." ".$form_emailId;
+ 	echo $func_var_name." ".$func_var_year." ".$func_var_branch." ".$func_var_mobileNo." ".$func_var_emailID;
 
 	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 	if (!$dbconn){
