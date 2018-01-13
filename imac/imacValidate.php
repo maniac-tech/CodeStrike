@@ -28,19 +28,12 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$password=getenv('PostGRE_DB_Password');
 	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
 
-	echo "<br>Dumping the URL part 2:<br>";
- 	echo $func_var_name." ".$func_var_year." ".$func_var_branch." ".$func_var_mobileNo." ".$func_var_emailID;
-
 	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 	if (!$dbconn){
 		echo ('Could not connect: ' . pg_last_error().'<br>');
-		echo pg_result_error($dbconn);
 	}else{ 
 		//----- PostGRE SQL Commands -----
 		$query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Mobile\",\"Email\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_mobileNo','$func_var_emailID')";
-		// $result=pg_query($dbconn,$query);
-		// postgre syntax for inserting modified.
-		// $query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		$result=pg_query($dbconn,$query);
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
@@ -50,18 +43,13 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		$result=$conn->query($query);
 		*/
 		// -X-X-X- End of SQL Commands -X-X-X-
-		echo "pg_querya output:",pg_query($dbconn,$query);
+
 		if ($result) {
-			// header('Location:imac.php');
-			echo "Successful submission of form";
+			header('Location:imac.php');
+			// echo "Successful submission of form";
 		}
 		else{
-			
-			// echo "dbocnn is :".$dbconn."..<br>";
-			// echo "Failure";
-			// echo pg_result_error($dbconn)." ..  ".pg_result_error($result);
 			echo "pg_querya output:".pg_query($dbconn,$query);
-			// header('Location:medium.php');
 		}
 	}
 }
@@ -147,10 +135,6 @@ function regularExpression(){
  									// echo "BRANCH HAS BEEN MATCHED.<BR>";
  									
  									// IF THE BRANCH IS ACCEPTABLE, WRITE THE DATA TO DB:
- 									
- 									echo "Dumping the URL:<br>";
- 									echo $form_name." ".$form_year." ".$form_branch." ".$form_mobileNo." ".$form_emailId;
- 									
  									insertData($name,$form_year,$form_branch,$form_emailId,$form_mobileNo);
  								}
  								else{
