@@ -44,8 +44,8 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		// echo "dbocnn is :".$dbconn."..<br>";
 		// echo "Failure";
 		// echo pg_result_error($dbconn)." ..  ".pg_result_error($result);
-		
-		header('Location:medium.php');
+		echo "pg_querya output:",pg_query($dbconn,$query);
+		// header('Location:medium.php');
 	}
 }
 
