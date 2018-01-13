@@ -39,6 +39,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	else{
 		echo "dbocnn is :".$dbconn."..<br>";
 		echo "Failure";
+		echo pg_result_error($dbconn)." ..  ".pg_result_error($result);
 	}
 }
 
