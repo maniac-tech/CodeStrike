@@ -29,7 +29,8 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
 	echo $tableName_interviews
 
-
+	echo "<br>Dumping the URL part 2:<br>";
+ 	echo $form_name." ".$form_year." ".$form_branch." ".$form_mobileNo." ".$form_emailId;
 
 	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 	if (!$dbconn){
@@ -147,10 +148,11 @@ function regularExpression(){
  									// echo "BRANCH HAS BEEN MATCHED.<BR>";
  									
  									// IF THE BRANCH IS ACCEPTABLE, WRITE THE DATA TO DB:
- 									// insertData($name,$form_year,$form_branch,$form_emailId,$form_mobileNo);
  									
  									echo "Dumping the URL:<br>";
  									echo $form_name." ".$form_year." ".$form_branch." ".$form_mobileNo." ".$form_emailId;
+ 									
+ 									insertData($name,$form_year,$form_branch,$form_emailId,$form_mobileNo);
  								}
  								else{
  									echo "ENTER A VALID BRANCH. i.e IT,CMPN,ELEX,ELEC or EXTC. <br>";
