@@ -37,10 +37,10 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		echo pg_result_error($dbconn);
 	}else{ 
 		//----- PostGRE SQL Commands -----
-		// $query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		$query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Mobile\",\"Email\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_mobileNo','$func_var_emailID')";
 		// $result=pg_query($dbconn,$query);
 		// postgre syntax for inserting modified.
-		$query="INSERT INTO '$tableName_'.\interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		// $query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		$result=pg_query($dbconn,$query);
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
