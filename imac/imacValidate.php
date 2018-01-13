@@ -17,12 +17,12 @@ $dbconn=$dbconn;
 
 // Declating all the required functions:
 function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_emailID,$func_var_mobileNo){
-	global $tableName;
-	global $conn;
+	global $tableName_interviews;
+	global $dbconn;
 
 	//----- PostGRE SQL Commands -----
 	$query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','2','$func_var_emailID','$func_var_mobileNo')";
-	$result=pg_query($_GLOBALS['dbconn'],$query);
+	$result=pg_query($dbconn,$query);
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 	//----- SQL Commands -----
@@ -46,7 +46,9 @@ function captchaValidation(){
 	$captchaSecretKey=	getenv('GOOGLE_RECAPTCHA_SECRET');
 	$clientIp = $_SERVER['REMOTE_ADDR'];
 	$captchResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$captchaSecretKey."&response=".$captcha);
+	
 	// The success status of captcha is being returned:
+	
 	if ($captchResponse.success==false){
 		echo "Captcha Failed.";
 		return 0; //Captcha Failed
@@ -137,7 +139,7 @@ function regularExpression(){
 
 function error($func_var_mobileNo){
 	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
-	global $tableName, $conn;
+	global $tableName_interviews, $dbconn;
 	$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
 	$result = mysqli_query($conn, $sql);
 
