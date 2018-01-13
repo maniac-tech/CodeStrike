@@ -37,8 +37,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		echo "Successful submission of form";
 	}
 	else{
-		header('Location:http://www.medium.com');
-		echo "Failure".pg_result_error($result);
+		echo "Failure";
 	}
 }
 
