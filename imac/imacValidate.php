@@ -34,7 +34,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$result=$conn->query($query);
 	*/
 	// -X-X-X- End of SQL Commands -X-X-X-
-
+	echo "pg_querya output:",pg_query($dbconn,$query);
 	if ($result) {
 		// header('Location:imac.php');
 		echo "Successful submission of form";
