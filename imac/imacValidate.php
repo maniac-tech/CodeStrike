@@ -147,9 +147,9 @@ function regularExpression(){
  						}
  					}
  				}
- 			}
  		}
- }
+ 	}
+}
 
 function error($func_var_mobileNo){
 	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
