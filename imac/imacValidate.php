@@ -102,7 +102,7 @@ function regularExpression(){
 		}
 		else{
  				//echo "NAME HAS BEEN MATCHED.<BR>";
- 				$name = $form_fname." ".$form_name; //COMBINED FIRST NAME AND LAST NAME INTO ONE VARIABLE
+ 				$name = $form_fname." ".$form_lname; //COMBINED FIRST NAME AND LAST NAME INTO ONE VARIABLE
 
  				// IF THE NAME IS ACCEPTABLE, PROCEED TO CHECK FOR EMAIL ID:
  				// EMAIL CHECKING:
