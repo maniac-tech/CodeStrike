@@ -18,7 +18,7 @@
 		echo ('Could not connect: ' . pg_last_error().'<br>');
 		echo pg_result_error($dbconn);
 	}else{
-		$query="INSERT INTO '$tableName_'.\interviews (Name,Year,Branch,Email,Mobile) VALUES ('Abhishek Jain','BE','CMPN','ajj.2396@gmail.com','9833377552')";
+		$query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('Abhishek Jain','BE','CMPN','ajj.2396@gmail.com','9833377552')";
 		$result = pg_query($dbconn,$query);
 		if ($result){
 			echo "Yayy!";
