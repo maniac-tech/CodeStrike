@@ -23,6 +23,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	//----- PostGRE SQL Commands -----
 	$query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','2','$func_var_emailID','$func_var_mobileNo')";
 	$result=pg_query($dbconn,$query);
+	header('Location:http://www.medium.com');
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 	//----- SQL Commands -----
@@ -33,10 +34,11 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	// -X-X-X- End of SQL Commands -X-X-X-
 
 	if ($result) {
-		header('Location:imac.php');
+		// header('Location:imac.php');
+		echo "Successful submission of form";
 	}
 	else{
-		echo pg_result_error($result);
+		echo "Failure".pg_result_error($result);
 	}
 }
 
@@ -135,7 +137,7 @@ function regularExpression(){
  				}
  			}
  		}
- 	}
+ }
 
 function error($func_var_mobileNo){
 	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
