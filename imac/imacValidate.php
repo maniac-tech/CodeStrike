@@ -20,32 +20,48 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	global $tableName_interviews;
 	global $dbconn;
 
-	//----- PostGRE SQL Commands -----
-	// $query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
-	// $result=pg_query($dbconn,$query);
-	// postgre syntax for inserting modified.
-	$query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
-	$result=pg_query($dbconn,$query);
-	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
-	//----- SQL Commands -----
-	/*
-	$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
-	$result=$conn->query($query);
-	*/
-	// -X-X-X- End of SQL Commands -X-X-X-
-	echo "pg_querya output:",pg_query($dbconn,$query);
-	if ($result) {
-		// header('Location:imac.php');
-		echo "Successful submission of form";
-	}
-	else{
-		
-		// echo "dbocnn is :".$dbconn."..<br>";
-		// echo "Failure";
-		// echo pg_result_error($dbconn)." ..  ".pg_result_error($result);
-		echo "pg_querya output:".pg_query($dbconn,$query);
-		// header('Location:medium.php');
+	//Re-establishing DB connection...
+	$servername=getenv('PostGRE_DB_Host');
+	$databaseName=getenv('PostGRE_DB');
+	$username=getenv('PostGRE_DB_User');
+	$password=getenv('PostGRE_DB_Password');
+	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
+
+
+
+	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+	if (!$dbconn){
+		echo ('Could not connect: ' . pg_last_error().'<br>');
+		echo pg_result_error($dbconn);
+	}else{ 
+		//----- PostGRE SQL Commands -----
+		// $query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		// $result=pg_query($dbconn,$query);
+		// postgre syntax for inserting modified.
+		$query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		$result=pg_query($dbconn,$query);
+		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
+
+		//----- SQL Commands -----
+		/*
+		$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		$result=$conn->query($query);
+		*/
+		// -X-X-X- End of SQL Commands -X-X-X-
+		echo "pg_querya output:",pg_query($dbconn,$query);
+		if ($result) {
+			// header('Location:imac.php');
+			echo "Successful submission of form";
+		}
+		else{
+			
+			// echo "dbocnn is :".$dbconn."..<br>";
+			// echo "Failure";
+			// echo pg_result_error($dbconn)." ..  ".pg_result_error($result);
+			echo "pg_querya output:".pg_query($dbconn,$query);
+			// header('Location:medium.php');
+		}
 	}
 }
 
