@@ -27,6 +27,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$username=getenv('PostGRE_DB_User');
 	$password=getenv('PostGRE_DB_Password');
 	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
+	echo $tableName_interviews
 
 
 
@@ -39,7 +40,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		// $query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		// $result=pg_query($dbconn,$query);
 		// postgre syntax for inserting modified.
-		$query="INSERT INTO $tableName_interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		$query="INSERT INTO '$tableName_'.\interviews (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		$result=pg_query($dbconn,$query);
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
@@ -146,7 +147,10 @@ function regularExpression(){
  									// echo "BRANCH HAS BEEN MATCHED.<BR>";
  									
  									// IF THE BRANCH IS ACCEPTABLE, WRITE THE DATA TO DB:
- 									insertData($name,$form_year,$form_branch,$form_emailId,$form_mobileNo);
+ 									// insertData($name,$form_year,$form_branch,$form_emailId,$form_mobileNo);
+ 									
+ 									echo "Dumping the URL:<br>";
+ 									echo $form_name." ".$form_year." ".$form_branch." ".$form_mobileNo." ".$form_emailId;
  								}
  								else{
  									echo "ENTER A VALID BRANCH. i.e IT,CMPN,ELEX,ELEC or EXTC. <br>";
