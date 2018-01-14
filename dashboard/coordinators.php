@@ -88,4 +88,33 @@ if(!isset($_SESSION['userId'])){
 		}
 		?>
 	</table>
+	<p id="studentsListT">Interview Registration List:</p>
+	<table >
+		<tr>
+			<th>Name</th>
+			<th>Year</th>
+			<th>Branch</th>
+			<th>Mobile</th>
+			<th>E-Mail</th>
+		</tr>
+		<?php
+		//----- PostGRE SQL Commands -----
+		$query = "SELECT * FROM $tableName_IMac_interviews";
+		$result = pg_query($dbconn,$query);
+		if (pg_result_status($result)==2) {
+			while($row = pg_fetch_assoc($result)){
+				echo "<tr>";
+				echo "<td>".$row["Name"]."</td>";
+				echo "<td>".$row["Year"]."</td>";
+				echo "<td>".$row["Branch"]."</td>";
+				echo "<td>".$row["Email"]."</td>";
+				echo "<td>".$row["Mobile"]."</td>";
+				echo "</tr>";
+			}
+		}else{
+			echo "NO DATA";
+		}
+		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
+		?>
+	</table>
 </div>
