@@ -71,6 +71,7 @@ if(!isset($_SESSION['userId'])){
 			<th>Branch</th>
 			<th>Mobile</th>
 			<th>E-Mail</th>
+			<th>Nominated</th>
 		</tr>
 		<?php
 		//----- PostGRE SQL Commands -----
