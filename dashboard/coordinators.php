@@ -63,31 +63,6 @@ if(!isset($_SESSION['userId'])){
 		// -X-X-X- End of SQL Commands -X-X-X-
 		?>
 	</table>
-	<p id="studentsListT">Nominated Student Co-Ordinator List:</p>
-	<table >
-		<tr>
-			<th>Name</th>
-			<th>Year</th>
-			<th>Branch</th>
-			<th>Mobile</th>
-		</tr>
-		<?php
-		$sql = "SELECT * FROM $tableNameCoT";
-		$result = mysqli_query($conn,$sql);
-		if(mysqli_num_rows($result)>0){
-			while ($row=mysqli_fetch_assoc($result)){
-				echo "<tr>";
-				echo "<td>".$row["Name"]."</td>";
-				echo "<td>".$row["Year"]."</td>";
-				echo "<td>".$row["Branch"]."</td>";
-				echo "<td>".$row["Mobile"]."</td>";
-				echo "</tr>";
-			}
-		}else{
-			echo "NO DATA";
-		}
-		?>
-	</table>
 	<p id="studentsListT">Interview Registration List:</p>
 	<table >
 		<tr>
@@ -109,6 +84,7 @@ if(!isset($_SESSION['userId'])){
 				echo "<td>".$row["Branch"]."</td>";
 				echo "<td>".$row["Email"]."</td>";
 				echo "<td>".$row["Mobile"]."</td>";
+				echo "<td>".$row["Nominated"]."</td>";
 				echo "</tr>";
 			}
 		}else{
