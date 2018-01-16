@@ -64,56 +64,65 @@
               Your browser doesn't support the Video.
             </video>
           </div>
-           -->
-        </center>
-        <div  class="form">
-          <div id="aboutInterview">
-          <p>About the Interview</p>
+        -->
+      </center>
+      <div  class="form">
+        <div id="aboutInterview">
+          <p><b>About the Interview</b></p>
           <hr>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, facilis facere dolore aliquid. Ipsum, quae. Sed magni repellendus repudiandae vitae repellat nesciunt. Beatae, deleniti ipsam enim, quae fugiat perferendis repellat!
+            iMac lab provides you a platform to improve your skills by learning about the iOS app development which require a dedicated apple system.
+            <br><br>
+            We are looking for the following skills in a Coordinator:
+              <ul id="aboutInterview_bullets" style="list-style-type: circle;">
+              <li>Good knowledge of Object oriented programming (preferably Swift or Objective C)</li>
+              <li>Good oratory skills</li>
+              <li>A problem solving approach</li>
+              </ul>
             <br>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis perferendis, repellat dolore, doloremque fugit sed dolores aliquid ipsa sit nisi hic nihil accusantium, quisquam fugiat ipsum. Aliquam id et adipisci.
+            As an iMac Coordinator you will manage multiple sessions and teach the development of different apps and will be working application development projects as well.
+            <br><br>  
+            At the end of your session you will be given a Assistant teaching Certificate and a letter of recommendation.
           </p>
-          </div>
-          <form id="contactform" action="imacValidate.php" method="post">
-            <center><p>Register here</p></center>
-            <hr> 
-            <p class="contact"><label for="name">First Name</label></p> 
-            <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
-
-            <p class="contact"><label for="name">Last Name</label></p> 
-            <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
-
-            <p class="contact"><label for="email">E-Mail ID</label></p> 
-            <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
-
-            <p class="contact"><label for="branch">Branch</label></p> 
-            <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
-
-            <p class="contact"><label for="year">Year</label></p> 
-            <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
-
-            <p class="contact"><label for="phone">Mobile phone</label></p> 
-            <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
-
-            <!-- Google reCaptcha Code -->
-            <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
-            <br> 
-            <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">     
-          </form> 
         </div>
+        <form id="contactform" action="imacValidate.php" method="post">
+          <center><p><b>Register here</b></p></center>
+          <hr> 
+          <p class="contact"><label for="name">First Name</label></p> 
+          <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
+
+          <p class="contact"><label for="name">Last Name</label></p> 
+          <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
+
+          <p class="contact"><label for="email">E-Mail ID</label></p> 
+          <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
+
+          <p class="contact"><label for="branch">Branch</label></p> 
+          <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
+
+          <p class="contact"><label for="year">Year</label></p> 
+          <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
+
+          <p class="contact"><label for="phone">Mobile phone</label></p> 
+          <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
+
+          <!-- Google reCaptcha Code -->
+          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+          <br> 
+          <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
+        </form> 
       </div>
-    </div>                         
+    </div>
+  </div>                         
 
-    <!--Footer-->
-    <?php 
-    require '../footer.php';
-    ?>
+  <!--Footer-->
+  <?php 
+  require '../footer.php';
+  ?>
 
-    <!--  Scripts-->
-    <script src="../min/plugin-min.js"></script>
-    <script src="../min/custom-min.js"></script>
+  <!--  Scripts-->
+  <script src="../min/plugin-min.js"></script>
+  <script src="../min/custom-min.js"></script>
 
-  </body>
-  </html>
+</body>
+</html>

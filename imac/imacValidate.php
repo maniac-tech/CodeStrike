@@ -13,20 +13,44 @@ $form_emailId;
 $form_mobileNo;
 $form_year;
 $form_branch;
+$dbconn=$dbconn;
 
 // Declating all the required functions:
 function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_emailID,$func_var_mobileNo){
-	global $tableName;
-	global $conn;
+	global $tableName_interviews;
+	global $dbconn;
 
-	$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
-	$result=$conn->query($query);
 
-	if ($result) {
-		header('Location:imac.php');
-	}
-	else{
-		error($func_var_mobileNo);
+	//Re-establishing DB connection...
+	$servername=getenv('PostGRE_DB_Host');
+	$databaseName=getenv('PostGRE_DB');
+	$username=getenv('PostGRE_DB_User');
+	$password=getenv('PostGRE_DB_Password');
+	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
+
+	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+	if (!$dbconn){
+		echo ('Could not connect: ' . pg_last_error().'<br>');
+	}else{ 
+		//----- PostGRE SQL Commands -----
+		$query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Mobile\",\"Email\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_mobileNo','$func_var_emailID')";
+		$result=pg_query($dbconn,$query);
+		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
+
+		//----- SQL Commands -----
+		/*
+		$query="INSERT INTO $tableName (Name,Year,Branch,Email,Mobile) VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
+		$result=$conn->query($query);
+		*/
+		// -X-X-X- End of SQL Commands -X-X-X-
+
+		if ($result) {
+			header('Location:imac.php');
+			// echo "Successful submission of form";
+		}
+		else{
+			echo "pg_querya output:".pg_query($dbconn,$query);
+		}
 	}
 }
 
@@ -36,7 +60,9 @@ function captchaValidation(){
 	$captchaSecretKey=	getenv('GOOGLE_RECAPTCHA_SECRET');
 	$clientIp = $_SERVER['REMOTE_ADDR'];
 	$captchResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$captchaSecretKey."&response=".$captcha);
+	
 	// The success status of captcha is being returned:
+	
 	if ($captchResponse.success==false){
 		echo "Captcha Failed.";
 		return 0; //Captcha Failed
@@ -121,13 +147,13 @@ function regularExpression(){
  						}
  					}
  				}
- 			}
  		}
  	}
+}
 
 function error($func_var_mobileNo){
 	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
-	global $tableName, $conn;
+	global $tableName_interviews, $dbconn;
 	$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
 	$result = mysqli_query($conn, $sql);
 
