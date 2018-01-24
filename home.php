@@ -10,14 +10,8 @@
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.min.js"></script>
 
-	<!-- <script type="text/javascript">
-		//splash script
-		$(window).load(function(){
-			// PAGE IS FULLY LOADED  
-			// FADE OUT YOUR OVERLAYING DIV
-			$('#overlay').fadeOut();
-		});
-	</script> -->
+	<!-- Sweetalert stylesheet -->
+	<link rel='stylesheet prefetch' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'> 
 </head>
 <body>
 	<!-- splash overlay -->
@@ -527,6 +521,9 @@ require 'footer.php';
 <script async src="min/plugin-min.js"></script>
 <script async src="min/custom-min.js"></script>
 </body>
+<!-- Sweetalert script src -->
+<script src='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.min.js'></script>
+<script  src="js/sweetalert.js"></script>
 <!-- CSS  -->
 <link  href="min/plugin-min.css" type="text/css" rel="stylesheet">
 <link  href="min/custom-min.css" type="text/css" rel="stylesheet" >
