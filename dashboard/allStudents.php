@@ -6,8 +6,11 @@ if(!isset($_SESSION['userId'])){
 }
 ?>
 <div id="content_table">
+	
+<input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
+    
 <p id="studentsList">List of Students Registered:</p>
-	<table >
+	<table id="myTable">
 		<tr>
 			<th>Name</th>
 			<th>Year</th>
@@ -65,3 +68,4 @@ if(!isset($_SESSION['userId'])){
 		?>
 	</table>
 </div>
+
