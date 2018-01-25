@@ -7,7 +7,7 @@ if(!isset($_SESSION['userId'])){
 ?>
 <div id="content_table">
 <p id="studentsList">List of Students Registered:</p>
-	<table >
+	<table id="allStudentsTable">
 		<tr>
 			<th>Name</th>
 			<th>Year</th>
@@ -64,4 +64,5 @@ if(!isset($_SESSION['userId'])){
 		// -X-X-X- End of SQL Commands -X-X-X-
 		?>
 	</table>
+	<button onclick="$('#tableID').tableExport({type:'pdf',escape:'false'});">Export to PDF</button>
 </div>
