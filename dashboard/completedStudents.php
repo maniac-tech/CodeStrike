@@ -7,36 +7,36 @@ if(!isset($_SESSION['userId'])){
 ?>
 <div id="content_table">
 	<p id="studentsList"><b>List of Students Completed:</b></p>
-		<table >
-			<tr>
-				<td>Name</td>
-				<td>Year</td>
-				<td>Branch</td>
-				<td>Email</td>
-				<td>Mobile</td>
-				<!-- TO-DO: Print the Batch no alloted from the respective table -->
-				<!-- <th>Batch</th> -->
-			</tr>
-			<?php
+	<table id="tableID">
+		<tr>
+			<td>Name</td>
+			<td>Year</td>
+			<td>Branch</td>
+			<td>Email</td>
+			<td>Mobile</td>
+			<!-- TO-DO: Print the Batch no alloted from the respective table -->
+			<!-- <th>Batch</th> -->
+		</tr>
+		<?php
 			//----- PostGRE SQL Commands -----
 			// $query = "SELECT * FROM $tablename_IMac WHERE \"Status\"='$1'";
-			$result = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1",array('COMPLETED'));
-			if (pg_result_status($result)==2) {
-				while($row = pg_fetch_assoc($result)){
-					echo "<tr>";
-					echo "<td>".$row["Name"]."</td>";
-					echo "<td>".$row["Year"]."</td>";
-					echo "<td>".$row["Branch"]."</td>";
-					echo "<td>".$row["Email"]."</td>";
-					echo "<td>".$row["Mobile"]."</td>";
+		$result = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1",array('COMPLETED'));
+		if (pg_result_status($result)==2) {
+			while($row = pg_fetch_assoc($result)){
+				echo "<tr>";
+				echo "<td>".$row["Name"]."</td>";
+				echo "<td>".$row["Year"]."</td>";
+				echo "<td>".$row["Branch"]."</td>";
+				echo "<td>".$row["Email"]."</td>";
+				echo "<td>".$row["Mobile"]."</td>";
 					// echo "<td>".$row["Status"]."</td>";
 					// echo "<td>".$row["Batch"]."</td>";
-					echo "</tr>";
-				}
+				echo "</tr>";
 			}
-			else{
-				echo "Query Failed.";
-			}
+		}
+		else{
+			echo "Query Failed.";
+		}
 			// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 			//----- SQL Commands -----
@@ -61,4 +61,6 @@ if(!isset($_SESSION['userId'])){
 			// -X-X-X- End of SQL Commands -X-X-X-
 			?>
 		</table>
+		<button onclick="$('#tableID').tableExport({type:'pdf',escape:'false'});">Export</button>
+	</body>
 </div>
