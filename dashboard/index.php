@@ -15,6 +15,14 @@ if(!isset($_SESSION['userId'])){
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script>google.charts.load('current', {'packages':['corechart']});</script>
+
+	<!-- tableExport jQuery Plugin -->
+	<script type="text/javascript" src="js/tableExportPlugin/tableExport.js"></script>
+	<script type="text/javascript" src="js/tableExportPlugin/jquery.base64.js"></script>
+	<script type="text/javascript" src="js/tableExportPlugin/jspdf/libs/sprintf.js" ></script>
+	<script type="text/javascript" src="js/tableExportPlugin/jspdf/jspdf.js" ></script>
+	<script type="text/javascript" src="js/tableExportPlugin/jspdf/libs/base64.js" ></script>
+
 </head>
 <body>
 	<div id="navbar">
