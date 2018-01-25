@@ -64,5 +64,5 @@ if(!isset($_SESSION['userId'])){
 		// -X-X-X- End of SQL Commands -X-X-X-
 		?>
 	</table>
-	<button onclick="$('#allStudentsTable').tableExport({type:'pdf',escape:'false'});">Export to PDF</button>
+	<button onclick="$('#allStudentsTable').tableExport({type:'csv',escape:'false'});">Export to PDF</button>
 </div>
