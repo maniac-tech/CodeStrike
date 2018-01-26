@@ -9,15 +9,11 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="js/jquery-2.1.1.min.js"></script>
 	<script src="js/materialize.min.js"></script>
-
-	<!-- <script type="text/javascript">
-		//splash script
-		$(window).load(function(){
-			// PAGE IS FULLY LOADED  
-			// FADE OUT YOUR OVERLAYING DIV
-			$('#overlay').fadeOut();
-		});
-	</script> -->
+	<!-- Sweetalert stylesheet -->
+	<link rel='stylesheet prefetch' href='https://cdn.rawgit.com/t4t5/sweetalert/v0.2.0/lib/sweet-alert.css'>
+	<!-- Sweetalert script src -->
+	<script src='https://cdn.jsdelivr.net/npm/sweetalert2@7.7.0/dist/sweetalert2.all.min.js'></script>
+	<!-- <script  src="js/sweetalert.js"></script> -->
 </head>
 <body>
 	<!-- splash overlay -->
@@ -518,6 +514,8 @@
 		</div>
 	</div>
 
+
+
 <!--Footer-->
 <?php 
 require 'footer.php';
@@ -526,7 +524,36 @@ require 'footer.php';
 <!--  Scripts-->
 <script async src="min/plugin-min.js"></script>
 <script async src="min/custom-min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function () {
+
+
+		swal({
+			title: 'CodeChef Certified Data Structure & Algorithms Programme (CCDSAP)',
+			text: 'Exam Date: 18 March 2018 ',
+			html:
+			'<p>'+'<a target="_blank" href="https://www.codechef.com/certification/about"><button style="  border-width: 0; padding: 15px; outline: none; border-radius: 2px; box-shadow: 0 1px 4px rgba(0, 0, 0, .6); background-color: #2ecc71; color: #ecf0f1;" return false;">More Details</button></a>',
+			imageUrl: 'https://s3.amazonaws.com/codechef_shared/sites/all/themes/abessive/logo.png',
+			imageWidth: 405,
+			imageHeight: 157,
+			imageAlt: 'Custom image',
+			showCloseButton: true,
+			showConfirmButton: false,
+			animation: false,
+			timer: 15000
+
+		}).then((result) => {
+  			if (result.dismiss === 'timer') {
+				swal.close()
+			}
+		});
+	});
+
+</script>
+
+
 </body>
+
 <!-- CSS  -->
 <link  href="min/plugin-min.css" type="text/css" rel="stylesheet">
 <link  href="min/custom-min.css" type="text/css" rel="stylesheet" >
