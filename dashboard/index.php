@@ -17,8 +17,8 @@ if(!isset($_SESSION['userId'])){
 	<script>google.charts.load('current', {'packages':['corechart']});</script>
 
 	<!-- tableExport jQuery Plugin -->
-	<script type="text/javascript" src="tableExportPlugin/tableExport/js/tableexport.js"></script>
 	<script type="text/javascript" src="tableExportPlugin/FileSaver.js"></script>
+	<script type="text/javascript" src="tableExportPlugin/tableExport/js/tableexport.js"></script>
 </head>
 <body>
 	<div id="navbar">
