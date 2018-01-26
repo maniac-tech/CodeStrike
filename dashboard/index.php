@@ -17,6 +17,14 @@ if(!isset($_SESSION['userId'])){
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 	<script>google.charts.load('current', {'packages':['corechart']});</script>
+
+	<!-- tableExport jQuery Plugin -->
+	<!-- Note:
+		*For proper functioning of tableExportPlugin,
+		make sure 'FileSaver.js' script is included before 'tableexport.js'
+	 -->
+	<script type="text/javascript" src="tableExportPlugin/FileSaver.js"></script>
+	<script type="text/javascript" src="tableExportPlugin/tableExport/js/tableexport.js"></script>
 </head>
 <body>
 	<div id="navbar">
