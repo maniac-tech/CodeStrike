@@ -64,7 +64,8 @@ if(!isset($_SESSION['userId'])){
 		?>
 	</table>
 	<p id="studentsListT">Interview Registration List:</p>
-	<table >
+	<button onclick="$('#interviewStudents').tableExport({type:'csv',escape:'false'});">Download file</button>
+	<table id="interviewStudents">
 		<tr>
 			<th>Name</th>
 			<th>Year</th>
