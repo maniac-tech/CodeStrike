@@ -69,9 +69,10 @@ if(!isset($_SESSION['userId'])){
 			<th>Name</th>
 			<th>Year</th>
 			<th>Branch</th>
-			<th>Mobile</th>
 			<th>E-Mail</th>
+			<th>Mobile</th>
 			<th>Nominated</th>
+			<th>Unique ID</th>
 		</tr>
 		<?php
 		//----- PostGRE SQL Commands -----
@@ -86,6 +87,7 @@ if(!isset($_SESSION['userId'])){
 				echo "<td>".$row["Email"]."</td>";
 				echo "<td>".$row["Mobile"]."</td>";
 				echo "<td>".$row["Nominated"]."</td>";
+				echo "<td>".$row["Unique ID"]."</td>";
 				echo "</tr>";
 			}
 		}else{
