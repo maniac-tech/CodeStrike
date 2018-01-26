@@ -64,7 +64,7 @@ if(!isset($_SESSION['userId'])){
 		?>
 	</table>
 	<p id="studentsListT">Interview Registration List:</p>
-	<button onclick="$('#interviewStudents').tableExport({type:'csv',escape:'false'});">Download file</button>
+	
 	<table id="interviewStudents">
 		<tr>
 			<th>Name</th>
@@ -97,4 +97,5 @@ if(!isset($_SESSION['userId'])){
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 		?>
 	</table>
+	<button onclick="$('#interviewStudents').tableExport({type:'csv',escape:'false'});">Download file</button>
 </div>
