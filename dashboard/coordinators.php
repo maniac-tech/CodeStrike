@@ -71,7 +71,7 @@ if(!isset($_SESSION['userId'])){
     	filename: 'interviewStudents',                             // (id, String), filename for the downloaded file, (default: 'id')
    		bootstrap: true,                           // (Boolean), style buttons using bootstrap, (default: true)
     	exportButtons: true,                        // (Boolean), automatically generate the built-in export buttons for each of the specified formats (default: true)
-    	position: 'bottom',                         // (top, bottom), position of the caption element relative to table, (default: 'bottom')
+    	position: 'top',                         // (top, bottom), position of the caption element relative to table, (default: 'bottom')
     	ignoreRows: null,                           // (Number, Number[]), row indices to exclude from the exported file(s) (default: null)
     	ignoreCols: null,                           // (Number, Number[]), column indices to exclude from the exported file(s) (default: null)
     	trimWhitespace: true,
