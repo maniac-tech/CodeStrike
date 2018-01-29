@@ -64,7 +64,20 @@ if(!isset($_SESSION['userId'])){
 		?>
 	</table>
 	<p id="studentsListT">Interview Registration List:</p>
-	<button onclick="$('#interviewStudents').tableExport({type:'pdf',escape:'false'});">Download file</button>
+	<button onclick="$('#interviewStudents').tableExport({
+		headers: true,                              // (Boolean), display table headers (th or td elements) in the <thead>, (default: true)
+	    footers: true,                              // (Boolean), display table footers (th or td elements) in the <tfoot>, (default: false)
+	    formats: ['xls', 'csv', 'txt'],             // (String[]), filetype(s) for the export, (default: ['xls', 'csv', 'txt'])
+    	filename: 'interviewStudents',                             // (id, String), filename for the downloaded file, (default: 'id')
+   		bootstrap: true,                           // (Boolean), style buttons using bootstrap, (default: true)
+    	exportButtons: true,                        // (Boolean), automatically generate the built-in export buttons for each of the specified formats (default: true)
+    	position: 'bottom',                         // (top, bottom), position of the caption element relative to table, (default: 'bottom')
+    	ignoreRows: null,                           // (Number, Number[]), row indices to exclude from the exported file(s) (default: null)
+    	ignoreCols: null,                           // (Number, Number[]), column indices to exclude from the exported file(s) (default: null)
+    	trimWhitespace: true,
+    	// type: 'csv' 
+    }
+    );">Download file</button>
 	<table id="interviewStudents">
 		<tr>
 			<th>Name</th>
