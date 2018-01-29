@@ -88,28 +88,7 @@
         <form id="contactform" action="imacValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 
-          <p class="contact"><label for="name">First Name</label></p> 
-          <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
-
-          <p class="contact"><label for="name">Last Name</label></p> 
-          <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
-
-          <p class="contact"><label for="email">E-Mail ID</label></p> 
-          <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
-
-          <p class="contact"><label for="branch">Branch</label></p> 
-          <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
-
-          <p class="contact"><label for="year">Year</label></p> 
-          <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
-
-          <p class="contact"><label for="phone">Mobile phone</label></p> 
-          <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
-
-          <!-- Google reCaptcha Code -->
-          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
-          <br> 
-          <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
+          REGISTRATIONS HAVE BEEN CLOSED.
         </form> 
       </div>
     </div>
