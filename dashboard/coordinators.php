@@ -77,7 +77,7 @@ if(!isset($_SESSION['userId'])){
 		</tr>
 		<?php
 		//----- PostGRE SQL Commands -----
-		$query = "SELECT * FROM $tableName_IMac_interviews";
+		$query = "SELECT * FROM $tableName_IMac_interviews ORDER BY "Year" DESC, "Branch" ASC;
 		$result = pg_query($dbconn,$query);
 		if (pg_result_status($result)==2) {
 			while($row = pg_fetch_assoc($result)){
