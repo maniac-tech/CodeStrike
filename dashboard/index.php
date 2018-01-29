@@ -25,6 +25,7 @@ if(!isset($_SESSION['userId'])){
 	 -->
 	<script type="text/javascript" src="tableExportPlugin/FileSaver.js"></script>
 	<script type="text/javascript" src="tableExportPlugin/tableExport/js/tableexport.js"></script>
+	<link rel="stylesheet" href="tableExportPlugin/tableExport/css/tableexport.css">
 </head>
 <body>
 	<div id="navbar">
