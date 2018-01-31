@@ -4,6 +4,7 @@
         "guzzlehttp/guzzle": "^6.3",
         "php-http/guzzle6-adapter": "^1.1",
         "sparkpost/sparkpost": "^2.1",
+        "sparkpost/php-sparkpost": "^1.0",
         "herrera-io/silex-pdo": "^1.2"
     }
 
