@@ -5,7 +5,8 @@ SparkPost::setConfig(["key"=>getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);
 try {
     //Using the transmission of php sdk
     Transmission::send(array('campaign'=>'first-mailing',
-            'from'=>'test@' . getEnv("SPARKPOST_SANDBOX_DOMAIN"), // 'test@sparkpostbox.com'
+            // 'from'=>'test@' . getEnv("SPARKPOST_SANDBOX_DOMAIN"), // 'test@sparkpostbox.com'
+        'from'=>'imac@codestrike.in', 
             'subject'=>'Hello from CodeStrike',
             'html'=>'<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your very first mailing!</p></body></html>',
             'text'=>'Congratulations, {{name}}!! You just sent your very first mailing!',
