@@ -49,6 +49,7 @@ $sparky->setOptions(['async' => false]);
 try {
     $response = $sparky->transmissions->get();
     
+    echo("try:");
     echo $response->getStatusCode()."\n";
     print_r($response->getBody())."\n";
 }
