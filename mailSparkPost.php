@@ -2,7 +2,8 @@
 require 'vendor/autoload.php';
 use SparkPost\SparkPost;
 use GuzzleHttp\Client;
-use Ivory\HttpAdapter\Guzzle6HttpAdapter;
+// use Ivory\HttpAdapter\Guzzle6HttpAdapter;
+use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 /*
 * CONFIGURATION
 */
