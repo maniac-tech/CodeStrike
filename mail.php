@@ -11,7 +11,7 @@ $promise = $sparky->transmissions->post([
     'content' => [
         'from' => [
             'name' => 'SparkPost Team',
-            'email' => 'imac@codestrike.com',
+            'email' => 'imac@codestrike.in',
         ],
         'subject' => 'First Mailing From PHP',
         'html' => '<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your very first mailing!</p></body></html>',
