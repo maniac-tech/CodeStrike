@@ -6,19 +6,18 @@ use GuzzleHttp\Client;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 
 $httpClient = new GuzzleAdapter(new Client());
-$sparky = new SparkPost($httpClient, ['key'=>getenv('SPARKPOST_API_KEY_IMAC_DELIEVERY')]);
-
+$sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);
 $promise = $sparky->transmissions->post([
     'content' => [
         'from' => [
-            'name' => 'CodeStrike',
-            'email' => 'codestrikehq@gmail.com',
+            'name' => 'SparkPost Team',
+            'email' => 'imac@codestrike.com',
         ],
         'subject' => 'First Mailing From PHP',
         'html' => '<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your very first mailing!</p></body></html>',
-        'text' => 'Congratulations, {{name}}!! You just sent your very first mailing!',
+        'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
     ],
-    'substitution_data' => ['name' => 'YOUR_FIRST_NAME'],
+    'substitution_data' => ['name' => 'iMac'],
     'recipients' => [
         [
             'address' => [
@@ -27,35 +26,13 @@ $promise = $sparky->transmissions->post([
             ],
         ],
     ],
-    'cc' => [
-        [
-            'address' => [
-                'name' => 'Abhishek Jha',
-                'email' => 'ajha025@gmail.com',
-            ],
-        ],
-    ],
-    'bcc' => [
-        [
-            'address' => [
-                'name' => 'CodeStrike',
-                'email' => 'codestrikehq@gmail.com',
-            ],
-        ],
-    ],
 ]);
-
-$sparky->setOptions(['async' => false]);
 try {
-    $response = $sparky->transmissions->get();
-    
-    echo("try:");
+    $response = $promise->wait();
+    echo "try:";
     echo $response->getStatusCode()."\n";
     print_r($response->getBody())."\n";
-}
-catch (\Exception $e) {
+} catch (\Exception $e) {
     echo $e->getCode()."\n";
     echo $e->getMessage()."\n";
 }
-?>
-?>
