@@ -14,8 +14,31 @@ $promise = $sparky->transmissions->post([
             'email' => 'imac@codestrike.in',
         ],
         'subject' => 'First Mailing From PHP',
-        'html' => '<html><body><h1>Congratulations, {{name}}!</h1><p>You just sent your very first mailing!</p></body></html>',
-        'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
+        'html' => '<html>
+        <body style="background-color: grey">
+        <table style="background-color: white;">
+        <tr>
+        <td style="width: 100%;"><img src="img/logo.png" alt="" style="width: 25%; align-content: center;"></td>
+        </tr>
+        <tr>
+        <td>
+        <p>
+        Hi User,
+        </p>
+        <p>
+        Your Registration has been confirmed.
+        You will be receiving the batch details and other event details soon via mail.
+        Make sure you check your Inbox and <b>Spam</b> folder regularly.
+        <br>
+        Thank You,<br>
+        Team CodeStrike.
+        </p>
+        </td>
+        </tr>
+        </table>
+        </body>
+        </html>',
+        // 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
     ],
     'substitution_data' => ['name' => 'iMac'],
     'recipients' => [
