@@ -15,12 +15,16 @@ $promise = $sparky->transmissions->post([
         ],
         'subject' => 'First Mailing From PHP',
         'html' => '<html>
-        <body style="background-color: grey">
-        <table style="background-color: white;">
-        <tr>
-        <td style="width: 100%;"><img src="http://www.codestrike.in/img/logo.png" alt="" style="width: 25%; align-content: center;"></td>
+        <body style="background-color: grey; width:100%;">
+        <table style="background-color: white;margin-left: 5%; margin-right: 5%; margin-top: 5%;margin-bottom: 5%;width: 90%;">
+        <tr >
+        <td style="width: 100%; border-bottom: solid; border-color: grey; border-width: 1%;">
+        <center>
+        <img src="http://www.codestrike.in/img/logo.png" alt="" style="width: 25%; align-content: center;">
+        </center>
+        </td>
         </tr>
-        <tr>
+        <tr >
         <td>
         <p>
         Hi User,
