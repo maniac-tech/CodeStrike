@@ -18,7 +18,7 @@ $promise = $sparky->transmissions->post([
         <body style="background-color: grey">
         <table style="background-color: white;">
         <tr>
-        <td style="width: 100%;"><img src="img/logo.png" alt="" style="width: 25%; align-content: center;"></td>
+        <td style="width: 100%;"><img src="http://www.codestrike.in/img/logo.png" alt="" style="width: 25%; align-content: center;"></td>
         </tr>
         <tr>
         <td>
