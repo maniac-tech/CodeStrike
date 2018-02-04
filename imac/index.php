@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="#2196F3">
-  <title>iMac Co-ordinator Interviews 2018</title>
+  <title>iMac Training Sessions 2018</title>
   <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" /> <!--Tab Icon-->
 
   <!-- CSS  -->
@@ -52,7 +52,7 @@
   <div class="section scrollspy" id="team">
     <br>
     <center>
-      <h2 style="color:#A020F0; font-size: 35px">iMac Interview 2018</h2>
+      <h2 style="color:#A020F0; font-size: 35px">iMac Training Sessions 2018</h2>
     </center>
     <br>
     <div class="container">
@@ -68,7 +68,7 @@
       </center>
       <div  class="form">
         <div id="aboutInterview">
-          <p><b>About the Interview</b></p>
+          <p><b>About the Session</b></p>
           <hr>
           <p>
             iMac lab provides you a platform to improve your skills by learning about the iOS app development which require a dedicated apple system.
@@ -88,8 +88,29 @@
         <form id="contactform" action="imacValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 
-          REGISTRATIONS HAVE BEEN CLOSED.
-        </form> 
+          <p class="contact"><label for="name">First Name</label></p> 
+          <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
+
+          <p class="contact"><label for="name">Last Name</label></p> 
+          <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
+
+          <p class="contact"><label for="email">E-Mail ID</label></p> 
+          <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
+
+          <p class="contact"><label for="branch">Branch</label></p> 
+          <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
+
+          <p class="contact"><label for="year">Year</label></p> 
+          <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
+
+          <p class="contact"><label for="phone">Mobile phone</label></p> 
+          <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
+
+          <!-- Google reCaptcha Code -->
+          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+          <br> 
+          <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
+</form> 
       </div>
     </div>
   </div>                         
