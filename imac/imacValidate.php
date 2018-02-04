@@ -37,7 +37,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		echo ('Could not connect: ' . pg_last_error().'<br>');
 	}else{ 
 		//----- PostGRE SQL Commands -----
-		$query="INSERT INTO $tableName_imacTraining (\"Name\",\"Year\",\"Branch\",\"Mobile\",\"Email\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_mobileNo','$func_var_emailID')";
+		$query="INSERT INTO $tableName_imacTraining (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		$result=pg_query($dbconn,$query);
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
