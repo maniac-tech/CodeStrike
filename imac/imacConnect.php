@@ -5,6 +5,7 @@
 	$username=getenv('PostGRE_DB_User');
 	$password=getenv('PostGRE_DB_Password');
 	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
+	$tableName_imacTraining = getenv('PostGRE_DB_IMac_2018');
 
 	// $servername="localhost";
 	// $databaseName="imac";
