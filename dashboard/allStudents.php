@@ -10,7 +10,7 @@ if(!isset($_SESSION['userId'])){
 <input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
     
 <p id="studentsList" class="searchbar">List of Students Registered:</p>
-	<table id="allStudentsTable">
+	<table id="myTable">
 		<tr>
 			<th>Name</th>
 			<th>Year</th>

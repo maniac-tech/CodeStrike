@@ -40,11 +40,11 @@ if(!isset($_SESSION['userId'])){
 			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
 			if (pg_result_status($result)==2) {
 				echo "<tr>
-						<td></td>
-						<td>Name</td>
-						<td>Year</td>
-						<td>Branch</td>
-					</tr>";
+				<td></td>
+				<td>Name</td>
+				<td>Year</td>
+				<td>Branch</td>
+				</tr>";
 				while($row = pg_fetch_assoc($result)){
 					echo "<tr>";
 					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
