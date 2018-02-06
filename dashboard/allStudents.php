@@ -67,7 +67,7 @@ if(!isset($_SESSION['userId'])){
 		// -X-X-X- End of SQL Commands -X-X-X-
 		?>
 	</table>
-	<button onclick="$('#allStudentsTable').tableExport({
+	<button onclick="$('#myTable').tableExport({
 		headers: true,                              // (Boolean), display table headers (th or td elements) in the <thead>, (default: true)
 	    footers: true,                              // (Boolean), display table footers (th or td elements) in the <tfoot>, (default: false)
 	    formats: ['xls', 'csv', 'txt'],             // (String[]), filetype(s) for the export, (default: ['xls', 'csv', 'txt'])
