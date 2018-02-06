@@ -98,7 +98,7 @@ Button Roles:
 		/*
 		$servername=getenv('DATABASE_SERVER_NAME_IMAC');
 		$databaseName=getenv('DATABASE_NAME_IMAC');
-		$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
+		$tablename_IMac=getenv('DATABASE_TABLE_NAME_IMAC');
 		$username=getenv('DATABASE_USERNAME_IMAC');
 		$password=getenv('DATABASE_PASSWORD_IMAC');
 		
@@ -109,7 +109,7 @@ Button Roles:
 		}else{
 			foreach($checkboxArray as $array) {
 				// echo "$array";
-				$sql = "UPDATE $tableName SET Batch='$toInsert' WHERE Mobile IN ($array)";
+				$sql = "UPDATE $tablename_IMac SET Batch='$toInsert' WHERE Mobile IN ($array)";
 				$result=mysqli_query($conn,$sql);
 				if ($result) {
 					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
@@ -131,29 +131,30 @@ Button Roles:
 	function otherOptions($status){
 		$checkboxArray = array();
 		$checkboxArray=$_POST['checkbox'];
-		$servername=getenv('DATABASE_SERVER_NAME_IMAC');
-		$databaseName=getenv('DATABASE_NAME_IMAC');
-		$tableName=getenv('DATABASE_TABLE_NAME_IMAC');
-		$username=getenv('DATABASE_USERNAME_IMAC');
-		$password=getenv('DATABASE_PASSWORD_IMAC');
+		$servername=getenv('PostGRE_DB_Host');
+		$databaseName=getenv('PostGRE_DB');
+		$username=getenv('PostGRE_DB_User');
+		$password=getenv('PostGRE_DB_Password');
+		$tablename_IMac=getenv('PostGRE_DB_IMac');
+
 		//create connection
-		$conn=mysqli_connect($servername,$username,$password,$databaseName);
-		if (!$conn){
-			die('Connection failed:'.mysqli_connect_error());
+		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+		if (!$dbconn){
+			echo ('Could not connect: ' . pg_last_error().'<br>');
 		}else{
 			foreach($_POST['checkbox'] as $check) {
 				if ($status=="statusComplete"){
-					$sql = "UPDATE $tableName SET Status='COMPLETED' WHERE Mobile IN ($check)";
-					$result=mysqli_query($conn,$sql);
+					$query= "UPDATE $tablename_IMac SET \"Status\"='COMPLETED' WHERE \"Mobile\" IN ($check)";
+					$result=pg_query($dbconn,$query);
 				}else{
-					$sql = "UPDATE $tableName SET Status='PENDING' WHERE Mobile IN ($check)";
-					$result=mysqli_query($conn,$sql);
+					$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
+					$result=pg_query($dbconn,$query);
 				}
 				if ($result) {
 					echo "QUERY COMPLETE";
 				}else{
 					echo "<p>QUERY FAILED</p>";
-					echo mysqli_error($conn);
+					// echo mysqli_error($conn);
 				}
 			}
 		}
