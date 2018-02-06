@@ -28,23 +28,23 @@ if(!isset($_SESSION['userId'])){
 </script>
 <div id="content_table">
 	<!--  Search Bar-->
-	<input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
+	<input type="text" id="myInput" onkeyup="myFunctionS()" style="" placeholder="Search for names..">
 	<!--  -->
 	<p id="studentsList"><b>List of Students Pending:</b></p>
 	<form name="willAllotTaskForm" id="willAllotTaskForm">
-		<table >
+		<table id="myTable">
 
 			<?php
 			//----- PostGRE SQL Commands -----
 			// $query = "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND Batch=$2";
-			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2",array('PENDING','0'));
+			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
 			if (pg_result_status($result)==2) {
 				echo "<tr>
-						<td></td>
-						<td>Name</td>
-						<td>Year</td>
-						<td>Branch</td>
-					</tr>";
+				<td></td>
+				<td>Name</td>
+				<td>Year</td>
+				<td>Branch</td>
+				</tr>";
 				while($row = pg_fetch_assoc($result)){
 					echo "<tr>";
 					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
