@@ -68,7 +68,7 @@ function myFunction() {
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
   // table = document.getElementById("willAllotTaskForm");
-  table = document.getElementsByClassName("searchbar");
+  table = document.getElementsByClassName("searchbar")[0];
   tr = table.getElementsByTagName("tr");
 
   // Loop through all table rows, and hide those who don't match the search query
