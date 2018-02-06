@@ -32,7 +32,7 @@ if(!isset($_SESSION['userId'])){
 	<!--  -->
 	<p id="studentsList"><b>List of Students Pending:</b></p>
 	<form name="willAllotTaskForm" id="willAllotTaskForm">
-		<table class="searchbar">
+		<table >
 
 			<?php
 			//----- PostGRE SQL Commands -----
