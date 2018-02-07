@@ -1,6 +1,11 @@
 <?php 
 // Importing all the required files:
 require_once('imacConnect.php');
+require '../vendor/autoload.php';
+
+use SparkPost\SparkPost;
+use GuzzleHttp\Client;
+use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 
 // Declaring Global variables: is for False nd 1 is for True
 $status_captcha;
@@ -17,7 +22,7 @@ $dbconn=$dbconn;
 
 // Declating all the required functions:
 function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_emailID,$func_var_mobileNo){
-	global $tableName_interviews;
+	global $tableName_imacTraining;
 	global $dbconn;
 
 
@@ -26,14 +31,14 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$databaseName=getenv('PostGRE_DB');
 	$username=getenv('PostGRE_DB_User');
 	$password=getenv('PostGRE_DB_Password');
-	$tableName_interviews = getenv('PostGRE_DB_IMac_intr');
+	$tableName_imacTraining = getenv('PostGRE_DB_IMac_2018');
 
 	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 	if (!$dbconn){
 		echo ('Could not connect: ' . pg_last_error().'<br>');
 	}else{ 
 		//----- PostGRE SQL Commands -----
-		$query="INSERT INTO $tableName_interviews (\"Name\",\"Year\",\"Branch\",\"Mobile\",\"Email\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_mobileNo','$func_var_emailID')";
+		$query="INSERT INTO $tableName_imacTraining (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		$result=pg_query($dbconn,$query);
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
@@ -45,11 +50,73 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		// -X-X-X- End of SQL Commands -X-X-X-
 
 		if ($result) {
+			// sendMail();
+
+			$httpClient = new GuzzleAdapter(new Client());
+			$sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);			
+			$promise = $sparky->transmissions->post([
+
+				'substitution_data' => ['name' => 'iMac'],
+				'recipients' => [
+					[
+						'address' => [
+							'name' => $func_var_name,
+							'email' => $func_var_emailID,
+						],
+					],
+				],
+				'content' => [
+					'from' => [
+						'name' => 'iMac Atharva',
+						'email' => 'imac@codestrike.in',
+					],
+					'subject' => 'Confirmation message for iMac Training Session 2018',
+					'html' => '<html>
+					<body style="background-color: grey; width:100%; font-family: sans-serif;">
+					<table style="background-color: white;margin-left: 5%; margin-right: 5%; margin-top: 5%;margin-bottom: 5%;width: 90%;">
+					<tr >
+					<td style="width: 100%; border-bottom: solid; border-color: grey; border-width: 1%;">
+					<center>
+					<img src="http://www.codestrike.in/img/logo.png" alt="" style="width: 25%; align-content: center;">
+					</center>
+					</td>
+					</tr>
+					<tr >
+					<td>
+					<p style="margin-top: 2%; margin-left:2%;margin-right: 2%;">
+					Hi {{address.name}},
+					</p>
+					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
+					Your Registration has been confirmed.
+					You will be receiving the batch and training details soon via mail.
+					Please make sure you check your <b>Inbox</b> and <b>Spam</b> folder regularly.
+					<br><br>
+					Thank You,<br>
+					Team CodeStrike.
+					</p>
+					</td>
+					</tr>
+					</table>
+					</body>
+					</html>',
+        // 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
+				]
+			]);
+			try {
+				$response = $promise->wait();
+				echo "try:";
+				echo $response->getStatusCode()."\n";
+				print_r($response->getBody())."\n";
+			} catch (\Exception $e) {
+				echo $e->getCode()."\n";
+				echo $e->getMessage()."\n";
+			}
 			header('Location:imac.php');
 			// echo "Successful submission of form";
 		}
 		else{
-			echo "pg_querya output:".pg_query($dbconn,$query);
+			// echo "pg_querya output:".pg_query($dbconn,$query);
+			header('Location:http://www.google.com');
 		}
 	}
 }
@@ -147,31 +214,32 @@ function regularExpression(){
  						}
  					}
  				}
+ 			}
  		}
  	}
-}
 
-function error($func_var_mobileNo){
-	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
-	global $tableName_interviews, $dbconn;
-	$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
-	$result = mysqli_query($conn, $sql);
 
-	if (mysqli_num_rows ($result) > 0){
-		echo "You have been Registered already.";
-	}
-	else{
-		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
-		echo $conn->error;
-	}
-}
+ 	function error($func_var_mobileNo){
+ 		global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
+ 		global $tableName_imacTraining, $dbconn;
+ 		$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
+ 		$result = mysqli_query($conn, $sql);
 
-function main(){
-	if($_SERVER["REQUEST_METHOD"]=="POST"){
-		$status_captcha = captchaValidation();
-	}
-}
+ 		if (mysqli_num_rows ($result) > 0){
+ 			echo "You have been Registered already.";
+ 		}
+ 		else{
+ 			echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
+ 			echo $conn->error;
+ 		}
+ 	}
 
-main();
+ 	function main(){
+ 		if($_SERVER["REQUEST_METHOD"]=="POST"){
+ 			$status_captcha = captchaValidation();
+ 		}
+ 	}
 
-?>
+ 	main();
+
+ 	?>
