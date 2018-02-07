@@ -60,7 +60,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 				'recipients' => [
 					[
 						'address' => [
-							'name' => $func_var_year,
+							'name' => $func_var_name,
 							'email' => $func_var_emailID,
 						],
 					],
