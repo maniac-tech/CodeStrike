@@ -88,7 +88,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
 					Your Registration has been confirmed.
-					You will be receiving the batch and traingin details soon via mail.
+					You will be receiving the batch and training details soon via mail.
 					Please make sure you check your <b>Inbox</b> and <b>Spam</b> folder regularly.
 					<br><br>
 					Thank You,<br>
