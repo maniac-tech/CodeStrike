@@ -19,8 +19,8 @@ $promise = $sparky->transmissions->post([
     'recipients' => [
         [
             'address' => [
-                'name' => $recipientName,
-                'email' => $recipientEmail,
+                'name' => 'Abhishek Jain',
+                'email' => 'ajj.2396@gmail.com',
             ],
         ],
     ],
