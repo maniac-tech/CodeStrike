@@ -36,7 +36,33 @@ if(!isset($_SESSION['userId'])){
 
 			<?php
 			//----- PostGRE SQL Commands -----
-			// $query = "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND Batch=$2";
+			// Printing 2018 Data:
+			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
+			if (pg_result_status($result)==2) {
+				echo "<tr>
+				<td></td>
+				<td>Name</td>
+				<td>Year</td>
+				<td>Branch</td>
+				</tr>";
+				while($row = pg_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					// echo "<td>".$row["Email"]."</td>";
+					// echo "<td>".$row["Mobile"]."</td>";
+					// echo "<td>".$row["Status"]."</td>";
+					// echo "<td>".$row["Batch"]."</td>";
+					echo "</tr>";
+				}
+			}
+			else{
+				echo "Query Failed.";
+				echo pg_result_status($result);
+			}
+			// Printing 2017 Data:
 			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
 			if (pg_result_status($result)==2) {
 				echo "<tr>

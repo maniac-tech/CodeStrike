@@ -58,6 +58,23 @@ if(!isset($_SESSION['userId'])){
 			</tr>
 			<?php
 			//----- PostGRE SQL Commands -----
+			// Printing 2018 Data:
+			$psql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Batch\"!=0 AND \"Status\"='PENDING'";
+			$result = pg_query($dbconn,$psql);
+			if(pg_num_rows($result)>0){
+				while ($row=pg_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td><input type='checkbox' name='checkbox[]' value='".$row['Mobile']."'></td>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					echo "<td>".$row["Batch"]."</td>";
+					echo "</tr>";
+				}
+			}else{
+				echo "NO DATA";
+			}
+			// Printing 2017 Data:
 			$psql = "SELECT * FROM $tablename_IMac WHERE \"Batch\"!=0 AND \"Status\"='PENDING'";
 			$result = pg_query($dbconn,$psql);
 			if(pg_num_rows($result)>0){

@@ -6,7 +6,7 @@ if(!isset($_SESSION['userId'])){
 }
 ?>
 <div id="content_table">
-    <input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
+	<input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
 	<p id="studentsList"><b>List of Students Completed:</b></p>
 	<table id="tableID">
 		<tr>
@@ -20,24 +20,42 @@ if(!isset($_SESSION['userId'])){
 		</tr>
 		<?php
 			//----- PostGRE SQL Commands -----
-			// $query = "SELECT * FROM $tablename_IMac WHERE \"Status\"='$1'";
-		$result = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1",array('COMPLETED'));
-		if (pg_result_status($result)==2) {
-			while($row = pg_fetch_assoc($result)){
-				echo "<tr>";
-				echo "<td>".$row["Name"]."</td>";
-				echo "<td>".$row["Year"]."</td>";
-				echo "<td>".$row["Branch"]."</td>";
-				echo "<td>".$row["Email"]."</td>";
-				echo "<td>".$row["Mobile"]."</td>";
-					// echo "<td>".$row["Status"]."</td>";
-					// echo "<td>".$row["Batch"]."</td>";
-				echo "</tr>";
+			// Printing 2018 Data:
+			$result = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"=$1",array('COMPLETED'));
+			if (pg_result_status($result)==2) {
+				while($row = pg_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					echo "<td>".$row["Email"]."</td>";
+					echo "<td>".$row["Mobile"]."</td>";
+							// echo "<td>".$row["Status"]."</td>";
+							// echo "<td>".$row["Batch"]."</td>";
+					echo "</tr>";
+				}
 			}
-		}
-		else{
-			echo "Query Failed.";
-		}
+			else{
+				echo "Query Failed.";
+			}
+				// Printing 2017 Data:
+			$result = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac WHERE \"Status\"=$1",array('COMPLETED'));
+			if (pg_result_status($result)==2) {
+				while($row = pg_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					echo "<td>".$row["Email"]."</td>";
+					echo "<td>".$row["Mobile"]."</td>";
+						// echo "<td>".$row["Status"]."</td>";
+						// echo "<td>".$row["Batch"]."</td>";
+					echo "</tr>";
+				}
+			}
+			else{
+				echo "Query Failed.";
+			}
 			// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 			//----- SQL Commands -----
