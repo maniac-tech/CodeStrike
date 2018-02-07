@@ -11,10 +11,7 @@ $recipientEmail = "ajj.2396@gmail.com";
 $httpClient = new GuzzleAdapter(new Client());
 $sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);
 $promise = $sparky->transmissions->post([
-    'options': {
-        'open_tracking': true,
-        'click_tracking': true
-    },
+    
     'substitution_data' => ['name' => 'iMac'],
     'recipients' => [
         [
