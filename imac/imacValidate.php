@@ -55,12 +55,22 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 			$httpClient = new GuzzleAdapter(new Client());
 			$sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);			
 			$promise = $sparky->transmissions->post([
+
+				'substitution_data' => ['name' => 'iMac'],
+				'recipients' => [
+					[
+						'address' => [
+							'name' => $func_var_year,
+							'email' => $func_var_emailID,
+						],
+					],
+				],
 				'content' => [
 					'from' => [
-						'name' => 'SparkPost Team',
+						'name' => 'iMac Atharva',
 						'email' => 'imac@codestrike.in',
 					],
-					'subject' => 'First Mailing From PHP',
+					'subject' => 'Confirmation message for iMac Training Session 2018',
 					'html' => '<html>
 					<body style="background-color: grey; width:100%; font-family: sans-serif;">
 					<table style="background-color: white;margin-left: 5%; margin-right: 5%; margin-top: 5%;margin-bottom: 5%;width: 90%;">
@@ -74,7 +84,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					<tr >
 					<td>
 					<p style="margin-top: 2%; margin-left:2%;margin-right: 2%;">
-					Hi User,
+					Hi {{address.name}},
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
 					Your Registration has been confirmed.
@@ -89,17 +99,8 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					</table>
 					</body>
 					</html>',
-        			// 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
-				],
-				'substitution_data' => ['name' => 'iMac'],
-				'recipients' => [
-					[
-						'address' => [
-							'name' => 'Abhishek Jain',
-							'email' => 'ajj.2396@gmail.com',
-						],
-					],
-				],
+        // 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
+				]
 			]);
 			try {
 				$response = $promise->wait();
