@@ -43,7 +43,7 @@ $promise = $sparky->transmissions->post([
         <tr >
         <td>
         <p style="margin-top: 2%; margin-left:2%;margin-right: 2%;">
-        Hi {{address.name}},
+        Hi Abhishek,
         </p>
         <p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
         Your Registration has been confirmed.
