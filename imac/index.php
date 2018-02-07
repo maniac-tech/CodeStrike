@@ -67,6 +67,7 @@
         -->
       </center>
       <div  class="form">
+        <!-- 
         <div id="aboutInterview">
           <p><b>About the Session</b></p>
           <hr>
@@ -85,6 +86,7 @@
             At the end of your session you will be given a Assistant teaching Certificate and a letter of recommendation.
           </p>
         </div>
+         -->
         <form id="contactform" action="imacValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 

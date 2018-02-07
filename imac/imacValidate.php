@@ -26,7 +26,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 	$databaseName=getenv('PostGRE_DB');
 	$username=getenv('PostGRE_DB_User');
 	$password=getenv('PostGRE_DB_Password');
-	$tableName_imacTraining = getenv('PostGRE_DB_IMac_intr');
+	$tableName_imacTraining = getenv('PostGRE_DB_IMac_2018');
 
 	$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 	if (!$dbconn){
