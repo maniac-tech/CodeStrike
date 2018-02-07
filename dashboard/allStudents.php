@@ -23,6 +23,28 @@ if(!isset($_SESSION['userId'])){
 		</tr>
 		<?php
 		//----- PostGRE SQL Commands -----
+		// Printing 2018 Data:
+		$query = "SELECT * FROM $tablename_IMac_2018";
+		$result = pg_query($dbconn, $query);
+
+		if (pg_result_status($result)==2) {
+			while($row = pg_fetch_assoc($result)){
+				echo "<tr>";
+				echo "<td>".$row["Name"]."</td>";
+				echo "<td>".$row["Year"]."</td>";
+				echo "<td>".$row["Branch"]."</td>";
+				echo "<td>".$row["Email"]."</td>";
+				echo "<td>".$row["Mobile"]."</td>";
+				echo "<td>".$row["Status"]."</td>";
+				// echo "<td>".$row["Batch"]."</td>";
+				echo "</tr>";
+			}
+		}
+		else{
+			echo "Query Failed.";
+		}
+
+		// Printing 2017 Data:
 		$query = "SELECT * FROM $tablename_IMac";
 		$result = pg_query($dbconn, $query);
 
