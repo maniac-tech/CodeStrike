@@ -5,12 +5,28 @@ use SparkPost\SparkPost;
 use GuzzleHttp\Client;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
 
+$recipientName = "Abhishek Jain";
+$recipientEmail = "ajj.2396@gmail.com";
+
 $httpClient = new GuzzleAdapter(new Client());
 $sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);
 $promise = $sparky->transmissions->post([
+    'options': {
+        'open_tracking': true,
+        'click_tracking': true
+    },
+    'substitution_data' => ['name' => 'iMac'],
+    'recipients' => [
+        [
+            'address' => [
+                'name' => $recipientName,
+                'email' => $recipientEmail,
+            ],
+        ],
+    ],
     'content' => [
         'from' => [
-            'name' => 'SparkPost Team',
+            'name' => 'iMac Atharva',
             'email' => 'imac@codestrike.in',
         ],
         'subject' => 'First Mailing From PHP',
@@ -27,7 +43,7 @@ $promise = $sparky->transmissions->post([
         <tr >
         <td>
         <p style="margin-top: 2%; margin-left:2%;margin-right: 2%;">
-        Hi User,
+        Hi {{address.name}},
         </p>
         <p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
         Your Registration has been confirmed.
@@ -43,16 +59,7 @@ $promise = $sparky->transmissions->post([
         </body>
         </html>',
         // 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
-    ],
-    'substitution_data' => ['name' => 'iMac'],
-    'recipients' => [
-        [
-            'address' => [
-                'name' => 'Abhishek Jain',
-                'email' => 'ajj.2396@gmail.com',
-            ],
-        ],
-    ],
+    ]
 ]);
 try {
     $response = $promise->wait();
