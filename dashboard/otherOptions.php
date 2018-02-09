@@ -128,5 +128,6 @@ if(!isset($_SESSION['userId'])){
 	<p>
 		<button onclick="loadAjax()">Completed</button>
 		<button onclick="loadAjax2()">Pending</button>
+		<button onclick="loadAjax3()">Not Attended</button>
 	</p>
 </div>
