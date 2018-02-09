@@ -24,7 +24,7 @@ if(!isset($_SESSION['userId'])){
 		xhttp.send("query=statusComplete&checkbox[]="+checkboxArray);
 	}
 	function loadAjax2(){
-		/*
+		
 		var checkboxArray = new Array();
 		var xhttp = new XMLHttpRequest();
 		
@@ -40,9 +40,30 @@ if(!isset($_SESSION['userId'])){
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
 		xhttp.send("query=statusPending&checkbox[]="+checkboxArray);
+		
+		// alert ("Functionality Under development");
+	}
+	function loadAjax3(){
+		/*
+		var checkboxArray = new Array();
+		var xhttp = new XMLHttpRequest();
+		
+		$("input:checked").each(function(){
+			checkboxArray.push($(this).val());
+		});
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				alert(xhttp.responseText);
+			}
+		};
+		xhttp.open("POST","master.php",true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
+		xhttp.send("query=statusNA&checkbox[]="+checkboxArray);
 		*/
 		alert ("Functionality Under development");
 	}
+
 </script>
 <div id="content_table">
 	<input type="text" id="myInput" onkeyup="myFunctionS()" style="" placeholder="Search for names..">
