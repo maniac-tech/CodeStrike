@@ -174,5 +174,7 @@ Button Roles:
 		otherOptions("statusComplete");
 	}elseif($urlVariable=="statusPending"){
 		otherOptions("statusPending");
+	}elseif($urlVariable=="statusNA"){
+		otherOptions("statusNA");
 	}
 	?>
