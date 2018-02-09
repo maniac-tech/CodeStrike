@@ -147,19 +147,30 @@ Button Roles:
 					$query= "UPDATE $tablename_IMac SET \"Status\"='COMPLETED' WHERE \"Mobile\" IN ($check)";
 					$result=pg_query($dbconn,$query);
 				}else{
-					$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
-					$result=pg_query($dbconn,$query);
-				}
-				if ($result) {
-					echo "QUERY COMPLETE";
-				}else{
-					echo "<p>QUERY FAILED</p>";
+					if ($status=="statusPending"){
+						$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
+						$result=pg_query($dbconn,$query);
+					}else{
+						if ($status=="statusNA"){
+							$query = "UPDATE $tablename_IMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
+							$result=pg_query($dbconn,$query);
+						}else{
+							if($status=="statusIncomplete"){
+								$query = "UPDATE $tablename_IMac SET \"Status\"='INCOMPLETE' WHERE \"Mobile\" IN ($check)";
+								$result=pg_query($dbconn,$query);
+							}
+						}					
+					}
+					if ($result) {
+						echo "QUERY COMPLETE";
+					}else{
+						echo "<p>QUERY FAILED</p>";
 					// echo mysqli_error($conn);
+					}
 				}
 			}
 		}
 	}
-
 	if($urlVariable=="allotTask"){
 		$batch = $_POST['Batch'];
 		// echo "$batch";
@@ -168,5 +179,9 @@ Button Roles:
 		otherOptions("statusComplete");
 	}elseif($urlVariable=="statusPending"){
 		otherOptions("statusPending");
+	}elseif($urlVariable=="statusNA"){
+		otherOptions("statusNA");
+	}elseif($urlVariable=="statusIncomplete"){
+		otherOptions("statusIncomplete");
 	}
 	?>
