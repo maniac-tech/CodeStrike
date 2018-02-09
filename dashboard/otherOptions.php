@@ -63,6 +63,26 @@ if(!isset($_SESSION['userId'])){
 		
 		// alert ("Functionality Under development");
 	}
+	function loadAjax4(){
+		
+		var checkboxArray = new Array();
+		var xhttp = new XMLHttpRequest();
+		
+		$("input:checked").each(function(){
+			checkboxArray.push($(this).val());
+		});
+		xhttp.onreadystatechange = function() {
+			if (this.readyState == 4 && this.status == 200) {
+				alert(xhttp.responseText);
+			}
+		};
+		xhttp.open("POST","master.php",true);
+		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
+		xhttp.send("query=statusIncomplete&checkbox[]="+checkboxArray);
+		
+		// alert ("Functionality Under development");
+	}
 
 </script>
 <div id="content_table">
@@ -150,5 +170,6 @@ if(!isset($_SESSION['userId'])){
 		<button onclick="loadAjax()">Completed</button>
 		<button onclick="loadAjax2()">Pending</button>
 		<button onclick="loadAjax3()">Not Attended</button>
+		<button onclick="loadAjax4()">Incomplete</button>
 	</p>
 </div>
