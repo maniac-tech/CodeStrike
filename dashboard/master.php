@@ -154,6 +154,12 @@ Button Roles:
 						if ($status=="statusNA"){
 							$query = "UPDATE $tablename_IMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
 							$result=pg_query($dbconn,$query);
+						}else{
+							if($status=="statusIncomplete"){
+							$query = "UPDATE $tablename_IMac SET \"Status\"='INCOMPLETE' WHERE \"Mobile\" IN ($check)";
+							$result=pg_query($dbconn,$query);(){
+
+							}
 						}
 					}					
 				}
@@ -176,5 +182,7 @@ Button Roles:
 		otherOptions("statusPending");
 	}elseif($urlVariable=="statusNA"){
 		otherOptions("statusNA");
+	}elseif($urlVariable=="statusIncomplete"){
+		otherOptions("statusIncomplete");
 	}
 	?>
