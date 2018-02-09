@@ -148,24 +148,24 @@ Button Roles:
 					$result=pg_query($dbconn,$query);
 				}else{
 					if ($status=="statusPending"){
-					$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
-					$result=pg_query($dbconn,$query);
-				}else{
-					if ($status=="statusNA"){
-					$query = "UPDATE $tablename_IMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
-					$result=pg_query($dbconn,$query);
-				}
-				}
-				if ($result) {
-					echo "QUERY COMPLETE";
-				}else{
-					echo "<p>QUERY FAILED</p>";
+						$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
+						$result=pg_query($dbconn,$query);
+					}else{
+						if ($status=="statusNA"){
+							$query = "UPDATE $tablename_IMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
+							$result=pg_query($dbconn,$query);
+						}
+					}
+					if ($result) {
+						echo "QUERY COMPLETE";
+					}else{
+						echo "<p>QUERY FAILED</p>";
 					// echo mysqli_error($conn);
+					}
 				}
 			}
 		}
 	}
-
 	if($urlVariable=="allotTask"){
 		$batch = $_POST['Batch'];
 		// echo "$batch";
