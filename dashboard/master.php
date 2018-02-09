@@ -147,8 +147,14 @@ Button Roles:
 					$query= "UPDATE $tablename_IMac SET \"Status\"='COMPLETED' WHERE \"Mobile\" IN ($check)";
 					$result=pg_query($dbconn,$query);
 				}else{
+					if ($status=="statusPending"){
 					$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
 					$result=pg_query($dbconn,$query);
+				}else{
+					if ($status=="statusNA"){
+					$query = "UPDATE $tablename_IMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
+					$result=pg_query($dbconn,$query);
+				}
 				}
 				if ($result) {
 					echo "QUERY COMPLETE";

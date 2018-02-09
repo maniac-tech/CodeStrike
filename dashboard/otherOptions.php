@@ -44,7 +44,7 @@ if(!isset($_SESSION['userId'])){
 		// alert ("Functionality Under development");
 	}
 	function loadAjax3(){
-		/*
+		
 		var checkboxArray = new Array();
 		var xhttp = new XMLHttpRequest();
 		
@@ -60,8 +60,8 @@ if(!isset($_SESSION['userId'])){
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
 		xhttp.send("query=statusNA&checkbox[]="+checkboxArray);
-		*/
-		alert ("Functionality Under development");
+		
+		// alert ("Functionality Under development");
 	}
 
 </script>
