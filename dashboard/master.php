@@ -156,18 +156,17 @@ Button Roles:
 							$result=pg_query($dbconn,$query);
 						}else{
 							if($status=="statusIncomplete"){
-							$query = "UPDATE $tablename_IMac SET \"Status\"='INCOMPLETE' WHERE \"Mobile\" IN ($check)";
-							$result=pg_query($dbconn,$query);(){
-
+								$query = "UPDATE $tablename_IMac SET \"Status\"='INCOMPLETE' WHERE \"Mobile\" IN ($check)";
+								$result=pg_query($dbconn,$query);
 							}
-						}
-					}					
-				}
-				if ($result) {
-					echo "QUERY COMPLETE";
-				}else{
-					echo "<p>QUERY FAILED</p>";
+						}					
+					}
+					if ($result) {
+						echo "QUERY COMPLETE";
+					}else{
+						echo "<p>QUERY FAILED</p>";
 					// echo mysqli_error($conn);
+					}
 				}
 			}
 		}
