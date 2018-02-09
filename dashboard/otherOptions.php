@@ -6,7 +6,7 @@ if(!isset($_SESSION['userId'])){
 }
 ?>
 <script>
-	function loadAjax(status){
+	function loadAjax(){
 		var checkboxArray = new Array();
 		var xhttp = new XMLHttpRequest();
 		
@@ -21,11 +21,7 @@ if(!isset($_SESSION['userId'])){
 		xhttp.open("POST","master.php",true);
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
-		if (status=="completed"){
 			xhttp.send("query=statusComplete&checkbox[]="+checkboxArray);
-		}else{
-			alert ("Complete failed");
-		}
 	}
 	function loadAjax2(){
 		/*
@@ -151,7 +147,7 @@ if(!isset($_SESSION['userId'])){
 		</ol>
 	</p>
 	<p>
-		<button onclick="loadAjax('completed')">Completed</button>
+		<button onclick="loadAjax()">Completed</button>
 		<button onclick="loadAjax2()">Pending</button>
 		<button onclick="loadAjax3()">Not Attended</button>
 	</p>
