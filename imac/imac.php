@@ -44,7 +44,7 @@
     <br>
     <div class="container">
     <center>  
-      <h5 style="color:#A020F0; font-size: 35px">Your details have been Registered. Please, check you mailbox for a confirmation message.</h5>
+      <h5 style="color:#A020F0; font-size: 35px">Your details have been Registered. Please, check you mailbox (Inbox/Spam) for a confirmation message.</h5>
        </center>
     </div>
   </div>                         
