@@ -57,36 +57,128 @@
     <br>
     <div class="container">
       <center>
-        <!-- 
+        
         <div class="video">
           <video width="50%" controls="auto">
             <source src="imacLab.mp4">
               Your browser doesn't support the Video.
             </video>
           </div>
-        -->
+       
       </center>
       <div  class="form">
-        <!-- 
+        
         <div id="aboutInterview">
-          <p><b>About the Session</b></p>
+          <p><b>List of Selected Students as iMac Co-ordinators:</b></p>
           <hr>
-          <p>
-            iMac lab provides you a platform to improve your skills by learning about the iOS app development which require a dedicated apple system.
-            <br><br>
-            We are looking for the following skills in a Coordinator:
-              <ul id="aboutInterview_bullets" style="list-style-type: circle;">
-              <li>Good knowledge of Object oriented programming (preferably Swift or Objective C)</li>
-              <li>Good oratory skills</li>
-              <li>A problem solving approach</li>
-              </ul>
-            <br>
-            As an iMac Coordinator you will manage multiple sessions and teach the development of different apps and will be working application development projects as well.
-            <br><br>  
-            At the end of your session you will be given a Assistant teaching Certificate and a letter of recommendation.
-          </p>
+          <table>
+            <tr>
+              <td>Name</td>
+              <td>Year</td>
+              <td>Branch</td>
+            </tr>
+            <tr>
+              <td>
+                Pavankumar Kamath
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                CMPN
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Harsh Kshatriya
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                CMPN
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Rohan Gantellu
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                CMPN
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Shubham Rane
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                CMPN
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Mishal Roy
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                EXTC
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Dhruv Vaghela
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                INFT
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Jeet Bafna
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                CMPN
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Omkar Sanap
+              </td>
+              <td>
+                TE
+              </td>
+              <td>
+                CMPN
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Pawan Badsewal
+              </td>
+              <td>
+                SE
+              </td>
+              <td>
+                EXTC
+              </td>
+            </tr>
+          </table>
         </div>
-         -->
+        
         <form id="contactform" action="imacValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 
@@ -112,7 +204,7 @@
           <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
-</form> 
+        </form> 
       </div>
     </div>
   </div>                         
