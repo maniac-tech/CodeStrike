@@ -3,6 +3,7 @@
 require_once('imacConnect.php');
 require '../vendor/autoload.php';
 
+//Dependcies for using SparkPost as our email delievery client:
 use SparkPost\SparkPost;
 use GuzzleHttp\Client;
 use Http\Adapter\Guzzle6\Client as GuzzleAdapter;
@@ -24,7 +25,6 @@ $dbconn=$dbconn;
 function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_emailID,$func_var_mobileNo){
 	global $tableName_imacTraining;
 	global $dbconn;
-
 
 	//Re-establishing DB connection...
 	$servername=getenv('PostGRE_DB_Host');
@@ -50,7 +50,10 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		// -X-X-X- End of SQL Commands -X-X-X-
 
 		if ($result) {
-			// sendMail();
+			// Mailing client code:
+			// Refer to Sparkpost Mail delievery documentation in case of any query.
+
+			// Note: Since, the mails are being sent on runtime, we make use of substituion data to send emails to the registered students on their respective IDs.
 
 			$httpClient = new GuzzleAdapter(new Client());
 			$sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);			
@@ -60,6 +63,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 				'recipients' => [
 					[
 						'address' => [
+							// Fetching the form data i.e. Name and Email ID, from the form data.
 							'name' => $func_var_name,
 							'email' => $func_var_emailID,
 						],
@@ -99,7 +103,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					</table>
 					</body>
 					</html>',
-        // 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
+        		// 'text' => 'Congratulations, {{name}}! You just sent your very first mailing!',
 				]
 			]);
 			try {
@@ -115,31 +119,33 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 			// echo "Successful submission of form";
 		}
 		else{
+			echo "Registration failed. Try Again, if the problem persists, contact the Lab.";
 			// echo "pg_querya output:".pg_query($dbconn,$query);
-			header('Location:http://www.google.com');
+			// header('Location:http://www.google.com');
 		}
 	}
 }
 
 function captchaValidation(){
 	//Captcha Validation as instructed by Google:
+	// Refer to the documentation of Google Cpatcha to understand the validation.
 	$captcha = $_POST['g-recaptcha-response'];
 	$captchaSecretKey=	getenv('GOOGLE_RECAPTCHA_SECRET');
 	$clientIp = $_SERVER['REMOTE_ADDR'];
 	$captchResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=".$captchaSecretKey."&response=".$captcha);
 	
 	// The success status of captcha is being returned:
-	
 	if ($captchResponse.success==false){
 		echo "Captcha Failed.";
 		return 0; //Captcha Failed
 	}
 	else{
-		//On Captcha Successful
-		// Fetch form data:
+		//On Captcha Successful:
+		// Fetch form data
 		fetchFormData();
 
-		// Regular expression check:
+		// After we have succesfully retrieved the data:
+		// Regular expression check
 		regularExpression();
 		return 1; 
 	}
@@ -215,31 +221,31 @@ function regularExpression(){
  					}
  				}
  			}
- 		}
  	}
+}
 
 
- 	function error($func_var_mobileNo){
- 		global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
- 		global $tableName_imacTraining, $dbconn;
- 		$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
- 		$result = mysqli_query($conn, $sql);
+function error($func_var_mobileNo){
+	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
+	global $tableName_imacTraining, $dbconn;
+	$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
+	$result = mysqli_query($conn, $sql);
 
- 		if (mysqli_num_rows ($result) > 0){
- 			echo "You have been Registered already.";
- 		}
- 		else{
- 			echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
- 			echo $conn->error;
- 		}
- 	}
+	if (mysqli_num_rows ($result) > 0){
+		echo "You have been Registered already.";
+	}
+	else{
+		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
+		echo $conn->error;
+	}
+}
 
- 	function main(){
- 		if($_SERVER["REQUEST_METHOD"]=="POST"){
- 			$status_captcha = captchaValidation();
- 		}
- 	}
+function main(){
+	if($_SERVER["REQUEST_METHOD"]=="POST"){
+		$status_captcha = captchaValidation();
+	}
+}
 
- 	main();
+main();
 
- 	?>
+?>
