@@ -9,36 +9,36 @@
 	//----- PostGRE SQL Commands -----	
 	$sql="";
 	$result="";
-	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='CMPN' ";
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='CMPN' ";
 	$result = pg_query($dbconn, $sql);
 	$countCMPN = pg_num_rows($result);
 	// echo "$countCMPN";
 
-	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='IT' ";
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='IT' ";
 	$result = pg_query($dbconn, $sql);
 	$countIT = pg_num_rows($result);
 
-	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='EXTC' ";
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='EXTC' ";
 	$result = pg_query($dbconn, $sql);
 	$countEXTC = pg_num_rows($result);
 
-	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='ELEC' ";
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='ELEC' ";
 	$result = pg_query($dbconn, $sql);
 	$countELEC = pg_num_rows($result);
 
-	$sql = "SELECT * FROM $tablename_IMac WHERE Branch='ELEX' ";
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='ELEX' ";
 	$result = pg_query($dbconn, $sql);
 	$countELEX = pg_num_rows($result);
 
-	$sql = "SELECT  * FROM $tablename_IMac WHERE Year='BE' ";
+	$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='BE' ";
 	$result = pg_query($dbconn,$sql);
 	$countBE = pg_num_rows($result);
 
-	$sql = "SELECT  * FROM $tablename_IMac WHERE Year='TE' ";
+	$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='TE' ";
 	$result = pg_query($dbconn,$sql);
 	$countTE = pg_num_rows($result);
 
-	$sql = "SELECT  * FROM $tablename_IMac WHERE Year='SE' ";
+	$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='SE' ";
 	$result = pg_query($dbconn,$sql);
 	$countSE = pg_num_rows($result);	
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
