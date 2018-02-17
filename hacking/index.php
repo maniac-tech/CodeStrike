@@ -13,7 +13,7 @@
   <link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
 
   <!-- Reg form CSS -->
-  <link rel="stylesheet" type="text/css" href="css/imacreg.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/hackingreg.css" media="all" />
   <link rel="stylesheet" type="text/css" href="../demo.css" media="all" />
 
   <!-- Google reCaptcha  -->
@@ -68,11 +68,9 @@
       </center> -->
       <div  class="form">
         
-        <div id="aboutInterview">
-         
-        </div>
         
-        <form id="contactform" action="hackingValidate.php" method="post">
+       <div>
+          <form id="contactform" action="hackingValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 
           <p class="contact"><label for="name">First Name</label></p> 
@@ -98,6 +96,7 @@
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
         </form> 
+       </div>
       </div>
     </div>
   </div>                         

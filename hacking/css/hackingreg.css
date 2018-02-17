@@ -36,8 +36,8 @@ body{
   margin-left: 8%;
 }
 #contactform{
-  width: 50%;
-  float: right;
+  width: 72%;
+  margin-right: 0.5%;
   margin-left: 0.5%;
   background:#FFFFFF;
   padding : 3% 3% 3% 3%;
@@ -47,11 +47,11 @@ body{
 
 
 .form input[type="text"] { 
-  width: 400px; 
+  width: 600px; 
   background: #f2f2f2;
 }
 .form input[type="text"],.form input[type="email"] {
- width: 400px;
+ width: 600px;
  background: #f2f2f2; 
 }
 .form input[type="year"]{
