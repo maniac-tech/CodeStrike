@@ -115,7 +115,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 				echo $e->getCode()."\n";
 				echo $e->getMessage()."\n";
 			}
-			header('Location:imac.php');
+			header('Location:hacking.php');
 			// echo "Successful submission of form";
 		}
 		else{
