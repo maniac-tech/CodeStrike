@@ -72,7 +72,7 @@
          
         </div>
         
-        <form id="contactform" action="imacValidate.php" method="post">
+        <form id="contactform" action="hackingValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 
           <p class="contact"><label for="name">First Name</label></p> 
