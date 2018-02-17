@@ -1,6 +1,6 @@
 <?php 
 // Importing all the required files:
-require_once('imacConnect.php');
+require_once('jsConnect.php');
 require '../vendor/autoload.php';
 
 //Dependcies for using SparkPost as our email delievery client:
