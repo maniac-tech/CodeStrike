@@ -38,7 +38,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 		echo ('Could not connect: ' . pg_last_error().'<br>');
 	}else{ 
 		//----- PostGRE SQL Commands -----
-		$query="INSERT INTO $tableName_imacTraining (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\",\"Status\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo','PENDING')";
+		$query="INSERT INTO $tableName_imacTraining (\"Name\",\"Year\",\"Branch\",\"Email\",\"Mobile\") VALUES ('$func_var_name','$func_var_year','$func_var_branch','$func_var_emailID','$func_var_mobileNo')";
 		$result=pg_query($dbconn,$query);
 		// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
@@ -92,8 +92,6 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
 					Your Registration has been confirmed.
-					You will be receiving the batch and training details soon via mail.
-					Please make sure you check your <b>Inbox</b> and <b>Spam</b> folder regularly.
 					<br><br>
 					Thank You,<br>
 					Team CodeStrike.
