@@ -69,8 +69,9 @@
           <br>
           <p style="font-size: 120%">
           Also refreshments would be given between the workshop and in the end of the workshop each student will be get a certificate.
-            <b>Registration fee : 80Rs</b>
           </p>
+          <br>
+            <b style="font-size: 120%">Registration fee : 80Rs</b>
         </div>
         
         <form id="contactform" action="jsValidate.php" method="post">
