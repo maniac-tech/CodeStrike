@@ -62,13 +62,16 @@
           <p style="font-size: 120%">
             Wondering how to create an attractive, dynamic website?
             Here's a chance to become the web master!
-            Grab a seat at the Javascript workshop that is going be conducted on <b>5th/6th/7th of march</b>.
+          </p>
+          <br>
+          <p style="font-size: 120%">
+           Grab a seat at the Javascript workshop that is going be conducted on <b>5th/6th/7th of march</b>.
             3 days, 3 different slots of student will be welcomed.
             Limited seats, grab soon....
           </p> 
           <br>
           <p style="font-size: 120%">
-          Also refreshments would be given between the workshop and in the end of the workshop each student will be get a certificate.
+          Also refreshments would be given between the workshop and in the end of the workshop each student will get a certificate.
           </p>
           <br>
             <b style="font-size: 120%">Registration fee : 80Rs</b>
