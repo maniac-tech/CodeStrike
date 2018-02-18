@@ -24,7 +24,7 @@ if(!isset($_SESSION['userId'])){
 		<?php
 		//----- PostGRE SQL Commands -----
 		// Printing 2018 Data:
-		$query = "SELECT * FROM $tablename_JS_2018";
+		$query = "SELECT * FROM $tablename_Hacking_2018";
 		$result = pg_query($dbconn, $query);
 
 		if (pg_result_status($result)==2) {
@@ -43,6 +43,7 @@ if(!isset($_SESSION['userId'])){
 		else{
 			echo "Query Failed.";
 		}
+
 		?>
 	</table>
 	<button onclick="$('#myTable').tableExport({
