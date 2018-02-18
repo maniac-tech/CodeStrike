@@ -9,11 +9,11 @@
   <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" /> <!--Tab Icon-->
 
   <!-- CSS  -->
-  <link href="../min/plugin-min.css" type="text/css" rel="stylesheet">
-  <link href="../min/custom-min.css" type="text/css" rel="stylesheet" >
+  <link href="../../min/plugin-min.css" type="text/css" rel="stylesheet">
+  <link href="../../min/custom-min.css" type="text/css" rel="stylesheet" >
 
   <!-- Reg form CSS -->
-  <link rel="stylesheet" type="text/css" href="css/imacreg.css" media="all" />
+  <link rel="stylesheet" type="text/css" href="css/hackingreg.css" media="all" />
   <link rel="stylesheet" type="text/css" href="demo.css" media="all" />
 
   <!-- Google reCaptcha  -->
