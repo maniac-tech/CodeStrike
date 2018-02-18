@@ -1,7 +1,7 @@
 <?php 
 // Importing all the required files:
 require_once('hackingConnect.php');
-require '../vendor/autoload.php';
+require '../../vendor/autoload.php';
 
 //Dependcies for using SparkPost as our email delievery client:
 use SparkPost\SparkPost;
