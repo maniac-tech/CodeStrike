@@ -92,7 +92,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
 					We have got your registration for Introduction to Ethical Hacking Workshop 2018.
-					A Comfirmation mail will be sent to you as the seats will be given on first come first serve bases.
+					A Confirmation mail will be sent to you as the seats will be given on first come first serve bases.
 					<br><br>
 					Thank You,<br>
 					Team CodeStrike.
