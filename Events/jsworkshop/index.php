@@ -50,7 +50,6 @@
   -->
   <!--Form Details-->
   <div class="section scrollspy" id="team">
-    <br>
     <center>
       <h2 style="color:#A020F0; font-size: 35px">JS Workshop 2018</h2>
     </center>
@@ -60,8 +59,12 @@
       <div  class="form">
         
         <div id="aboutInterview">
-          <p>
-            CodeStrike is a <b>committee of students</b>,<b> made by students</b> and <b>for students</b>
+          <p style="font-size: 120%">
+            Wondering how to create an attractive, dynamic website?
+            Here's a chance to become the web master!
+            Grab a seat at the Javascript workshop that is going be conducted on <b>5th/6th/7th of march</b>.
+            3 days, 3 different slots of student will be welcomed.
+            Limited seats, grab soon....
           </p>
         </div>
         
