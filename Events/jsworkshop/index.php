@@ -60,7 +60,9 @@
       <div  class="form">
         
         <div id="aboutInterview">
-          
+          <p>
+            CodeStrike is a <b>committee of students</b>,<b> made by students</b> and <b>for students</b>
+          </p>
         </div>
         
         <form id="contactform" action="jsValidate.php" method="post">
