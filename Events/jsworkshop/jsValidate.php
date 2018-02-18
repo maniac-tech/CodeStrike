@@ -72,7 +72,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 				'content' => [
 					'from' => [
 						'name' => 'CodeStrike',
-						'email' => 'donotreply@codestrike.com',
+						'email' => 'donotreply@codestrike.in',
 					],
 					'subject' => 'Confirmation message for JavaScript Workshop 2018',
 					'html' => '<html>
