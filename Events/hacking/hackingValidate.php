@@ -59,7 +59,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 			$sparky = new SparkPost($httpClient, ["key" => getEnv("SPARKPOST_API_KEY_IMAC_DELIEVERY")]);			
 			$promise = $sparky->transmissions->post([
 
-				'substitution_data' => ['name' => 'iMac'],
+				'substitution_data' => ['name' => 'Hacking Workshop'],
 				'recipients' => [
 					[
 						'address' => [
@@ -71,10 +71,10 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 				],
 				'content' => [
 					'from' => [
-						'name' => 'iMac Atharva',
-						'email' => 'imac@codestrike.in',
+						'name' => 'CodeStrike',
+						'email' => 'donotreply@codestrike.com',
 					],
-					'subject' => 'Confirmation message for iMac Training Session 2018',
+					'subject' => 'Confirmation message for Hacking Workshop 2018',
 					'html' => '<html>
 					<body style="background-color: grey; width:100%; font-family: sans-serif;">
 					<table style="background-color: white;margin-left: 5%; margin-right: 5%; margin-top: 5%;margin-bottom: 5%;width: 90%;">
@@ -91,7 +91,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					Hi {{address.name}},
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
-					Your Registration has been confirmed.
+					Your Registration has been confirmed for Hacking Workshop 2018. 
 					<br><br>
 					Thank You,<br>
 					Team CodeStrike.
