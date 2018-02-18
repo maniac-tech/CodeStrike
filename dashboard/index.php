@@ -45,11 +45,8 @@ if(!isset($_SESSION['userId'])){
 			<li title="data" onclick="loadPage(this.title)">
 				<p>iMac</p>
 			</li>
-			<li title="data" onclick="loadPage(this.title)">
-				<p>Hacking Workshop 2018</p>
-			</li>
-			<li title="data" onclick="loadPage(this.title)">
-				<p>JavaScript Workshop 2018</p>
+			<li title="events" onclick="loadPage(this.title)">
+				<p>CodeStrike</p>
 			</li>
 		</ul>
 	</div>
