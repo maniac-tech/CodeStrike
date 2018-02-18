@@ -5,7 +5,7 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
   <meta name="theme-color" content="#2196F3">
-  <title>Hacking Workshop 2018</title>
+  <title>Introduction Ethical Hacking Workshop 2018</title>
   <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" /> <!--Tab Icon-->
 
   <!-- CSS  -->
@@ -39,7 +39,7 @@
   <div class="section scrollspy" id="team" style="height: 53%">
     <br>
     <center>
-      <h2 style="color:#A020F0; font-size: 35px">Hacking workshop 2018</h2>
+      <h2 style="color:#A020F0; font-size: 35px">Introduction Ethical Hacking workshop 2018</h2>
     </center>
     <br>
     <div class="container">
