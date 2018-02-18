@@ -91,7 +91,9 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					Hi {{address.name}},
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
-					Your Registration has been confirmed for Javascript Workshop 2018.
+					We have got your registration for Introduction to Javascript Workshop 2018.
+					A Comfirmation mail will be sent to you as the seats will be given on first come first
+					serve bases.
 					<br><br>
 					Thank You,<br>
 					Team CodeStrike.
@@ -219,31 +221,31 @@ function regularExpression(){
  					}
  				}
  			}
+ 		}
  	}
-}
 
 
-function error($func_var_mobileNo){
-	global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
-	global $tableName_imacTraining, $dbconn;
-	$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
-	$result = mysqli_query($conn, $sql);
+ 	function error($func_var_mobileNo){
+ 		global $form_fname, $form_lname, $form_name, $form_emailId, $form_mobileNo, $form_year, $form_branch;
+ 		global $tableName_imacTraining, $dbconn;
+ 		$sql = "SELECT Name FROM $tableName WHERE Mobile='$func_var_mobileNo'";
+ 		$result = mysqli_query($conn, $sql);
 
-	if (mysqli_num_rows ($result) > 0){
-		echo "You have been Registered already.";
-	}
-	else{
-		echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
-		echo $conn->error;
-	}
-}
+ 		if (mysqli_num_rows ($result) > 0){
+ 			echo "You have been Registered already.";
+ 		}
+ 		else{
+ 			echo "Registration Failed. Try Again. If the problem still occurs, contact the iMac Incharge.<br>";
+ 			echo $conn->error;
+ 		}
+ 	}
 
-function main(){
-	if($_SERVER["REQUEST_METHOD"]=="POST"){
-		$status_captcha = captchaValidation();
-	}
-}
+ 	function main(){
+ 		if($_SERVER["REQUEST_METHOD"]=="POST"){
+ 			$status_captcha = captchaValidation();
+ 		}
+ 	}
 
-main();
+ 	main();
 
-?>
+ 	?>

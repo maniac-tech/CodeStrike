@@ -22,7 +22,6 @@ body{
   width: 80%;
   height: 22cm;
   padding-left: 50px;
-  padding-top: 50px;
   padding-right: 50px;
 }
 #aboutInterview{
@@ -36,7 +35,7 @@ body{
   margin-left: 8%;
 }
 #contactform{
-  width: 100%;
+  width: 50%;
   margin-right: 0.5%;
   margin-left: 0.5%;
   background:#FFFFFF;

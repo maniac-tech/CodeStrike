@@ -52,7 +52,7 @@
   <div class="section scrollspy" id="team">
     <br>
     <center>
-      <h2 style="color:#A020F0; font-size: 35px">Hacking Workshop 2018</h2>
+      <h2 style="color:#A020F0; font-size: 35px">Introduction To Ethical Hacking 2018</h2>
     </center>
     <br>
     <div class="container">
@@ -67,7 +67,12 @@
        
       </center> -->
       <div  class="form">
-        
+         <div id="aboutInterview">
+          <p style="font-size: 120%">
+            The Introduction To Ethical Hacking is organised by  teachers of Atharva College.
+             Workshop will be held on <b>22nd of February, 10am onwards, CC Lab, 5th floor 10AM onwards</b>. The seats will be given on <b>first come first serve bases</b>, so hurry up don't let this opportunity slip away.
+          </p>
+        </div>
         
        <div>
           <form id="contactform" action="hackingValidate.php" method="post">

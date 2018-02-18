@@ -65,6 +65,8 @@
             Grab a seat at the Javascript workshop that is going be conducted on <b>5th/6th/7th of march</b>.
             3 days, 3 different slots of student will be welcomed.
             Limited seats, grab soon....
+            Also refreshments would be given between the workshop and in the end of the workshop each student will be get a certificate.
+            <b>Registration fee : 80Rs</b>
           </p>
         </div>
         
