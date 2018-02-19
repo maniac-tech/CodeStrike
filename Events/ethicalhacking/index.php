@@ -53,6 +53,10 @@
     <br>
     <center>
       <h2 style="color:#A020F0; font-size: 35px">Introduction To Ethical Hacking 2018</h2>
+      <p style="font-size: 250%; margin-top: 7%">Registration for this event is closed.</p>
+      <p style = "font-size: 250%; margin-top: 2%">This workshop will be held on <b>22nd of February, CC Lab, 5th floor 10AM onwards</b>.
+        <p style="font-size: 250%; margin-top: 2%">For further queries contact us at codestrikehq@gmail.com </p>
+      <p style="font-size: 250%; margin-top: 2%">Until then wait for our next event.</p>
     </center>
     <br>
     <div class="container">
@@ -66,7 +70,7 @@
           </div>
        
       </center> -->
-      <div  class="form">
+     <!--  <div  class="form">
          <div id="aboutInterview">
           <p style="font-size: 120%">
             The Introduction To Ethical Hacking is organised by  teachers of Atharva College.
@@ -79,9 +83,9 @@
            <br>
            <p style = "font-size: 120%">The seats will be given on <b>first come first serve bases</b>, so hurry up don't let this opportunity slip away.
            </p>
-        </div>
+        </div> -->
         
-       <div>
+       <!-- <div>
           <form id="contactform" action="hackingValidate.php" method="post">
           <center><p><b>Register here</b></p></center>
           <hr> 
@@ -102,14 +106,14 @@
 
           <p class="contact"><label for="phone">Mobile phone</label></p> 
           <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
-
+ -->
           <!-- Google reCaptcha Code -->
-          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+          <!-- <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
           <br> 
           <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit">
         </form> 
        </div>
-      </div>
+      </div> -->
     </div>
   </div>                         
 
