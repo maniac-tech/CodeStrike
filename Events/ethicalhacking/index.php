@@ -75,7 +75,7 @@
             <p style = "font-size: 120%">Workshop will be held on <b>22nd of February, CC Lab, 5th floor 10AM onwards</b>.
            </p>
            <br>
-           <p style = "font-size: 120%">The speaker of the event are Saurabh Soparkar and Suraj Pawar</p>
+           <p style = "font-size: 120%">The speakers of the event are Saurabh Soparkar and Suraj Pawar</p>
            <br>
            <p style = "font-size: 120%">The seats will be given on <b>first come first serve bases</b>, so hurry up don't let this opportunity slip away.
            </p>
