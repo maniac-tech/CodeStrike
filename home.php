@@ -219,6 +219,32 @@
 				<div class="col s12 m3">
 					<div class="card card-avatar" style="height:310px;">
 						<div class="waves-effect waves-block waves-light">
+							<img class="activator" src="https://media-exp2.licdn.com/mpr/mpr/shrinknp_400_400/AAMAAwDuAAgAAQAAAAAAABAHAAAAJDhlZmYxOTNjLWRlNTQtNDZhMy1hMWM3LWEyZWNiNDlhMjIzMA.bin">
+						</div>
+						<div class="card-content">
+							<span class="card-title activator grey-text text-darken-4">Harshit Shetty
+								<br/>
+							</span>
+							<p>
+								<a class="blue-text text-lighten-2" href="https://www.facebook.com/profile.php?id=100009449610853" target="_blank">
+									<i class="fa fa-facebook-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://github.com/ShettyHarshit" target="_blank">
+									<i class="fa fa-github-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://plus.google.com/u/0/+HarshitShetty5" target="_blank">
+									<i class="fa fa-google-plus-square"></i>
+								</a>
+								<a class="blue-text text-lighten-2" href="https://www.linkedin.com/in/harshit-shetty-4846b8127/" target="_blank">
+									<i class="fa fa-linkedin-square"></i>
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div class="col s12 m3">
+					<div class="card card-avatar" style="height:310px;">
+						<div class="waves-effect waves-block waves-light">
 							<img class="activator" src="img/team/burhanuddin.jpg">
 						</div>
 						<div class="card-content">
