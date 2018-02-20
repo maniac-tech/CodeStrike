@@ -77,7 +77,7 @@
           Also refreshments would be given between the workshop and in the end of the workshop each student will get a certificate.
           </p>
           <br>
-            <b style="font-size: 120%">Registration fee : 80Rs</b>
+            <b style="font-size: 120%">Registration fee : 150Rs</b>
         </div>
         
         <form id="contactform" action="jsValidate.php" method="post">
