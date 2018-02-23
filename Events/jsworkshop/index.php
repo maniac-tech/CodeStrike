@@ -55,69 +55,81 @@
     </center>
     <br>
     <div class="container">
-     
+
       <div  class="form">
-        
+
         <div id="aboutInterview">
           <p style="font-size: 120%">
-            Wondering how to create an attractive, dynamic website?
+            Wondering how to create attractive and dynamic websites?
             Here's a chance to become the web master!
           </p>
           <br>
           <p style="font-size: 120%">
-           Grab a seat at the Javascript workshop that is going be conducted on <b>5th/6th/7th of march</b>.
-          </p>
-            <br>
-          <p style="font-size: 120%">
-            3 days, 3 different slots of student will be welcomed.
-            Limited seats, grab soon....
-          </p> 
+           Grab a seat at the CodeStrike Javascript workshop that is going be conducted on <b>5th, 6th and 7th of March</b>.
+         </p>
+         <br>
+         <p style="font-size: 120%">
+          3 days, 3 different slots of students will be welcomed.
+          Limited seats, grab soon....
+        </p> 
+        <br>
+        <p style="font-size: 120%">
+          Also, refreshments will be given between the workshop and in the end of the workshop, each student will get a certificate.
+        </p>
+
+        <br>
+        <b style="font-size: 120%;">Registration fee : Rs. 150
           <br>
-          <p style="font-size: 120%">
-          Also refreshments would be given between the workshop and in the end of the workshop each student will get a certificate.
-          </p>
+          The Registration desks will be set up on the following dates at the below times:
           <br>
-            <b style="font-size: 120%">Registration fee : 150Rs</b>
-        </div>
-        
-        <form id="contactform" action="jsValidate.php" method="post">
-          <center><p><b>Register here</b></p></center>
-          <hr> 
-          <p class="contact"><label for="name">First Name</label></p> 
-          <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
-
-          <p class="contact"><label for="name">Last Name</label></p> 
-          <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
-
-          <p class="contact"><label for="email">E-Mail ID</label></p> 
-          <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
-
-          <p class="contact"><label for="branch">Branch</label></p> 
-          <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
-
-          <p class="contact"><label for="year">Year</label></p> 
-          <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
-
-          <p class="contact"><label for="phone">Mobile phone</label></p> 
-          <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
-
-          <!-- Google reCaptcha Code -->
-          <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
-          <br> 
-          <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
-        </form> 
+          <ol style="padding-left: 23px;">
+          <li>28th February - 10 am to 2.30 pm</li>
+          <li>1st March - 9.30 am to 3.30pm</li>
+          </ol>
+          <br><br>
+          Limited seats only! Complete the payment early to confirm your seats!
+          <br><br>
+        </b>
       </div>
+
+      <form id="contactform" action="jsValidate.php" method="post">
+        <center><p><b>Register here</b></p></center>
+        <hr> 
+        <p class="contact"><label for="name">First Name</label></p> 
+        <input id="name" name="fname" placeholder="First name" required="True" tabindex="1" type="text"> 
+
+        <p class="contact"><label for="name">Last Name</label></p> 
+        <input id="name" name="lname" placeholder="Last name" required="True" tabindex="1" type="text"> 
+
+        <p class="contact"><label for="email">E-Mail ID</label></p> 
+        <input id="email" name="email" placeholder="example@domain.com" required="TRUE" type="email"> 
+
+        <p class="contact"><label for="branch">Branch</label></p> 
+        <input type="text" name="stream" placeholder="CMPN/IT/ELEX/ELEC/EXTC" required="TRUE">
+
+        <p class="contact"><label for="year">Year</label></p> 
+        <input type="year" id="year" placeholder="SE/TE/BE" name="year" required="TRUE" type="text"> 
+
+        <p class="contact"><label for="phone">Mobile phone</label></p> 
+        <input id="phone" name="phone" placeholder="9XXXX XXXXX" required="" type="text"> <br>
+
+        <!-- Google reCaptcha Code -->
+        <div class="g-recaptcha" data-sitekey="6LcPICkUAAAAAEgQZ7QvL0TNZkGx728-xsStXvoV"></div>
+        <br> 
+        <input class="buttom" name="submit" id="submit" tabindex="12" value="Register" type="submit" style="margin-left: 33%">
+      </form> 
     </div>
-  </div>                         
+  </div>
+</div>                         
 
-  <!--Footer-->
-  <?php 
-  require '../../footer.php';
-  ?>
+<!--Footer-->
+<?php 
+require '../../footer.php';
+?>
 
-  <!--  Scripts-->
-  <script src="../../min/plugin-min.js"></script>
-  <script src="../../min/custom-min.js"></script>
+<!--  Scripts-->
+<script src="../../min/plugin-min.js"></script>
+<script src="../../min/custom-min.js"></script>
 
 </body>
 </html>

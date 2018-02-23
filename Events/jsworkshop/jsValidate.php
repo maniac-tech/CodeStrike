@@ -74,7 +74,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 						'name' => 'CodeStrike',
 						'email' => 'donotreply@codestrike.in',
 					],
-					'subject' => 'Confirmation message for JavaScript Workshop 2018',
+					'subject' => 'Notification message for JavaScript Workshop 2018',
 					'html' => '<html>
 					<body style="background-color: grey; width:100%; font-family: sans-serif;">
 					<table style="background-color: white;margin-left: 5%; margin-right: 5%; margin-top: 5%;margin-bottom: 5%;width: 90%;">
@@ -91,9 +91,19 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					Hi {{address.name}},
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
-					We have got your registration for Introduction to Javascript Workshop 2018.
-					A Comfirmation mail will be sent to you as the seats will be given on first come first
-					serve bases.
+					We have recorded your registration for the "Introduction to Javascript Workshop - 2018.
+					A Confirmation mail will be sent to you once you have paid the registration fee. 
+
+					The Registration desks will be set up on the following dates at the below times:
+					<br>
+					Registration fee: Rs. 150
+					<br>
+					<ul>
+					<li>28th February - 10 am to 2.30 pm</li>
+					<li>1st March - 9.30 am to 3.30pm</li>
+					</ul>
+					<br><br>
+					Limited seats only! Complete the payment early to confirm your seats!
 					<br><br>
 					Thank You,<br>
 					Team CodeStrike.
