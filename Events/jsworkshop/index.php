@@ -80,7 +80,7 @@
         <br>
         <b style="font-size: 120%;">Registration fee : Rs. 150
           <br>
-          The Registration desks will be set up on the following dates at the below times:
+          The payment desks will be set up in the college canteen or on the 2nd/3rd floor of our college on the following day and time:
           <br>
           <ol style="padding-left: 23px;">
           <li>28th February - 10 am to 2.30 pm</li>

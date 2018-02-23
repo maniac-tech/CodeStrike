@@ -94,14 +94,14 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					We have recorded your registration for the Introduction to Javascript Workshop - 2018.
 					Your registration will be confirmed once you have paid the registration fee. <br> 
 
-					The Registration desks will be set up on the following dates at the below times:
-					<br>
-					Registration fee: Rs. 150
+					The payment desks will be set up in the college canteen or on the 2nd/3rd floor of our college on the following day and time:
 					<br>
 					<ul>
 					<li>28th February - 10 am to 2.30 pm</li>
 					<li>1st March - 9.30 am to 3.30pm</li>
 					</ul>
+					<br>
+					Registration fee: Rs. 150
 					<br><br>
 					Limited seats only! Complete the payment at the earliest to confirm your seats!
 					<br><br>
