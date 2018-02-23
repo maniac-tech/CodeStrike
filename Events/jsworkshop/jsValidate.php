@@ -103,7 +103,7 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					<li>1st March - 9.30 am to 3.30pm</li>
 					</ul>
 					<br><br>
-					Limited seats only! Complete the payment early to confirm your seats!
+					Limited seats only! Complete the payment at the earliest to confirm your seats!
 					<br><br>
 					Thank You,<br>
 					Team CodeStrike.
