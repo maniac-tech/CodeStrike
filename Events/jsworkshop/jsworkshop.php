@@ -44,13 +44,8 @@
     <br>
     <div class="container">
       <center>  
-        <h6 style="color:#A020F0; font-size: 35px">Your details have been recorded. Check your mailbox for a notification mail. Complete the payment at the earliest to confirm your registration. Your registration will be confirmed once you have paid the registration fee. <br>
-          Registration fee: Rs. 150.
-          The Registration desks will be set up on the following days:
-          <br>
-          <h4>28th February - 10 am to 2.30 pm and 1st March - 9.30 am to 3.30pm</h4>
-          
-          Limited seats only! Complete the payment early to confirm your seats!</h6>
+        <h6 style="color:#A020F0; font-size: 27px">Your details have been recorded. Check your mailbox for a notification mail. Complete the payment at the earliest to confirm your registration. Your registration will be confirmed once you have paid the registration fee. <br>
+          </h6>
           <br>
         </h5>
       </center>
