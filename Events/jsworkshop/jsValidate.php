@@ -91,8 +91,8 @@ function insertData($func_var_name,$func_var_year,$func_var_branch,$func_var_ema
 					Hi {{address.name}},
 					</p>
 					<p style="margin-left:2%; margin-right: 2%;margin-bottom: 2%;">
-					We have recorded your registration for the "Introduction to Javascript Workshop - 2018.
-					A Confirmation mail will be sent to you once you have paid the registration fee. 
+					We have recorded your registration for the Introduction to Javascript Workshop - 2018.
+					Your registration will be confirmed once you have paid the registration fee. <br> 
 
 					The Registration desks will be set up on the following dates at the below times:
 					<br>
