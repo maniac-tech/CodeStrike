@@ -87,7 +87,7 @@
           <li>1st March - 9.30 am to 3.30pm</li>
           </ol>
           <br><br>
-          Limited seats only! Complete the payment early to confirm your seats!
+          Limited seats only! Complete the payment at the earliest to confirm your seats!
           <br><br>
         </b>
       </div>
