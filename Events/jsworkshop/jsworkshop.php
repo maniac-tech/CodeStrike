@@ -37,30 +37,30 @@
 
   <!--Form Details-->
   <div class="section scrollspy" id="team" style="height: 53%">
-    <br>
-    <center>
-      <h2 style="color:#A020F0; font-size: 35px">JavaScript workshop 2018</h2>
-    </center>
-    <br>
-    <div class="container">
-      <center>  
-        <h6 style="color:#A020F0; font-size: 27px">Your details have been recorded. Check your mailbox for a notification mail. Complete the payment at the earliest to confirm your registration. Your registration will be confirmed once you have paid the registration fee. <br>
+    <div style="background-color: #fff; padding: 10%; margin: 10%; box-shadow: 5px 10px 5px #888888;">
+      <br>
+      <center>
+        <h2 style="color:#A020F0; font-size: 35px">JavaScript workshop 2018</h2>
+        <br>
+        <div class="container">
+          <h6 style="color:#A020F0; font-size: 1.4em">Your details have been recorded. Check your mailbox for a notification mail. Complete the payment at the earliest to confirm your registration. Your registration will be confirmed once you have paid the registration fee. <br>
           </h6>
           <br>
         </h5>
       </center>
     </div>
-  </div>                         
+  </div>
+</div>                         
 
-  <!--Footer-->
-  <?php 
-  require '../../footer.php';
-  ?>
+<!--Footer-->
+<?php 
+require '../../footer.php';
+?>
 
 
-  <!--  Scripts-->
-  <script src="../../min/plugin-min.js"></script>
-  <script src="../../min/custom-min.js"></script>
+<!--  Scripts-->
+<script src="../../min/plugin-min.js"></script>
+<script src="../../min/custom-min.js"></script>
 
 </body>
 </html>
