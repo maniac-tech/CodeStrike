@@ -36,8 +36,8 @@
 
 
   <!--Form Details-->
-  <div class="section scrollspy" id="team" style="height: 53%">
-    <div style="background-color: #fff; padding: 10%; margin: 10%; box-shadow: 5px 10px 5px #888888;">
+  <div class="section scrollspy" id="team" style="height: 20px; background-color: #2196F3;">
+    <div style="background-color: #fff; padding: 10%; margin: 10%; box-shadow: 5px 10px 5px #888888; margin-top: 0%;">
       <br>
       <center>
         <h2 style="color:#A020F0; font-size: 35px">JavaScript workshop 2018</h2>
