@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Batch Details Format</title>
+	<link rel="stylesheet" href="batchDetailsFormat.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+	<!-- tableExport jQuery Plugin -->
+	<!-- Note:
+		*For proper functioning of tableExportPlugin,
+		make sure 'FileSaver.js' script is included before 'tableexport.js'
+	 -->
+	<script type="text/javascript" src="tableExportPlugin/FileSaver.js"></script>
+	<script type="text/javascript" src="tableExportPlugin/tableExport/js/tableexport.js"></script>
+	<link rel="stylesheet" href="tableExportPlugin/tableExport/css/tableexport.css">
+</head>
+<body>
+	<div id="downloadableContent">
+
+		<table id="BatchTable" border="0">
+			<tr>
+				<td rowspan=2><img src="ace logo.png" alt="Logo"></td>
+			</tr>
+			<tr>
+				<td>
+					<center>
+						<h3>ATHARVA EDUCATIONAL TRUST'S</h3>
+					<h1>ATHARVA COLLEGE OF ENGINEERING</h1>
+					<p>(Approved by AICTE, Recognized by Government of Maharashtra<br>& Affiliated to University of Mumbai - Estd. 1999-2000)</p>
+					</center>
+				</td>
+			</tr>
+		</table>
+
+
+
+
+
+
+		
+		<div id="StudentDetail">		
+			<hr>
+			<table border="1">
+				<tr>
+					<td colspan=8>
+						<center>Atharva iMac Lab Batch 49 Attendance</center>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						Department : TE CMPN
+					</td> 
+					<td colspan="4">
+						Prepared By: Prof. Neha Kunte, Prof Santosh Dodamani
+					</td>
+					<td colspan="2">
+						Date :18/09/2017-22/09/2017
+					</td>
+				</tr>
+				<tr>
+					<td>Sr. No</td>
+					<td>Name of Student</td>
+					<td> Day 1</td>
+					<td> Day 2</td>
+					<td> Day 3</td>
+					<td> Day 4</td>
+					<td> Marks</td>
+					<td> Certificate</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>Student 1</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>Student 2</td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+					<td> </td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<button onclick="$('#StudentDetail').tableExport({
+		headers: true,                              // (Boolean), display table headers (th or td elements) in the <thead>, (default: true)
+	    footers: true,                              // (Boolean), display table footers (th or td elements) in the <tfoot>, (default: false)
+	    formats: ['xls', 'csv', 'txt'],             // (String[]), filetype(s) for the export, (default: ['xls', 'csv', 'txt'])
+    	filename: 'Batch Sheet',                             // (id, String), filename for the downloaded file, (default: 'id')
+   		bootstrap: true,                           // (Boolean), style buttons using bootstrap, (default: true)
+    	exportButtons: true,                        // (Boolean), automatically generate the built-in export buttons for each of the specified formats (default: true)
+    	position: 'bottom',                         // (top, bottom), position of the caption element relative to table, (default: 'bottom')
+    	ignoreRows: null,                           // (Number, Number[]), row indices to exclude from the exported file(s) (default: null)
+    	ignoreCols: null,                           // (Number, Number[]), column indices to exclude from the exported file(s) (default: null)
+    	trimWhitespace: true,
+    	// type: 'csv' 
+    }
+    );">
+    Export
+</button>
+</body>
+</html>

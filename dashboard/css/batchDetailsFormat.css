@@ -1,0 +1,48 @@
+#header{
+	height: 10%;
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5%;
+	display: block;
+}
+#BatchTable{
+	width: 90%;
+	margin-left:5%;
+	margin-right:5%;
+	/*border: 1px solid black;*/
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-weight: bold;
+}
+#header_1{
+	width: 20%;
+	float: left;
+}
+#header_2{
+	width: 80%;
+	text-align: center;
+	float: right;
+}
+#header img{
+	width: 80%;
+}
+#StudentDetail{
+	width: 90%;
+	height: 90%;
+	margin-left:5%;
+	margin-right:5%;
+}
+#StudentDetail table{
+	width: 100%;
+	border: 1px solid black;
+	border-collapse: collapse;
+	border-spacing: 0;
+	font-weight: bold;
+}
+#StudentDetail table tr td{
+	padding-left: 1%;
+	padding-right: 1%;
+	padding-top: 1%;
+	padding-bottom: 1%; 
+}
