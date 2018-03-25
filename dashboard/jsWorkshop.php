@@ -18,6 +18,8 @@ if(!isset($_SESSION['userId'])){
 			<th>Email</th>
 			<th>Mobile</th>
 			<th>Status</th>
+			<th>Attended</th>
+			<th>Fee Paid</th>
 			<!-- TO-DO: Print the Batch no alloted from the respective table -->
 			<!-- <th>Batch</th> -->
 		</tr>
