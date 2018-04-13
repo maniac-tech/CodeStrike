@@ -1,0 +1,9 @@
+#sub-menu{
+	width: 100%;
+	margin-bottom:1%;
+}
+#sub-menu button{
+	width: 15%;
+	float: left;
+	background-color: grey;
+}
