@@ -12,6 +12,8 @@ if(!isset($_SESSION['userId'])){
 	<link rel="stylesheet" href="css/data.css">
 	<link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/searchbar.css">
+    <link rel="stylesheet" href="css/profile_card.css">
+    <link rel="stylesheet" href="css/sub-menu.css">
 
 	
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
