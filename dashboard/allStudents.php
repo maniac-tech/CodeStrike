@@ -7,14 +7,14 @@ if(!isset($_SESSION['userId'])){
 ?>
 <div id="content_table">
 	<div id="sub-menu">
-		<button>Student Info</button>
+		<button>Registered</button>
 		<button>Pending</button>
 		<button>Completed</button>
 	</div>
 	<br>
 	<input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
 
-	<p id="studentsList" class="searchbar">List of Students Registered:</p>
+	<!-- <p id="studentsList" class="searchbar">List of Students Registered:</p> -->
 	<table id="myTable">
 		<tr>
 			<th>Name</th>

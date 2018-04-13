@@ -39,7 +39,7 @@
 }
 #content_table{
 	width: 94%;
-	background: white;
+	/*background: white;*/
 	margin-left: 1%;
 	margin-right: 0.5%;
 	border-radius: 4px;
@@ -55,6 +55,10 @@
 	font-family: 'Helvetica Neue Bold';
 	font-size: 1.5em;
 }
+#mytable{
+	background-color: white;
+	width: 100%;
+}
 #studentsList{
 	margin-bottom: 1%;
 	margin-top: 0;
@@ -66,8 +70,11 @@
 	border-style: none;
 }
 #content_table table tr:first-child{
-	background: #64b5f6;
+	/*background: #64b5f6;*/
+	background: #c4c7d6;
 	text-align: left;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 #intro{
 	font-size: 1em !important;
