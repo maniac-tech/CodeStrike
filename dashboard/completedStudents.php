@@ -79,7 +79,7 @@ if(!isset($_SESSION['userId'])){
 			*/
 			// -X-X-X- End of SQL Commands -X-X-X-
 			?>
-		</table>
+	</table>
 		<button onclick="$('#tableID').tableExport({type:'csv',escape:'false'});">Export</button>
 	</body>
 </div>
