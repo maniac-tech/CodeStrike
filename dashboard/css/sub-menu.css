@@ -4,6 +4,17 @@
 }
 #sub-menu button{
 	width: 15%;
-	float: left;
+	padding :0;
+	float: right;
 	background-color: grey;
+}
+#sub-menu button:not(last) {
+	/*border-right: solid;*/
+	/*border-collapse: yellow;*/
+}
+{
+
+}
+#sub-menu button a{
+	font-size: 1em !important;
 }
