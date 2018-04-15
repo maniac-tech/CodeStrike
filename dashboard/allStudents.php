@@ -7,9 +7,9 @@ if(!isset($_SESSION['userId'])){
 ?>
 <div id="content_table">
 	<div id="sub-menu">
-		<button id="Register-button"><a href="#registeredStudents">Registered</a></button>
-		<button id="Pending-button"><a href="pendingStudents">Pending</a></button>
 		<button id="Completed-button">Completed</button>
+		<button id="Pending-button"><a href="pendingStudents">Pending</a></button>
+		<button id="Register-button"><a href="#registeredStudents">Registered</a></button>
 	</div>
 	<br>
 	<input type="text" id="myInput" onkeyup="myFunction()" style="" placeholder="Search for names..">
