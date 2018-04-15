@@ -12,6 +12,18 @@ $tablename_IMac_2018 = getenv('PostGRE_DB_IMac_2018');
 $tablename_JS_2018 = getenv('PostGRE_DB_JavascriptWorkshop_2018');
 $tablename_Hacking_2018 = getenv('PostGRE_DB_HackingWorkshop_2018');
 
+// $servername="localhost";
+// $databaseName="dashboard";
+// $username="postgres";
+// $password="root";
+// $tableName="dashboard_users";
+// $tablename_IMac="imac2017_registrations";
+// $tablename_IMac_Coord="imac2017_coordinators";
+// $tableName_IMac_interviews = "imac2018_interviews";
+// $tablename_IMac_2018 = "imac2018_registrations_even";
+// $tablename_JS_2018 = getenv('PostGRE_DB_JavascriptWorkshop_2018');
+// $tablename_Hacking_2018 = getenv('PostGRE_DB_HackingWorkshop_2018');
+
 $dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 if (!$dbconn){
 	echo ('Could not connect: ' . pg_last_error().'<br>');
