@@ -27,9 +27,16 @@ if(!isset($_SESSION['userId'])){
 	}
 </script>
 <div id="content_table">
+	<div id="sub-menu">
+		<button id="Completed-button">Operations</button>
+		<button id="Pending-button"><a href="pendingStudents">Allot Batch</a></button>
+		<button id="Register-button"><a href="#registeredStudents">Batch Info</a></button>
+	</div>
+	
 	<!--  Search Bar-->
 	<input type="text" id="myInput" onkeyup="myFunctionS()" style="" placeholder="Search for names..">
 	<!--  -->
+
 	<p id="studentsList"><b>List of Students Pending:</b></p>
 	<form name="willAllotTaskForm" id="willAllotTaskForm">
 		<table id="myTable">
