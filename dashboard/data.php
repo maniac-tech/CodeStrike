@@ -7,8 +7,8 @@ if(!isset($_SESSION['userId'])){
 ?>
 <div id="interface">
 	<button title="allStudents" onclick="loadContent(this.title)">Student Detail</button>
-	<button title="pendingStudents" onclick="loadContent(this.title)">Pending </button>
-	<button title="completedStudents" onclick="loadContent(this.title)">Completed </button>
+	<!-- <button title="pendingStudents" onclick="loadContent(this.title)">Pending </button>
+	<button title="completedStudents" onclick="loadContent(this.title)">Completed </button> -->
 	<button title="allotBatch" onclick="loadContent(this.title)">Allot Batch</button>
 	<button title="coordinators" onclick="loadContent(this.title)">Co-Ordinators</button>
 	<button title="batchDetails" onclick="loadContent(this.title)">Batch Details</button>
