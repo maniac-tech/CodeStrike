@@ -26,102 +26,168 @@ if(!isset($_SESSION['userId'])){
 		// xhttp.send("Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray);
 	}
 </script>
+
 <div id="content_table">
 	<div id="sub-menu">
-		<button id="Completed-button">Operations</button>
-		<button id="Pending-button"><a href="pendingStudents">Allot Batch</a></button>
-		<button id="Register-button"><a href="#registeredStudents">Batch Info</a></button>
+		<button id="Operations-button">Operations</button>
+		<button id="AllotBatch-button"><a href="pendingStudents">Allot Batch</a></button>
+		<button id="BatchInfo-button"><a href="#registeredStudents">Batch Info</a></button>
 	</div>
 	
 	<!--  Search Bar-->
 	<input type="text" id="myInput" onkeyup="myFunctionS()" style="" placeholder="Search for names..">
 	<!--  -->
 
-	<p id="studentsList"><b>List of Students Pending:</b></p>
-	<form name="willAllotTaskForm" id="willAllotTaskForm">
-		<table id="myTable">
+	<!-- <p id="studentsList"><b>List of Students Pending:</b></p> -->
+	<div id="tab-data">
+		<table id="myTableAllotBatch">
+			<?php
+				//----- PostGRE SQL Commands -----
+				// Printing 2018 Data:
+				$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
+				if (pg_result_status($result)==2) {
+					echo "<tr>
+					<td></td>
+					<td>Name</td>
+					<td>Year</td>
+					<td>Branch</td>
+					</tr>";
+					while($row = pg_fetch_assoc($result)){
+						echo "<tr>";
+						echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
+						echo "<td>".$row["Name"]."</td>";
+						echo "<td>".$row["Year"]."</td>";
+						echo "<td>".$row["Branch"]."</td>";
+						// echo "<td>".$row["Email"]."</td>";
+						// echo "<td>".$row["Mobile"]."</td>";
+						// echo "<td>".$row["Status"]."</td>";
+						// echo "<td>".$row["Batch"]."</td>";
+						echo "</tr>";
+					}
+				}
+				else{
+					echo "Query Failed.";
+					echo pg_result_status($result);
+				}
+				// Printing 2017 Data:
+				$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
+				if (pg_result_status($result)==2) {
+					echo "<tr>
+					<td></td>
+					<td>Name</td>
+					<td>Year</td>
+					<td>Branch</td>
+					</tr>";
+					while($row = pg_fetch_assoc($result)){
+						echo "<tr>";
+						echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
+						echo "<td>".$row["Name"]."</td>";
+						echo "<td>".$row["Year"]."</td>";
+						echo "<td>".$row["Branch"]."</td>";
+						// echo "<td>".$row["Email"]."</td>";
+						// echo "<td>".$row["Mobile"]."</td>";
+						// echo "<td>".$row["Status"]."</td>";
+						// echo "<td>".$row["Batch"]."</td>";
+						echo "</tr>";
+					}
+				}
+				else{
+					echo "Query Failed.";
+					echo pg_result_status($result);
+				}
+				// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
+				//----- SQL Commands -----
+				/*
+				$sql = "SELECT * FROM $tableName WHERE Status='PENDING' AND Batch=0";
+				$result = mysqli_query($conn,$sql);
+				if(mysqli_num_rows($result)>0){
+					echo "<tr>
+							<td></td>
+							<td>Name</td>
+							<td>Year</td>
+							<td>Branch</td>
+						</tr>";
+				while ($row=mysqli_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					echo "</tr>";
+				}
+				}else{
+					echo "ALL REGISTRATIONS HAVE BEEN ALLOTED A BATCH.";
+				}
+				*/
+				// -X-X-X- End of SQL Commands -X-X-X-
+			?>
+		</table>
+		<table id="myTableOperations">
+			<tr><td>DEFINE USE OF THIS BUTTON</td></tr>
+		</table>
+		<table id="myTableBatchInfo">
+			<tr><td>BATCH INFO TABLE</td></tr>
 			<?php
 			//----- PostGRE SQL Commands -----
 			// Printing 2018 Data:
-			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
-			if (pg_result_status($result)==2) {
-				echo "<tr>
-				<td></td>
-				<td>Name</td>
-				<td>Year</td>
-				<td>Branch</td>
-				</tr>";
-				while($row = pg_fetch_assoc($result)){
+			$psql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Batch\"!=0 ORDER BY \"Batch\" DESC";
+			$result = pg_query($dbconn,$psql);
+			if(pg_num_rows($result)>0){
+				while ($row=pg_fetch_assoc($result)){
 					echo "<tr>";
-					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
 					echo "<td>".$row["Name"]."</td>";
 					echo "<td>".$row["Year"]."</td>";
 					echo "<td>".$row["Branch"]."</td>";
-					// echo "<td>".$row["Email"]."</td>";
-					// echo "<td>".$row["Mobile"]."</td>";
-					// echo "<td>".$row["Status"]."</td>";
-					// echo "<td>".$row["Batch"]."</td>";
+					echo "<td>".$row["Batch"]."</td>";
 					echo "</tr>";
 				}
+			}else{
+				echo "NO DATA";
 			}
-			else{
-				echo "Query Failed.";
-				echo pg_result_status($result);
-			}
+
 			// Printing 2017 Data:
-			$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
-			if (pg_result_status($result)==2) {
-				echo "<tr>
-				<td></td>
-				<td>Name</td>
-				<td>Year</td>
-				<td>Branch</td>
-				</tr>";
-				while($row = pg_fetch_assoc($result)){
+			$psql = "SELECT * FROM $tablename_IMac WHERE \"Batch\"!=0 ORDER BY \"Batch\" DESC";
+			$result = pg_query($dbconn,$psql);
+			if(pg_num_rows($result)>0){
+				while ($row=pg_fetch_assoc($result)){
 					echo "<tr>";
-					echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
 					echo "<td>".$row["Name"]."</td>";
 					echo "<td>".$row["Year"]."</td>";
 					echo "<td>".$row["Branch"]."</td>";
-					// echo "<td>".$row["Email"]."</td>";
-					// echo "<td>".$row["Mobile"]."</td>";
-					// echo "<td>".$row["Status"]."</td>";
-					// echo "<td>".$row["Batch"]."</td>";
+					echo "<td>".$row["Batch"]."</td>";
 					echo "</tr>";
 				}
-			}
-			else{
-				echo "Query Failed.";
-				echo pg_result_status($result);
+			}else{
+				echo "NO DATA";
 			}
 			// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 			//----- SQL Commands -----
 			/*
-			$sql = "SELECT * FROM $tableName WHERE Status='PENDING' AND Batch=0";
+			$sql = "SELECT * FROM $tableName WHERE Batch!=0";
 			$result = mysqli_query($conn,$sql);
 			if(mysqli_num_rows($result)>0){
-				echo "<tr>
-						<td></td>
-						<td>Name</td>
-						<td>Year</td>
-						<td>Branch</td>
-					</tr>";
-			while ($row=mysqli_fetch_assoc($result)){
-				echo "<tr>";
-				echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
-				echo "<td>".$row["Name"]."</td>";
-				echo "<td>".$row["Year"]."</td>";
-				echo "<td>".$row["Branch"]."</td>";
-				echo "</tr>";
+				while ($row=mysqli_fetch_assoc($result)){
+					echo "<tr>";
+					echo "<td>".$row["Name"]."</td>";
+					echo "<td>".$row["Year"]."</td>";
+					echo "<td>".$row["Branch"]."</td>";
+					echo "<td>".$row["Batch"]."</td>";
+					echo "</tr>";
+				}
+			}else{
+				echo "NO DATA";
 			}
-		}else{
-			echo "ALL REGISTRATIONS HAVE BEEN ALLOTED A BATCH.";
-		}
-		*/
-		// -X-X-X- End of SQL Commands -X-X-X-
+			*/
+			// -X-X-X- End of SQL Commands -X-X-X-
 		?>
+		</table>
+		</div>	
+	<form name="willAllotTaskForm" id="willAllotTaskForm">
+		<table id="myTable">
+
+			
 	</table>
 </form>
 </div>
@@ -137,3 +203,5 @@ if(!isset($_SESSION['userId'])){
 		<button onclick="loadAjax()" >Submit</button>
 	</p>
 </div>
+
+<script src="js/indexBatches.js"></script>
