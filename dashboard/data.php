@@ -11,7 +11,7 @@ if(!isset($_SESSION['userId'])){
 	<button title="completedStudents" onclick="loadContent(this.title)">Completed </button> -->
 	<button title="allotBatch" onclick="loadContent(this.title)">Batch Details</button>
 	<button title="coordinators" onclick="loadContent(this.title)">Co-Ordinators</button>
-	<button title="batchDetails" onclick="loadContent(this.title)">Batch Details</button>
+	<button title="#" onclick="loadContent(this.title)">-</button>
 	<button title="otherOptions" onclick="loadContent(this.title)">Other Options</button>
 </div>
 <div id="content">
