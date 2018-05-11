@@ -6,12 +6,12 @@ if(!isset($_SESSION['userId'])){
 }
 ?>
 <div id="interface">
-	<button title="allStudents" onclick="loadContent(this.title)">Student Detail</button>
+	<button title="students" onclick="loadContent(this.title)">Student Detail</button>
 	<!-- <button title="pendingStudents" onclick="loadContent(this.title)">Pending </button>
 	<button title="completedStudents" onclick="loadContent(this.title)">Completed </button> -->
 	<button title="allotBatch" onclick="loadContent(this.title)">Batch Details</button>
+	<button title="otherOptions" onclick="loadContent(this.title)">Status Details</button>
 	<button title="coordinators" onclick="loadContent(this.title)">Co-Ordinators</button>
-	<button title="#" onclick="loadContent(this.title)">-</button>
 	<button title="otherOptions" onclick="loadContent(this.title)">Other Options</button>
 </div>
 <div id="content">
