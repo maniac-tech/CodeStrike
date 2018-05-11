@@ -19,7 +19,7 @@ function loadRegisterTable(){
 	document.getElementById("Completed-button").style.backgroundColor = "white";
 
 
-	tableRegister.style.display="block";
+	tableRegister.style.display="table";
 	tablePending.style.display="none";
 	tableCompleted.style.display="none";
 }
@@ -32,7 +32,7 @@ function loadPendingTable(){
 	document.getElementById("Completed-button").style.backgroundColor = "white";
 
 	tableRegister.style.display="none";
-	tablePending.style.display="block";
+	tablePending.style.display="table";
 	tableCompleted.style.display="none";
 }
 
@@ -45,7 +45,7 @@ function loadCompletedTable(){
 
 	tableRegister.style.display="none";
 	tablePending.style.display="none";
-	tableCompleted.style.display="block";
+	tableCompleted.style.display="table";
 }
 
 init();
