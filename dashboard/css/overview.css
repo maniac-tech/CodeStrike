@@ -1,29 +1,60 @@
-#overview_chart{
+#top_charts{
 	width: 98%;
-	height: 47%;
+	/*height: 47%;*/
+	height: 20%;
 	margin-left: 1%;
 	margin-right: 1%;
 	margin-top:1%;
 	margin-bottom: 0.5%;
-	background: white;
 }
-#piechart{
+#total_reg, #complete_reg, #pending_reg{
+	width:31%;
+	margin-left:1%;
+	margin-right: 1%;
+	padding: 0;
+	background: #2196f3;
+	display: inline;
+	float: left;
+}
+#top_charts_val,#top_charts_name{
+	color: white;
+	align-content: center;
+	margin-bottom: 0;
+	margin-top:0;
+}
+#top_charts_val{
+	font-size: 3em;
+	margin-top:5%;
+}
+#top_charts_name{
+	font-size: 1.5em;
+	margin-bottom:5%;
+}
+#bottom_charts{
+	width: 98%;
+	height:100%;
+	margin-left: 1%;
+	margin-right: 1%;
+	margin-top:1%;
+	margin-bottom: 0.5%;
+}
+#branch-wise{
 	width: 47%;
 	height: 50%;
 	margin-top: 1%;
 	margin-left: 1%;
 	margin-bottom: 1%;
 	margin-right: 0.5%;
-	background: white;
+	background: #2196f3;
 	float: left;
 }
-#chart_div{
+#batches-per-week{
 	width: 47%;
 	height: 50%;
 	margin-top: 1%;
 	margin-left: 0.5%;
 	margin-bottom: 1%;
 	margin-right: 1%;
-	background: white;
+	background: #2196f3;
 	float: right;	
 }

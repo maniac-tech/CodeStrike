@@ -1,9 +1,31 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div id="overview_chart">
-	Main chart goes here
+<div id="top_charts">
+	<div id="total_reg">
+		<center>		
+			<p id="top_charts_val">3500</p>
+			<br>
+			<p id="top_charts_name">Total Registered</p>
+		</center>
+	</div>
+	<div id="complete_reg">
+		<center>
+		<p id="top_charts_val">2400</p>
+		<br>
+		<p id="top_charts_name">Completed Students</p>
+	</center>
+	</div>
+	<div id="pending_reg">
+		<center>
+		<p id="top_charts_val">1100</p>
+		<br>
+		<p id="top_charts_name">Pending Students</p>
+	</center>
+	</div>
 </div>
-<div id="piechart" ></div>
-<div id="chart_div"></div>
+<div id="bottom_charts">	
+	<div id="branch-wise" ></div>
+	<div id="batches-per-week"></div>
+</div>
 <?php
 
 	//----- PostGRE SQL Commands -----	
