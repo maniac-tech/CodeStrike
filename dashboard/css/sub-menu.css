@@ -20,3 +20,6 @@
 #sub-menu button a{
 	font-size: 1em !important;
 }
+#download-data-button{
+	float: left !important;
+}

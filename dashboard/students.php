@@ -10,6 +10,7 @@ if(!isset($_SESSION['userId'])){
 		<button id="Completed-button"><a href="pendingStudents">Completed</a></button>
 		<button id="Pending-button"><a href="pendingStudents">Pending</a></button>
 		<button id="Register-button"><a href="#registeredStudents">Registered</a></button>
+		<button id="download-data-button">Download Data</button>
 	</div>
 	<br>
 
