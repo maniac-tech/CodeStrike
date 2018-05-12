@@ -21,5 +21,17 @@
 	font-size: 1em !important;
 }
 #download-data-button{
+	width: 20% !important;
 	float: left !important;
+	display: inline;
+	vertical-align: middle;
+	color: black;
+	background-color: inherit !important;
+	border-style:none !important;
+	border-color:none; 
+}
+#download-icon{
+	float: left;
+	width: 20% !important;
+	margin-right: 0;
 }
