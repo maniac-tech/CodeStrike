@@ -38,6 +38,15 @@
 	$countSE = pg_num_rows($result);	
 
 	$total_reg = $countIT+$countCMPN+$countELEX+$countELEC+$countEXTC;
+
+
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='PENDING' ";
+	$result = pg_query($dbconn, $sql);
+	$countPending = pg_num_rows($result);
+
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='COMPLETED' ";
+	$result = pg_query($dbconn, $sql);
+	$countCompleted = pg_num_rows($result);
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 ?>
@@ -51,14 +60,14 @@
 	</div>
 	<div id="complete_reg">
 		<center>
-		<p id="top_charts_val">2400</p>
+		<p id="top_charts_val"><?php echo $countCompleted; ?></p>
 		<br>
 		<p id="top_charts_name">Completed Students</p>
 	</center>
 	</div>
 	<div id="pending_reg">
 		<center>
-		<p id="top_charts_val">1100</p>
+		<p id="top_charts_val"><?php echo $countPending; ?></p>
 		<br>
 		<p id="top_charts_name">Pending Students</p>
 	</center>
