@@ -115,3 +115,7 @@
 	font-size: 1em !important;	
 	float: left;
 }
+#pendingStudentsList{
+	width: 46%;
+	float: left;
+}
