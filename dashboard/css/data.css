@@ -19,7 +19,7 @@
 	width: 100%;
 }
 #interface button{
-	width: 12%;
+	width: 18%;
 	height: 7%;
 	margin-top: 1%;
 	margin-left: 1%;
@@ -33,11 +33,13 @@
 	box-shadow: 1px 1px 1px #888888;
 }
 #content{
+	width: 100%;
 	margin-left: 1%;
 	display: inline;
 }
 #content_table{
-	background: white;
+	width: 94%;
+	/*background: white;*/
 	margin-left: 1%;
 	margin-right: 0.5%;
 	border-radius: 4px;
@@ -53,6 +55,10 @@
 	font-family: 'Helvetica Neue Bold';
 	font-size: 1.5em;
 }
+#mytableRegister,#mytablePending,#mytableCompleted{
+	background-color: white;
+	width: 100%;
+}
 #studentsList{
 	margin-bottom: 1%;
 	margin-top: 0;
@@ -64,12 +70,20 @@
 	border-style: none;
 }
 #content_table table tr:first-child{
-	background: #64b5f6;
+	/*background: #64b5f6;*/
+	background: #c4c7d6;
 	text-align: left;
+	font-weight: bold;
+	font-size: 1.5em;
 }
 #intro{
 	font-size: 1em !important;
 	font-family: 'Helvetica Neue Thin'!important;
+}
+#myTableAllotBatch_details,#myTableAllotBatch_operations{
+	background-color: white;
+	width: 50%;
+	float: left;
 }
 #operations{
 	width: 50%;
@@ -89,4 +103,19 @@
 	height: 5%;
 	border-style: none;
 	box-shadow: 1px 1px 1px #888888;
+}
+#allotBatch_header{
+	font-size: 1.5em !important;
+}
+#allotBatch_content{
+	font-size: 1em !important;	
+}
+#allotBatch_form p, #allotBatch_form input{
+	/*width: 50%;*/
+	font-size: 1em !important;	
+	float: left;
+}
+#pendingStudentsList{
+	width: 46%;
+	float: left;
 }

@@ -16,6 +16,7 @@ body{
 	height: 100%;
 	width: 100%;
 	font-family: 'Helvetica Neue Medium';
+	background-color: #dddcdc;
 }
 #navbar{
 	background: white;

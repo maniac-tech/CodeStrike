@@ -1,0 +1,37 @@
+#sub-menu{
+	width: 100%;
+	margin-bottom:2%;
+}
+#sub-menu button{
+	width: 15%;
+	padding :0;
+	float: right;
+	background-color: grey;
+	border-color:black;
+	border-style:solid;
+	border-width:1px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+}
+#sub-menu button:not(last) {
+	/*border-right: solid;*/
+	/*border-collapse: yellow;*/
+}
+#sub-menu button a{
+	font-size: 1em !important;
+}
+#download-data-button{
+	width: 20% !important;
+	float: left !important;
+	display: inline;
+	vertical-align: middle;
+	color: black;
+	background-color: inherit !important;
+	border-style:none !important;
+	border-color:none; 
+}
+#download-icon{
+	float: left;
+	width: 20% !important;
+	margin-right: 0;
+}

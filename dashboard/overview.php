@@ -1,9 +1,4 @@
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-<div id="overview_chart">
-	Main chart goes here
-</div>
-<div id="piechart" ></div>
-<div id="chart_div"></div>
 <?php
 
 	//----- PostGRE SQL Commands -----	
@@ -41,56 +36,44 @@
 	$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='SE' ";
 	$result = pg_query($dbconn,$sql);
 	$countSE = pg_num_rows($result);	
+
+	$total_reg = $countIT+$countCMPN+$countELEX+$countELEC+$countEXTC;
+
+
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='PENDING' ";
+	$result = pg_query($dbconn, $sql);
+	$countPending = pg_num_rows($result);
+
+	$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='COMPLETED' ";
+	$result = pg_query($dbconn, $sql);
+	$countCompleted = pg_num_rows($result);
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 ?>
-<script>
-	
-	google.charts.setOnLoadCallback(drawChart);
-	google.charts.setOnLoadCallback(drawBasic);
-
-	function drawChart() {
-		var data = google.visualization.arrayToDataTable([
-			['Registrations', 'Per week'],
-			['CMPN',     <?php echo $countCMPN; ?>],
-			['INFT',      <?php echo $countIT; ?>],
-			['ELEX',  <?php echo $countELEX; ?>],
-			['ELEC', <?php echo $countELEC; ?>],
-			['EXTC',    <?php echo $countEXTC; ?>]
-			]);
-
-		var options = {
-			title: 'Department wise Registrations',
-			is3D: true,
-		};
-
-		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
-
-		chart.draw(data, options);
-	}
-
-	function drawBasic() {
-		var data = google.visualization.arrayToDataTable([
-			['Year', 'Registrations',],
-			['SE', <?php echo $countSE; ?>],
-			['TE', <?php echo $countTE; ?>],
-			['BE', <?php echo $countBE; ?>],
-			]);
-
-		var options = {
-			title: 'Year wise Registrations',
-			chartArea: {width: '50%'},
-			hAxis: {
-				title: 'Total Registrations',
-				minValue: 0
-			},
-			vAxis: {
-				title: 'Year'
-			}
-		};
-
-		var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
-
-		chart.draw(data, options);
-	}
-</script>
+<div id="top_charts">
+	<div id="total_reg">
+		<center>		
+			<p id="top_charts_val"><?php echo $total_reg; ?></p>
+			<br>
+			<p id="top_charts_name">Total Registered</p>
+		</center>
+	</div>
+	<div id="complete_reg">
+		<center>
+		<p id="top_charts_val"><?php echo $countCompleted; ?></p>
+		<br>
+		<p id="top_charts_name">Completed Students</p>
+	</center>
+	</div>
+	<div id="pending_reg">
+		<center>
+		<p id="top_charts_val"><?php echo $countPending; ?></p>
+		<br>
+		<p id="top_charts_name">Pending Students</p>
+	</center>
+	</div>
+</div>
+<div id="bottom_charts">	
+	<div id="branch-wise" ></div>
+	<div id="batches-per-week"></div>
+</div>
