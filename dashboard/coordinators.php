@@ -15,7 +15,7 @@ if(!isset($_SESSION['userId'])){
 		if (pg_result_status($result)==2) {
 			while ($row = pg_fetch_assoc($result)){
 			echo "<div class=\"card\">";
-			echo "<img src=\"profile.jpg\" alt=\"John\" style=\"width:100%\">";
+			echo "<img src=\"images\coordinators\\".$row["Image Name"].\".jpg\" alt=\"John\" style=\"width:100%\">";
 			echo "<h1>".$row["Name"]."</h1>";
 			echo "<p class=\"title\">".$row["Year"]." - ".$row["Branch"]."</p>
 			<p>".$row["Email ID"]."</p>
