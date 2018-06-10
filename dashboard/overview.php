@@ -80,6 +80,10 @@ $sql = "SELECT * FROM $tablename_IMac WHERE \"Status\"='COMPLETED' ";
 $result = pg_query($dbconn, $sql);
 $countCompleted_2017 = pg_num_rows($result);
 
+$sql = "SELECT * FROM $tablename_IMac WHERE \"Status\"='NOT ATTENDED' ";
+$result = pg_query($dbconn, $sql);
+$countNA_2017 = pg_num_rows($result);
+
 // 2018 Data:
 $sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='PENDING' ";
 $result = pg_query($dbconn, $sql);
@@ -88,6 +92,10 @@ $countPending_2018 = pg_num_rows($result);
 $sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='COMPLETED' ";
 $result = pg_query($dbconn, $sql);
 $countCompleted_2018 = pg_num_rows($result);
+
+$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='NOT ATTENDED' ";
+$result = pg_query($dbconn, $sql);
+$countNA_2018 = pg_num_rows($result);
 	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 ?>
@@ -134,14 +142,21 @@ $countCompleted_2018 = pg_num_rows($result);
 		<center>
 			<p id="top_charts_val"><?php echo ($countCompleted_2018+$countCompleted_2017); ?></p>
 			<br>
-			<p id="top_charts_name">Completed Students</p>
+			<p id="top_charts_name">Completed</p>
 		</center>
 	</div>
 	<div id="pending_reg">
 		<center>
 			<p id="top_charts_val"><?php echo ($countPending_2018+$countPending_2017); ?></p>
 			<br>
-			<p id="top_charts_name">Pending Students</p>
+			<p id="top_charts_name">Pending</p>
+		</center>
+	</div>
+	<div id="notAttended_reg">
+		<center>
+			<p id="top_charts_val"><?php echo ($countNA_2018+$countNA_2017); ?></p>
+			<br>
+			<p id="top_charts_name">Not Attended</p>
 		</center>
 	</div>
 </div>
