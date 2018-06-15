@@ -82,8 +82,15 @@
 }
 #myTableAllotBatch_details,#myTableAllotBatch_operations{
 	background-color: white;
-	width: 50%;
+	width: 48%;
 	float: left;
+	margin:1%;
+}
+#enterBatchNo p,#enterBatchNo input, #enterBatchNo button{
+	display: inline;
+}
+#enterBatchNo button{
+	width: 50%;
 }
 #operations{
 	width: 50%;
@@ -116,6 +123,7 @@
 	float: left;
 }
 #pendingStudentsList{
+	background-color:white;
 	width: 46%;
 	float: left;
 }
