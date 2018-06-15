@@ -65,78 +65,91 @@ Button Roles:
 	function alloTaskScript($toInsert){
 		$checkboxArray = array();
 		$checkboxArray=$_POST['checkbox'];
+		$count_checkboxArray = $_POST['checkboxLength'];
 
 		//----- PostGRE SQL Server Commands -----
+		
+		// Database Credentials:
 		$servername=getenv('PostGRE_DB_Host');
 		$databaseName=getenv('PostGRE_DB');
 		$username=getenv('PostGRE_DB_User');
 		$password=getenv('PostGRE_DB_Password');
-		$tableNameImac=getenv('PostGRE_DB_IMac');
-
+		// iMac:
+		$tablename_iMac=getenv('PostGRE_DB_imac');
+		$tablename_iMacBatches=getenv('PostGRE_DB_imacBatches');
+		
 		//create connection
 		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
+		
 		if (!$dbconn){
 			echo ('Could not connect: ' . pg_last_error().'<br>');
 			echo pg_result_error($dbconn);
 		}else{
 			foreach($checkboxArray as $array) {
-				// echo "$array";
-				$psql = "UPDATE $tableNameImac SET \"Batch\"='$toInsert' WHERE \"Mobile\" IN ($array)";
+				
+				/*
+				Updating the Column of Batch No in the DB with the value provided in the Query.
+				*/
+				$psql = "UPDATE $tablename_iMac SET \"Batch\"='$toInsert' WHERE \"Mobile\" IN ($array)";
 				$result=pg_query($dbconn,$psql);
+
 				if ($result) {
 					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
 				}else{
-					echo "QUERY FAILED for $array ".pg_result_error($result)."...";
-					echo pg_result_error($dbconn);
+					echo "QUERY FAILED for $array ".pg_result_error($result).". for Batch No:".$toInsert;
 				}
-			}		
+			}
+
+			/*
+			Updating the Batch DB on the following conditions:
+			If the Batch no is not already present in the DB:
+			Update the count of the batch by adding the size of the array provided in the query.
+			else:
+			Insert the Batch No as a new entry, with the size as the size of the array.
+			*/
+			$query_searchBatch = "SELECT \"Total Students\" FROM $tablename_iMacBatches WHERE \"Batch No\" = '$toInsert'";
+			$result_searchBatch = pg_query($dbconn,$query_searchBatch);
+			if ($result_searchBatch){
+				$row_totalStudents = pg_fetch_assoc($result_searchBatch);
+				if ($row_totalStudents){
+					$update_totalStudents = $row_totalStudents["Total Students"] + $count_checkboxArray;
+					$query_updateTotalStudents = "UPDATE $tablename_iMacBatches SET \"Total Students\" = '$update_totalStudents'
+					WHERE \"Batch No\" = '$toInsert'";
+					$result_updateTotalStudents=pg_query($dbconn,$query_updateTotalStudents);
+					if ($result_updateTotalStudents){
+						echo "Total Students updated";
+					}else{
+						echo "Total Students update failed";
+					}
+				}else{
+					$query_insertBatch = "INSERT INTO $tablename_iMacBatches (\"Batch No\", \"Total Students\") VALUES ('$toInsert','$count_checkboxArray')";
+					$result_insertBatch=pg_query($dbconn,$query_insertBatch);
+					if ($result_insertBatch){
+						echo "New Batch inserted";
+					}else{
+						echo "New Batch insert failed";
+					}
+				}
+			}else{
+				echo "Batch Database didn't Update";
+			}
 		}
 
 		// -X-X-X- End of PostGRE SQL Server Commands -X-X-X-
-
-		//----- SQL Server Commands -----
-		/*
-		$servername=getenv('DATABASE_SERVER_NAME_IMAC');
-		$databaseName=getenv('DATABASE_NAME_IMAC');
-		$tablename_IMac=getenv('DATABASE_TABLE_NAME_IMAC');
-		$username=getenv('DATABASE_USERNAME_IMAC');
-		$password=getenv('DATABASE_PASSWORD_IMAC');
-		
-		//create connection
-		$conn=mysqli_connect($servername,$username,$password,$databaseName);
-		if (!$conn){
-			die('Connection failed:'.mysqli_connect_error());
-		}else{
-			foreach($checkboxArray as $array) {
-				// echo "$array";
-				$sql = "UPDATE $tablename_IMac SET Batch='$toInsert' WHERE Mobile IN ($array)";
-				$result=mysqli_query($conn,$sql);
-				if ($result) {
-					echo "Batch Allocated:".$toInsert.". Refresh to see the Updated List.";
-				}else{
-					echo "QUERY FAILED for $array";
-					echo mysqli_error($conn);
-				}
-			}		
-
-			// foreach ($checkboxArray as $key) {
-			// 	echo $key;
-			// }
-
-		}
-		*/
-		// -X-X-X- End of SQL Server Commands -X-X-X-
 	}
 
 	function otherOptions($status){
 		$checkboxArray = array();
 		$checkboxArray=$_POST['checkbox'];
+		
 		$servername=getenv('PostGRE_DB_Host');
 		$databaseName=getenv('PostGRE_DB');
 		$username=getenv('PostGRE_DB_User');
 		$password=getenv('PostGRE_DB_Password');
-		$tablename_IMac=getenv('PostGRE_DB_IMac');
-
+		// iMac:
+		$tablename_iMac=getenv('PostGRE_DB_imac');
+		$tablename_iMacBatches=getenv('PostGRE_DB_imacBatches');
+		
 		//create connection
 		$dbconn = pg_connect("host=$servername dbname=$databaseName user=$username password=$password");
 		if (!$dbconn){
@@ -144,29 +157,29 @@ Button Roles:
 		}else{
 			foreach($_POST['checkbox'] as $check) {
 				if ($status=="statusComplete"){
-					$query= "UPDATE $tablename_IMac SET \"Status\"='COMPLETED' WHERE \"Mobile\" IN ($check)";
+					$query= "UPDATE $tablename_iMac SET \"Status\"='COMPLETED' WHERE \"Mobile\" IN ($check)";
 					$result=pg_query($dbconn,$query);
 				}else{
 					if ($status=="statusPending"){
-						$query = "UPDATE $tablename_IMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
+						$query = "UPDATE $tablename_iMac SET \"Status\"='PENDING' WHERE \"Mobile\" IN ($check)";
 						$result=pg_query($dbconn,$query);
 					}else{
 						if ($status=="statusNA"){
-							$query = "UPDATE $tablename_IMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
+							$query = "UPDATE $tablename_iMac SET \"Status\"='NOT ATTENDED' WHERE \"Mobile\" IN ($check)";
 							$result=pg_query($dbconn,$query);
 						}else{
 							if($status=="statusIncomplete"){
-								$query = "UPDATE $tablename_IMac SET \"Status\"='INCOMPLETE' WHERE \"Mobile\" IN ($check)";
+								$query = "UPDATE $tablename_iMac SET \"Status\"='INCOMPLETE' WHERE \"Mobile\" IN ($check)";
 								$result=pg_query($dbconn,$query);
 							}
 						}					
 					}
-					if ($result) {
-						echo "QUERY COMPLETE";
-					}else{
-						echo "<p>QUERY FAILED</p>";
+				}
+				if ($result) {
+					echo "QUERY COMPLETE";
+				}else{
+					echo "<p>QUERY FAILED</p>";
 					// echo mysqli_error($conn);
-					}
 				}
 			}
 		}
