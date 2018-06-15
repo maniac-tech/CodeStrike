@@ -1,102 +1,56 @@
 <?php
-
+	require 'login_connect.php';
 	//----- PostGRE SQL Commands -----	
 $sql="";
 $result="";
 // 2017 Data
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Branch\"='CMPN' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Branch\"='CMPN' ";
 $result = pg_query($dbconn, $sql);
-$countCMPN_2017 = pg_num_rows($result);
+$countCMPN = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Branch\"='IT' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Branch\"='IT' ";
 $result = pg_query($dbconn, $sql);
-$countIT_2017 = pg_num_rows($result);
+$countIT = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Branch\"='EXTC' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Branch\"='EXTC' ";
 $result = pg_query($dbconn, $sql);
-$countEXTC_2017 = pg_num_rows($result);
+$countEXTC = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Branch\"='ELEC' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Branch\"='ELEC' ";
 $result = pg_query($dbconn, $sql);
-$countELEC_2017 = pg_num_rows($result);
+$countELEC = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Branch\"='ELEX' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Branch\"='ELEX' ";
 $result = pg_query($dbconn, $sql);
-$countELEX_2017 = pg_num_rows($result);
+$countELEX = pg_num_rows($result);
 
-$sql = "SELECT  * FROM $tablename_IMac WHERE \"Year\"='BE' ";
+$sql = "SELECT  * FROM $tablename_iMac WHERE \"Year\"='BE' ";
 $result = pg_query($dbconn,$sql);
-$countBE_2017 = pg_num_rows($result);
+$countBE = pg_num_rows($result);
 
-$sql = "SELECT  * FROM $tablename_IMac WHERE \"Year\"='TE' ";
+$sql = "SELECT  * FROM $tablename_iMac WHERE \"Year\"='TE' ";
 $result = pg_query($dbconn,$sql);
-$countTE_2017 = pg_num_rows($result);
+$countTE = pg_num_rows($result);
 
-$sql = "SELECT  * FROM $tablename_IMac WHERE \"Year\"='SE' ";
+$sql = "SELECT  * FROM $tablename_iMac WHERE \"Year\"='SE' ";
 $result = pg_query($dbconn,$sql);
-$countSE_2017 = pg_num_rows($result);	
+$countSE = pg_num_rows($result);	
 
-// 2018 Data
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='CMPN' ";
+$total_reg = $countIT+$countCMPN+$countELEX+$countELEC+$countEXTC;
+
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Status\"='PENDING' ";
 $result = pg_query($dbconn, $sql);
-$countCMPN_2018 = pg_num_rows($result);
+$countPending = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='IT' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Status\"='COMPLETED' ";
 $result = pg_query($dbconn, $sql);
-$countIT_2018 = pg_num_rows($result);
+$countCompleted = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='EXTC' ";
+$sql = "SELECT * FROM $tablename_iMac WHERE \"Status\"='NOT ATTENDED' ";
 $result = pg_query($dbconn, $sql);
-$countEXTC_2018 = pg_num_rows($result);
+$countNA = pg_num_rows($result);
 
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='ELEC' ";
-$result = pg_query($dbconn, $sql);
-$countELEC_2018 = pg_num_rows($result);
-
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Branch\"='ELEX' ";
-$result = pg_query($dbconn, $sql);
-$countELEX_2018 = pg_num_rows($result);
-
-$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='BE' ";
-$result = pg_query($dbconn,$sql);
-$countBE_2018 = pg_num_rows($result);
-
-$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='TE' ";
-$result = pg_query($dbconn,$sql);
-$countTE_2018 = pg_num_rows($result);
-
-$sql = "SELECT  * FROM $tablename_IMac_2018 WHERE \"Year\"='SE' ";
-$result = pg_query($dbconn,$sql);
-$countSE_2018 = pg_num_rows($result);	
-
-$total_reg = $countIT_2018+$countCMPN_2018+$countELEX_2018+$countELEC_2018+$countEXTC_2018+$countIT_2017+$countCMPN_2017+$countELEX_2017+$countELEC_2017+$countEXTC_2017;
-
-// 2017 Data:
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Status\"='PENDING' ";
-$result = pg_query($dbconn, $sql);
-$countPending_2017 = pg_num_rows($result);
-
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Status\"='COMPLETED' ";
-$result = pg_query($dbconn, $sql);
-$countCompleted_2017 = pg_num_rows($result);
-
-$sql = "SELECT * FROM $tablename_IMac WHERE \"Status\"='NOT ATTENDED' ";
-$result = pg_query($dbconn, $sql);
-$countNA_2017 = pg_num_rows($result);
-
-// 2018 Data:
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='PENDING' ";
-$result = pg_query($dbconn, $sql);
-$countPending_2018 = pg_num_rows($result);
-
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='COMPLETED' ";
-$result = pg_query($dbconn, $sql);
-$countCompleted_2018 = pg_num_rows($result);
-
-$sql = "SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"='NOT ATTENDED' ";
-$result = pg_query($dbconn, $sql);
-$countNA_2018 = pg_num_rows($result);
-	// -X-X-X- End of PostGRE SQL Commands -X-X-X-
+// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 
 ?>
 <script>
@@ -116,11 +70,11 @@ $countNA_2018 = pg_num_rows($result);
 		indexLabel: "{label} - #percent%",
 		toolTipContent: "<b>{label}:</b> {y} (#percent%)",
 		dataPoints: [
-		{ y: <?php echo ($countCMPN_2018+$countCMPN_2017) ?>, label: "CMPN" },
-		{ y: <?php echo ($countIT_2018+$countIT_2017) ?>, label: "INFT" },
-		{ y: <?php echo ($countELEX_2018+$countELEX_2017) ?>, label: "ELEX" },
-		{ y: <?php echo ($countELEC_2018+$countELEC_2017) ?>, label: "ELEC"},
-		{ y: <?php echo ($countEXTC_2018+$countEXTC_2017) ?>, label: "EXTC"},
+		{ y: <?php echo ($countCMPN) ?>, label: "CMPN" },
+		{ y: <?php echo ($countIT) ?>, label: "INFT" },
+		{ y: <?php echo ($countELEX) ?>, label: "ELEX" },
+		{ y: <?php echo ($countELEC) ?>, label: "ELEC"},
+		{ y: <?php echo ($countEXTC) ?>, label: "EXTC"},
 		]
 	}]
 });
@@ -140,21 +94,21 @@ $countNA_2018 = pg_num_rows($result);
 	</div>
 	<div id="complete_reg">
 		<center>
-			<p id="top_charts_val"><?php echo ($countCompleted_2018+$countCompleted_2017); ?></p>
+			<p id="top_charts_val"><?php echo ($countCompleted); ?></p>
 			<br>
 			<p id="top_charts_name">Completed</p>
 		</center>
 	</div>
 	<div id="pending_reg">
 		<center>
-			<p id="top_charts_val"><?php echo ($countPending_2018+$countPending_2017); ?></p>
+			<p id="top_charts_val"><?php echo ($countPending); ?></p>
 			<br>
 			<p id="top_charts_name">Pending</p>
 		</center>
 	</div>
 	<div id="notAttended_reg">
 		<center>
-			<p id="top_charts_val"><?php echo ($countNA_2018+$countNA_2017); ?></p>
+			<p id="top_charts_val"><?php echo ($countNA); ?></p>
 			<br>
 			<p id="top_charts_name">Not Attended</p>
 		</center>
