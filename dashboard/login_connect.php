@@ -10,6 +10,7 @@ $tableName=getenv('PostGRE_DB_Users');
 
 // iMac:
 $tablename_iMac=getenv('PostGRE_DB_imac');
+$tablename_iMacBatches=getenv('PostGRE_DB_imacBatches');
 $tablename_IMac_Coord=getenv('PostGRE_DB_IMac_Co');
 $tableName_IMac_interviews = getenv('PostGRE_DB_IMac_intr');
 
