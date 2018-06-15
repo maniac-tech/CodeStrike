@@ -51,6 +51,7 @@ if(!isset($_SESSION['userId'])){
 			}
 			else{
 				echo "Query Failed.";
+				echo "<script>console.log('Error:'".pg_result_error($result).")</script";
 			}
 			// -X-X-X- End of PostGRE SQL Commands -X-X-X-
 			?>
