@@ -22,8 +22,11 @@ if(!isset($_SESSION['userId'])){
 		xhttp.open("POST","master.php",true);
 		xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 		// xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val());
-		xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray);
+		xhttp.send("query=allotTask&Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray+"&checkboxLength="+checkboxArray.length);
 		// xhttp.send("Batch="+$("#batchAllotedInput").val()+"&checkbox[]="+checkboxArray);
+	}
+	function checkboxUpdated(){
+		$("#noOfStudentsSelected").text(document.querySelectorAll('input[type="checkbox"]:checked').length);
 	}
 </script>
 
@@ -45,51 +48,23 @@ if(!isset($_SESSION['userId'])){
 				<table id="myTableAllotBatch_details">
 					<?php
 					//----- PostGRE SQL Commands -----
-					// Printing 2018 Data:
-					$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac_2018 WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
+					// Printing Student Data of all Academic Years:
+					$result = pg_query_params($dbconn,"SELECT * FROM $tablename_iMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
 					if (pg_result_status($result)==2) {
 						echo "<tr>
 						<td></td>
 						<td>Name</td>
 						<td>Year</td>
 						<td>Branch</td>
+						<td>Reg Year</td>
 						</tr>";
 						while($row = pg_fetch_assoc($result)){
 							echo "<tr>";
-							echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
+							echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'onchange=checkboxUpdated()></td>";
 							echo "<td>".$row["Name"]."</td>";
 							echo "<td>".$row["Year"]."</td>";
 							echo "<td>".$row["Branch"]."</td>";
-								// echo "<td>".$row["Email"]."</td>";
-								// echo "<td>".$row["Mobile"]."</td>";
-								// echo "<td>".$row["Status"]."</td>";
-								// echo "<td>".$row["Batch"]."</td>";
-							echo "</tr>";
-						}
-					}
-					else{
-						echo "Query Failed.";
-						echo pg_result_status($result);
-					}
-						// Printing 2017 Data:
-					$result = pg_query_params($dbconn,"SELECT * FROM $tablename_IMac WHERE \"Status\"=$1 AND \"Batch\"=$2 ",array('PENDING','0'));
-					if (pg_result_status($result)==2) {
-						echo "<tr>
-						<td></td>
-						<td>Name</td>
-						<td>Year</td>
-						<td>Branch</td>
-						</tr>";
-						while($row = pg_fetch_assoc($result)){
-							echo "<tr>";
-							echo "<td><input type='checkbox' name='checkbox[]' id='checkbox' value='".$row['Mobile']."'></td>";
-							echo "<td>".$row["Name"]."</td>";
-							echo "<td>".$row["Year"]."</td>";
-							echo "<td>".$row["Branch"]."</td>";
-								// echo "<td>".$row["Email"]."</td>";
-								// echo "<td>".$row["Mobile"]."</td>";
-								// echo "<td>".$row["Status"]."</td>";
-								// echo "<td>".$row["Batch"]."</td>";
+							echo "<td>".$row["Reg Year"]."</td>";
 							echo "</tr>";
 						}
 					}
@@ -113,10 +88,12 @@ if(!isset($_SESSION['userId'])){
 						</ol>
 					</p>
 				</p>
-				<p>Enter Batch No:</p>
-				<input type="text" form="willAllotBatchForm" id="batchAllotedInput" required>
-				<button onclick="loadAjax()">Allot Batch</button>
-				<p>Total no. of students selected:</p>
+				<div id="enterBatchNo">
+					<p>Enter Batch No:</p>
+					<input type="text" form="willAllotBatchForm" id="batchAllotedInput" required>
+					<button onclick="loadAjax()">Allot Batch</button>
+				</div>
+				<p>Total no. of students selected: <span id="noOfStudentsSelected"></span></p>
 			</div>
 		</div>
 		<table id="myTableOperations">
@@ -128,40 +105,36 @@ if(!isset($_SESSION['userId'])){
 			<?php 
 			//----- PostGRE SQL Commands -----
 			// Printing 2018 Data:
-			$query = "SELECT * FROM $tablename_IMac_2018_Batch";
+			$query = "SELECT * FROM $tablename_iMacBatches ORDER BY \"Batch No\" ASC";
 			$result = pg_query($dbconn, $query);
 			if (pg_result_status($result)==2){
 				while($row = pg_fetch_assoc($result)){
 					echo"<button class=\"accordion\">Batch No: ".$row['Batch No']."     Total Students: ".$row['Total Students']."/20</button>
 					<div class=\"panel\">";
-					$result2 = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac WHERE \"Batch\"=$1",array($row['Batch No']));
-					$result3 = pg_query_params($dbconn, "SELECT * FROM $tablename_IMac_2018 WHERE \"Batch\"=$1",array($row['Batch No']));
+					$result2 = pg_query_params($dbconn, "SELECT * FROM $tablename_iMac WHERE \"Batch\"=$1",array($row['Batch No']));
 					if (pg_result_status($result2)==2){
 						echo "<table border=1>
 						<th colspan = 4>
-							Atharva iMac Lab Batch:53 
+						Atharva iMac Lab Batch:".$row['Batch No']."
 						</th>
 						<tr>
 						<td>Sr. no</td>
 						<td>Name of Student</td>
 						<td>Year</td>
 						<td>Branch</td>
+						<td>Reg Year</td>
 						</tr>
 						";
+						$temp=1;
 						while($row2 = pg_fetch_assoc($result2)){
 							echo "<tr>
-							<td></td>
+							<td>$temp</td>
 							<td>".$row2['Name']."</td>
 							<td>".$row2['Year']."</td>
 							<td>".$row2['Branch']."</td>
+							<td>".$row2['Reg Year']."</td>
 							</tr>";
-						}
-						while($row3 = pg_fetch_assoc($result3)){
-							echo "<tr>
-							<td>".$row3['Name']."</td>
-							<td>".$row3['Year']."</td>
-							<td>".$row3['Branch']."</td>
-							</tr>";
+							$temp++;
 						}
 						echo "</table>";
 					}
@@ -170,39 +143,10 @@ if(!isset($_SESSION['userId'])){
 			}
 			?>
 		</table>
-	</div>	
-	<form name="willAllotTaskForm" id="willAllotTaskForm">
-		<table id="myTable">
-		</table>
-	</form>
+	</div>
 </div>
 
-
-<style>
-.accordion {
-	background-color: #eee;
-	color: #444;
-	cursor: pointer;
-	padding: 18px;
-	width: 100%;
-	border: none;
-	text-align: left;
-	outline: none;
-	font-size: 15px;
-	transition: 0.4s;
-}
-
-.active, .accordion:hover {
-	background-color: #ccc; 
-}
-
-.panel {
-	padding: 0 18px;
-	display: none;
-	background-color: white;
-	overflow: hidden;
-}
-</style>
+<link rel="stylesheet" href="css/accordion.css">
 <script>
 	var acc = document.getElementsByClassName("accordion");
 	var i;
