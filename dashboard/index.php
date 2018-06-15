@@ -8,17 +8,19 @@ if(!isset($_SESSION['userId'])){
 <html>
 <head>
 	<title></title>
+	
+	<!-- Stylesheets of various Tabs: -->
 	<link rel="stylesheet" href="css/adminTest.css">
 	<link rel="stylesheet" href="css/data.css">
 	<link rel="stylesheet" href="css/overview.css">
     <link rel="stylesheet" href="css/searchbar.css">
     <link rel="stylesheet" href="css/profile_card.css">
     <link rel="stylesheet" href="css/sub-menu.css">
-
+	<!--  -->
 	
+	<!-- jQuery CDN -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-	<script>google.charts.load('current', {'packages':['corechart']});</script>
+	<!--  -->
 
 	<!-- tableExport jQuery Plugin -->
 	<!-- Note:
